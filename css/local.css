@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap');
+h1{
+    font-family: "Zen Dots";
+}
+p{
+    font-family: sans-serif;
+}
+body {
+    background-color: #F5F5F5;
+}
+
+* {
+    margin: 0;
+}
+
+.logo {
+    width: 210px;
+}
+
+header a {
+    font-family: "Zen Dots";
+    color: black;
+    text-decoration: none;
+}
+
+ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+li {
+    list-style: none;
+    padding-right: 20px;
+}
+
+header {
+    background-color: #F5F5F5;
+}
+#seta{
+    padding: 60px;
+}
+.titulo{
+    display: flex;
+    gap: 10px;
+    padding: 40px;
+}
+main{
+    width: 800px;
+    margin: auto;
+    height: 100%;
+    border-radius: 15px;
+    box-shadow: 1px 1px 1px gray;
+    display: block;
+}
+main #img_princiapal{
+    margin: auto;
+    display: flex;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+    width: 100%;
+}
+.localizacao{
+    background-color: #D9D9D9;
+    padding: 40px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+.decidir-local{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    
+}
+main a{
+    color: black;
+}
+@media screen and (max-width: 816px){
+    main{
+        width: 600px;
+    }
+    .localizacao{
+        gap:20px
+    }
+    #seta{
+        padding: 20px;
+    }
+}
+@media screen and (max-width: 545px) {
+    h1{
+        font-size: 1.4rem;
+        display: flex;
+        align-items: center;
+    }
+}
+@media screen and (max-width: 616px){
+    main{
+        width: 400px;
+
+    }
+    .localizacao{
+        display: flex;
+        flex-direction: column;
+    }
+}
+@media screen and (max-width: 425px){
+    h1{
+        font-size: 1rem;
+        display: flex;
+        align-items: center;
+    }
+}
+@media screen and (max-width: 416px){
+    main{
+        width: 300px;
+
+    }
+}
+@media screen and (max-width: 370px){
+    ul{
+        margin: 0;
+        padding: 0;
+    }
+}

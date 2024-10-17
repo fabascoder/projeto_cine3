@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #F5F5F5;
+}
+
+.logo {
+    width: 210px;
+}
+
+a {
+    font-family: "Zen Dots";
+    color: black;
+    text-decoration: none;
+}
+
+header {
+    background-color: #F5F5F5;
+}
+
+ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+li {
+    list-style: none;
+    padding-right: 20px;
+}
+
+.etapas-compra {
+    background-color: #fff;
+    width: 65px;
+    height: 65px;
+    margin: auto;
+    border-radius: 50%;
+    border: solid black 2px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+#caixa {
+    padding-top: 60px;
+    text-align: center;
+    display: flex;
+}
+
+.etapas-compra img {
+    margin: auto;
+    width: 50px;
+    height: 50px;
+    padding-top: 7px;
+}
+
+.etapas-compra p {
+    font-family: "Zen Dots";
+    font-size: 0.8rem;
+}
+
+main {
+    margin: auto;
+    max-width: 800px;
+    min-width: 320px;
+    margin-top: 90px;
+}
+
+.caixa-principal {
+    margin: auto;
+    border: solid lightslategray 2px;
+    width: 800px;
+}
+
+.local-data {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 20px 0;
+}
+
+.local {
+    font-weight: 700;
+    font-family: sans-serif;
+}
+
+.data {
+    font-weight: 400;
+    font-family: sans-serif;
+    color: black;
+}
+
+.conferir-nota {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    font-family: sans-serif;
+    font-weight: 549;
+}
+
+.total {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    font-weight: 600;
+    font-family: sans-serif;
+}
+
+.forma-de-pagamento {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px;
+}
+
+.qr-code {
+    display: flex;
+    justify-content: flex-end;
+}
+
+img {
+    background: none;
+}
+
+.labels {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.botao {
+    margin: auto;
+    width: 800px;
+    display: flex;
+    padding: 20px;
+    justify-content: flex-end;
+}
+
+.btn {
+    background-color: black;
+    color: #bf5672;
+    border: none;
+    width: 160px;
+    height: 50px;
+    font-family: "Zen Dots";
+    font-size: 1rem;
+}
+
+/* Media Queries */
+@media screen and (max-width: 895px) {
+    .local-data {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .caixa-principal {
+        width: 700px;
+    }
+
+    .botao {
+        width: 700px;
+    }
+
+    .forma-de-pagamento {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 780px) {
+    .botao {
+        width: 600px;
+    }
+
+    .caixa-principal {
+        width: 600px;
+    }
+}
+
+@media screen and (max-width: 663px) {
+    .botao {
+        width: 450px;
+    }
+
+    .caixa-principal {
+        width: 500px;
+    }
+
+    .qr-code {
+        margin: auto;
+        width: 90px;
+    }
+
+    .labels {
+        padding-bottom: 40px;
+    }
+}
+
+@media screen and (max-width: 527px) {
+    .caixa-principal {
+        width: 400px;
+    }
+
+    .botao {
+        width: 350px;
+    }
+}

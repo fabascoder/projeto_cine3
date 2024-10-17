@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap');
+
+:root {
+    --cinza: #D9D9D9;
+    --vermelho: #401C26;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+header {
+    width: 100%;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    /*margin: 0;*/
+    overflow-x: hidden;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Zen Dots", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    margin-bottom: 192px
+}
+
+.logo img {
+
+    max-width: 100px;
+    margin-bottom: 20px;
+}
+
+h1 {
+    color: #bf5672;
+    font-size: 40px;
+    margin-bottom: 20px;
+    display: flex;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-size: 14px;
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"]
+{
+    padding: 20px;
+    margin-bottom: 30px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1.1rem;
+    background-color: var(--cinza);
+    outline: none;
+    width: 400px;
+    height: 55px;
+
+}
+
+
+button {
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+    font-family: "Zen Dots", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    background-color: #000000;
+    align-items: center;
+    color: #bf5672;
+}
+
+.login-link {
+    margin-top: 20px;
+    font-weight: 700;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #bf5672;
+}
+
+.login-link a:hover {
+    text-decoration: underline;
+}
+
+.logo {
+    width: 210px;
+    height: 70px;
+}
+
+nav div a i {
+    width: 50px;
+    height: 40px;
+    color: black;
+}
+
+.checkbox-container {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #bf5672;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    color: #bf5672;
+    text-decoration: underline;
+}
+
+.checkbox-container input {
+    margin-right: 10px;
+}
+
+form div label a {
+    color: #bf5672;
+}
+
+form p a {
+    color: #000000;
+}
+/*--------RODAPÉ-----------*/
+footer {
+    background-color: #a39f9f;
+    gap: 20px;
+    justify-content: space-between;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100%;
+    height: 142px;
+    justify-content: space-around;
+    font-size: 0.8rem;
+    margin: 0px;
+    padding: 10px;
+}
+
+.term {
+    display: flex;
+    padding: 2rem;
+    gap: 7rem;
+}
+
+footer div p {
+    display: flex;
+    font-size: 0.8rem;
+}
+footer div a {
+    color: #6a6868;
+}
+
+footer div select {
+    outline: none;
+    background-color: #a39f9f;
+    color: #6a6868;
+    font-size: 1.1rem;
+}
+
+.tampa {
+    margin-left: 20px;
+    font-size: 1rem;
+}
+
+.container_footer {
+    display: flex;
+    gap: 100px;
+}
+
+
+
+@media screen and (max-width: 400px) {
+
+    body {
+        background: red
+    }
+
+    .logo {
+        display: none;
+    }
+
+    div h1 {
+        display: flex;
+        text-align: center;
+    }
+
+    h1 {
+        text-align: center;
+        font-size: 1.7rem;
+    }
+
+    form {
+        justify-content: center;
+        text-align: center;
+        margin: 0px 10px 15px 10px
+    }
+
+    .container {
+        justify-content: center;
+        text-align: center;
+        font-size: 1.5rem;
+    }
+
+    label {
+        font-size: 1.2rem;
+        margin: 0px 10px 0px 10px
+    }
+
+    input {
+        font-size: 1.3rem;
+    }
+
+    .checkbox-container {
+        font-size: 1.2rem;
+        padding-bottom: 10px;
+    }
+
+    .terms-of-use {
+        margin: 0px ;
+    }
+
+    .button {
+        font-size: 1.5rem;
+    }
+
+    footer {
+        display: none
+    }
+     
+}
+input.valid {
+    border: 2px solid green; /* Borda verde para campos válidos */
+    font-family: Arial, Helvetica, sans-serif;
+}

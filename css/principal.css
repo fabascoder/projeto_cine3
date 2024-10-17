@@ -1,0 +1,298 @@
+@import url("https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap");
+
+/*CONTEÚDO CABEÇALHO*/
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  max-width: 100%;
+  width: 100%;
+  height: 100%;
+
+  font-family: "Zen Dots", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  background: #191815;
+}
+
+:root {
+  --vermelho: #401c26;
+  --cinza: #d9d9d9;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--vermelho);
+}
+
+#navegacao {
+  display: flex;
+  align-items: center;
+  gap: 0px;
+}
+
+#pesquisa {
+  margin: 17px 100px 0px 0px;
+  width: 350px;
+  height: 40px;
+  padding: 10px;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  font-size: 1.2rem;
+}
+
+ul {
+  display: flex;
+  gap: 0px;
+}
+
+li {
+  list-style: none;
+  color: #fff;
+  margin-right: 100px;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+a:hover {
+  opacity: 0.5s;
+  color: #d95f80;
+}
+
+.login {
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#icon_ingresso {
+  margin-left: 38px;
+}
+
+#icon_produto {
+  margin-left: 35px;
+}
+
+#icon_local {
+  margin-left: 45px;
+}
+
+#icon_profile {
+  margin-left: 16px;
+}
+
+/*CONTEÚDO PRINCIPAL*/
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+.img_banner {
+  max-width: 100%;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 1px 1px 10px 1px #d95f80;
+  border-radius: 45px;
+  border: none;
+
+}
+
+.foto {
+  max-width: 100%;
+  border-radius: 45px;
+  border: 4px solid #fff;
+  width: 929px;
+  height:459px;
+}
+
+.arrow2,
+.arrow1 {
+  display: inline-block;
+  font-size: 3rem;
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+  position: absolute;
+  top: 0px;
+}
+
+.arrow1 {
+  left: -50px;
+}
+.arrow2 {
+  left: 20px;
+}
+
+.direita {
+  position: relative;
+}
+
+.esquerda {
+  position: relative;
+}
+
+/*SEÇÃO DAS IMAGENS*/
+
+h1 {
+  color: #fff;
+  margin: 15px 0px 30px 0px;
+}
+
+.secao {
+  margin: 50px;
+}
+
+/* .container_secao{
+    /* display: flex; */
+
+.imagem_section {
+  max-width: 100%;
+  height: 400px;
+  border-radius: 20px;
+  box-shadow: 1px 1px 10px 1px #d95f80;
+}
+
+.casa_arrow {
+  position: absolute;
+}
+
+.arrow_esquerda_main,
+.arrow_direita_main {
+  color: #fff;
+  position: relative;
+  font-size: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+  top: 170px;
+  left: 100px;
+}
+
+.arrow_direita_main {
+  /* display: inline-block; */
+  left: 600px;
+}
+
+.container_imagens {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 60px;
+  justify-content: center;
+  /* max-width: 900px; */
+  width: 100%;
+}
+
+/*RODAPÉ*/
+footer {
+  background-color: #a39f9f;
+  gap: 20px;
+  justify-content: space-between;
+  font-family: Arial, Helvetica, sans-serif;
+  width: 100%;
+  height: 142px;
+  justify-content: space-around;
+  font-size: 0.8rem;
+  margin: 0px;
+  padding: 10px;
+}
+
+.term {
+  display: flex;
+  padding: 2rem;
+  gap: 7rem;
+}
+
+footer div p {
+  display: flex;
+  font-size: 0.8rem;
+}
+footer div a {
+  color: #6a6868;
+}
+
+footer div select {
+  outline: none;
+  background-color: #a39f9f;
+  color: #6a6868;
+  font-size: 1.1rem;
+}
+
+.tampa {
+  margin-left: 20px;
+  font-size: 1rem;
+}
+
+.container_footer {
+  display: flex;
+  gap: 100px;
+}
+
+/* Modal */
+#modal-ingressos {
+  position: absolute;
+  left: 35%;
+  top: 30%;
+  display: none;
+  border: none;
+  background: none;
+}
+
+.modal-content {
+  background-color: #252525;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 500px;
+  color: rgb(224, 224, 224);
+  border-radius: 10px;
+  text-align: center;
+
+}
+
+.t1 {
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 10px;
+  justify-content: start;
+  align-items: start;
+  font-size: 20px;
+}
+
+.p1 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  justify-content: start;
+  align-items: start;
+  padding: 10px 0px
+}
+
+.v1 {
+  font-family: Arial, Helvetica, sans-serif;
+  justify-content: start;
+  align-items: start;
+  font-size: 13px;
+  color: grey;
+}
+
+.ingressos {
+  font-weight: 500;
+  padding: 20px 0px;
+}
+
+.close {
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.close:hover {
+  opacity: 2;
+  color:#d95f80;
+}
+
+.tamanho {
+  width: 267px;
+  max-height: 400px;
+}

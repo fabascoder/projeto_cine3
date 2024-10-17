@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap');
+*{
+    margin: 0;
+}
+.logo {
+    width: 210px;   
+}
+a{
+    font-family: "Zen Dots";
+    color: black;
+    text-decoration: none;  
+    
+}
+ul{
+    display: flex;
+    justify-content: space-between;
+    
+    align-items: center;
+}
+li{
+    list-style: none;
+    padding-right: 20px;
+}
+header{
+    background-color: #F5F5F5;
+}
+.etapas-compra{
+    background-color: rgb(255, 255, 255);
+    width: 65px;
+    height: 65px;
+    margin: auto;
+    border-radius: 50%;
+    border: solid black 2px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+#caixa {
+    padding-top: 60px;
+    text-align: center;
+    display: flex;
+}
+.etapas-compra img{
+    margin: auto;
+    width: 50px;
+    height: 50px;
+    padding-top: 7px;
+    display: flex;
+}
+.etapas-compra p{
+    font-family: "Zen Dots";
+    font-size: 0.8rem;
+   
+}
+main{
+    margin: auto;
+    display: flex;
+}
+.caixa-principal{
+    margin: auto;
+}
+.caixa-principal h1{
+    text-align: center;
+    font-family: "Zen Dots";
+    font-size: 1.4rem;
+    font-weight: 100;
+}
+.cinema{
+    width: 1150px;
+    height: 730px;
+    background-color: black;
+    border-radius: 20px;
+}
+.cinema .numeros{
+    color: white;
+    font-family: "Zen Dots";
+    text-align: center;
+    font-size: 2rem;
+    letter-spacing: 10px;
+    padding: 10px;
+}
+.cinema .letras{
+    flex-direction: column;
+    color: white;
+    font-family: "Zen Dots";
+    font-size: 2rem;
+    padding: 10px;
+}
+.assentos{
+    font-family: sans-serif;
+    font-size: 1.2rem;
+    font-weight: 550;
+}
+span{
+    color: #bf5672;
+}
+select{
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: white;
+}
+.localizacao p{
+    font-family: sans-serif;
+    font-size: 1.1rem;
+}
+a{
+    font-weight: 400;
+    font-family: sans-serif;
+    color: black;    
+}
+.btn{
+    background-color: black;
+    color: #bf5672;
+    border: 0;
+    width: 160px;
+    height: 50px;
+    font-family: "Zen Dots";
+    font-size: 1rem;
+}
+.botao{
+    margin: auto;
+    width: 1000px;
+    display: flex;
+    padding: 20px;
+    justify-content: end;
+}
