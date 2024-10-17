@@ -61,6 +61,14 @@ label {
     font-size: 14px;
     margin-bottom: 5px;
     text-align: left;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 300;
+    font-size: 1rem;
+}
+
+.error-menssage {
+    font-weight: 500;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 input[type="text"],
@@ -76,7 +84,7 @@ input[type="password"]
     outline: none;
     width: 400px;
     height: 55px;
-
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 
@@ -216,6 +224,7 @@ footer div select {
         justify-content: center;
         text-align: center;
         font-size: 1.5rem;
+
     }
 
     label {
