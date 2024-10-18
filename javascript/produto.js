@@ -30,17 +30,22 @@ cartCounts.forEach((cartCount) => {
 });
 
 document.addEventListener("DOMContentLoaded", function() {
-    // Selecione todos os botões de tamanho
-    const sizeButtons = document.querySelectorAll('.sizes button');
+    // Seleciona todos os contêineres com botões de tamanhos
+    const sizeContainers = document.querySelectorAll('.sizes');
 
-    // Adiciona o evento de clique a cada botão
-    sizeButtons.forEach(button => {
-        button.addEventListener('click', function() {
-            // Remove a classe 'selected' de todos os botões para garantir que apenas um seja selecionado
-            sizeButtons.forEach(btn => btn.classList.remove('selected'));
-
-            // Adiciona a classe 'selected' ao botão que foi clicado
-            this.classList.add('selected');
+    // Percorre cada contêiner de tamanhos individualmente
+    sizeContainers.forEach(container => {
+        const buttons = container.querySelectorAll('button');
+        
+        // Adiciona o evento de clique para cada botão dentro do contêiner
+        buttons.forEach(button => {
+            button.addEventListener('click', function() {
+                // Remove a classe 'selected' de todos os botões dentro do contêiner atual
+                buttons.forEach(btn => btn.classList.remove('selected'));
+                
+                // Adiciona a classe 'selected' ao botão clicado
+                this.classList.add('selected');
+            });
         });
     });
 });
