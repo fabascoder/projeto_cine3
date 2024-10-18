@@ -181,3 +181,8 @@ header {
     font-size: 30px;
 
 }
+
+.sizes button.selected {
+    background-color: #BF5672; /* Cor do texto original */
+    color: #000000; /* Cor do fundo original */
+}

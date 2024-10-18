@@ -28,3 +28,19 @@ cartCounts.forEach((cartCount) => {
         }
     });
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+    // Selecione todos os botões de tamanho
+    const sizeButtons = document.querySelectorAll('.sizes button');
+
+    // Adiciona o evento de clique a cada botão
+    sizeButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            // Remove a classe 'selected' de todos os botões para garantir que apenas um seja selecionado
+            sizeButtons.forEach(btn => btn.classList.remove('selected'));
+
+            // Adiciona a classe 'selected' ao botão que foi clicado
+            this.classList.add('selected');
+        });
+    });
+});
