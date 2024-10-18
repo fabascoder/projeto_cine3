@@ -29,17 +29,19 @@ var modal = document.getElementById("modal-ingressos");
 
 // Obtém o link correto
 var ingressoLink = document.getElementById("openModal");
-
+var body = document.querySelector('html')
 // Quando o usuário clicar no link de ingressos, abre o modal
 ingressoLink.addEventListener("click", function (event) {
     event.preventDefault(); // Evita o redirecionamento
     modal.style.display = "block";
+    body.style.background = '#000';
 });
 
 // Quando o usuário clicar no <span> (x), fecha o modal
 var span = document.getElementsByClassName("close")[0];
 span.onclick = function () {
     modal.style.display = "none";
+    body.style.background = '#191814';
 };
 
 // Quando o usuário clicar fora do modal, fecha o modal
