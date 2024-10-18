@@ -75,11 +75,15 @@ li {
     padding: 40px;
 }
 
+.camiseta {
+    display: block;
+}
+
 .caixa-valores,
 .camiseta-valores {
     background-color: #fff;
     width: 85%;
-    height: 300px;
+    height: 250px;
     margin: 1.6rem auto;
     border: black solid 2px;
     display: flex;
@@ -91,9 +95,10 @@ li {
 .caixa-valores button,
 .camiseta-valores button {
     margin-left: auto;
-    display: flex;
     background: none;
     border: 0;
+    max-width: 100%;
+    display: block;
 }
 
 .camiseta-valores .camiseta {
@@ -114,8 +119,16 @@ li {
 .total-ingresso {
     font-family: sans-serif;
     font-size: 1.2rem;
+    margin: 0px; 
+    padding: 0px;
+    margin-right: 100px;
+    justify-content: center;
+    align-items: center;
 }
 
+.texto_c3 {
+    margin: 0px 25px 0px 0px;
+}
 select {
     width: 100px;
     height: 30px;
