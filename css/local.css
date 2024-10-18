@@ -15,6 +15,7 @@ body {
 
 .logo {
     width: 210px;
+    padding: 0px;
 }
 
 header a {
