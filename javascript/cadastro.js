@@ -88,6 +88,8 @@ function showError(input, message) {
     const error = document.createElement('div');
     error.className = 'error-message';
     error.style.color = 'red';
+    error.style.fontFamily ='Arial, sans-serif';
+    error.style.paddingLeft = '130px';
     error.textContent = message;
     input.parentNode.insertBefore(error, input.nextSibling);
     input.classList.remove('valid'); // Remove a classe de validação se houver erro
