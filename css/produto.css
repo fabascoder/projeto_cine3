@@ -183,6 +183,7 @@ header {
 }
 
 .sizes button.selected {
-    background-color: #BF5672; /* Cor do texto original */
+    background-color: #fff; /* Cor do texto original */
     color: #000000; /* Cor do fundo original */
+    border: 1px solid #000;
 }
