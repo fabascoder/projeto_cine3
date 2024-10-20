@@ -45,6 +45,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 
                 // Adiciona a classe 'selected' ao botão clicado
                 this.classList.add('selected');
+                
             });
         });
     });
