@@ -184,15 +184,15 @@ function cadastro(event) {
     });
 
     // Se todos os campos estiverem válidos
-    if (isValid) {
-        alert("Cadastro realizado com sucesso!");
+    // if (isValid) {
+    //     alert("Cadastro realizado com sucesso!");
 
-        // Armazenar o nome do usuário no LocalStorage
-        const username = document.getElementById('username').value;
-        localStorage.setItem('username', username);
+    //     // Armazenar o nome do usuário no LocalStorage
+    //     const username = document.getElementById('username').value;
+    //     localStorage.setItem('username', username);
 
-        // Redirecionar para a página principal
-        window.location.href = 'principal.php';
-    }
+    //     // Redirecionar para a página principal
+    //     window.location.href = 'principal.php';
+    // }
 }
 
