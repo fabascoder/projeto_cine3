@@ -86,7 +86,7 @@
                 <div class="escolhas">
                     <div class="tipo-ingresso">
                         <p style="margin: 4rem auto;">Ingresso:</p>
-                        <p>Padrão Intera</p>
+                        <p>Meia promocional</p>
                     </div>
                     <div class="quantidade-ingresso">
                         <p style="margin: 4rem auto;">Quantidade</p>
