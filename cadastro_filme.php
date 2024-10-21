@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro Filme</title>
+    <link rel="stylesheet" href="css/cadastro_filme.css">
 </head>
 <body>
 <header>
@@ -50,7 +51,7 @@
         <div>
             <button type="submite">CADASTRAR FILME</button>
         </div>
-        <div>
+        <div class="msg">
             <?php 
              echo $msg;
              ?>

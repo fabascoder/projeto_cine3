@@ -91,6 +91,8 @@ function showError(input, message) {
     error.style.fontFamily ='Arial, sans-serif';
     error.style.fontWeight = 'normal'
     error.style.marginTop = '15px';
+    error.style.marginLeft = '55px'
+    error.style.fontSize = '15px'
     error.textContent = message;
     input.parentNode.insertBefore(error, input.nextSibling);
     input.classList.remove('valid'); // Remove a classe de validação se houver erro

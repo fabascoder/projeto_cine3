@@ -63,6 +63,7 @@ li {
     display: flex;
     align-items: center;
     padding: 55px 0 0 80px;
+    gap: 10px;
 }
 
 .titulo p {
@@ -75,15 +76,11 @@ li {
     padding: 40px;
 }
 
-.camiseta {
-    display: block;
-}
-
 .caixa-valores,
 .camiseta-valores {
     background-color: #fff;
     width: 85%;
-    height: 250px;
+    height: 300px;
     margin: 1.6rem auto;
     border: black solid 2px;
     display: flex;
@@ -95,10 +92,9 @@ li {
 .caixa-valores button,
 .camiseta-valores button {
     margin-left: auto;
+    display: flex;
     background: none;
     border: 0;
-    max-width: 100%;
-    display: block;
 }
 
 .camiseta-valores .camiseta {
@@ -111,6 +107,15 @@ li {
     display: flex;
     justify-content: space-between;
     padding: 20px;
+    text-align: center;
+    margin-bottom: 130px;
+}
+.escolhas-camisa{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 130px;
 }
 
 .tipo-ingresso,
@@ -119,16 +124,12 @@ li {
 .total-ingresso {
     font-family: sans-serif;
     font-size: 1.2rem;
-    margin: 0px; 
-    padding: 0px;
-    margin-right: 100px;
-    justify-content: center;
-    align-items: center;
 }
 
-.texto_c3 {
-    margin: 0px 25px 0px 0px;
+.tamanho-camisa {
+    margin-right: 120px;
 }
+
 select {
     width: 100px;
     height: 30px;
@@ -154,7 +155,7 @@ select {
     border: 0;
     border-radius: 5px;
     cursor: pointer;
-    padding: 15px 10px
+    padding: 15px 10px;
 }
 
 /* Media Queries para Responsividade */
@@ -167,7 +168,6 @@ select {
     .valores {
         padding: 30px;
     }
-
     .caixa-valores,
     .camiseta-valores {
         width: 90%;
@@ -179,18 +179,17 @@ select {
     .titulo {
         flex-direction: column; /* Empilha o título em telas menores */
         align-items: flex-start; /* Alinha à esquerda */
-        padding: 30px 0;
+        padding: 30px;
     }
 
     .titulo p {
         font-size: 1.5rem; /* Reduz o tamanho da fonte */
     }
 
-    .escolhas {
+    .escolhas-camisa{
         flex-direction: column; /* Coloca as escolhas em coluna */
-        align-items: flex-start; /* Alinha à esquerda */
+        margin: auto;
     }
-
     select {
         width: 100%; /* Faz o select ocupar toda a largura */
     }
@@ -202,6 +201,8 @@ select {
     .finalizar button {
         width: 100%; /* Faz o botão ocupar toda a largura */
     }
+    
+    
 }
 
 @media screen and (max-width: 480px) {
@@ -217,5 +218,51 @@ select {
 
     .camiseta-valores .camiseta {
         width: 100%; /* Faz a camiseta ocupar toda a largura */
+    }
+    
+}
+@media screen and (max-width:517px){
+    .etapas-compra {
+        background-color: #fff;
+        width: 45px;
+        height: 45px;
+        margin: auto;
+        border-radius: 50%;
+        border: solid black 2px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+    .etapas-compra img{
+        margin: auto;
+        width: 30px;
+        height: 30px;
+        padding-top: 7px;
+    }
+    .etapas-compra p{
+        font-family: "Zen Dots";
+        font-size: 0.54rem;
+    }
+    #caixa {
+        padding-top: 60px;
+        text-align: center;
+        display: flex;
+        justify-content: space-around;
+        margin: auto;
+    }
+}
+@media screen and (max-width: 420px){
+    .escolhas{
+        padding: 0%;
+    }
+    .caixa-valores{
+        width: 100%;
+    }
+    .camiseta-valores{
+        width: 100%;
+    }
+    .tamanho-camisa, .total-ingresso{
+        margin: auto;
     }
 }

@@ -75,7 +75,7 @@
                         <img src="imagens/visa.png" alt="Visa.png" width="60px">
                     </label>
                     <label class="label">
-                        <input type="radio" name="radio" id="radio">
+                        <input type="radio" name="radio" class="radio">
                         <span class="customizar-radio"></span>
                         <img src="imagens/MasterCard_Logo.svg.png" alt="MasterCard.png" width="60px">
                     </label>
@@ -96,7 +96,7 @@
             </div> 
         </div>
         <div class="botao">
-            <a class="btn" href="pagamento_confirmacao.php" type="submit">CONTINUAR ></a>
+            <a class="btn" href="pagamento_confirmacao.php">CONTINUAR ></a>
         </div>
     </main>
 </body>

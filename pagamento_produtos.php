@@ -122,17 +122,19 @@
                         </div>
                     </div>
                 </div>
-                
+                <div class="avancar">
+                <a class="btn" href="pagamento.php">AVANÇAR</a>
+                </div>
                 <div class="caixa-preta">
                     <img src="imagens/Logo_Cine3-removebg-preview.png" alt="Logo_Cine3.png" width="200px">
                     <h1>PROMOÇÃO DE <span>PRÉ-VENDA</span></h1>
                     <div class="pipocas">
                         <div class="porcoes">
-                            <div class="pipoca-pequena">
+                            <div class="pipoca-media">
                                 <img src="imagens/balde-de-pipoca.png" alt="balde-de-pipoca.png" width="45px">
                                 
                             </div>
-                            <div class="preco-pequena">
+                            <div class="preco-combo">
                                 <p>PEQUENA</p>
                                 <p style="color: #bf5672;">R$23,99</p>
                             </div>
@@ -188,11 +190,10 @@
                             </div>
                         </div>
                     </div>
+                    <div class="caixa-prevenda"><a href="" class="pre-venda">FILMES EM<span style="color=white;"> PRÉ-VENDA</span></a></div>
             </div>
                     
-            <div>
-                <a class="btn" href="pagamento.php">AVANÇAR</a>
-            </div>
+            
     </main>
 </body>
 </html>

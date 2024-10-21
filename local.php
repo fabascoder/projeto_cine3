@@ -24,7 +24,7 @@
         </nav>
         <a href="principal.php"><img src="imagens/seta.png" alt="" width="40px" id="seta"></a>
     </header> 
-    <div class="titulo"><img src="imagens/local.png" alt=""width="40px"><h1>Nossas Localidades</h1>  </div> 
+    <div class="titulo"><h1>Nossas Localidades</h1>  </div> 
     <main>
         
         <img src="imagens/Localizaçao_Cine3.png" alt="" id="img_princiapal">

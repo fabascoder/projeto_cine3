@@ -32,11 +32,17 @@ header {
     margin-right: 20px;
 }
 
+span {
+    margin: 0px;
+    padding: 0px;
+}
+
 .topo {
     display: flex;
     align-items: center;
     margin-top: 20px;
 }
+
 
 .h1 {
     font-size: 40px;

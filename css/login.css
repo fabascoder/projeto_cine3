@@ -6,13 +6,37 @@
     box-sizing: border-box;
 }
 
-body {
+main {
     font-family: sans-serif;
     background-color: #f4f4f4;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
+}
+
+header {
+    background-color: #f4f4f4;
+}
+
+.logo {
+    width: 210px;
+    height: 70px;
+}
+
+.back {
+    color: black;
+    text-decoration: none;
+    background-color: #f4f4f4;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    margin-left: 20px;
+}
+
+.back:hover {
+    opacity: 2;
+    transform: 0.5;
+    color:#BF5672;
 }
 
 .login-container {

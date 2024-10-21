@@ -220,22 +220,22 @@
     <footer>
         <div class="term">
             <div>
-                <a href="#">
+                <a href="termos.php">
                     <p>TERMOS DE USO</p>
                 </a>
             </div>
             <div>
-                <a href="#">
+                <a href="termos.php">
                     <p>POLÍTICA DE PRIVACIDADE</p>
                 </a>
             </div>
             <div>
-                <a href="#">
+                <a href="local.php">
                     <p>CONTATO</p>
                 </a>
             </div>
             <div>
-                <a href="#">
+                <a href="local.php">
                     <p>LOCAL</p>
                 </a>
             </div>

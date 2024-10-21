@@ -55,7 +55,7 @@
     </header>
     <main>    
         <div class="titulo">
-            <img src="imagens/seta.png" alt="" width="30px">
+            <a href=""><img src="imagens/seta.png" alt="" width="30px"></a>
             <p>ingressos</p>
         </div>
         <div class="valores">
@@ -63,11 +63,11 @@
                 <button type="submit"><img src="imagens/lixeira-vermelha.png" alt="" width="30px"></button>   
                 <div class="escolhas">
                     <div class="tipo-ingresso">
-                        <p style="margin: 2rem auto;">Ingresso:</p>
+                        <p style="margin: 4rem auto;">Ingresso:</p>
                         <p>Padrão Intera</p>
                     </div>
                     <div class="quantidade-ingresso">
-                        <p style="margin: 2rem auto;">Quantidade</p>
+                        <p style="margin: 4rem auto;">Quantidade</p>
                         <select name="" id="">
                             <option value="1">1</option>
                             <option value="2">2</option>
@@ -75,7 +75,7 @@
                         </select>
                     </div>
                     <div class="total-ingresso" >
-                        <p style="margin: 2rem auto;">Total:</p>
+                        <p style="margin: 4rem auto;">Total:</p>
                         <p>R$ 38,00</p>
                     </div>
                 </div>
@@ -85,11 +85,11 @@
                 <button type="submit"><img src="imagens/lixeira-vermelha.png" alt="" width="30px">  </button> 
                 <div class="escolhas">
                     <div class="tipo-ingresso">
-                        <p style="margin: 2rem auto;">Ingresso:</p>
+                        <p style="margin: 4rem auto;">Ingresso:</p>
                         <p>Padrão Intera</p>
                     </div>
                     <div class="quantidade-ingresso">
-                        <p style="margin: 2rem auto;">Quantidade</p>
+                        <p style="margin: 4rem auto;">Quantidade</p>
                         <select name="" id="">
                             <option value="1">1</option>
                             <option value="2">2</option>
@@ -97,7 +97,7 @@
                         </select>
                     </div>
                     <div class="total-ingresso" >
-                        <p style="margin: 2rem auto;">Total:</p>
+                        <p style="margin: 4rem auto;">Total:</p>
                         <p>R$ 38,00</p>
                     </div>
                 </div>
@@ -106,20 +106,20 @@
             <div class="camiseta-valores">
                 <button type="submit"><img src="/imagens/lixeira-vermelha.png" alt="" width="30px"> </button>  
                 
-                <div class="escolhas">
-                     <img src="imagens/Camiseta_Cine3.png" alt="" class="camiseta">
+                <div class="escolhas-camisa">
+                    <img src="imagens/Camiseta_Cine3.png" alt="" class="camiseta">
                     <div class="tamanho-camisa">
-                       
-                        <p class="texto_c3" style="margin: 2rem auto;">Camisa <span  style="font-family: Arial, sans-serif;">CINE3!</span></p> 
+                        <p style="margin: 4.2rem auto;">Camisa <span style="font-family: Zen Dots;">CINE3!</span></p> 
                         
                         <select name="tamanho-camisa" id="tamanho-camisa">
+                            <option value="P">Nenhuma</option>
                             <option value="P">P</option>
                             <option value="M">M</option>
                             <option value="G">G</option>
                         </select>
                     </div>
                     <div class="total-ingresso" >
-                        <p style="margin: 2rem auto;">Total:</p>
+                        <p style="margin: 4rem auto;">Total:</p>
                         <p>R$ 38,00</p>
                     </div>
                 </div>

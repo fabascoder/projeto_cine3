@@ -11,27 +11,40 @@
     <script src="js/login.js" defer></script>
 </head>
 <body>
-    <div class="login-container">
-        <h1>Login</h1>
-        <form onsubmit="validateLogin(event)">
-            <label for="email">E-mail</label>
-            <input type="email" id="email" name="email" required>
-            
-            <label for="password">Senha</label>
-            <input type="password" id="password" name="password" required>
-            
-            <div class="options">
-                <div>
-                    <input type="checkbox" id="remember-me" name="remember-me">
-                    <label for="remember-me">Lembrar-me</label>
-                </div>
-                <a href="#">Esqueceu sua senha?</a>
+<header>
+        <nav>
+            <div>
+                <a href="principal.php">
+                    <img src="imagens/Logo_Cine3-removebg-preview.png" alt="Cine3 Logo" class="logo">
+                </a>
             </div>
-            
-            <button type="submit">Entrar</button>
-        </form>
-        <a href="cadastro.php" class="signup">Cadastre-se!</a>
-    </div>
+            <a href="principal.php" class="back">VOLTAR</i></a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="login-container">
+            <h1>Login</h1>
+            <form onsubmit="validateLogin(event)">
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email" required>
+        
+                <label for="password">Senha</label>
+                <input type="password" id="password" name="password" required>
+        
+                <div class="options">
+                    <div>
+                        <input type="checkbox" id="remember-me" name="remember-me">
+                        <label for="remember-me">Lembrar-me</label>
+                    </div>
+                    <a href="#">Esqueceu sua senha?</a>
+                </div>
+        
+                <button type="submit">Entrar</button>
+            </form>
+            <a href="cadastro.php" class="signup">Cadastre-se!</a>
+        </div>
+    </main>
     <script src="javascript/login.js"></script>
 </body>
 </html>

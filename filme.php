@@ -33,7 +33,7 @@
                 <li>
                     <div id="window_ticket">
                         <div id="ingresso">
-                             <a href=""> <!--INGRESSO - LINK-->
+                            <a href="javascript:void(0)" id="openModal">
                                 <div>
                                     <span id="icon_ingresso" class="material-symbols-outlined">
                                         confirmation_number
@@ -45,7 +45,7 @@
                     </div>
                 </li>
                 <li class="item_produto">
-                    <a href="protudos.php">
+                    <a href="produtos.php">
                         <div>
                             <span id="icon_produto" class="material-symbols-outlined">
                                 shopping_bag
@@ -174,6 +174,7 @@
             </div>
         </section>
     </main>
+    <script src="javascript/principal.js"></script>
 </body>
 
 </html>
