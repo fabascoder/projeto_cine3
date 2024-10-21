@@ -190,7 +190,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="caixa-prevenda"><a href="" class="pre-venda">FILMES EM<span style="color=white;"> PRÉ-VENDA</span></a></div>
+                    <div class="caixa-prevenda"><a href="principal.php" class="pre-venda">FILMES EM<span style="color=white;"> PRÉ-VENDA</span></a></div>
             </div>
                     
             
