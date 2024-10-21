@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="css/principal.css">
 </head>
 
-<body class="body">
+<body style="background: #fff;">
 
 <header>
         <a href="./principal.php"><img src="imagens/Logo_Cine3.png" alt="Imagem CINE3" width="200px"></a>
