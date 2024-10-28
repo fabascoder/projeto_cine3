@@ -11,7 +11,7 @@
         <nav>
             <ul>
                 <li>
-                    <a href="principal.php">
+                    <a href="index.php">
                         <img src="imagens/Logo_Cine3-removebg-preview.png" alt="Cine3 Logo" class="logo">
                     </a>
                 </li>   
@@ -22,7 +22,7 @@
             </ul>
             <a href="pricipal.php"><i class="fa fa-arrow-left" aria-hidden="true"></i></a>
         </nav>
-        <a href="principal.php"><img src="imagens/seta.png" alt="" width="40px" id="seta"></a>
+        <a href="index.php"><img src="imagens/seta.png" alt="" width="40px" id="seta"></a>
     </header> 
     <div class="titulo"><h1>Nossas Localidades</h1>  </div> 
     <main>
@@ -37,7 +37,44 @@
                     <option value="G">São Paulo</option>
                 </select>
             </div>
-            <p>CEP: <a href="">XXXXX-XXX</a></p>
+            <form method="post" id="formulario">
+                <div>
+                    <label>CEP:</label>
+                    <input type="text" name="cep" id="cep">
+                </div>
+            </form>
+            <?php
+            $cep = $_POST['cep']??'';
+            $url = "https://viacep.com.br/ws/$cep/json/";
+            $json = file_get_contents($url);
+            $dados = json_decode($json, true);
+            
+            ?>
+            <div id="resposta"></div>
+            <script>
+        const div = document.getElementById('resposta');
+        const formulario = document.getElementById('formulario');
+        formulario.addEventListener('input', (evento)=> {
+            let value = document.getElementById('cep').value;
+            if(value.length == 8 ) {
+            evento.preventDefault();
+            let dados = new FormData(formulario);
+            console.log(dados);
+            fetch('acao.php', {
+                method: 'POST',
+                body: dados
+            })
+            .then((resposta)=>{
+                if(resposta.ok) {
+                    return resposta.text()
+                }
+            })
+            .then((dados)=>{
+                div.innerHTML = dados;
+            });
+        }
+        });
+    </script>
             <br>
                 <div class="decidir-local">
                     <img src="imagens/local.png" alt="" width="30px">
@@ -46,5 +83,6 @@
             <p>Ligue: XXXXX-XXXX</p>    
         </div>
     </main>
+
 </body>
 </html>

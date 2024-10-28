@@ -20,7 +20,7 @@
 
 <body>
     <header>
-        <a href="principal.php"><img src="imagens/Logo_Cine3.png" alt="Imagem CINE3"
+        <a href="index.php"><img src="imagens/Logo_Cine3.png" alt="Imagem CINE3"
                 width="200px"></a>
         <div class="div_pesquisa">
             <input type="search" id="pesquisa" placeholder="Pesquisar">
@@ -80,7 +80,7 @@
     </header>
     <main>
         <div>
-            <a href="principal.php">
+            <a href="index.php">
                 <img class="arrow_back" src="icones/arrow_left.jpg" alt="Arrow Left">
             </a>
         </div>
