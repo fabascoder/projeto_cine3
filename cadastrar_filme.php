@@ -47,7 +47,7 @@ if (move_uploaded_file($temp, 'imagens/' . $novo_nome)) {
         'imagem' => $novo_nome
     ];
 
-    $insert = $conexao->prepare('INSERT INTO filme (nome, descricao, genero, duracao, direcao, distribuicao, elenco, horario, classificacao, valor, status_filme, ano_lancamento, imagem) VALUES (:nome, :descricao, :genero, :duracao, :direcao, :distribuicao, :elenco, :horario
+    $insert = $conexao->prepare('INSERT INTO filme (nome, descricao, genero, duracao, direcao, distribuicao, elenco, horario, classificacao, valor, status_filme, ano_lancamento, imagem) VALUES (:nome, :descricao, :genero, :duracao, :direcao, :distribuicao, :elenco, :horario,
     :classificacao, :valor, :status_filme, :ano_lancamento, :imagem )');
     if ($insert->execute($new_filme)) {
         echo "CADASTRADO!";
