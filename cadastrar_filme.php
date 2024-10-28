@@ -2,6 +2,7 @@
 include_once "conexao.php";
 $nome_filme = $_POST['nome'];
 $descricao = $_POST['descricao'];
+$genero = $_POST['genero'];
 $idade = $_POST['classificacao'];
 $valor = $_POST['valor'];
 $status = $_POST['status_filme'];
@@ -27,7 +28,8 @@ if (move_uploaded_file($temp, 'imagens/' . $novo_nome)) {
 
     $new_filme = [
         'nome' => $nome_filme,
-            'descricao' =>  $descricao,
+        'descricao' =>  $descricao,
+        'genero' =>  $genero,
         'classificacao' => $idade,
         'valor' => $valor,
         'status_filme' => $status,
@@ -35,7 +37,7 @@ if (move_uploaded_file($temp, 'imagens/' . $novo_nome)) {
         'imagem' => $novo_nome
     ];
 
-    $insert = $conexao->prepare('INSERT INTO filme (nome, descricao, classificacao, valor, status_filme, ano_lancamento, imagem) VALUES (:nome, :descricao, :classificacao, :valor, :status_filme, :ano_lancamento, :imagem )');
+    $insert = $conexao->prepare('INSERT INTO filme (nome, descricao, genero, classificacao, valor, status_filme, ano_lancamento, imagem) VALUES (:nome, :descricao, :genero,  :classificacao, :valor, :status_filme, :ano_lancamento, :imagem )');
     if ($insert->execute($new_filme)) {
         echo "CADASTRADO!";
     } else {

@@ -1,8 +1,8 @@
 <?php
-$host = "sql205.infinityfree.com"; 
-$db = "if0_37567896_banco";
-$user = "if0_37567896";
-$senha = "fabricio124 ";
+$host = "localhost"; 
+$db = "projetocine31";
+$user = "root";
+$senha = "";
  
 try {
     $conexao = new PDO("mysql:host=$host;dbname=$db", $user, $senha);
