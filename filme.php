@@ -19,6 +19,15 @@
 </head>
 
 <body>
+    <?php 
+    include_once "conexao.php";
+    $id = $_GET['id']??'';
+    if($id) {
+        $select = $conexao->prepare("SELECT * FROM filme WHERE id=:id");
+        $select->execute(['id'=>$id]);
+        $resultado = $select->fetch();
+    }
+    ?>
     <header>
         <a href="index.php"><img src="imagens/Logo_Cine3.png" alt="Imagem CINE3"
                 width="200px"></a>
@@ -85,8 +94,14 @@
             </a>
         </div>
         <div id="container_principal">
+            <?php 
+              $imagem = $resultado['imagem']??"umavidadeesperança.jpg";
+              if($imagem == '') {
+                  $imagem = "umavidadeesperança.jpg";
+              }
+            ?>
             <div id="div_img">
-                <img class="foto_bad_boys" src="imagens/bad_boys_Cine3.jfif" alt="Foto do FIlmes - Bas Boys">
+                <img class="foto_bad_boys" src="imagens/<?=$imagem?>" alt="Foto do FIlmes - Bas Boys"></img>
             </div>
 
             <section id="grid">
@@ -96,21 +111,21 @@
                         <ul>
                             <li>
                                 <div>
-                                    <a class="button_horario" href="pagamento_ingressos.php">16:00, qui</a>
+                                    <a class="button_horario" href="pagamento_ingressos.php"><?php echo $resultado['horario'];?>h</a>
                                 </div>
                             </li>
                         </ul>
                         <ul>
                             <li>
                                 <div>
-                                    <a class="button_horario" href="pagamento_ingressos.php">16:00, qui</a>
+                                    <a class="button_horario" href="pagamento_ingressos.php">-</a>
                                 </div>
                             </li>
                         </ul>
                         <ul>
                             <li>
                                 <div>
-                                    <a class="button_horario" href="pagamento_ingressos.php">16:00, qui</a>
+                                    <a class="button_horario" href="pagamento_ingressos.php">-</a>
                                 </div>
                             </li>
                         </ul>
@@ -120,21 +135,21 @@
                             <ul>
                                 <li>
                                     <div>
-                                        <a class="button_horario" href="pagamento_ingressos.php">16:00, qui</a>
+                                        <a class="button_horario" href="pagamento_ingressos.php">-</a>
                                     </div>
                                 </li>
                             </ul>
                             <ul>
                                 <li>
                                     <div>
-                                        <a class="button_horario" href="pagamento_ingressos.php">16:00, qui</a>
+                                        <a class="button_horario" href="pagamento_ingressos.php">-</a>
                                     </div>
                                 </li>
                             </ul>
                             <ul>
                                 <li>
                                     <div>
-                                        <a class="button_horario" href="pagamento_ingressos.php">16:00, qui</a>
+                                        <a class="button_horario" href="pagamento_ingressos.php">-</a>
                                     </div>
                                 </li>
                             </ul>
@@ -143,16 +158,15 @@
                 </div>
 
                 <div class="descricao"> <!--MOVIE'S INFOTMARIONS-->
-                    <p>Gênero: <span>Ação</span>, <span>Comédia</span></p>
+                    <p>Gênero: <span><?php echo $resultado['genero'];?></span> 
 
-                    <p>Duração: <span>115 minutos</span></p>
+                    <p>Duração: <span><?php echo $resultado['duracao'];?>h</span></p>
 
-                    <p>Diretor: <span>Adil El Arbi</span>, <span>Bilall Fallah</span></p>
+                    <p>Diretor: <span><?php echo $resultado['direcao'];?></span></p>
 
-                    <p>Dustribuído por: <span>Magnolia Pictures</span></p>
+                    <p>Dustribuído por: <span><?php echo $resultado['distribuicao'];?></span></p>
 
-                    <p>Elenco: <span>Brigette Lundy-Paine</span>, <span>Carloto Cotta</span>, <span>Anabela
-                            Moreira</span></p>
+                    <p>Elenco: <span><?php echo $resultado['elenco'];?></span>
                 </div>
             </section>
         </div>
@@ -161,15 +175,10 @@
         <section>
             <div class="sinopse">
                 <h2>SINOPSE</h2>
-                <p>A Semente do Mal vai partir de quando a busca de <span>Edward (Carloto Cotta)</span> por sua família
-                    biológica leva ele e sua namorada, <span>Riley (Brigette Lundy-Paine)</span>, a uma magnífica vila
-                    no alto das montanhas do norte de <span>Portugal</span>, ele fica entusiasmado ao conhecer sua mãe
-                    há muito tempo perdida e seu irmão gêmeo. Finalmente, ele descobrirá quem é e de onde vem. A bela
-                    paisagem da vila contrasta com os segredos sombrios que ela esconde. Inicialmente, Edward se sente
-                    acolhido, mas logo percebe que há <span>mistérios profundos envolvendo sua família</span>. À medida
-                    que os dias passam, ele começa a desvendar um <span>segredo monstruoso</span> que o liga a sua mãe e
-                    irmão de uma maneira que ele jamais poderia ter imaginado. A verdade que emerge é mais aterrorizante
-                    do que ele jamais poderia ter previsto, ameaçando destruir tudo o que ele acreditava ser verdade.
+                <p>
+                <?php 
+                echo $resultado['descricao'];
+                ?>
                 </p>
             </div>
         </section>
