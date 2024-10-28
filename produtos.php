@@ -182,6 +182,7 @@
         </section>
     </div>
 <script src="javascript/produto.js"></script>
+<script src="javascript/pricipal.js"></script>
 </body>
 
 </html>
