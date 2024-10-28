@@ -33,6 +33,26 @@
             <input type="text" name="genero" id="genero" class="form_input">
         </div>
         <div class="campo">
+            <label for="duracao">Duração</label><br>
+            <input type="number" name="duracao" id="duracao" class="form_input">
+        </div>
+        <div class="campo">
+            <label for="direcao">Direção</label><br>
+            <input type="text" name="direcao" id="direcao" class="form_input">
+        </div>
+        <div class="campo">
+            <label for="distribuicao">Distribuição</label><br>
+            <input type="text" name="distribuicao" id="distribuicao" class="form_input">
+        </div>
+        <div class="campo">
+            <label for="elenco">Elenco</label><br>
+            <input type="text" name="elenco" id="elenco" class="form_input">
+        </div>
+        <div class="campo">
+            <label for="horario">Horário</label><br>
+            <input type="number" name="horario" id="horario" class="form_input">
+        </div>
+        <div class="campo">
             <label for="calssificacao">Idade</label><br>
             <input type="text" name="classificacao" id="classificacao" class="form_input">
         </div>
