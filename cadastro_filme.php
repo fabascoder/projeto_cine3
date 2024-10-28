@@ -29,6 +29,10 @@
             <input type="text" name="descricao" id="descricao" class="form_input">
         </div>
         <div class="campo">
+            <label for="genero">Gênero</label><br>
+            <input type="text" name="genero" id="genero" class="form_input">
+        </div>
+        <div class="campo">
             <label for="calssificacao">Idade</label><br>
             <input type="text" name="classificacao" id="classificacao" class="form_input">
         </div>

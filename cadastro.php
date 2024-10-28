@@ -22,7 +22,7 @@
         </nav>
     </header>
     <div class="container">
-        <form method="POST">
+        <form method="POST" id='formulario'>
                 <div>
                     <h1>Cadastro</h1>
                 </div>
@@ -51,15 +51,13 @@
             <!--campo de pree. cep-->
             <label for="cep">Digite seu CEP</label>
             <input type="text" id="cep" name="cep" required>
-            <?php
 
-            $cep = $_POST['cep']??'08451420';
+            <?php
+            $cep = $_POST['cep']??'';
             $url = "https://viacep.com.br/ws/$cep/json/";
             $json = file_get_contents($url);
             $dados = json_decode($json, true);
-
-           echo $dados['logradouro'].' - '.$dados['bairro'].' - '.$dados['localidade'].' - '.$dados['uf'];
-            
+            echo $dados['logradouro'].' - '.$dados['bairro'].' - '.$dados['localidade'].' - '.$dados['uf'];
             ?>
             
 
@@ -82,6 +80,33 @@
         <div id="teste"></div>
     </div>
 
-    <script src="javascript/cadastro.js"></script>
+    <script src="javascript/cadastro.js">
+        const div = document.querySelector('php')
+        const formulario = document.getElementById('formulario');
+        formulario.addEventListener('input', (evento)=> {
+            let value = document.getElementById('cep').value;
+            if (value.length == 8) {
+
+        
+            evento.preventDefault();
+            let  dados = new FormData(formulario)
+            
+            fetch('acao.php', {
+                method: 'POST',
+                body: dados
+            })
+            .then((resposta) => {
+                if(resposta.ok) {
+                    return resposta.text()
+                }
+            })
+            .then((dados) => {
+                div.innerHTML = dados;
+                console.log(dados)
+            });
+
+        }
+        });
+    </script>
 </body>
 </html>
