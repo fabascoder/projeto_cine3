@@ -34,7 +34,7 @@
         </div>
         <div class="campo">
             <label for="duracao">Duração</label><br>
-            <input type="number" name="duracao" id="duracao" class="form_input">
+            <input type="time" name="duracao" id="duracao" class="form_input">
         </div>
         <div class="campo">
             <label for="direcao">Direção</label><br>
@@ -50,7 +50,7 @@
         </div>
         <div class="campo">
             <label for="horario">Horário</label><br>
-            <input type="number" name="horario" id="horario" class="form_input">
+            <input type="time" name="horario" id="horario" class="form_input">
         </div>
         <div class="campo">
             <label for="calssificacao">Idade</label><br>
@@ -62,7 +62,8 @@
         </div>
         <div class="campo">
             <label for="status_filme">Status do Filme</label><br>
-            <input type="text" name="status_filme" id="status" class="form_input">
+            <input type="radio" name="status_filme" id="s0" value="0" class="form_input"> Disponível
+            <input type="radio" name="status_filme" id="s1" value="1" class="form_input"> Indisponível
         </div>
         <div class="campo">
             <label for="ano_lancamento">Ano de Lançamento</label><br>
