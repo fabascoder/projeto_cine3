@@ -257,10 +257,11 @@
 
 
     </footer>
+    <span></span>
 
 
     <script src="javascript/principal.js"></script>
-    <script>
+    <!-- <script>
     window.onload = function() {
         const username = localStorage.getItem('username');
         if (username) {
@@ -268,7 +269,7 @@
             document.getElementById('login-link').href = 'javascript:void(0)'; // Remover link de login
         }
     }
-    </script>
+    </script> -->
 
 </body>
 
