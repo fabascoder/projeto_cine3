@@ -47,7 +47,13 @@
                     <input type="text" name="cep" id="cep">
                 </div>
             </form>
-
+            <?php
+            $cep = $_POST['cep']??'';
+            $url = "https://viacep.com.br/ws/$cep/json/";
+            $json = file_get_contents($url);
+            $dados = json_decode($json, true);
+            
+            ?>
             <div id="resposta"></div>
             <script>
             const div = document.getElementById('resposta');
