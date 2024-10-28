@@ -19,7 +19,7 @@
 
 <body>
     <header>
-        <a href="./principal.php"><img src="imagens/Logo_Cine3.png" alt="Imagem CINE3" width="200px"></a>
+        <a href="index.php"><img src="imagens/Logo_Cine3.png" alt="Imagem CINE3" width="200px"></a>
         <div class="div_pesquisa">
             <input type="search" id="pesquisa" placeholder="Pesquisar">
         </div>

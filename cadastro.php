@@ -14,7 +14,7 @@
     <header>
         <nav>
             <div>
-                <a href="principal.php">
+                <a href="index.php">
                     <img src="imagens/Logo_Cine3-removebg-preview.png" alt="Cine3 Logo" class="logo">
                 </a>
             </div>

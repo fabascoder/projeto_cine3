@@ -20,7 +20,7 @@
                     <a href="">Olá, [Nome]</a>
                 </li>
             </ul>
-            <a href="principal.php"><i class="fa fa-arrow-left" aria-hidden="true"></i></a>
+            <a href="index.php"><i class="fa fa-arrow-left" aria-hidden="true"></i></a>
         </nav>
         <div id="caixa"> 
             <div class="etapas-compra">
@@ -190,7 +190,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="caixa-prevenda"><a href="principal.php" class="pre-venda">FILMES EM<span style="color=white;"> PRÉ-VENDA</span></a></div>
+                    <div class="caixa-prevenda"><a href="index.php" class="pre-venda">FILMES EM<span style="color=white;"> PRÉ-VENDA</span></a></div>
             </div>
                     
             

@@ -11,7 +11,7 @@
         <nav>
             <ul>
                 <li>
-                    <a href="principal.php">
+                    <a href="index.php">
                         <img src="imagens/Logo_Cine3-removebg-preview.png" alt="Cine3 Logo" class="logo">
                     </a>
                 </li>   
@@ -22,7 +22,7 @@
             </ul>
             <a href="pricipal.php"><i class="fa fa-arrow-left" aria-hidden="true"></i></a>
         </nav>
-        <a href="principal.php"><img src="imagens/seta.png" alt="" width="40px" id="seta"></a>
+        <a href="index.php"><img src="imagens/seta.png" alt="" width="40px" id="seta"></a>
     </header> 
     <div class="titulo"><h1>Nossas Localidades</h1>  </div> 
     <main>
