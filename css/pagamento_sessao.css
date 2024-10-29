@@ -63,6 +63,13 @@ main{
     width: 100%;
     padding-top: 50px;
 }
+
+#sessao {
+    width: 100%;
+    margin: auto;
+
+}
+
 .caixa-principal{
     margin: auto;
     width: 100%;
@@ -199,6 +206,12 @@ color: #333
     width: 100%;
     border-radius: 20px;
     text-align: center;
+}
+.escolhidos {
+    display: block;
+    margin: auto;
+    width: 1550px;
+    overflow: none;
 }
 .caixa-assentos {
     display: flex;

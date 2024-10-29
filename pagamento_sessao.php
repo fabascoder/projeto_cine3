@@ -9,51 +9,19 @@
 </head>
 
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li>
-                    <a href="#">
-                        <img src="imagens/Logo_Cine3-removebg-preview.png" alt="Cine3 Logo" class="logo">
-                    </a>
-                </li>
-
-                <li>
-                    <a href="">Olá, [Nome]</a>
-                </li>
-            </ul>
-            <a href="index.php"><i class="fa fa-arrow-left" aria-hidden="true"></i></a>
-        </nav>
-        <div id="caixa">
-            <div class="etapas-compra">
-                <img src="imagens/ingressos.png" alt="">
-
-                <p>Ingresso</p>
-            </div>
-
-            <div class="etapas-compra">
-                <img src="imagens/secao.png" alt="">
-
-                <p>Seção</p>
-            </div>
-            <div class="etapas-compra">
-                <img src="imagens/pipoca.png" alt="">
-
-                <p>Produtos</p>
-            </div>
-            <div class="etapas-compra">
-                <img src="imagens/cartao.png" alt="">
-
-                <p>Pagamento</p>
-            </div>
-            <div class="etapas-compra">
-                <img src="imagens/confirmacao.png" alt="">
-
-                <p>Confirmação</p>
-            </div>
-        </div>
-    </header>
+    <?php 
+    include_once "header_pagto.php";
+    $_SESSION['total_pagar'] = $_POST['total_pagar']??"";
+    $_SESSION['total'] = $_POST['total']??"";
+    $_SESSION['qtd_inteira'] = $POST['qtd_inteira']??"";
+    $_SESSION['qtd_meia'] = $_POST['qtd_meia']??"";
+    $_SESSION['valor_inteira'] = $_POST['valor_inteira']??"";
+    $_SESSION['tamanho-camiseta'] = $_POST['tamanho-camiseta']??"";
+    $_SESSION['tamanho-camiseta'] = $_POST['tamanho-camiseta']??"";
+    ?>
     <main>
+    <form action="pagamento_produtos.php" method="post" id="sessao">
+       
         <div class="caixa-principal">
             <h1>SALA: 01</h1>
             <div class="cinema">
@@ -78,11 +46,11 @@
                     </div>
                     <div class="linha">
                         <label>A</label>
-                        <div class="assento"><input type="checkbox" name="assentos" class="assentos" id="assentos1">
+                        <div class="assento"><input type="checkbox" name="assentos" class="assentos" id="A1">
                         </div>
-                        <div class="assento"><input type="checkbox" name="assentos" class="assentos" id="assentos2">
+                        <div class="assento"><input type="checkbox" name="assentos" class="assentos" id="A2">
                         </div>
-                        <div class="assento"><input type="checkbox" name="assentos" class="assentos" id="assentos3">
+                        <div class="assento"><input type="checkbox" name="assentos" class="assentos" id="A3">
                         </div>
                         <div class="assento"><input type="checkbox" name="assentos" class="assentos" id="assentos4">
                         </div>
@@ -347,7 +315,7 @@
 
                 </div>
             </div>
-            <p class=" assentos-escolhidos">ASSENTO(S) ESCOLHIDOS: <span class="escolhidos">E-5; D-11;</span></p>
+            <p class=" assentos-escolhidos">ASSENTO(S) ESCOLHIDOS: <span  class="escolhidos"></span></p>
             <hr>
 
             <div class="localizacao">
@@ -371,7 +339,9 @@
             </div>
 
         </div>
+</form>
     </main>
+    <script src="javascript/assentos.js"></script>
 </body>
 
 </html>

@@ -18,86 +18,6 @@
 </head>
 
 <body>
-    <header>
-        <a href="index.php"><img src="imagens/Logo_Cine3.png" alt="Imagem CINE3" width="200px"></a>
-        <div class="div_pesquisa">
-            <input type="search" id="pesquisa" placeholder="Pesquisar">
-        </div>
-
-        <nav id="navegacao">
-
-
-            <ul>
-                <li>
-                    <div id="window_ticket">
-                        <div id="ingresso">
-                            <a href="javascript:void(0)" id="openModal">
-                                <div>
-                                    <span id="icon_ingresso" class="material-symbols-outlined">
-                                        confirmation_number
-                                    </span>
-                                </div>
-                                Ingressos
-                            </a>
-                        </div>
-                    </div>
-                    </li>
-
-                    <!-- Modal HTML -->
-                    <dialog id="modal-ingressos" class="modal">
-                        <div class="modal-content">
-                            <span class="close">&times;</span>
-                            <h2 class="ingressos">Ingressos</h2>
-                            <div>
-                                <p class="p1">Padrão Inteira</p>
-                                <p class="v1">Válido de quinta-feira, sexta-feira, sábado e domingo.</p>
-                                <p class="t1">R$18,00</p>
-                            </div>
-                            <hr>
-                            <div>
-                                <p class="p1">Meia Promocional</p>
-                                <p class="v1">Válido de segunda-feira, terça-feira e quarta-feira OU com Comprovante Escolar.</p>
-                                <p class="t1">R$9,00</p>
-                            </div>
-                        </div>
-                    </dialog>
-
-
-                    <li class="item_produto">
-                        <a href="produtos.php">
-                            <div>
-                                <span id="icon_produto" class="material-symbols-outlined">
-                                    shopping_bag
-                                </span>
-                            </div>
-                            Produtos
-                        </a>
-                    </li>
-                    <li>
-                        <a href="local.php">
-                            <div>
-                                <span id="icon_local" class="material-symbols-outlined">
-                                    pin_drop
-                                </span>
-                            </div>
-                            Localização
-                        </a>
-                    </li>
-            </ul>
-
-            <div class="login">
-                <a href="login.php" id="login-link">
-                    <div>
-                        <span id="icon_profile" class="material-symbols-outlined">
-                            account_circle
-                        </span>
-                    </div>
-                    <span id="login-text">Login</span>
-                </a>
-            </div>
-        </nav>
-    </header>
-
 
     <main>
 
@@ -119,45 +39,26 @@
             </div>
 
 
-
+<!-- 
             <section class="secao">
                 <h1>FILMES EM CARTAZ</h1>
                 <div class="container_secao">
                     <div class="casa_arrow">
                         <div class="arrow_esquerda_main">
-                            <!-- > -->
+    
                         </div>
                     </div>
                     <div class="container_imagens">
-                        <div>
-                            <a href="filme.php">
-                                <img   src="imagens/umavidadeesperança.jpg" alt="Imagem Bad Boys" class="imagem_section tamanho">
-                            </a>
-                        </div>
-                        <div>
-                            <a href="filme.php">
-                                <img  src="imagens/bad_boys_Cine3.jfif" alt="Imagem Bad Boys" class="imagem_section tamanho">
-                            </a>
-                        </div>
-                        <div>
-                            <a href="filme.php">
-                                <img  src="imagens/Assasino_por_acaso_Cine3.jpg" alt="Imagem Bad Boys" class="imagem_section tamanho">
-                            </a>
-                        </div>
-                        <div>
-                            <a href="filme.php">
-                                <img  src="imagens/Planeta_dos_macacos_Cine3_jpg.webp" alt="Imagem Bad Boys" class="imagem_section tamanho">
-                            </a>
-                        </div>
+                        
 
                         <div class="casa_arrow">
                             <div class="arrow_direita_main">
-                                <!---->
+                                
                             </div>
                         </div>
                     </div>
                 </div>
-            </section>
+            </section> -->
 
             <?php 
             include_once "conexao.php";
@@ -166,7 +67,7 @@
             
             ?>
             <section class="secao">
-                <h1>EM BREVE</h1>
+                <h1>FILMES EM CARTAZ</h1>
                 <div class="container_secao">
                     <div class="casa_arrow">
                         <div class="arrow_esquerda_main">
@@ -182,28 +83,13 @@
                             };
                            
                             echo ' <div>
-                            <a href="filme.php">
+                            <a href="filme.php?id='.$resultado['id'].'">
                                 <img  src="imagens/'.$imagem.'" alt="'.$resultado['nome'].'" class="imagem_section tamanho">
                             </a>
                         </div>';
                         }
                         ?> 
-                       
-                        <div>
-                            <a href="filme.php">
-                                <img  src="imagens/umavidadeesperança.jpg" alt="Imagem Bad Boys" class="imagem_section tamanho">
-                            </a>
-                        </div>
-                        <div>
-                            <a href="filme.php">
-                                <img  src="imagens/Planeta_dos_macacos_Cine3_jpg.webp" alt="Imagem Bad Boys" class="imagem_section tamanho">
-                            </a>
-                        </div>
-                        <div>
-                            <a href="filme.php">
-                                <img  src="imagens/Assasino_por_acaso_Cine3.jpg" alt="Imagem Bad Boys" class="imagem_section tamanho">
-                            </a>
-                        </div>
+
 
                         <div class="casa_arrow">
                             <div class="arrow_direita_main">
