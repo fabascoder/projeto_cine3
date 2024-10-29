@@ -183,6 +183,8 @@ function cadastro(event) {
         }
     });
 
+    
+
     // Se todos os campos estiverem válidos
     // if (isValid) {
     //     alert("Cadastro realizado com sucesso!");

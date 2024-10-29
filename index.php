@@ -121,45 +121,26 @@
             </div>
 
 
-
+<!-- 
             <section class="secao">
                 <h1>FILMES EM CARTAZ</h1>
                 <div class="container_secao">
                     <div class="casa_arrow">
                         <div class="arrow_esquerda_main">
-                            <!-- > -->
+    
                         </div>
                     </div>
                     <div class="container_imagens">
-                        <div>
-                            <a href="filme.php">
-                                <img   src="imagens/umavidadeesperança.jpg" alt="Imagem Bad Boys" class="imagem_section tamanho">
-                            </a>
-                        </div>
-                        <div>
-                            <a href="filme.php">
-                                <img  src="imagens/bad_boys_Cine3.jfif" alt="Imagem Bad Boys" class="imagem_section tamanho">
-                            </a>
-                        </div>
-                        <div>
-                            <a href="filme.php">
-                                <img  src="imagens/Assasino_por_acaso_Cine3.jpg" alt="Imagem Bad Boys" class="imagem_section tamanho">
-                            </a>
-                        </div>
-                        <div>
-                            <a href="filme.php">
-                                <img  src="imagens/Planeta_dos_macacos_Cine3_jpg.webp" alt="Imagem Bad Boys" class="imagem_section tamanho">
-                            </a>
-                        </div>
+                        
 
                         <div class="casa_arrow">
                             <div class="arrow_direita_main">
-                                <!---->
+                                
                             </div>
                         </div>
                     </div>
                 </div>
-            </section>
+            </section> -->
 
             <?php 
             include_once "conexao.php";
@@ -168,7 +149,7 @@
             
             ?>
             <section class="secao">
-                <h1>EM BREVE</h1>
+                <h1>FILMES EM CARTAZ</h1>
                 <div class="container_secao">
                     <div class="casa_arrow">
                         <div class="arrow_esquerda_main">
@@ -184,28 +165,13 @@
                             };
                            
                             echo ' <div>
-                            <a href="filme.php">
+                            <a href="filme.php?id='.$resultado['id'].'">
                                 <img  src="imagens/'.$imagem.'" alt="'.$resultado['nome'].'" class="imagem_section tamanho">
                             </a>
                         </div>';
                         }
                         ?> 
-                       
-                        <div>
-                            <a href="filme.php">
-                                <img  src="imagens/umavidadeesperança.jpg" alt="Imagem Bad Boys" class="imagem_section tamanho">
-                            </a>
-                        </div>
-                        <div>
-                            <a href="filme.php">
-                                <img  src="imagens/Planeta_dos_macacos_Cine3_jpg.webp" alt="Imagem Bad Boys" class="imagem_section tamanho">
-                            </a>
-                        </div>
-                        <div>
-                            <a href="filme.php">
-                                <img  src="imagens/Assasino_por_acaso_Cine3.jpg" alt="Imagem Bad Boys" class="imagem_section tamanho">
-                            </a>
-                        </div>
+
 
                         <div class="casa_arrow">
                             <div class="arrow_direita_main">
@@ -257,6 +223,7 @@
                 </select>
             </div>
     </footer>
+    <span></span>
 
 
     <script src="javascript/principal.js"></script>

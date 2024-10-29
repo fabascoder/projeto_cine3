@@ -70,7 +70,7 @@
                 <img src="imagens/25350.png" alt="">
             </div>
             <div class="voltar-inicio">
-                <a href="principal.php">VOLTAR AO INÍCIO</a>
+                <a href="index.php">VOLTAR AO INÍCIO</a>
             </div>
         </div>
     </main>

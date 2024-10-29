@@ -2,6 +2,12 @@
 include_once "conexao.php";
 $nome_filme = $_POST['nome'];
 $descricao = $_POST['descricao'];
+$genero = $_POST['genero'];
+$duracao = $_POST['duracao'];
+$direcao = $_POST['direcao'];
+$distribuicao = $_POST['distribuicao'];
+$elenco = $_POST['elenco'];
+$horario = $_POST['horario'];
 $idade = $_POST['classificacao'];
 $valor = $_POST['valor'];
 $status = $_POST['status_filme'];
@@ -27,7 +33,13 @@ if (move_uploaded_file($temp, 'imagens/' . $novo_nome)) {
 
     $new_filme = [
         'nome' => $nome_filme,
-            'descricao' =>  $descricao,
+        'descricao' =>  $descricao,
+        'genero' =>  $genero,
+        'duracao' =>  $duracao,
+        'direcao' =>  $direcao,
+        'distribuicao' =>  $distribuicao,
+        'elenco' =>  $elenco,
+        'horario' =>  $horario,
         'classificacao' => $idade,
         'valor' => $valor,
         'status_filme' => $status,
@@ -35,7 +47,8 @@ if (move_uploaded_file($temp, 'imagens/' . $novo_nome)) {
         'imagem' => $novo_nome
     ];
 
-    $insert = $conexao->prepare('INSERT INTO filme (nome, descricao, classificacao, valor, status_filme, ano_lancamento, imagem) VALUES (:nome, :descricao, :classificacao, :valor, :status_filme, :ano_lancamento, :imagem )');
+    $insert = $conexao->prepare('INSERT INTO filme (nome, descricao, genero, duracao, direcao, distribuicao, elenco, horario, classificacao, valor, status_filme, ano_lancamento, imagem) VALUES (:nome, :descricao, :genero, :duracao, :direcao, :distribuicao, :elenco, :horario,
+    :classificacao, :valor, :status_filme, :ano_lancamento, :imagem )');
     if ($insert->execute($new_filme)) {
         echo "CADASTRADO!";
     } else {

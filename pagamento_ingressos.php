@@ -20,7 +20,7 @@
                     <a href="">Olá, [Nome]</a>
                 </li>
             </ul>
-            <a href="principal.php"><i class="fa fa-arrow-left" aria-hidden="true"></i></a>
+            <a href="index.php"><i class="fa fa-arrow-left" aria-hidden="true"></i></a>
         </nav>
     
     

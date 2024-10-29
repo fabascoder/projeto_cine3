@@ -94,7 +94,7 @@
     </header>
 
     <div class="topo">
-        <a href="principal.php"><img src="imagens/seta.png" alt="Seta" width="40px" id="seta"></a>
+        <a href="index.php"><img src="imagens/seta.png" alt="Seta" width="40px" id="seta"></a>
         <h1 class="h1">Produtos</h1>
     </div>
 
@@ -181,6 +181,7 @@
         </section>
     </div>
 <script src="javascript/produto.js"></script>
+<script src="javascript/principal.js"></script>
 </body>
 
 </html>
