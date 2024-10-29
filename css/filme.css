@@ -178,8 +178,12 @@ h2 {
 @media screen and (max-width: 456px){
  
 }
+
+
+
+
 /*MAIN*/
-@media screen and (max-width:995px){
+@media screen and (max-width:1100px){
   .foto_bad_boys {
     max-width: 100%;
     border-radius: 45px;
@@ -203,7 +207,6 @@ h2 {
     font-size: 2rem;
   }
   
-}@media screen and (max-width:995px){
 .button_horario {
     display: inline-block;
     background-color: #310a0a;
