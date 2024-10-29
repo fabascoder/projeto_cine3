@@ -55,7 +55,7 @@
     </header>
     <main>    
         <div class="titulo">
-            <a href=""><img src="imagens/seta.png" alt="" width="30px"></a>
+            <a href="filme.php"><img src="imagens/seta.png" alt="" width="30px"></a>
             <p>ingressos</p>
         </div>
         <div class="valores">
