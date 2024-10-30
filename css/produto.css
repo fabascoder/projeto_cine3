@@ -55,16 +55,16 @@ span {
 
 
 .h1 {
-    font-size: 40px;
+    font-size: 1.8rem;
     font-weight: bold;
     color: #000000;
-    font-size: 50px;
 }
 
 
 .product-section {
     text-align: center;
     margin-top: 20px;
+    display: block;
 }
 
 .product-section h2 {
@@ -182,7 +182,7 @@ span {
 }
 
 .port {
-    margin-left: 55px ;
+    margin-left: 0px ;
 }
 /* .btn {
     width: 323.58px;
@@ -203,3 +203,133 @@ span {
     color: #000000; /* Cor do fundo original */
     border: 1px solid #000;
 }
+/*HEADER*/
+  @media screen and (max-width: 1238px){
+    ul{
+      gap: 40px;
+    }
+    .logo-pesquisa{
+      gap: 0px;
+    }
+    .logo-pesquisa #pesquisa {
+      margin: 17px 0px 0px 0px;
+      width: 270px;
+      height: 35px;
+      padding: 10px;
+      border-radius: 10px;
+      outline: none;
+      border: none;
+      font-size: 1.2rem;
+    }
+    header{
+      gap: 10px;
+    }
+  }
+  @media screen and (max-width: 981px){
+    header {
+      display: flex;
+      background-color: var(--vermelho);
+      flex-direction: column;
+    }
+    .logo-pesquisa{
+      display: flex;
+      margin: auto;
+      gap: 120px;
+    }
+    .logo-pesquisa #pesquisa{
+      margin: 17px 0px 0px 0px;
+    }
+    ul{
+      gap: 120px;
+    }
+  }
+  @media screen and (max-width: 741px){
+    ul{
+      gap: 60px;
+    }
+    .logo-pesquisa{
+      display: flex;
+      justify-content: space-between;
+      gap: 0px;
+    }
+    header {
+      display: flex;
+      background-color: var(--vermelho);
+      flex-direction: column;
+    }
+  }
+  @media screen and (max-width: 566px){
+    ul{
+      gap: 25px;
+      width: 100%;
+    }
+    .logo-pesquisa #pesquisa {
+      margin: 17px 0px 0px 0px;
+      width: 210px;
+      height: 35px;
+      padding: 10px;
+      border-radius: 10px;
+      outline: none;
+      border: none;
+      font-size: 1.2rem;
+    }
+    .logo-pesquisa #navegacao{
+    }
+  }
+  @media screen and (max-width: 456px){
+   
+  }
+/*MAIN  */
+  @media screen and (max-width: 1020px){
+    .product-content {
+        display: block;
+        align-items: center;
+    }
+    .product-image {
+        width: 500px; 
+        margin-right: 0px; 
+        border-radius: 18px;
+    
+    }
+  }
+  @media screen and (max-width: 604px){
+    .product-card {
+        background-color: #ffffff;
+        padding-left: 10px;
+        padding-right: 10px;
+        border-radius: 10px;
+        display: inline-block;
+        text-align: left;
+    
+    }
+    .h1 {
+        font-size: 1.4rem;
+        font-weight: bold;
+        color: #000000;
+    }
+    #seta{
+        width: 30px;
+    }
+    .product-content {
+        align-items: center;
+        margin: auto;
+    }
+  }
+  @media screen and (max-width: 534px){
+    .product-image {
+        width: 340px; 
+        margin-right: 0px; 
+        border-radius: 18px;
+    
+    }
+    .h1 {
+        font-size: 1.3rem;
+        font-weight: bold;
+        color: #000000;
+        
+
+    }
+    #seta{
+        width: 26px;
+    }
+  }

@@ -58,5 +58,6 @@
             <a class="btn" href="pagamento_confirmacao.php">CONTINUAR ></a>
         </div>
     </main>
+    <script src="header.js"></script>
 </body>
 </html>

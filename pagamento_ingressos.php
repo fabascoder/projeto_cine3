@@ -27,64 +27,98 @@
 </head>
 
 <body>
-<?php include_once "header_pagto.php"; ?>
-    <main>
-        <form action="pagamento_sessao.php" method="post">
-            <div class="titulo">
-                <a href=""><img src="imagens/seta.png" alt="" width="30px"></a>
-                <p>ingressos</p>
+    <header>
+        <nav>
+            <ul>
+                <li>
+                    <a href="#">
+                        <img src="imagens/Logo_Cine3-removebg-preview.png" alt="Cine3 Logo" class="logo">
+                    </a>
+                </li>   
+                
+                <li>     
+                    <a href="">Olá, [Nome]</a>
+                </li>
+            </ul>
+            <a href="index.php"><i class="fa fa-arrow-left" aria-hidden="true"></i></a>
+        </nav>
+    
+    
+        <div id="caixa"> 
+            <div class="etapas-compra">
+                <img src="imagens/ingressos.png" alt="">
+                
+                <p>Ingresso</p>
             </div>
-            <div class="valores">
-                <div class="caixa-valores">
-                    <button type="button"><img src="imagens/lixeira-vermelha.png" alt="" width="30px"></button>
-                    <div class="escolhas">
-                        <div class="tipo-ingresso">
-                            <p>Ingresso:</p>
-                            <p>Padrão Intera</p>
-                        </div>
-                        <div class="quantidade-ingresso">
-                            <p>Quantidade</p>
-                            <select id="quantidade-ingresso1" onchange="calcularTotal()">
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                                <option value="5">5</option>
-                                <option value="6">6</option>
-                                <option value="7">7</option>
-                                <option value="8">8</option>
-                                <option value="9">9</option>
-                                <option value="10">10</option>
-                                <option value="11">11</option>
-                                <option value="12">12</option>
-                                <option value="13">13</option>
-                                <option value="14">14</option>
-                                <option value="15">15</option>
-                                <option value="16">16</option>
-                            </select>
-                        </div>
-                        <div class="total-ingresso">
-                            <p>Total:</p>
-                            <p>R$ 38,00</p>
-                        </div>
+            
+            <div class="etapas-compra">
+                <img src="imagens/secao.png" alt="">
+                
+                <p>Seção</p>
+            </div>
+            <div class="etapas-compra">
+                <img src="imagens/pipoca.png" alt="">
+                
+                <p>Produtos</p>
+            </div>
+            <div class="etapas-compra">
+                <img src="imagens/cartao.png" alt="">
+                
+                <p>Pagamento</p>
+            </div>
+            <div class="etapas-compra">
+                <img src="imagens/confirmacao.png" alt="">
+                
+                <p>Confirmação</p>
+            </div>
+        </div>
+    </header>
+    <main>    
+        <div class="titulo">
+            <a href=""><img src="imagens/seta.png" alt="" width="30px"></a>
+            <p>ingressos</p>
+        </div>
+        <div class="valores">
+            <div class="caixa-valores">
+                <button type="submit"><img src="imagens/lixeira-vermelha.png" alt="" width="30px"></button>   
+                <div class="escolhas">
+                    <div class="tipo-ingresso">
+                        <p style="margin: 4rem auto;">Ingresso:</p>
+                        <p>Padrão Intera</p>
+                    </div>
+                    <div class="quantidade-ingresso">
+                        <p style="margin: 4rem auto;">Quantidade</p>
+                        <select name="" id="">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                        </select>
+                    </div>
+                    <div class="total-ingresso" >
+                        <p style="margin: 4rem auto;">Total:</p>
+                        <p>R$ 38,00</p>
                     </div>
                 </div>
-
-                <div class="caixa-valores">
-                    <button type="button"><img src="imagens/lixeira-vermelha.png" alt="" width="30px"> </button>
-                    <div class="escolhas">
-                        <div class="tipo-ingresso">
-                            <p>Ingresso:</p>
-                            <p>Meia promocional</p>
-                        </div>
-                        <div class="quantidade-ingresso">
-                            <p>Quantidade</p>
-                            <input type="number" id="quantidade-ingresso2" step="1" onchange="calcularTotal()">
-                        </div>
-                        <div class="total-ingresso">
-                            <p>Total:</p>
-                            <p>R$ 18,50</p>
-                        </div>
+            </div>
+                
+            <div class="caixa-valores">
+                <button type="submit"><img src="imagens/lixeira-vermelha.png" alt="" width="30px">  </button> 
+                <div class="escolhas">
+                    <div class="tipo-ingresso">
+                        <p style="margin: 4rem auto;">Ingresso:</p>
+                        <p>Meia promocional</p>
+                    </div>
+                    <div class="quantidade-ingresso">
+                        <p style="margin: 4rem auto;">Quantidade</p>
+                        <select name="" id="">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                        </select>
+                    </div>
+                    <div class="total-ingresso" >
+                        <p style="margin: 4rem auto;">Total:</p>
+                        <p>R$ 38,00</p>
                     </div>
                 </div>
             </div>

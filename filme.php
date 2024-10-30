@@ -29,10 +29,12 @@
     }
     ?>
     <header>
-        <a href="index.php"><img src="imagens/Logo_Cine3.png" alt="Imagem CINE3"
-                width="200px"></a>
-        <div class="div_pesquisa">
-            <input type="search" id="pesquisa" placeholder="Pesquisar">
+        <div class="logo-pesquisa">
+            <a href="principal.php"><img src="imagens/Logo_Cine3-removebg-preview.png" alt="Imagem CINE3"
+                    width="200px"></a>
+            <div class="div_pesquisa">
+                <input type="search" id="pesquisa" placeholder="Pesquisar">
+            </div>
         </div>
 
         <nav id="navegacao">
@@ -73,9 +75,7 @@
                         Localização
                     </a>
                 </li>
-            </ul>
-
-            <div class="login">
+                <li>
                 <a href="login.php">
                     <div>
                         <span id="icon_profile" class="material-symbols-outlined">
@@ -84,7 +84,8 @@
                     </div>
                     Login <!--foto-->
                 </a>
-            </div>
+                </li>
+            </ul>
         </nav>
     </header>
     <main>
@@ -110,23 +111,20 @@
                     <div id="column1">
                         <ul>
                             <li>
-                                <div>
-                                    <a class="button_horario" href="pagamento_ingressos.php"><?php echo $resultado['horario'];?>h</a>
-                                </div>
+                                    <a class="button_horario" href="pagamento_ingressos.php">16:00, qui</a>
+                                
                             </li>
                         </ul>
                         <ul>
                             <li>
-                                <div>
-                                    <a class="button_horario" href="pagamento_ingressos.php">-</a>
-                                </div>
+                                    <a class="button_horario" href="pagamento_ingressos.php">16:00, qui</a>
+                                
                             </li>
                         </ul>
                         <ul>
                             <li>
-                                <div>
-                                    <a class="button_horario" href="pagamento_ingressos.php">-</a>
-                                </div>
+                                    <a class="button_horario" href="pagamento_ingressos.php">16:00, qui</a>
+                                
                             </li>
                         </ul>
                     </div>
@@ -134,23 +132,23 @@
                         <div>
                             <ul>
                                 <li>
-                                    <div>
-                                        <a class="button_horario" href="pagamento_ingressos.php">-</a>
-                                    </div>
+                                    
+                                        <a class="button_horario" href="pagamento_ingressos.php">16:00, qui</a>
+                                    
                                 </li>
                             </ul>
                             <ul>
                                 <li>
-                                    <div>
-                                        <a class="button_horario" href="pagamento_ingressos.php">-</a>
-                                    </div>
+                                    
+                                        <a class="button_horario" href="pagamento_ingressos.php">16:00, qui</a>
+                                    
                                 </li>
                             </ul>
                             <ul>
                                 <li>
-                                    <div>
-                                        <a class="button_horario" href="pagamento_ingressos.php">-</a>
-                                    </div>
+                                    
+                                        <a class="button_horario" href="pagamento_ingressos.php">16:00, qui</a>
+                                    
                                 </li>
                             </ul>
                         </div>

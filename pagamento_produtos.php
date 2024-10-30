@@ -15,7 +15,7 @@
         if (!empty($_POST['assentos'.$i])){
             $_SESSION['assentos'][$i] = $_POST['assentos'.$i];
            echo  '<h2>'.$_POST['assentos'.$i].'</h2>';
-        };
+        }
     }
     ?>
     <main>
