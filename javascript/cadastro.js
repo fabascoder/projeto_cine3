@@ -91,6 +91,8 @@ function showError(input, message) {
     error.style.fontFamily ='Arial, sans-serif';
     error.style.fontWeight = 'normal'
     error.style.marginTop = '15px';
+    error.style.marginLeft = '55px'
+    error.style.fontSize = '15px'
     error.textContent = message;
     input.parentNode.insertBefore(error, input.nextSibling);
     input.classList.remove('valid'); // Remove a classe de validação se houver erro
@@ -181,16 +183,18 @@ function cadastro(event) {
         }
     });
 
+    
+
     // Se todos os campos estiverem válidos
-    if (isValid) {
-        alert("Cadastro realizado com sucesso!");
+    // if (isValid) {
+    //     alert("Cadastro realizado com sucesso!");
 
-        // Armazenar o nome do usuário no LocalStorage
-        const username = document.getElementById('username').value;
-        localStorage.setItem('username', username);
+    //     // Armazenar o nome do usuário no LocalStorage
+    //     const username = document.getElementById('username').value;
+    //     localStorage.setItem('username', username);
 
-        // Redirecionar para a página principal
-        window.location.href = 'principal.php';
-    }
+    //     // Redirecionar para a página principal
+    //     window.location.href = 'principal.php';
+    // }
 }
 

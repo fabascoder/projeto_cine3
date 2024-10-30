@@ -1,42 +1,199 @@
-@import url('https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap");
 
 body {
-    background-color: #F5F5F5;
+  background-color: #f5f5f5;
 }
 
 * {
-    margin: 0;
+  margin: 0;
 }
 
 .logo {
-    width: 210px;
+  width: 210px;
 }
 
-a {
-    font-family: "Zen Dots";
-    color: black;
-    text-decoration: none;
+ a {
+  font-family: "Zen Dots";
+  color: black;
+  text-decoration: none;
 }
 
 ul {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 li {
-    list-style: none;
-    padding-right: 20px;
+  list-style: none;
+  padding-right: 20px;
 }
 
 header {
-    background-color: #F5F5F5;
+  background-color: #f5f5f5;
 }
 
 .etapas-compra {
-    background-color: #FFF;
-    width: 65px;
-    height: 65px;
+  background-color: #fff;
+  width: 65px;
+  height: 65px;
+  margin: auto;
+  border-radius: 50%;
+  border: solid black 2px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+#caixa {
+  padding-top: 60px;
+  text-align: center;
+  display: flex;
+}
+
+.etapas-compra img {
+  margin: auto;
+  width: 50px;
+  height: 50px;
+  padding-top: 7px;
+}
+
+.etapas-compra p {
+  font-family: "Zen Dots";
+  font-size: 0.8rem;
+}
+
+main {
+  margin: auto;
+  display: flex;
+  max-width: 800px;
+  min-width: 320px;
+}
+
+.caixa-principal {
+  margin: auto;
+  width: 800px;
+  margin-top: 60px;
+}
+
+.mensagem img {
+  margin: auto;
+  display: flex;
+}
+
+.mensagem p {
+  font-family: sans-serif;
+  text-align: center;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.local-data {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 30px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.data {
+    color: #222
+}
+
+.local {
+  font-weight: 400;
+  font-family: sans-serif;
+  color: black;
+  margin-right: 60px;
+}
+
+.data {
+  font-weight: 700;
+  font-family: sans-serif;
+}
+
+.conferir-nota {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  font-family: sans-serif;
+  font-weight: 549;
+}
+
+.total {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  font-weight: 600;
+  font-family: sans-serif;
+}
+
+.codigo-de-barras img {
+  margin: auto;
+  display: flex;
+  width: 550px;
+  height: 300px;
+  padding: 30px;
+}
+
+.voltar-inicio {
+  display: flex;
+  padding: 20px;
+}
+header a {
+  color: black;
+}
+a {
+  margin: auto;
+  color: #bf5672;
+  font-family: "Zen Dots";
+  font-size: 1.1rem;
+}
+
+.aviso {
+  font-size: 1.5rem;
+  color: #444;
+}
+
+@media screen and (max-width: 733px) {
+  .local-data {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .caixa-principal {
+    width: 500px;
+  }
+
+  .codigo-de-barras img {
+    width: 400px;
+  }
+  ul {
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 475px) {
+  .codigo-de-barras img {
+    width: 300px;
+    height: 200px;
+  }
+  ul {
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  ul {
+    padding: 0;
+  }
+}
+@media screen and (max-width: 517px) {
+  .etapas-compra {
+    background-color: #fff;
+    width: 45px;
+    height: 45px;
     margin: auto;
     border-radius: 50%;
     border: solid black 2px;
@@ -44,134 +201,28 @@ header {
     flex-direction: column;
     align-items: center;
     gap: 15px;
-}
-
-#caixa {
+  }
+  .etapas-compra img {
+    margin: auto;
+    width: 30px;
+    height: 30px;
+    padding-top: 7px;
+  }
+  .etapas-compra p {
+    font-family: "Zen Dots";
+    font-size: 0.54rem;
+  }
+  #caixa {
     padding-top: 60px;
     text-align: center;
     display: flex;
-}
-
-.etapas-compra img {
+    justify-content: space-around;
     margin: auto;
-    width: 50px;
-    height: 50px;
-    padding-top: 7px;
-}
-
-.etapas-compra p {
-    font-family: "Zen Dots";
-    font-size: 0.8rem;
-}
-
-main {
-    margin: auto;
-    display: flex;
-    max-width: 800px;
-    min-width: 320px;
-}
-
-.caixa-principal {
-    margin: auto;
-    width: 800px;
-    margin-top: 60px;
-}
-
-.mensagem img {
-    margin: auto;
-    display: flex;
-}
-
-.mensagem p {
-    font-family: sans-serif;
-    text-align: center;
-    font-weight: 700;
-    font-size: 1rem;
-}
-
-.local-data {
-    display: flex;
-    justify-content: space-between;
-    padding-top: 30px;
-    padding-left: 20px;
-    padding-right: 20px;
-}
-
-.local {
-    font-weight: 400;
-    font-family: sans-serif;
-    color: black;
-}
-
-.data {
-    font-weight: 700;
-    font-family: sans-serif;
-}
-
-.conferir-nota {
-    display: flex;
-    justify-content: space-between;
-    padding: 20px;
-    font-family: sans-serif;
-    font-weight: 549;
-}
-
-.total {
-    display: flex;
-    justify-content: space-between;
-    padding: 20px;
-    font-weight: 600;
-    font-family: sans-serif;
-}
-
-.codigo-de-barras img {
-    margin: auto;
-    display: flex;
-    width: 550px;
-    height: 300px;
-    padding: 30px;
-}
-
-.voltar-inicio {
-    margin: auto;
-    display: flex;
-    padding: 20px;
-}
-
-a {
-    margin: auto;
-    color: #bf5672;
-    font-family: "Zen Dots";
-    font-size: 1.1rem;
-}
-
-
-
-@media screen and (max-width: 733px) {
-    .local-data {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .caixa-principal {
-        width: 500px;
-    }
-
-    .codigo-de-barras img {
-        width: 400px;
-    }
-}
-
-@media screen and (max-width: 475px) {
-    .codigo-de-barras img {
-        width: 300px;
-        height: 200px;
-    }
-}
-
-@media screen and (max-width: 375px) {
-    .codigo-de-barras {
-        width: 200px;
-        height: 100px;
-    }
+  }
+  .codigo-de-barras img {
+    padding: 17px;
+  }
+  li a {
+    padding: 0px;
+  }
 }

@@ -5,25 +5,35 @@
     padding: 0;
     box-sizing: border-box;
 }
-
-.body {
-    font-family: 'Montserrat', sans-serif;
-    color: rgb(0, 0, 0);
+html {
     background-color: #fff;
 }
-
-.container {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-header {
+body {
+    margin: 0;
+    padding: 0;
+    background: #fff;
+  }
+  
+  #container_principal {
     display: flex;
     align-items: center;
-    gap: 20px;
-}
+    justify-content: space-around;
+    margin: 0px 0px 0px 0px;
+  }
+  
+  .arrow_back {
+    width: 40px;
+    margin: 1rem;
+  }
+  
+  #grid {
+    /* display: flex; */
+  
+    height: 910px;
+    padding: 0px;
+    margin: 0;
+    width: 100%;
+  }
 
  .back-button {
     font-size: 24px;
@@ -32,11 +42,17 @@ header {
     margin-right: 20px;
 }
 
+span {
+    margin: 0px;
+    padding: 0px;
+}
+
 .topo {
     display: flex;
     align-items: center;
     margin-top: 20px;
 }
+
 
 .h1 {
     font-size: 40px;

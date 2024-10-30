@@ -121,6 +121,7 @@ a:hover {
   font-family: Arial, Helvetica, sans-serif;
   position: absolute;
   top: 0px;
+  cursor: pointer;
 }
 
 .arrow1 {

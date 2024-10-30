@@ -12,21 +12,22 @@
     <link rel="stylesheet" href="css/principal.css">
 </head>
 
-<body class="body">
+<body style="background: #fff;">
 
-    <header>
-        <a href="./principal.php">
-            <img src="imagens/Logo_Cine3.png" alt="Imagem CINE3" width="200px">
-        </a>
+<header>
+        <a href="index.php"><img src="imagens/Logo_Cine3.png" alt="Imagem CINE3" width="200px"></a>
         <div class="div_pesquisa">
             <input type="search" id="pesquisa" placeholder="Pesquisar">
         </div>
+
         <nav id="navegacao">
+
+
             <ul>
                 <li>
                     <div id="window_ticket">
                         <div id="ingresso">
-                            <a href="">
+                            <a href="javascript:void(0)" id="openModal">
                                 <div>
                                     <span id="icon_ingresso" class="material-symbols-outlined">
                                         confirmation_number
@@ -36,44 +37,65 @@
                             </a>
                         </div>
                     </div>
-                </li>
-                <li class="item_produto">
-                    <a href="produtos.php">
-                        <div>
-                            <span id="icon_produto" class="material-symbols-outlined">
-                                shopping_bag
-                            </span>
+                    </li>
+
+                    <!-- Modal HTML -->
+                    <dialog id="modal-ingressos" class="modal">
+                        <div class="modal-content">
+                            <span class="close">&times;</span>
+                            <h2 class="ingressos">Ingressos</h2>
+                            <div>
+                                <p class="p1">Padrão Inteira</p>
+                                <p class="v1">Válido de quinta-feira, sexta-feira, sábado e domingo.</p>
+                                <p class="t1">R$18,00</p>
+                            </div>
+                            <hr>
+                            <div>
+                                <p class="p1">Meia Promocional</p>
+                                <p class="v1">Válido de segunda-feira, terça-feira e quarta-feira OU com Comprovante Escolar.</p>
+                                <p class="t1">R$9,00</p>
+                            </div>
                         </div>
-                        Produtos
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                        <div>
-                            <span id="icon_local" class="material-symbols-outlined">
-                                pin_drop
-                            </span>
-                        </div>
-                        Localização
-                    </a>
-                </li>
+                    </dialog>
+
+
+                    <li class="item_produto">
+                        <a href="produtos.php">
+                            <div>
+                                <span id="icon_produto" class="material-symbols-outlined">
+                                    shopping_bag
+                                </span>
+                            </div>
+                            Produtos
+                        </a>
+                    </li>
+                    <li>
+                        <a href="local.php">
+                            <div>
+                                <span id="icon_local" class="material-symbols-outlined">
+                                    pin_drop
+                                </span>
+                            </div>
+                            Localização
+                        </a>
+                    </li>
             </ul>
 
             <div class="login">
-                <a href="login.php">
+                <a href="login.php" id="login-link">
                     <div>
                         <span id="icon_profile" class="material-symbols-outlined">
                             account_circle
                         </span>
                     </div>
-                    Login
+                    <span id="login-text">Login</span>
                 </a>
             </div>
         </nav>
     </header>
 
     <div class="topo">
-        <a href="principal.php"><img src="imagens/seta.png" alt="Seta" width="40px" id="seta"></a>
+        <a href="index.php"><img src="imagens/seta.png" alt="Seta" width="40px" id="seta"></a>
         <h1 class="h1">Produtos</h1>
     </div>
 
@@ -160,6 +182,7 @@
         </section>
     </div>
 <script src="javascript/produto.js"></script>
+<script src="javascript/principal.js"></script>
 </body>
 
 </html>

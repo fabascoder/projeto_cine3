@@ -29,23 +29,30 @@ cartCounts.forEach((cartCount) => {
     });
 });
 
-document.addEventListener("DOMContentLoaded", function() {
-    // Seleciona todos os contêineres com botões de tamanhos
-    const sizeContainers = document.querySelectorAll('.sizes');
+// Obtém o modal
+var modal = document.getElementById("modal-ingressos");
 
-    // Percorre cada contêiner de tamanhos individualmente
-    sizeContainers.forEach(container => {
-        const buttons = container.querySelectorAll('button');
-        
-        // Adiciona o evento de clique para cada botão dentro do contêiner
-        buttons.forEach(button => {
-            button.addEventListener('click', function() {
-                // Remove a classe 'selected' de todos os botões dentro do contêiner atual
-                buttons.forEach(btn => btn.classList.remove('selected'));
-                
-                // Adiciona a classe 'selected' ao botão clicado
-                this.classList.add('selected');
-            });
-        });
-    });
+// Obtém o link correto
+var ingressoLink = document.getElementById("openModal");
+var body = document.querySelector('html')
+// Quando o usuário clicar no link de ingressos, abre o modal
+ingressoLink.addEventListener("click", function (event) {
+    event.preventDefault(); // Evita o redirecionamento
+    modal.style.display = "block";
+    body.style.background = '#000';
 });
+
+// Quando o usuário clicar no <span> (x), fecha o modal
+var span = document.getElementsByClassName("close")[0];
+span.onclick = function () {
+    modal.style.display = "none";
+    body.style.background = '#191814';
+};
+
+// Quando o usuário clicar fora do modal, fecha o modal
+window.onclick = function (event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+};
+;;

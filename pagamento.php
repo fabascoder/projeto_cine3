@@ -7,50 +7,9 @@
     <link rel="stylesheet" href="css/pagamento.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li>
-                    <a href="#">
-                        <img src="imagens/Logo_Cine3-removebg-preview.png" alt="Cine3 Logo" class="logo">
-                    </a>
-                </li>   
-                
-                <li>     
-                    <a href="">Olá, [Nome]</a>
-                </li>
-            </ul>
-            <a href="pricipal.php"><i class="fa fa-arrow-left" aria-hidden="true"></i></a>
-        </nav>
-        <div id="caixa"> 
-            <div class="etapas-compra">
-                <img src="imagens/ingressos.png" alt="">
-                
-                <p>Ingresso</p>
-            </div>
-            
-            <div class="etapas-compra">
-                <img src="imagens/secao.png" alt="">
-                
-                <p>Seção</p>
-            </div>
-            <div class="etapas-compra">
-                <img src="imagens/pipoca.png" alt="">
-                
-                <p>Produtos</p>
-            </div>
-            <div class="etapas-compra">
-                <img src="imagens/cartao.png" alt="">
-                
-                <p>Pagamento</p>
-            </div>
-            <div class="etapas-compra">
-                <img src="imagens/confirmacao.png" alt="">
-                
-                <p>Confirmação</p>
-            </div>
-        </div>
-    </header>
+<?php 
+    include_once "header_pagto.php";
+    ?>
     <main>
         <div class="caixa-principal">
             <div class="local-data">
@@ -75,7 +34,7 @@
                         <img src="imagens/visa.png" alt="Visa.png" width="60px">
                     </label>
                     <label class="label">
-                        <input type="radio" name="radio" id="radio">
+                        <input type="radio" name="radio" class="radio">
                         <span class="customizar-radio"></span>
                         <img src="imagens/MasterCard_Logo.svg.png" alt="MasterCard.png" width="60px">
                     </label>
@@ -96,7 +55,7 @@
             </div> 
         </div>
         <div class="botao">
-            <a class="btn" href="pagamento_confirmacao.php" type="submit">CONTINUAR ></a>
+            <a class="btn" href="pagamento_confirmacao.php">CONTINUAR ></a>
         </div>
     </main>
 </body>

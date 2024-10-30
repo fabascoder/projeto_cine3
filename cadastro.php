@@ -14,95 +14,99 @@
     <header>
         <nav>
             <div>
-                <a href="principal.php">
+                <a href="index.php">
                     <img src="imagens/Logo_Cine3-removebg-preview.png" alt="Cine3 Logo" class="logo">
                 </a>
             </div>
-            <a href="login.php"><i class="fa fa-arrow-left" aria-hidden="true"></i></a>
+            <a href="login.php" class="back">VOLTAR</i></a>
         </nav>
     </header>
     <div class="container">
-        <form>
+        <form method="POST" id='formulario'>
                 <div>
                     <h1>Cadastro</h1>
                 </div>
             <!--campo de pree. usuario-->
-            <label for="username"><strong>Nome de Usuário</strong></label>
+            <label for="username">Nome de Usuário</label>
             <input type="text" id="username" name="username" required>
             <!--campo de pree. email-->
-            <label for="email"><strong>Email</strong></label>
+            <label for="email">Email</label>
             <input type="email" id="email" name="email" required>
             <!--campo de pree. senha-->
-            <label for="password"><strong>Senha</strong></label>
+            <label for="password">Senha</label>
             <div>
                 <input type="password" id="password" name="password" required>
-                <i class="fa fa-eye" onclick="togglePasswordVisibility()"></i> <!-- Ícone de olho -->
+                 <!-- Ícone de olho -->
             </div>
             <!--campo de confirmação de senha-->
-            <label for="confirm-password"><strong>Confirme sua senha</strong></label>
+            <label for="confirm-password">Confirme sua senha</label>
             <div>
                 <input type="password" id="confirm-password" name="confirm-password" required>
-                <i class="fa fa-eye" onclick="togglePasswordVisibility()"></i> <!-- Ícone de olho -->
+                 <!-- Ícone de olho -->
             </div>
             
             <!--campo de pree. cpf-->
-            <label for="cpf"><strong>Digite seu CPF</strong></label>
+            <label for="cpf">Digite seu CPF</label>
             <input type="text" id="cpf" name="cpf" required>
             <!--campo de pree. cep-->
-            <label for="cep"><strong>Digite seu CEP</strong></label>
+            <label for="cep">Digite seu CEP</label>
             <input type="text" id="cep" name="cep" required>
+
+            <?php
+            $cep = $_POST['cep']??'';
+            $url = "https://viacep.com.br/ws/$cep/json/";
+            $json = file_get_contents($url);
+            $dados = json_decode($json, true);
+            echo $dados['logradouro'].' - '.$dados['bairro'].' - '.$dados['localidade'].' - '.$dados['uf'];
+            ?>
+            
+
             <!--campo de pree. termos de uso-->
             <div class="checkbox-container">
-                <input type="checkbox" id="terms-of-use" name="terms-of-use" required>
-                <label for="terms-of-use"><a href="#">Concordar com termos de uso?</a></label>
+                <input type="checkbox"  id="privacy-policy" name="terms-of-use" required>
+                <label for="terms-of-use"><a href="termos.php" 
+                id="privacy-policy">Concordar com termos de uso?</a></label>
             </div>
             <!--campo de pree. termos de privacidade-->
             <div class="checkbox-container">
                 <input type="checkbox" id="privacy-policy" name="privacy-policy" required>
-                <label for="privacy-policy"><a href="#">Concordar com termos de privacidade?</a></label>
+                <label for="privacy-policy"><a href="#" id="privacy-policy"
+                >Concordar com termos de privacidade?</a></label>
             </div>
             <!--campo de pree. botão-->
             <button class="button" type="submit" onclick="cadastro(event)">Cadastrar-se</button>
-            <p class="login-link"><a href="#">Já tem uma conta?</a></p>
+            <p class="login-link"><a href="login.php">Já tem uma conta?</a></p>
         </form>
         <div id="teste"></div>
     </div>
 
-    <footer>
-        <div class="term">
-            <div>
-                <a href="#">
-                    <p>TERMOS DE USO</p>
-                </a>
-            </div>
-                <div>
-                    <a href="#">
-                        <p>POLÍTICA DE PRIVACIDADE</p>
-                    </a>
-                </div>
-                <div>
-                    <a href="#">
-                        <p>CONTATO</p>
-                    </a>
-                </div>
-                <div>
-                    <a href="#">
-                        <p>LOCAL</p>
-                    </a>
-                </div>
-        </div>
-        <div class="container_footer">
-        <div class="tampa"><i class="fa fa-language" aria-hidden="true"></i>
-            <select name="Idioma" id="idioma">
-                <option value="PT">PORTUGUÊS</option>
-                <option value="IG">INGLÊS</option>
-                <option value="ES">ESPANHOL</option>
-                <option value="CO">COREANO</option>
-            </select>
-        </div>
+    <script src="javascript/cadastro.js">
+        const div = document.querySelector('php')
+        const formulario = document.getElementById('formulario');
+        formulario.addEventListener('input', (evento)=> {
+            let value = document.getElementById('cep').value;
+            if (value.length == 8) {
 
+        
+            evento.preventDefault();
+            let  dados = new FormData(formulario)
+            
+            fetch('acao.php', {
+                method: 'POST',
+                body: dados
+            })
+            .then((resposta) => {
+                if(resposta.ok) {
+                    return resposta.text()
+                }
+            })
+            .then((dados) => {
+                div.innerHTML = dados;
+                console.log(dados)
+            });
 
-    </footer>
-    <script src="javascript/cadastro.js"></script>
+        }
+        });
+    </script>
 </body>
 </html>
