@@ -46,35 +46,35 @@
                     </div>
                     <div class="linha">
                         <label>A</label>
-                        <div class="assento"><input type="checkbox" name="assentos" class="assentos" id="A1">
+                        <div class="assento"><input type="checkbox" name="A1" class="assentos" id="A1">
                         </div>
-                        <div class="assento"><input type="checkbox" name="assentos" class="assentos" id="A2">
+                        <div class="assento"><input type="checkbox" name="A2" class="assentos" id="A2">
                         </div>
-                        <div class="assento"><input type="checkbox" name="assentos" class="assentos" id="A3">
+                        <div class="assento"><input type="checkbox" name="A3" class="assentos" id="A3">
                         </div>
-                        <div class="assento"><input type="checkbox" name="assentos" class="assentos" id="A4">
+                        <div class="assento"><input type="checkbox" name="A4" class="assentos" id="A4">
                         </div>
-                        <div class="assento"><input type="checkbox" name="assentos" class="assentos" id="A5">
+                        <div class="assento"><input type="checkbox" name="A5" class="assentos" id="A5">
                         </div>
-                        <div class="assento"><input type="checkbox" name="assentos" class="assentos" id="A6">
+                        <div class="assento"><input type="checkbox" name="A6" class="assentos" id="A6">
                         </div>
-                        <div class="assento"><input type="checkbox" name="assentos" class="assentos" id="A7">
+                        <div class="assento"><input type="checkbox" name="A7" class="assentos" id="A7">
                         </div>
-                        <div class="assento"><input type="checkbox" name="assentos" class="assentos" id="A8">
+                        <div class="assento"><input type="checkbox" name="A8" class="assentos" id="A8">
                         </div>
-                        <div class="assento"><input type="checkbox" name="assentos" class="assentos" id="A9">
+                        <div class="assento"><input type="checkbox" name="A9" class="assentos" id="A9">
                         </div>
-                        <div class="assento"><input type="checkbox" name="assentos" class="assentos" id="A10">
+                        <div class="assento"><input type="checkbox" name="A10" class="assentos" id="A10">
                         </div>
-                        <div class="assento"><input type="checkbox" name="assentos" class="assentos" id="A11">
+                        <div class="assento"><input type="checkbox" name="A11" class="assentos" id="A11">
                         </div>
-                        <div class="assento"><input type="checkbox" name="assentos" class="assentos" id="A12">
+                        <div class="assento"><input type="checkbox" name="A12" class="assentos" id="A12">
                         </div>
-                        <div class="assento"><input type="checkbox" name="assentos" class="assentos" id="A13">
+                        <div class="assento"><input type="checkbox" name="A13" class="assentos" id="A13">
                         </div>
-                        <div class="assento"><input type="checkbox" name="assentos" class="assentos" id="A14">
+                        <div class="assento"><input type="checkbox" name="A14" class="assentos" id="A14">
                         </div>
-                        <div class="assento"><input type="checkbox" name="assentos" class="assentos" id="A15">
+                        <div class="assento"><input type="checkbox" name="A15" class="assentos" id="A15">
                         </div>
                     </div>
                     <div class="linha">
@@ -335,7 +335,7 @@
             </div>
 
             <div class="botao">
-                <a type="submit" href="pagamento_produtos.php" class="btn">AVANÇAR ></a>
+                <button type="submit" href="pagamento_produtos.php" class="btn">AVANÇAR ></button>
             </div>
 
         </div>
@@ -345,9 +345,3 @@
 </body>
 
 </html>
-
-<<<<<<< HEAD
-hhhh
-=======
-kk
->>>>>>> e8451bef70ad9fa58023a12d1a9ffa5bb3dada34
