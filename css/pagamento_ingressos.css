@@ -251,10 +251,13 @@ select {
         justify-content: space-around;
         margin: auto;
     }
+    .escolhas{
+        padding: 0px;
+    }
 }
 @media screen and (max-width: 420px){
     .escolhas{
-        padding: 0%;
+        padding: 0px;
     }
     .caixa-valores{
         width: 100%;
@@ -264,5 +267,8 @@ select {
     }
     .tamanho-camisa, .total-ingresso{
         margin: auto;
+    }
+    li{
+        padding: 0;
     }
 }
