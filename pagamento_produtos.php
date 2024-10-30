@@ -9,10 +9,6 @@
 <body>
 <?php 
     include_once "header_pagto.php";
-    $_SESSION['assentos'] = [];
-    echo "<pre>";
-    print_r($_POST);  
-    $_POST['assento'.$i];
     ?>
     <main>
             <div class="caixa-principal">
