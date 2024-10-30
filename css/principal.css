@@ -65,6 +65,7 @@ a {
 a:hover {
   opacity: 0.5s;
   color: #d95f80;
+  transition: 200ms;
 }
 
 .login {
