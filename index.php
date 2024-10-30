@@ -18,12 +18,12 @@
 </head>
 
 <body>
-
-
-<header>
-        <a href="index.php"><img src="imagens/Logo_Cine3.png" alt="Imagem CINE3" width="200px"></a>
-        <div class="div_pesquisa">
-            <input type="search" id="pesquisa" placeholder="Pesquisar">
+    <header>
+        <div class="logo-pesquisa">
+            <a href="index.php"><img src="imagens/Logo_Cine3-removebg-preview.png" alt="Imagem CINE3" width="200px"></a>
+            <div class="div_pesquisa">
+                <input type="search" id="pesquisa" placeholder="Pesquisar">
+            </div>
         </div>
 
         <nav id="navegacao">
@@ -44,7 +44,7 @@
                         </div>
                     </div>
                     </li>
-
+                    
                     <!-- Modal HTML -->
                     <dialog id="modal-ingressos" class="modal">
                         <div class="modal-content">
@@ -85,18 +85,17 @@
                             Localização
                         </a>
                     </li>
+                    <li>
+                        <a href="login.php" id="login-link">
+                        <div>
+                            <span id="icon_profile" class="material-symbols-outlined">
+                                account_circle
+                            </span>
+                        </div>
+                        <span id="login-text">Login</span>
+                        </a>
+                    </li>
             </ul>
-
-            <div class="login">
-                <a href="login.php" id="login-link">
-                    <div>
-                        <span id="icon_profile" class="material-symbols-outlined">
-                            account_circle
-                        </span>
-                    </div>
-                    <span id="login-text">Login</span>
-                </a>
-            </div>
         </nav>
     </header>
 
@@ -221,8 +220,6 @@
                     <option value="CO">COREANO</option>
                 </select>
             </div>
-
-
     </footer>
     <span></span>
 

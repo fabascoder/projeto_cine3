@@ -102,3 +102,173 @@ h2 {
   font-size: 2rem;
   margin: 10px 0px 10px 10px;
 }
+/*HEADER*/
+@media screen and (max-width: 1238px){
+  ul{
+    gap: 40px;
+  }
+  .logo-pesquisa{
+    gap: 0px;
+  }
+  .logo-pesquisa #pesquisa {
+    margin: 17px 0px 0px 0px;
+    width: 270px;
+    height: 35px;
+    padding: 10px;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    font-size: 1.2rem;
+  }
+  header{
+    gap: 10px;
+  }
+}
+@media screen and (max-width: 981px){
+  header {
+    display: flex;
+    background-color: var(--vermelho);
+    flex-direction: column;
+  }
+  .logo-pesquisa{
+    display: flex;
+    margin: auto;
+    gap: 120px;
+  }
+  .logo-pesquisa #pesquisa{
+    margin: 17px 0px 0px 0px;
+  }
+  ul{
+    gap: 120px;
+  }
+}
+@media screen and (max-width: 741px){
+  ul{
+    gap: 60px;
+  }
+  .logo-pesquisa{
+    display: flex;
+    justify-content: space-between;
+    gap: 0px;
+  }
+  header {
+    display: flex;
+    background-color: var(--vermelho);
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 566px){
+  ul{
+    gap: 25px;
+    width: 100%;
+  }
+  .logo-pesquisa #pesquisa {
+    margin: 17px 0px 0px 0px;
+    width: 210px;
+    height: 35px;
+    padding: 10px;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    font-size: 1.2rem;
+  }
+  .logo-pesquisa #navegacao{
+  }
+}
+@media screen and (max-width: 456px){
+ 
+}
+
+
+
+
+/*MAIN*/
+@media screen and (max-width:1100px){
+  .foto_bad_boys {
+    max-width: 100%;
+    border-radius: 45px;
+    border: 4px solid #fff;
+    width: 300px;
+    margin: auto;
+    display: flex;
+  }
+  #container_principal {
+    display: block;
+    align-items: center;
+    justify-content: space-around;
+    margin: 0px 0px 0px 0px;
+  }
+  h1 {
+    font-weight: 200;
+    /* text-align: center; */
+    margin: 0px;
+    padding-left: 0px;
+    text-align: center;
+    font-size: 2rem;
+  }
+  
+.button_horario {
+    display: inline-block;
+    background-color: #310a0a;
+    padding: 25px 50px;
+    border-radius: 80px;
+    width: 230px;
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: 100;
+  }
+  #column1 .button_horario{
+    margin: 30px 30px 30px 0px;
+  }
+  #column2 .button_horario{
+    margin: 30px 0px 30px 30px;
+  }
+}
+@media screen and (max-width:534px){
+  .button_horario {
+    display: inline-block;
+    background-color: #310a0a;
+    padding: 25px 0px;
+    border-radius: 80px;
+    width: 200px;
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: 100;
+  }
+}
+@media screen and (max-width:474px){
+  .button_horario {
+    display: inline-block;
+    background-color: #310a0a;
+    padding: 25px 0px;
+    border-radius: 80px;
+    width: 170px;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 100;
+  }
+  #column1 .button_horario{
+    margin: 30px 20px 30px 0px;
+  }
+  #column2 .button_horario{
+    margin: 30px 0px 30px 20px;
+  }
+}
+@media screen and (max-width:474px){
+  .button_horario {
+    display: inline-block;
+    background-color: #310a0a;
+    padding: 25px 0px;
+    border-radius: 80px;
+    width: 160px;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 100;
+  }
+  #column1 .button_horario{
+    margin: 30px 17px 30px 0px;
+  }
+  #column2 .button_horario{
+    margin: 30px 0px 30px 17px;
+  }
+}

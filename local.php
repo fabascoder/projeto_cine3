@@ -41,10 +41,11 @@
                     <option value="G">São Paulo</option>
                 </select>
             </div>
-            <form method="post" id="formulario">
-                <div>
-                    <label>CEP:</label>
-                    <input type="text" name="cep" id="cep">
+            <p>CEP: <a href="">XXXXX-XXX</a></p>
+            <br>
+                <div class="decidir-local">
+                    <img src="imagens/local.png" alt="" width="30px">
+                    <a href="https://www.google.com/maps/dir//R.+Tito,+54+-+Vila+Romana,+São+Paulo+-+SP,+05051-000/@-23.5280642,-46.7741618,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x94cef8775663b04f:0x923835e9005f8309!2m2!1d-46.69176!2d-23.5280856?entry=ttu&g_ep=EgoyMDI0MTAyMC4xIKXMDSoASAFQAw%3D%3D" target="_blank" rel="external">Shopping Metrô Itaquera</a>
                 </div>
             </form>
             <?php

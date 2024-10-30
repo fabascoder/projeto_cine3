@@ -15,7 +15,7 @@
         if (!empty($_POST['assentos'.$i])){
             $_SESSION['assentos'][$i] = $_POST['assentos'.$i];
            echo  '<h2>'.$_POST['assentos'.$i].'</h2>';
-        };
+        }
     }
     // $_POST['assentos'.$i];
     ?>
@@ -214,3 +214,4 @@
     <script src="javascript/pagamento_produto.js"></script>
 </body>
 </html>
+qqq

@@ -311,7 +311,7 @@
                         </div>
                     </div>
 
-                    <div class="tela">SALA 01</div>
+                    <div class="tela">TELA</div>
 
                 </div>
             </div>
