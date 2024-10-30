@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/login.css">
     <script src="js/login.js" defer></script>
+    <link rel="stylesheet" href="css/footer.css">
 </head>
 <body>
 <header>

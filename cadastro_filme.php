@@ -18,7 +18,7 @@
         };
         ?>
     </header>
-    <h1>Filme</h1>
+    <h1>CADASTRE O FILME</h1>
     <form action="cadastrar_filme.php" method="post" class="formulario_filme" enctype="multipart/form-data">
         <div class="campo">
             <label for="nome">Nome do Filme</label><br>
