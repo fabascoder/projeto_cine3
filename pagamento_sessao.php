@@ -335,7 +335,7 @@
             </div>
 
             <div class="botao">
-                <a type="submit" href="pagamento_produtos.php" class="btn">AVANÇAR ></a>
+                <button type="submit" href="pagamento_produtos.php" class="btn">AVANÇAR ></button>
             </div>
 
         </div>
@@ -345,9 +345,3 @@
 </body>
 
 </html>
-
-<<<<<<< HEAD
-hhhh
-=======
-kk
->>>>>>> e8451bef70ad9fa58023a12d1a9ffa5bb3dada34
