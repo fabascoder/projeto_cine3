@@ -43,25 +43,13 @@
                             <p>Padrão Intera</p>
                         </div>
                         <div class="quantidade-ingresso">
-                            <p>Quantidade</p>
-                            <select id="quantidade-ingresso1" onchange="calcularTotal()">
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                                <option value="5">5</option>
-                                <option value="6">6</option>
-                                <option value="7">7</option>
-                                <option value="8">8</option>
-                                <option value="9">9</option>
-                                <option value="10">10</option>
-                                <option value="11">11</option>
-                                <option value="12">12</option>
-                                <option value="13">13</option>
-                                <option value="14">14</option>
-                                <option value="15">15</option>
-                                <option value="16">16</option>
-                            </select>
+                       
+                            <div class="quantidade-ingresso">
+                            <p style="margin: 4rem auto;">Quantidade</p>
+                            <button type="button" onclick="decrementa('qtd_inteira')">-</button>
+                            <input type="number" name="qtd_inteira" id="qtd_inteira" step="1" value="0">
+                            <button type="button" onclick="incrementa('qtd_inteira')">+</button>
+                        </div>
                         </div>
                         <div class="total-ingresso">
                             <p>Total:</p>
@@ -78,8 +66,12 @@
                             <p>Meia promocional</p>
                         </div>
                         <div class="quantidade-ingresso">
-                            <p>Quantidade</p>
-                            <input type="number" id="quantidade-ingresso2" step="1" onchange="calcularTotal()">
+                            <div class="quantidade-ingresso">
+                            <p style="margin: 4rem auto;">Quantidade</p>
+                            <button type="button" onclick="decrementa('qtd_meia')">-</button>
+                            <input type="number" name="qtd_meia" id="qtd_meia" step="1" value="0">
+                            <button type="button" onclick="incrementa('qtd_meia')">+</button>
+                        </div>
                         </div>
                         <div class="total-ingresso">
                             <p>Total:</p>
@@ -99,6 +91,7 @@
             </div>
         </form>
     </main>
-</body>
+    <script src="javascript/pagamento_ingressos.js"></script>
+    </body>
 
 </html>
