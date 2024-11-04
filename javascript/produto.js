@@ -59,16 +59,11 @@ window.onclick = function (event) {
 
 // chekbox
 
-// Seleciona todos os botões de tamanho
 const sizeButtons = document.querySelectorAll('.size-button');
 
-// Adiciona um evento de clique a cada botão de tamanho
 sizeButtons.forEach(button => {
     button.addEventListener('click', () => {
-        // Remove a classe 'selected' de todos os botões
         sizeButtons.forEach(btn => btn.classList.remove('selected'));
-
-        // Adiciona a classe 'selected' ao botão clicado
         button.classList.add('selected');
     });
 });
