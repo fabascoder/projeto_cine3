@@ -193,7 +193,7 @@ h1 {
 /*RODAPÉ*/
 footer {
   /*background-color: #a39f9f;*/
-  background-color: black;
+  background-color: #111;
   gap: 20px;
   justify-content: space-between;
   font-family: Arial, Helvetica, sans-serif;

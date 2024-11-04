@@ -76,11 +76,11 @@
     </header>
     <main>    
         <div class="titulo">
-            <a href=""><img src="imagens/seta.png" alt="" width="30px"></a>
+            <a href="index.php"><img src="imagens/seta.png" alt="" width="30px"></a>
             <p>ingressos</p>
         </div>
         <div class="valores">
-            <form action="pagamento_sessao.php" method="post"></form>
+        <form action="pagamento_sessao.php" method="post">
             <div class="caixa-valores">
                 <button type="submit"><img src="imagens/lixeira-vermelha.png" alt="" width="30px"></button>   
                 <div class="escolhas">
