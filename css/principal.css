@@ -190,6 +190,7 @@ h1 {
   width: 100%;
 }
 
+<<<<<<< HEAD
 /*RODAPÉ*/
 footer {
   /*background-color: #a39f9f;*/
@@ -245,6 +246,8 @@ footer div select {
   display: flex;
   gap: 100px;
 }
+=======
+>>>>>>> 7269369aac8475277fb80e2d363e923a0a146b95
 
 /* Modal */
 #modal-ingressos {
@@ -535,16 +538,4 @@ div #icon_produto{
 }
 @media screen and (max-width: 456px){
  
-}
-/*FOOTER*/
-@media screen and (max-width: 914px){
-  footer{
-    flex-direction: column;
-  }
-}
-@media screen and (max-width: 476px){
-  .term{
-    display: flex;
-    flex-direction: column;
-  }
 }

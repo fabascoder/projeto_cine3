@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Produtos</title>
     <link rel="stylesheet" href="css/pagamento_produtos.css">
+    <link rel="stylesheet" href="css/footer.css">
 </head>
 <body>
 <?php 
@@ -215,6 +216,5 @@
                     
             
     </main>
-    <script src="javascript/pagamento_produto.js"></script>
 </body>
 </html>
