@@ -13,7 +13,7 @@ footer {
     box-sizing: border-box;
     display: flex;
     align-items: center;
-    box-shadow: 5px 5px 30px black;
+    box-shadow: 5px 5px 10px gray;
   }
   footer img{
     width: 230px;
@@ -32,7 +32,8 @@ footer {
   }
   footer div a {
     /*color: #6a6868;*/
-    color: #d95f80;
+    color: #bf5672;
+    text-decoration: none;
   }
   
   footer div select {
@@ -51,6 +52,12 @@ footer {
   .container_footer {
     display: flex;
     gap: 100px;
+  }
+  #idioma{
+    height: 30px;
+    width: 134px;
+    padding: 0;
+    margin:  0;
   }
   @media screen and (max-width: 914px){
     footer{

@@ -203,6 +203,9 @@ span {
     color: #000000; /* Cor do fundo original */
     border: 1px solid #000;
 }
+#idioma{
+  height: 30px;
+}
 /*HEADER*/
   @media screen and (max-width: 1238px){
     ul{
