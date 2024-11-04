@@ -112,7 +112,7 @@
                     </div>
                     <div class="quantidade-ingresso">
                         <p style="margin: 4rem auto;">Quantidade</p>
-                        <select name="" id="">
+                        <select name="" id=""  onchange="calcularTotal()">
                             <option value="1">1</option>
                             <option value="2">2</option>
                             <option value="3">3</option>
