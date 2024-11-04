@@ -32,7 +32,7 @@
         <nav>
             <ul>
                 <li>
-                    <a href="index.php">
+                    <a href="#">
                         <img src="imagens/Logo_Cine3-removebg-preview.png" alt="Cine3 Logo" class="logo">
                     </a>
                 </li>   
@@ -80,6 +80,7 @@
             <p>ingressos</p>
         </div>
         <div class="valores">
+            <form action="pagamento_sessao.php" method="post"></form>
             <div class="caixa-valores">
                 <button type="submit"><img src="imagens/lixeira-vermelha.png" alt="" width="30px"></button>   
                 <div class="escolhas">
@@ -129,50 +130,14 @@
                     <input type="hidden" id="total_pagar" name="total_pagar" value="111.9">
                     <p id="total_pagar_display">TOTAL À PAGAR R$ 111,90</p>
 
-                    <button class="btn" href="pagamento_sessao.php">AVANÇAR <img src="imagens/setinha-rosa.png" alt="" width="10px"></button>
+                    <button type="submit" class="btn" href="pagamento_sessao.php">AVANÇAR <img src="imagens/setinha-rosa.png" alt="" width="10px"></button>
                 </div>
             </div>
         </form>
     </main>
-    <footer>
-        <img src="imagens/Logo_Cine3-removebg-preview.png" alt="">
-        <div class="term">
-            <div>
-                <a href="termos.php">
-                    <p>TERMOS DE USO</p>
-                </a>
-            </div>
-            <div>
-                <a href="termos.php">
-                    <p>POLÍTICA DE PRIVACIDADE</p>
-                </a>
-            </div>
-            <div>
-                <a href="local.php">
-                    <p>CONTATO</p>
-                </a>
-            </div>
-            <div>
-                <a href="local.php">
-                    <p>LOCAL</p>
-                </a>
-            </div>
-            <div>
-                <a href="cadastro_filme.php">
-                    <p>CADASTRAR FILMES </p>
-                </a>
-            </div>
-        </div>
-        <div class="container_footer">
-            <div class="tampa"><i class="fa fa-language" aria-hidden="true"></i>
-                <select name="Idioma" id="idioma">
-                    <option value="PT">PORTUGUÊS </option>
-                    <option value="IG">INGLÊS</option>
-                    <option value="ES">ESPANHOL</option>
-                    <option value="CO">COREANO</option>
-                </select>
-            </div>
-    </footer>
 </body>
 
 </html>
+
+
+

@@ -198,13 +198,10 @@ span {
 
 }
 
-.sizes button.selected {
-    background-color: #fff; /* Cor do texto original */
-    color: #000000; /* Cor do fundo original */
-    border: 1px solid #000;
-}
-#idioma{
-  height: 30px;
+.size-button.selected {
+  background-color: white; /* Fundo branco */
+  color: black; /* Texto preto */
+  border: 1px solid black; /* Borda preta */
 }
 /*HEADER*/
   @media screen and (max-width: 1238px){

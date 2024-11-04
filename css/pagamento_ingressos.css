@@ -159,6 +159,7 @@ select {
     margin-bottom: 80px;
     text-decoration: none;
 }
+
 /* Media Queries para Responsividade */
 
 @media screen and (max-width: 1200px) {
