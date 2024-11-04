@@ -14,7 +14,7 @@ body {
     width: 210px;
 }
 
-a {
+ul a {
     font-family: "Zen Dots";
     color: black;
     text-decoration: none;
@@ -148,6 +148,8 @@ img {
     border-radius: 5px;
     cursor: pointer;
     margin: auto;
+    text-decoration: none;
+    font-family: "Zen Dots";
 }
 .radio {
     width: 25px;
@@ -264,3 +266,15 @@ img {
     }
     
 }
+/*FOOTER*/
+@media screen and (max-width: 914px){
+    footer{
+      flex-direction: column;
+    }
+  }
+  @media screen and (max-width: 476px){
+    .term{
+      display: flex;
+      flex-direction: column;
+    }
+  }

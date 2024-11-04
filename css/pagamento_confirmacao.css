@@ -12,7 +12,7 @@ body {
   width: 210px;
 }
 
- a {
+ul a {
   font-family: "Zen Dots";
   color: black;
   text-decoration: none;
@@ -144,11 +144,12 @@ main {
 header a {
   color: black;
 }
-a {
+main a {
   margin: auto;
   color: #bf5672;
   font-family: "Zen Dots";
   font-size: 1.1rem;
+  
 }
 
 .aviso {

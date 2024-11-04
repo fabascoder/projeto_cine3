@@ -16,6 +16,7 @@
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="css/principal.css">
     <link rel="stylesheet" href="css/filme.css">
+    <link rel="stylesheet" href="css/footer.css">
 </head>
 
 <body>
@@ -181,6 +182,45 @@
             </div>
         </section>
     </main>
+    <footer>
+        <img src="imagens/Logo_Cine3-removebg-preview.png" alt="">
+        <div class="term">
+            <div>
+                <a href="termos.php">
+                    <p>TERMOS DE USO</p>
+                </a>
+            </div>
+            <div>
+                <a href="termos.php">
+                    <p>POLÍTICA DE PRIVACIDADE</p>
+                </a>
+            </div>
+            <div>
+                <a href="local.php">
+                    <p>CONTATO</p>
+                </a>
+            </div>
+            <div>
+                <a href="local.php">
+                    <p>LOCAL</p>
+                </a>
+            </div>
+            <div>
+                <a href="cadastro_filme.php">
+                    <p>CADASTRAR FILMES </p>
+                </a>
+            </div>
+        </div>
+        <div class="container_footer">
+            <div class="tampa"><i class="fa fa-language" aria-hidden="true"></i>
+                <select name="Idioma" id="idioma">
+                    <option value="PT">PORTUGUÊS </option>
+                    <option value="IG">INGLÊS</option>
+                    <option value="ES">ESPANHOL</option>
+                    <option value="CO">COREANO</option>
+                </select>
+            </div>
+    </footer>
     <script src="javascript/principal.js"></script>
 </body>
 

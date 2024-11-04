@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Produtos</title>
     <link rel="stylesheet" href="css/pagamento_produtos.css">
+    <link rel="stylesheet" href="css/footer.css">
 </head>
 <body>
 <?php 
@@ -215,5 +216,44 @@
                     
             
     </main>
+    <footer>
+        <img src="imagens/Logo_Cine3-removebg-preview.png" alt="">
+        <div class="term">
+            <div>
+                <a href="termos.php">
+                    <p>TERMOS DE USO</p>
+                </a>
+            </div>
+            <div>
+                <a href="termos.php">
+                    <p>POLÍTICA DE PRIVACIDADE</p>
+                </a>
+            </div>
+            <div>
+                <a href="local.php">
+                    <p>CONTATO</p>
+                </a>
+            </div>
+            <div>
+                <a href="local.php">
+                    <p>LOCAL</p>
+                </a>
+            </div>
+            <div>
+                <a href="cadastro_filme.php">
+                    <p>CADASTRAR FILMES </p>
+                </a>
+            </div>
+        </div>
+        <div class="container_footer">
+            <div class="tampa"><i class="fa fa-language" aria-hidden="true"></i>
+                <select name="Idioma" id="idioma">
+                    <option value="PT">PORTUGUÊS </option>
+                    <option value="IG">INGLÊS</option>
+                    <option value="ES">ESPANHOL</option>
+                    <option value="CO">COREANO</option>
+                </select>
+            </div>
+    </footer>
 </body>
 </html>
