@@ -52,13 +52,13 @@
             <label for="cep">Digite seu CEP</label>
             <input type="text" id="cep" name="cep" required>
 
-            <?php
-            $cep = $_POST['cep']??'';
-            $url = "https://viacep.com.br/ws/$cep/json/";
-            $json = file_get_contents($url);
-            $dados = json_decode($json, true);
-            echo $dados['logradouro'].' - '.$dados['bairro'].' - '.$dados['localidade'].' - '.$dados['uf'];
-            ?>
+             <?php
+            // $cep = $_POST['cep']??'';
+            // $url = "https://viacep.com.br/ws/$cep/json/";
+            // $json = file_get_contents($url);
+            // $dados = json_decode($json, true);
+            // echo $dados['logradouro'].' - '.$dados['bairro'].' - '.$dados['localidade'].' - '.$dados['uf'];
+            // ?> 
             
 
             <!--campo de pree. termos de uso-->

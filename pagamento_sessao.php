@@ -345,9 +345,3 @@
 </body>
 
 </html>
-
-<<<<<<< HEAD
-hhhh
-=======
-kk
->>>>>>> e8451bef70ad9fa58023a12d1a9ffa5bb3dada34
