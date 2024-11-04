@@ -80,6 +80,7 @@
             <p>ingressos</p>
         </div>
         <div class="valores">
+            <form action="pagamento_sessao.php" method="post"></form>
             <div class="caixa-valores">
                 <button type="submit"><img src="imagens/lixeira-vermelha.png" alt="" width="30px"></button>   
                 <div class="escolhas">
@@ -129,7 +130,7 @@
                     <input type="hidden" id="total_pagar" name="total_pagar" value="111.9">
                     <p id="total_pagar_display">TOTAL À PAGAR R$ 111,90</p>
 
-                    <button class="btn" href="pagamento_sessao.php">AVANÇAR <img src="imagens/setinha-rosa.png" alt="" width="10px"></button>
+                    <button type="submit" class="btn" href="pagamento_sessao.php">AVANÇAR <img src="imagens/setinha-rosa.png" alt="" width="10px"></button>
                 </div>
             </div>
         </form>
