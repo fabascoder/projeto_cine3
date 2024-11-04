@@ -11,12 +11,16 @@
     include_once "header_pagto.php";
     session_start();
     $_SESSION['assentos'] = [];
-   for ($i = 1; $i <= 120; $i++) {
-        if (!empty($_POST['assentos'.$i])){
+    // foreach($_POST as $campos) {
+    //      echo '<h2>'.$campos.'</h2>';
+    // }
+    while($i = 1; $i <= 120; $i++) {
+        if(!empty($_POST['assentos'.$i])){
             $_SESSION['assentos'][$i] = $_POST['assentos'.$i];
            echo  '<h2>'.$_POST['assentos'.$i].'</h2>';
         }
     }
+    echo $_POST['assentos1'];
     // $_POST['assentos'.$i];
     ?>
     <main>
@@ -211,6 +215,5 @@
                     
             
     </main>
-    <script src="javascript/pagamento_produto.js"></script>
 </body>
 </html>

@@ -30,7 +30,7 @@
     ?>
     <header>
         <div class="logo-pesquisa">
-            <a href="principal.php"><img src="imagens/Logo_Cine3-removebg-preview.png" alt="Imagem CINE3"
+            <a href="index.php"><img src="imagens/Logo_Cine3-removebg-preview.png" alt="Imagem CINE3"
                     width="200px"></a>
             <div class="div_pesquisa">
                 <input type="search" id="pesquisa" placeholder="Pesquisar">
