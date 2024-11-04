@@ -13,7 +13,7 @@ footer {
     box-sizing: border-box;
     display: flex;
     align-items: center;
-    box-shadow: 5px 5px 10px gray;
+    box-shadow: 5px 5px 10px rgba(128, 128, 128, 0.466);
   }
   footer img{
     width: 230px;
@@ -32,8 +32,7 @@ footer {
   }
   footer div a {
     /*color: #6a6868;*/
-    color: #bf5672;
-    text-decoration: none;
+    color: #d95f80;
   }
   
   footer div select {
@@ -54,10 +53,10 @@ footer {
     gap: 100px;
   }
   #idioma{
-    height: 30px;
-    width: 134px;
+    margin: 0;
     padding: 0;
-    margin:  0;
+    width: 137px;
+    height: 30px;
   }
   @media screen and (max-width: 914px){
     footer{
