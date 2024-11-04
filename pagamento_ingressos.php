@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ingressos</title>
     <link rel="stylesheet" href="css/pagamento_ingressos.css">
+    <link rel="stylesheet" href="css/footer.css">
     <script>
         function calcularTotal() {
             // Pegando os valores dos itens
@@ -136,3 +137,6 @@
 </body>
 
 </html>
+
+
+

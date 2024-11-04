@@ -16,7 +16,7 @@
 
 <header>
         <div class="logo-pesquisa">
-            <a href="./principal.php"><img src="imagens/Logo_Cine3-removebg-preview.png" alt="Imagem CINE3" width="200px"></a>
+            <a href="index.php"><img src="imagens/Logo_Cine3-removebg-preview.png" alt="Imagem CINE3" width="200px"></a>
             <div class="div_pesquisa">
                 <input type="search" id="pesquisa" placeholder="Pesquisar">
             </div>
@@ -181,6 +181,45 @@
             </div>
         </section>
     </div>
+    <footer>
+        <img src="imagens/Logo_Cine3-removebg-preview.png" alt="">
+        <div class="term">
+            <div>
+                <a href="termos.php">
+                    <p>TERMOS DE USO</p>
+                </a>
+            </div>
+            <div>
+                <a href="termos.php">
+                    <p>POLÍTICA DE PRIVACIDADE</p>
+                </a>
+            </div>
+            <div>
+                <a href="local.php">
+                    <p>CONTATO</p>
+                </a>
+            </div>
+            <div>
+                <a href="local.php">
+                    <p>LOCAL</p>
+                </a>
+            </div>
+            <div>
+                <a href="cadastro_filme.php">
+                    <p>CADASTRAR FILMES </p>
+                </a>
+            </div>
+        </div>
+        <div class="container_footer">
+            <div class="tampa"><i class="fa fa-language" aria-hidden="true"></i>
+                <select name="Idioma" id="idioma">
+                    <option value="PT">PORTUGUÊS </option>
+                    <option value="IG">INGLÊS</option>
+                    <option value="ES">ESPANHOL</option>
+                    <option value="CO">COREANO</option>
+                </select>
+            </div>
+    </footer>
 <script src="javascript/produto.js"></script>
 <script src="javascript/principal.js"></script>
 </body>

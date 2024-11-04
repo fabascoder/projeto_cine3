@@ -184,6 +184,7 @@
     </main>
 
     <footer>
+        <img src="imagens/Logo_Cine3-removebg-preview.png" alt="">
         <div class="term">
             <div>
                 <a href="termos.php">
@@ -214,7 +215,7 @@
         <div class="container_footer">
             <div class="tampa"><i class="fa fa-language" aria-hidden="true"></i>
                 <select name="Idioma" id="idioma">
-                    <option value="PT">PORTUGUÊS</option>
+                    <option value="PT">PORTUGUÊS </option>
                     <option value="IG">INGLÊS</option>
                     <option value="ES">ESPANHOL</option>
                     <option value="CO">COREANO</option>

@@ -30,7 +30,7 @@
     ?>
     <header>
         <div class="logo-pesquisa">
-            <a href="principal.php"><img src="imagens/Logo_Cine3-removebg-preview.png" alt="Imagem CINE3"
+            <a href="index.php"><img src="imagens/Logo_Cine3-removebg-preview.png" alt="Imagem CINE3"
                     width="200px"></a>
             <div class="div_pesquisa">
                 <input type="search" id="pesquisa" placeholder="Pesquisar">
@@ -111,19 +111,19 @@
                     <div id="column1">
                         <ul>
                             <li>
-                                    <a class="button_horario" href="pagamento_ingressos.php">16:00, qui</a>
+                                    <a class="button_horario" href="pagamento_ingressos.php"><?php echo $resultado['horario'];?></a>
                                 
                             </li>
                         </ul>
                         <ul>
                             <li>
-                                    <a class="button_horario" href="pagamento_ingressos.php">16:00, qui</a>
+                                    <a class="button_horario" href="pagamento_ingressos.php">-</a>
                                 
                             </li>
                         </ul>
                         <ul>
                             <li>
-                                    <a class="button_horario" href="pagamento_ingressos.php">16:00, qui</a>
+                                    <a class="button_horario" href="pagamento_ingressos.php">-</a>
                                 
                             </li>
                         </ul>
@@ -133,21 +133,21 @@
                             <ul>
                                 <li>
                                     
-                                        <a class="button_horario" href="pagamento_ingressos.php">16:00, qui</a>
+                                        <a class="button_horario" href="pagamento_ingressos.php">-</a>
                                     
                                 </li>
                             </ul>
                             <ul>
                                 <li>
                                     
-                                        <a class="button_horario" href="pagamento_ingressos.php">16:00, qui</a>
+                                        <a class="button_horario" href="pagamento_ingressos.php">-</a>
                                     
                                 </li>
                             </ul>
                             <ul>
                                 <li>
                                     
-                                        <a class="button_horario" href="pagamento_ingressos.php">16:00, qui</a>
+                                        <a class="button_horario" href="pagamento_ingressos.php">-</a>
                                     
                                 </li>
                             </ul>
