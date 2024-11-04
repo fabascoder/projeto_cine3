@@ -140,10 +140,11 @@
                             ★★★<span class="cinza">★★</span>
                         </div>
                         <div class="sizes">
-                            <button>P</button>
-                            <button>M</button>
-                            <button>G</button>
+                            <button class="size-button">P</button>
+                            <button class="size-button">M</button>
+                            <button class="size-button">G</button>
                         </div>
+
                         <p class="price">R$29,90</p>
                         <p class="free-shipping">Compras acima de R$129,99, você receberá frete grátis</p>
                         <div class="buy-cart-container">

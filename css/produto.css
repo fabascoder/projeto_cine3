@@ -203,6 +203,12 @@ span {
     color: #000000; /* Cor do fundo original */
     border: 1px solid #000;
 }
+.size-button.selected {
+  background-color: #4CAF50; /* Cor de fundo para indicar seleção */
+  color: white;
+  border: 1px solid #4CAF50;
+}
+
 /*HEADER*/
   @media screen and (max-width: 1238px){
     ul{
