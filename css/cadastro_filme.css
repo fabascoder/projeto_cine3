@@ -45,8 +45,9 @@ button {
 }
 
 button:hover {
-    background: #777;
-    border: none
+    background: #575757;
+    border: none;
+    cursor: pointer;
 }
 
 .msg {
@@ -60,4 +61,12 @@ button:hover {
 .campo .status{
     display: flex;
     align-items: center;
+}
+input#s1.form_input{
+    width: 30px;
+    margin: 0px 3px 0px 8px;
+}
+input#s0.form_input{
+    width: 30px;
+    margin: 0px 3px 0px 0px;
 }
