@@ -61,9 +61,11 @@
             <input type="number" name="valor" id="valor" class="form_input">
         </div>
         <div class="campo">
-            <label for="status_filme">Status do Filme</label><br>
-            <input type="radio" name="status_filme" id="s0" value="0" class="form_input"> Disponível
-            <input type="radio" name="status_filme" id="s1" value="1" class="form_input"> Indisponível
+            <div class="status">
+                <label for="status_filme">Status do Filme</label><br>
+                <input type="radio" name="status_filme" id="s0" value="0" class="form_input"> Disponível
+                <input type="radio" name="status_filme" id="s1" value="1" class="form_input"> Indisponível
+            </div>
         </div>
         <div class="campo">
             <label for="ano_lancamento">Ano de Lançamento</label><br>
