@@ -199,10 +199,11 @@ span {
 }
 
 .size-button.selected {
-  background-color: white; /* Fundo branco */
-  color: black; /* Texto preto */
+  background-color: white; /* Cor de fundo branco para o botão selecionado */
+  color: black; /* Texto preto para o botão selecionado */
   border: 1px solid black; /* Borda preta */
 }
+
 /*HEADER*/
   @media screen and (max-width: 1238px){
     ul{
