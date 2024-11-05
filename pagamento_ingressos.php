@@ -7,24 +7,6 @@
     <title>Ingressos</title>
     <link rel="stylesheet" href="css/pagamento_ingressos.css">
     <link rel="stylesheet" href="css/footer.css">
-    <script>
-        function calcularTotal() {
-            // Pegando os valores dos itens
-            const quantidadeIngresso1 = parseInt(document.getElementById('quantidade-ingresso1').value) || 0;
-            const quantidadeIngresso2 = parseInt(document.getElementById('quantidade-ingresso2').value) || 0;
-            const precoIngresso1 = 38.00;
-            const precoIngresso2 = 18.50;
-
-            // Calculando o total
-            const totalIngresso1 = quantidadeIngresso1 * precoIngresso1;
-            const totalIngresso2 = quantidadeIngresso2 * precoIngresso2;
-            const total = totalIngresso1 + totalIngresso2;
-
-            // Atualizando o valor total na tela
-            document.getElementById('total_pagar').value = total.toFixed(2);
-            document.getElementById('total_pagar_display').textContent = `TOTAL À PAGAR R$ ${total.toFixed(2)}`;
-        }
-    </script>
 </head>
 
 <body>
@@ -90,10 +72,12 @@
                     </div>
                     <div class="quantidade-ingresso">
                         <p style="margin: 4rem auto;">Quantidade</p>
-                        <select name="" id="">
+                        <select name="" id="" onchange="calcularTotal()">
                             <option value="1">1</option>
                             <option value="2">2</option>
                             <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
                         </select>
                     </div>
                     <div class="total-ingresso" >
@@ -112,10 +96,12 @@
                     </div>
                     <div class="quantidade-ingresso">
                         <p style="margin: 4rem auto;">Quantidade</p>
-                        <select name="" id=""  onchange="calcularTotal()">
+                        <select name="" id="" onchange="calcularTotal()">
                             <option value="1">1</option>
                             <option value="2">2</option>
                             <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
                         </select>
                     </div>
                     <div class="total-ingresso" >
