@@ -27,7 +27,7 @@ $sql = "INSERT INTO pagamento (
 )";
 $pagto = $conexao->prepare($sql);
 if ($pagto->execute($novo_pagto)) {
-    echo '<div>Pagamento ' . $novo_pagto['status'] . ' <a href="detalhe_pedido.php?id=' . $novo_pagto['payment_id'] . '">Detalhes do pedido</a></div>';
+    echo '<div>Pagamento ' . $novo_pagto['status'] . ' <a href="pagamento_confirmacao.php?id=' . $novo_pagto['payment_id'] . '">Detalhes do pedido</a></div>';
 } else {
     echo "Erro finalizar o pagamento.";
 }

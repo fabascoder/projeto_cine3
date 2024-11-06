@@ -88,7 +88,7 @@
                 ],
                 "auto_return" => "approved"
             ];
-            $token = "TEST-5232080259225545-042515-bfeaf6dff3b3fd59594bb4d9ffe6525f-22727655";
+            $token = "";
             $url = 'https://api.mercadopago.com/checkout/preferences';
             $ch = curl_init($url);
             curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
