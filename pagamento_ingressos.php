@@ -72,7 +72,7 @@
                         </div>
                         <div class="quantidade-ingresso">
                             <p>Quantidade</p>
-                            <select id="quantidadeInteira" onchange="calcularTotal()">
+                            <select name="quantidadeInteira" id="quantidadeInteira" onchange="calcularTotal()">
                                 <option value="1">1</option>
                                 <option value="2">2</option>
                                 <option value="3">3</option>
@@ -96,7 +96,7 @@
                         </div>
                         <div class="quantidade-ingresso">
                             <p>Quantidade</p>
-                            <select id="quantidadeMeia" onchange="calcularTotal()">
+                            <select name="quantidadeMeia" id="quantidadeMeia" onchange="calcularTotal()">
                                 <option value="1">1</option>
                                 <option value="2">2</option>
                                 <option value="3">3</option>
