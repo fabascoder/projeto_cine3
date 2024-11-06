@@ -55,15 +55,24 @@ window.onclick = function (event) {
         modal.style.display = "none";
     }
 };
-;
 
 // chekbox
 
-const sizeButtons = document.querySelectorAll('.size-button');
+// Seleciona todos os grupos de botões de tamanho
+const sizeGroups = document.querySelectorAll('.sizes');
 
-sizeButtons.forEach(button => {
-    button.addEventListener('click', () => {
-        sizeButtons.forEach(btn => btn.classList.remove('selected'));
-        button.classList.add('selected');
+sizeGroups.forEach(group => {
+    // Seleciona todos os botões de tamanho dentro do grupo
+    const sizeButtons = group.querySelectorAll('.size-button');
+
+    sizeButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            // Remove a classe "selected" de todos os botões no grupo
+            sizeButtons.forEach(btn => btn.classList.remove('selected'));
+
+            // Adiciona a classe "selected" ao botão clicado
+            button.classList.add('selected');
+        });
     });
 });
+

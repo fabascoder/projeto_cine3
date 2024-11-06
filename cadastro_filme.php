@@ -76,7 +76,7 @@
             <input type="file" name="foto" id="imagem" class="imagem">
         </div>
         <div>
-            <button type="submite">CADASTRAR FILME</button>
+            <button type="submit">CADASTRAR FILME</button>
         </div>
         <div class="msg">
             <?php 
