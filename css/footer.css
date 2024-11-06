@@ -33,6 +33,7 @@ footer {
   footer div a {
     /*color: #6a6868;*/
     color: #d95f80;
+    text-decoration: none;
   }
   
   footer div select {
