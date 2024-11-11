@@ -20,46 +20,111 @@
     $_SESSION['tamanho-camiseta'] = $_POST['tamanho-camiseta']??"";
     $_SESSION['tamanho-camiseta'] = $_POST['tamanho-camiseta']??"";
     ?>
+    <?php
+    session_start();
 
-<?php
+    // Recebe os dados da página anterior e guarda na sessão
+    $_SESSION['qtd_inteira'] = $_POST['quantidadeInteira'] ?? 0;
+    $_SESSION['qtd_meia'] = $_POST['quantidadeMeia'] ?? 0;
+    $_SESSION['total_pagar'] = $_POST['total_pagar'] ?? 0;
+
+    header("Location: selecao_assentos.php"); // Redireciona para a página de seleção de assentos
+    exit();
+    ?>
+    <?php
 session_start();
 
-// Recebe os dados da página anterior e guarda na sessão
-$_SESSION['qtd_inteira'] = $_POST['quantidadeInteira'] ?? 0;
-$_SESSION['qtd_meia'] = $_POST['quantidadeMeia'] ?? 0;
-$_SESSION['total_pagar'] = $_POST['total_pagar'] ?? 0;
+// Recupera os dados da sessão
+$qtd_inteira = $_SESSION['qtd_inteira'];
+$qtd_meia = $_SESSION['qtd_meia'];
+$total_assentos = $qtd_inteira + $qtd_meia; // Total de assentos permitidos
 
-// A partir daqui, os dados ficam disponíveis para a próxima página
+// Em caso de erro, verifica se as quantidades são válidas
+if ($total_assentos <= 0) {
+    echo "Erro: Nenhum ingresso selecionado.";
+    exit();
+}
 ?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sessão</title>
-    <link rel="stylesheet" href="css/pagamento_sessao.css">
-    <link rel="stylesheet" href="css/footer.css">
+    <title>Seleção de Assentos</title>
+    <link rel="stylesheet" href="css/selecao_assentos.css">
 </head>
 <body>
-    <?php
-        // Aqui você pode acessar as variáveis de sessão, por exemplo:
-        $qtd_inteira = $_SESSION['qtd_inteira'];
-        $qtd_meia = $_SESSION['qtd_meia'];
-    ?>
-    <h1>Sessão Selecionada</h1>
-    <p>Ingressos Inteira: <?php echo $qtd_inteira; ?></p>
-    <p>Ingressos Meia: <?php echo $qtd_meia; ?></p>
+    <header>
+        <nav>
+            <ul>
+                <li>
+                    <a href="#">
+                        <img src="imagens/Logo_Cine3-removebg-preview.png" alt="Cine3 Logo" class="logo">
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
 
-    <!-- Formulário de seleção de assentos que irá respeitar as quantidades selecionadas -->
-    <form action="pagamento_produtos.php" method="post">
-        <!-- Lógica de assentos será aplicada aqui -->
-        <input type="hidden" name="qtd_inteira" value="<?php echo $qtd_inteira; ?>">
-        <input type="hidden" name="qtd_meia" value="<?php echo $qtd_meia; ?>">
-        <button type="submit">Avançar para a próxima página</button>
-    </form>
+    <main>
+        <h1>Selecione seus assentos</h1>
+
+        <p>Escolha até <?php echo $total_assentos; ?> assentos</p>
+
+        <div class="assentos">
+            <?php
+            // Gerando os assentos de forma dinâmica
+            for ($i = 1; $i <= 20; $i++) {
+                echo "<input type='checkbox' class='assento' id='assento$i' data-id='$i'> Assento $i<br>";
+            }
+            ?>
+        </div>
+
+        <button id="confirmar">Confirmar</button>
+    </main>
+
+    <footer>
+        <div class="container_footer">
+            <div class="tampa">
+                <i class="fa fa-language" aria-hidden="true"></i>
+                <select name="Idioma" id="idioma">
+                    <option value="PT">PORTUGUÊS</option>
+                    <option value="IG">INGLÊS</option>
+                    <option value="ES">ESPANHOL</option>
+                    <option value="CO">COREANO</option>
+                </select>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Limitar a seleção de assentos
+        const totalAssentos = <?php echo $total_assentos; ?>;
+        let selecionados = [];
+
+        const assentos = document.querySelectorAll('.assento');
+        assentos.forEach(assento => {
+            assento.addEventListener('change', function () {
+                if (this.checked) {
+                    if (selecionados.length < totalAssentos) {
+                        selecionados.push(this.id);
+                    } else {
+                        this.checked = false; // Desmarca se o limite for atingido
+                        alert(`Você só pode selecionar até ${totalAssentos} assentos.`);
+                    }
+                } else {
+                    selecionados = selecionados.filter(id => id !== this.id);
+                }
+            });
+        });
+
+        document.getElementById('confirmar').addEventListener('click', function () {
+            alert(`Você selecionou os assentos: ${selecionados.join(', ')}`);
+        });
+    </script>
 </body>
 </html>
-
 
 
     <main>
