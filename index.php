@@ -16,6 +16,7 @@
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="css/principal.css">
     <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/header.css">
 </head>
 
 <body>
@@ -26,77 +27,71 @@
                 <input type="search" id="pesquisa" placeholder="Pesquisar">
             </div>
         </div>
-
-        <nav id="navegacao">
-
-
-            <ul>
-                <li>
-                    <div id="window_ticket">
-                        <div id="ingresso">
-                            <a href="javascript:void(0)" id="openModal">
-                                <div>
+        <div class="menu-hamburguer">
+            <input type="checkbox" id="menu-toggle" class="menu-toggle">
+            <label for="menu-toggle" class="menu-icon">
+                <span class="material-symbols-outlined">menu</span>
+            </label>
+            <nav class="menu">
+                <ul>
+                    <li><a href="javascript:void(0)" id="openModal"><div>
                                     <span id="icon_ingresso" class="material-symbols-outlined">
                                         confirmation_number
                                     </span>
                                 </div>
                                 Ingressos
-                            </a>
+                            </a></li>
+                    <li><a href="produtos.php"><div>
+                            <span id="icon_produto" class="material-symbols-outlined">
+                                shopping_bag
+                            </span>
+                        </div> 
+                        Produtos
+                    </a></li>
+                    <li><a href="local.php"><div>
+                            <span id="icon_local" class="material-symbols-outlined">
+                                pin_drop
+                            </span>
                         </div>
-                    </div>
-                    </li>
-                    
-                    <!-- Modal HTML -->
-                    <dialog id="modal-ingressos" class="modal">
-                        <div class="modal-content">
-                            <span class="close">&times;</span>
-                            <h2 class="ingressos">Ingressos</h2>
-                            <div>
-                                <p class="p1">Padrão Inteira</p>
-                                <p class="v1">Válido de quinta-feira, sexta-feira, sábado e domingo.</p>
-                                <p class="t1">R$18,00</p>
-                            </div>
-                            <hr>
-                            <div>
-                                <p class="p1">Meia Promocional</p>
-                                <p class="v1">Válido de segunda-feira, terça-feira e quarta-feira OU com Comprovante Escolar.</p>
-                                <p class="t1">R$9,00</p>
-                            </div>
-                        </div>
-                    </dialog>
-
-
-                    <li class="item_produto">
-                        <a href="produtos.php">
-                            <div>
-                                <span id="icon_produto" class="material-symbols-outlined">
-                                    shopping_bag
-                                </span>
-                            </div>
-                            Produtos
-                        </a>
-                    </li>
-                    <li>
-                        <a href="local.php">
-                            <div>
-                                <span id="icon_local" class="material-symbols-outlined">
-                                    pin_drop
-                                </span>
-                            </div>
-                            Localização
-                        </a>
-                    </li>
-                    <li>
-                        <a href="login.php" id="login-link">
-                        <div>
+                        Local
+                    </a></li>
+                    <li><a href="login.php"><div>
                             <span id="icon_profile" class="material-symbols-outlined">
                                 account_circle
                             </span>
                         </div>
-                        <span id="login-text">Login</span>
-                        </a>
-                    </li>
-            </ul>
+                        <span id="login-text">Login</span></a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <nav id="navegacao">
+
+
+                
+
+                <!-- Modal HTML -->
+                <dialog id="modal-ingressos" class="modal">
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <h2 class="ingressos">Ingressos</h2>
+                        <div>
+                            <p class="p1">Padrão Inteira</p>
+                            <p class="v1">Válido de quinta-feira, sexta-feira, sábado e domingo.</p>
+                            <p class="t1">R$18,00</p>
+                        </div>
+                        <hr>
+                        <div>
+                            <p class="p1">Meia Promocional</p>
+                            <p class="v1">Válido de segunda-feira, terça-feira e quarta-feira OU com Comprovante
+                                Escolar.</p>
+                            <p class="t1">R$9,00</p>
+                        </div>
+                    </div>
+                </dialog>
+
+
+               
         </nav>
     </header>
 
@@ -120,7 +115,7 @@
             </div>
 
 
-<!-- 
+            <!-- 
             <section class="secao">
                 <h1>FILMES EM CARTAZ</h1>
                 <div class="container_secao">
@@ -169,7 +164,7 @@
                             </a>
                         </div>';
                         }
-                        ?> 
+                        ?>
 
 
                         <div class="casa_arrow">
@@ -236,8 +231,8 @@
         }
     }
     </script> -->
-                    <!---->
-                    <!---->
+    <!---->
+    <!---->
 </body>
 
 </html>
