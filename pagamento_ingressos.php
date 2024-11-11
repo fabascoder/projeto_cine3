@@ -143,7 +143,7 @@
         </div>
     </footer>
 
-    <script src="js/script.js"></script>
+    <script src="javascript/produto.js"></script>
 </body>
 
 </html>
