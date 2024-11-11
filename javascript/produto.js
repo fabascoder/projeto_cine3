@@ -13,8 +13,11 @@ function calcularTotal() {
     const totalAPagar = totalInteira + totalMeia;
 
     // Atualização dos valores na página
-    document.getElementById('totalInteira').innerText = `R$ ${totalInteira.toFixed(2)}`;
-    document.getElementById('totalMeia').innerText = `R$ ${totalMeia.toFixed(2)}`;
-    document.getElementById('total_pagar_display').innerText = `TOTAL À PAGAR R$ ${totalAPagar.toFixed(2)}`;
+    document.getElementById('totalInteira').innerText = `R$ ${totalInteira.toFixed(2).replace('.', ',')}`;
+    document.getElementById('totalMeia').innerText = `R$ ${totalMeia.toFixed(2).replace('.', ',')}`;
+    document.getElementById('total_pagar_display').innerText = `TOTAL À PAGAR R$ ${totalAPagar.toFixed(2).replace('.', ',')}`;
     document.getElementById('total_pagar').value = totalAPagar.toFixed(2);
 }
+
+// Chame a função ao carregar a página para inicializar os valores
+document.addEventListener('DOMContentLoaded', calcularTotal);
