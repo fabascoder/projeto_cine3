@@ -20,6 +20,48 @@
     $_SESSION['tamanho-camiseta'] = $_POST['tamanho-camiseta']??"";
     $_SESSION['tamanho-camiseta'] = $_POST['tamanho-camiseta']??"";
     ?>
+
+<?php
+session_start();
+
+// Recebe os dados da página anterior e guarda na sessão
+$_SESSION['qtd_inteira'] = $_POST['quantidadeInteira'] ?? 0;
+$_SESSION['qtd_meia'] = $_POST['quantidadeMeia'] ?? 0;
+$_SESSION['total_pagar'] = $_POST['total_pagar'] ?? 0;
+
+// A partir daqui, os dados ficam disponíveis para a próxima página
+?>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sessão</title>
+    <link rel="stylesheet" href="css/pagamento_sessao.css">
+    <link rel="stylesheet" href="css/footer.css">
+</head>
+<body>
+    <?php
+        // Aqui você pode acessar as variáveis de sessão, por exemplo:
+        $qtd_inteira = $_SESSION['qtd_inteira'];
+        $qtd_meia = $_SESSION['qtd_meia'];
+    ?>
+    <h1>Sessão Selecionada</h1>
+    <p>Ingressos Inteira: <?php echo $qtd_inteira; ?></p>
+    <p>Ingressos Meia: <?php echo $qtd_meia; ?></p>
+
+    <!-- Formulário de seleção de assentos que irá respeitar as quantidades selecionadas -->
+    <form action="pagamento_produtos.php" method="post">
+        <!-- Lógica de assentos será aplicada aqui -->
+        <input type="hidden" name="qtd_inteira" value="<?php echo $qtd_inteira; ?>">
+        <input type="hidden" name="qtd_meia" value="<?php echo $qtd_meia; ?>">
+        <button type="submit">Avançar para a próxima página</button>
+    </form>
+</body>
+</html>
+
+
+
     <main>
     <form action="pagamento_produtos.php" method="post" id="sessao">
        
