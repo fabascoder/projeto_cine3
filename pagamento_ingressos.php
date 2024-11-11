@@ -18,7 +18,6 @@
                         <img src="imagens/Logo_Cine3-removebg-preview.png" alt="Cine3 Logo" class="logo">
                     </a>
                 </li>
-
                 <li>
                     <a href="">Olá, [Nome]</a>
                 </li>
@@ -26,43 +25,40 @@
             <a href="index.php"><i class="fa fa-arrow-left" aria-hidden="true"></i></a>
         </nav>
 
-
         <div id="caixa">
+            <!-- Etapas de Compra -->
             <div class="etapas-compra">
                 <img src="imagens/ingressos.png" alt="">
-
                 <p>Ingresso</p>
             </div>
-
             <div class="etapas-compra">
                 <img src="imagens/secao.png" alt="">
-
                 <p>Seção</p>
             </div>
             <div class="etapas-compra">
                 <img src="imagens/pipoca.png" alt="">
-
                 <p>Produtos</p>
             </div>
             <div class="etapas-compra">
                 <img src="imagens/cartao.png" alt="">
-
                 <p>Pagamento</p>
             </div>
             <div class="etapas-compra">
                 <img src="imagens/confirmacao.png" alt="">
-
                 <p>Confirmação</p>
             </div>
         </div>
     </header>
+
     <main>
         <div class="titulo">
             <a href="index.php"><img src="imagens/seta.png" alt="" width="30px"></a>
-            <p>ingressos</p>
+            <p>Ingressos</p>
         </div>
+
         <div class="valores">
             <form action="pagamento_sessao.php" method="post">
+                <!-- Ingresso Inteira -->
                 <div class="caixa-valores">
                     <button type="button"><img src="imagens/lixeira-vermelha.png" alt="" width="30px"></button>
                     <div class="escolhas">
@@ -87,6 +83,7 @@
                     </div>
                 </div>
 
+                <!-- Ingresso Meia -->
                 <div class="caixa-valores">
                     <button type="button"><img src="imagens/lixeira-vermelha.png" alt="" width="30px"></button>
                     <div class="escolhas">
@@ -111,54 +108,42 @@
                     </div>
                 </div>
 
+                <!-- Total a Pagar -->
                 <div class="caixa-finalizar">
                     <div class="finalizar">
-                        <input type="hidden" id="total_pagar" name="total_pagar" value="111.9">
+                        <input type="hidden" id="total_pagar" name="total_pagar" value="111.90">
                         <p id="total_pagar_display">TOTAL À PAGAR R$ 111,90</p>
                         <button type="submit" class="btn">AVANÇAR</button>
                     </div>
                 </div>
             </form>
+        </div>
     </main>
+
     <footer>
+        <!-- Conteúdo do Rodapé -->
         <img src="imagens/Logo_Cine3-removebg-preview.png" alt="">
         <div class="term">
-            <div>
-                <a href="termos.php">
-                    <p>TERMOS DE USO</p>
-                </a>
-            </div>
-            <div>
-                <a href="termos.php">
-                    <p>POLÍTICA DE PRIVACIDADE</p>
-                </a>
-            </div>
-            <div>
-                <a href="local.php">
-                    <p>CONTATO</p>
-                </a>
-            </div>
-            <div>
-                <a href="local.php">
-                    <p>LOCAL</p>
-                </a>
-            </div>
-            <div>
-                <a href="cadastro_filme.php">
-                    <p>CADASTRAR FILMES </p>
-                </a>
-            </div>
+            <div><a href="termos.php"><p>TERMOS DE USO</p></a></div>
+            <div><a href="termos.php"><p>POLÍTICA DE PRIVACIDADE</p></a></div>
+            <div><a href="local.php"><p>CONTATO</p></a></div>
+            <div><a href="local.php"><p>LOCAL</p></a></div>
+            <div><a href="cadastro_filme.php"><p>CADASTRAR FILMES</p></a></div>
         </div>
         <div class="container_footer">
-            <div class="tampa"><i class="fa fa-language" aria-hidden="true"></i>
+            <div class="tampa">
+                <i class="fa fa-language" aria-hidden="true"></i>
                 <select name="Idioma" id="idioma">
-                    <option value="PT">PORTUGUÊS </option>
+                    <option value="PT">PORTUGUÊS</option>
                     <option value="IG">INGLÊS</option>
                     <option value="ES">ESPANHOL</option>
                     <option value="CO">COREANO</option>
                 </select>
             </div>
+        </div>
     </footer>
+
+    <script src="js/script.js"></script>
 </body>
 
 </html>
