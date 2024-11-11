@@ -11,6 +11,7 @@
 <?php 
     include_once "header_pagto.php";
     session_start();
+    $_SESSION['local'] = $_POST['local_sessao'];
     $_SESSION['assentos'] = [];
     // foreach($_POST as $campos) {
     //      echo '<h2>'.$campos.'</h2>';
@@ -18,13 +19,13 @@
     for($i = 1; $i <= 120; $i++) {
         if(!empty($_POST['assentos'.$i])){
             $_SESSION['assentos'][$i] = $_POST['assentos'.$i];
-           echo  '<h2>'.$_POST['assentos'.$i].'</h2>';
-           echo 'assentos'.$i;
-        };
-    };
+          // echo  '<h2>'.$_POST['assentos'.$i].'</h2>';
+        }
+    }
     // $_POST['assentos'.$i];
     ?>
     <main>
+        <form action="pagamento.php" method="post">
             <div class="caixa-principal">
                 <h1>PRODUTOS E COMBOS</h1>
                 <div class="caixa-secundaria">
@@ -32,13 +33,13 @@
                         <div class="porcoes">
                             <div class="pipoca-pequena">
                                 <img src="imagens/balde-de-pipoca.png" alt="balde-de-pipoca.png" width="45px">
-                                <input type="checkbox" class="checkbox" id="checkbox">
+                                <input type="checkbox" class="checkbox" id="pipoca-pequena" name="pipoca-pequena">
                             </div>
                             <div class="preco-combo">
                                 <p>PEQUENA</p>
                                 <p style="color: #bf5672;">R$23,99</p>
                             </div>
-                            <select name="produto" class="produto" style="display: none;">
+                            <select name="qtd_pipoca_p" class="produto" style="display: none;">
                                 <option value="1">1</option>
                                 <option value="2">2</option>
                                 <option value="3">3</option>
@@ -50,13 +51,13 @@
                         <div class="porcoes">
                             <div class="pipoca-pequena">
                                 <img src="imagens/balde-de-pipoca.png" alt="balde-de-pipoca.png" width="45px">
-                                <input type="checkbox" class="checkbox">
+                                <input type="checkbox" class="checkbox" name="pipoca-media" id="pipoca-media">
                             </div>
                             <div class="preco-combo">
                                 <p>MÉDIA</p>
                                 <p style="color: #bf5672;">R$33,99</p>
                             </div>
-                            <select name="produto" class="produto" style="display: none;">
+                            <select name="qtd_pipoca_m" class="produto" style="display: none;">
                                 <option value="1">1</option>
                                 <option value="2">2</option>
                                 <option value="3">3</option>
@@ -68,7 +69,7 @@
                         <div class="porcoes">
                             <div class="pipoca-pequena">
                                 <img src="imagens/balde-de-pipoca.png" alt="balde-de-pipoca.png" width="45px">
-                                <input type="checkbox" class="checkbox">
+                                <input type="checkbox" class="checkbox" name="pipoca-grande" id="pipoca-grande">
                             </div>
                             <div class="preco-combo">
                                     <p>GRANDE <br>
@@ -76,7 +77,7 @@
                                     </p>
                                 <p style="color: #bf5672;">R$37,99</p>
                             </div>
-                            <select name="produto" class="produto" style="display: none;">
+                            <select name="qtd_pipoca_g" class="produto" style="display: none;">
                                 <option value="1">1</option>
                                 <option value="2">2</option>
                                 <option value="3">3</option>
@@ -91,13 +92,13 @@
                         <div class="porcoes">
                             <div class="pipoca-pequena">
                                 <img src="imagens/refrigerante.png" alt="refrigerante.png" width="45px">
-                                <input type="checkbox" class="checkbox">
+                                <input type="checkbox" class="checkbox" name="refri_pequeno" id="refri_pequeno">
                             </div>
                             <div class="preco-combo">
                                 <p>PEQUENA <br>refrigerante 200ml</p>
                                 <p style="color: #bf5672;">R$23,99</p>
                             </div>
-                            <select name="produto" class="produto" style="display: none;">
+                            <select name="qtd_refri_p" class="produto" style="display: none;">
                                 <option value="1">1</option>
                                 <option value="2">2</option>
                                 <option value="3">3</option>
@@ -109,13 +110,13 @@
                         <div class="porcoes">
                             <div class="pipoca-pequena">
                                 <img src="imagens/refrigerante.png" alt="refrigerante.png" width="45px">
-                                <input type="checkbox" class="checkbox">
+                                <input type="checkbox" class="checkbox" name="refri-medio" id="refri-medio">
                             </div>
                             <div class="preco-combo">
                                 <p>MÉDIA <br>refrigerante 500ml</p>
                                 <p style="color: #bf5672;">R$33,99</p>
                             </div>
-                            <select name="produto" class="produto" style="display: none;">
+                            <select name="qtd_refri_m" class="produto" style="display: none;">
                                 <option value="1">1</option>
                                 <option value="2">2</option>
                                 <option value="3">3</option>
@@ -127,13 +128,13 @@
                         <div class="porcoes">
                             <div class="pipoca-pequena">
                                 <img src="imagens/refrigerante.png" alt="refrigerante.png" width="45px">
-                                <input type="checkbox" class="checkbox">
+                                <input type="checkbox" class="checkbox" name="refri_grande" id="refri_grande">
                             </div>
                             <div class="preco-combo">
                                     <p>GRANDE <br>refrigerante <br>1 Litro</p>
                                 <p style="color: #bf5672;">R$37,99</p>
                             </div>
-                            <select name="produto" class="produto" style="display: none;">
+                            <select name="qtd_refri_g" class="produto" style="display: none;">
                                 <option value="1">1</option>
                                 <option value="2">2</option>
                                 <option value="3">3</option>
@@ -214,7 +215,7 @@
                     <div class="caixa-prevenda"><a href="index.php" class="pre-venda">FILMES EM<span style="color=white;"> PRÉ-VENDA</span></a></div>
             </div>
                     
-            
+            </form>
     </main>
 </body>
 </html>

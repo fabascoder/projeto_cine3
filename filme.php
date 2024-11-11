@@ -90,6 +90,13 @@
         </nav>
     </header>
     <main>
+        <?php 
+        session_start();
+        $_SESSION['dia'] = $_GET['dia']??"qui";
+        $_SESSION['hora'] = $_GET['hora']??"16";
+        echo $_SESSION['hora'];
+        echo $_SESSION['dia'];
+        ?>
         <div>
             <a href="index.php">
                 <img class="arrow_back" src="icones/arrow_left.jpg" alt="Arrow Left">
@@ -112,19 +119,19 @@
                     <div id="column1">
                         <ul>
                             <li>
-                                    <a class="button_horario" href="pagamento_ingressos.php"><?php echo $resultado['horario'];?></a>
+                                    <a class="button_horario" href="pagamento_ingressos.php?hora=16&&dia=qui"><?php echo $resultado['horario'];?></a>
                                 
                             </li>
                         </ul>
                         <ul>
                             <li>
-                                    <a class="button_horario" href="pagamento_ingressos.php">-</a>
+                                    <a class="button_horario" href="pagamento_ingressos.php?hora=15&&dia=sab">15:00, sáb</a>
                                 
                             </li>
                         </ul>
                         <ul>
                             <li>
-                                    <a class="button_horario" href="pagamento_ingressos.php">-</a>
+                                    <a class="button_horario" href="pagamento_ingressos.php?hora=18&&dia=seg">18:00, seg</a>
                                 
                             </li>
                         </ul>
@@ -134,21 +141,21 @@
                             <ul>
                                 <li>
                                     
-                                        <a class="button_horario" href="pagamento_ingressos.php">-</a>
+                                        <a class="button_horario" href="pagamento_ingressos.php?hora=13&&dia=qua">13:00, qua</a>
                                     
                                 </li>
                             </ul>
                             <ul>
                                 <li>
                                     
-                                        <a class="button_horario" href="pagamento_ingressos.php">-</a>
+                                        <a class="button_horario" href="pagamento_ingressos.php?hora=16&&dia=qui">16:00, qui</a>
                                     
                                 </li>
                             </ul>
                             <ul>
                                 <li>
                                     
-                                        <a class="button_horario" href="pagamento_ingressos.php">-</a>
+                                        <a class="button_horario" href="pagamento_ingressos.php?hora=20&&dia=ter">20:00, ter</a>
                                     
                                 </li>
                             </ul>

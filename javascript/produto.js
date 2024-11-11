@@ -55,17 +55,24 @@ window.onclick = function (event) {
         modal.style.display = "none";
     }
 };
-;
 
 // chekbox
 
-// Seleciona todos os botões de tamanho
-const sizeButtons = document.querySelectorAll('.size-button');
+// Seleciona todos os grupos de botões de tamanho
+const sizeGroups = document.querySelectorAll('.sizes');
 
-// Adiciona um evento de clique para cada botão de tamanho
-sizeButtons.forEach(button => {
-    button.addEventListener('click', () => {
-        // Alterna a classe "selected" no botão clicado
-        button.classList.toggle('selected');
+sizeGroups.forEach(group => {
+    // Seleciona todos os botões de tamanho dentro do grupo
+    const sizeButtons = group.querySelectorAll('.size-button');
+
+    sizeButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            // Remove a classe "selected" de todos os botões no grupo
+            sizeButtons.forEach(btn => btn.classList.remove('selected'));
+
+            // Adiciona a classe "selected" ao botão clicado
+            button.classList.add('selected');
+        });
     });
 });
+

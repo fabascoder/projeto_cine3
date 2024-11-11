@@ -13,51 +13,109 @@
     ?>
     <main>
         <div class="caixa-principal">
-            <div class="local-data">
-                <p class="local">Qui, 27, 13:30 | Sala 02 - e5; d11.</p>
-                <a href="https://www.google.com/maps/dir//Av.+José+Pinheiro+Borges+-+Itaquera,+São+Paulo+-+SP,+08220-900/@-23.5405404,-46.5530448,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x94ce5e622db57c4f:0x3de99bb691d3dc68!2m2!1d-46.4706432!2d-23.5405621?entry=ttu&g_ep=EgoyMDI0MDkxOC4xIKXMDSoASAFQAw%3D%3D" class="data" target="_blank" rel="external"><img src="/imagens/local.png" alt="" width="30px">Shopping Metrô Itaquera-SP</a>
-            </div>
-            <div class="conferir-nota">
-                <p class="itens">2x ingressos padrao</p>
-                <p class="valor"><R1>38,00</R1></p>
-            </div>
-            <hr>
-            <div class="total">
-                <p>TOTAL</p>
-                <p>R$38,00</p>
-            </div>
-            <p style="padding-left: 20px; font-weight: 500; font-family: sans-serif;">FORMA DE PAGAMENTO</p>
-            <div class="forma-de-pagamento">
-                <div class="labels">
-                    <label class="label">
-                        <input type="radio" name="radio" class="radio">
-                        <span class="customizar-radio"></span>
-                        <img src="imagens/visa.png" alt="Visa.png" width="60px">
-                    </label>
-                    <label class="label">
-                        <input type="radio" name="radio" class="radio">
-                        <span class="customizar-radio"></span>
-                        <img src="imagens/MasterCard_Logo.svg.png" alt="MasterCard.png" width="60px">
-                    </label>
-                    <label class="label">
-                        <input type="radio" name="radio" class="radio" >
-                        <span class="customizar-radio"></span>
-                        <img src="imagens/logo-pix-520x520.png" alt="Pix.png" width="60px">
-                    </label>
-                    <label class="label">
-                        <input type="radio" name="radio" class="radio">
-                        <span class="customizar-radio"></span>
-                        <img src="imagens/boleto-logo-0.png" alt="boleto.png" width="60px">
-                    </label>
-                </div>
-                <div class="qr-code">
-                    <img src="imagens/qrcode.png" alt="QRcode.png" >
-                </div>
-            </div> 
+            <?php 
+            $pipoca_p = $_POST['pipoca-pequena']?? 0;
+            $pipoca_m = $_POST['pipoca-media']?? 0;
+            $pipoca_g = $_POST['pipoca-grande']?? 0;
+            $qtd_p = intval($_POST['qtd_pipoca_p'])?? 0;
+            $qtd_m = intval($_POST['qtd_pipoca_m'])?? 0;
+            $qtd_g = intval($_POST['qtd_pipoca_g'])?? 0;
+
+            $refri_p = $_POST['refri_pequeno']?? 0;
+            $refri_m = $_POST['refri_medio']?? 0;
+            $refri_g = $_POST['refri_grande']?? 0;
+            $qtd_refri_p = intval($_POST['qtd_refri_p'])?? 0;
+            $qtd_refri_m = intval($_POST['qtd_refri_m'])?? 0;
+            $qtd_refri_g = intval($_POST['qtd_refri_g'])?? 0;
+            $total_produtos = 0;
+            if($pipoca_p) {
+                $total_produtos += $qtd_p * 23.99;
+            }
+            if($pipoca_m) {
+                $total_produtos += $qtd_m * 33.99;
+            }
+            if($pipoca_g) {
+                $total_produtos += $qtd_g * 37.99;
+            }
+            if($refri_p) {
+                $total_produtos += $qtd_refri_p * 23.99;
+            }
+            if($refri_m) {
+                $total_produtos += $qtd_refri_m * 33.99;
+            }
+            if($refri_g) {
+                $total_produtos += $qtd_refri_g * 37.99;
+            }
+
+            session_start();
+            echo "<pre>";
+            print_r($_SESSION);
+
+            $itens = [];
+            foreach($_SESSION['assentos'] as $assento) {
+                $assentos .= $assento." | "; 
+                $total_produtos += 38;
+            }
+            $descricao = "Sessão ".$_SESSION['dia']." às ".$_SESSION['hora']."h, assentos: $assentos";
+            echo $descricao;
+            $itens = [
+            "id"          => 01,
+            "title"       => "Sessão ".$_SESSION['dia']," as ".$_SESSION['hora'],
+            "description" => $descricao,
+            "quantity"    => 1,
+            "currency_id" => "BRL",
+            "unit_price"  => $total_produtos
+             ];
+             $data_atual = new Datetime();
+             $data = [
+                "items" => [$itens],
+                "external_reference" => '1',
+                "transaction_amount" => $total_produtos,
+                "payer" => [
+                    "name" => "Marcos",
+                    "surname" => "Amorim",
+                    "email" => "fabricialvez@gmail.com",
+                    "identification" => [
+                        "type" => "CPF",
+                        "number" =>  12345678909
+                    ],
+                    "date_created" => $data_atual->format('Y-m-d\TH:i:s\P') //"2024-04-01T00:00:00Z"
+                ],
+                "back_urls" => [
+                    "success" => "http://localhost/projeto_cine3/retorno.php?msg=successo",
+                    "failure" => "http://localhost/projeto_cine3/retorno.php?msg=failure",
+                    "pending" => "http://localhost/projeto_cine3/retorno.php?msg=pending"
+                ],
+                "auto_return" => "approved"
+            ];
+            $token = "";
+            $url = 'https://api.mercadopago.com/checkout/preferences';
+            $ch = curl_init($url);
+            curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+            curl_setopt($ch, CURLOPT_POST, true);
+            curl_setopt($ch, CURLOPT_HTTPHEADER, [
+                'Content-Type: application/json',
+                'Authorization: Bearer ' . $token
+            ]);
+            curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($data));
+            $response = curl_exec($ch);
+            curl_close($ch);
+        
+            $dados = json_decode($response, true);
+            // echo "<pre>";
+            // print_r($dados)
+            if (isset($dados['sandbox_init_point'])) {
+                header("Location: " . $dados['sandbox_init_point']);
+                exit;
+            } else {
+                echo "Erro ao processar pagamento";
+            }
+
+            ?>
         </div>
-        <div class="botao">
+        <!-- <div class="botao">
             <a class="btn" href="pagamento_confirmacao.php">CONTINUAR ></a>
-        </div>
+        </div> -->
     </main>
     <footer>
         <img src="imagens/Logo_Cine3-removebg-preview.png" alt="">

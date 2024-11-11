@@ -10,6 +10,7 @@
             //se clicado, pega o atributo ID do elemento clicado
             let id = checkbox.getAttribute('id');
             //executa a função "adicionarAssento()"
+            checkbox.value = id;
             adicionarAssento(checkbox, id);
         });
     });

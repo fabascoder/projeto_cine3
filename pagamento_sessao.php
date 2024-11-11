@@ -324,10 +324,10 @@
                 <div class="escolher-cidade">
                 <p>LOCAL:</p>
                     <img src="/imagens/local.png" alt="" width="20px">
-                    <select name="select" id="select">
+                    <select name="local_sessao" id="local_sessao">
                         <option value="São Paulo">São Paulo</option>
-                        <option value="São Paulo">São Paulo</option>
-                        <option value="São Paulo">São Paulo</option>
+                        <option value="Lapa">Lapa</option>
+                        <option value="Itaquera">Itaquera</option>
                     </select>
                 </div>
                 <img src="/imagens/local.png" alt="" width="20px">
