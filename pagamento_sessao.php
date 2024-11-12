@@ -10,57 +10,6 @@
 </head>
 
 <body>
-    <?php
-    session_start();
-
-    // Garantir que as variáveis sejam inteiros antes de somar
-    $qtd_inteira = (int)($_SESSION['qtd_inteira'] ?? 0); // Convertendo para inteiro
-    $qtd_meia = (int)($_SESSION['qtd_meia'] ?? 0); // Convertendo para inteiro
-
-    // Calculando o total de assentos permitidos
-    $total_assentos_permitidos = $qtd_inteira + $qtd_meia;
-
-    ?>
-
-
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sessão</title>
-    <link rel="stylesheet" href="css/pagamento_sessao.css">
-</head>
-<body>
-    <form action="pagamento_produtos.php" method="post">
-        <h1>SALA: 01</h1>
-        <div class="caixa-principal">
-            <div class="cinema">
-                <div class="caixa-assentos">
-                    <!-- Linhas de assentos -->
-                    <div class="linha">
-                        <label>A</label>
-                        <div class="assento"><input type="checkbox" name="assentos[]" class="assentos" id="A1"></div>
-                        <div class="assento"><input type="checkbox" name="assentos[]" class="assentos" id="A2"></div>
-                        <!-- Mais assentos -->
-                    </div>
-                    <!-- Outras linhas -->
-
-                    <div class="tela">TELA</div>
-                </div>
-            </div>
-
-            <p class="assentos-escolhidos">ASSENTO(S) ESCOLHIDOS: <span class="escolhidos"></span></p>
-            <hr>
-
-            <div class="botao">
-                <button type="submit" class="btn">AVANÇAR ></button>
-            </div>
-        </div>
-    </form>
-</body>
-</html>
-
     <?php 
     include_once "header_pagto.php";
     $_SESSION['total_pagar'] = $_POST['total_pagar']??"";
@@ -433,36 +382,5 @@
             </div>
     </footer>
     <script src="javascript/assentos.js"></script>
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            const maxAssentos = <?php echo $total_assentos_permitidos; ?>;
-            const checkboxes = document.querySelectorAll('.assentos');
-            let assentosSelecionados = 0;
-
-            checkboxes.forEach(function(checkbox) {
-                checkbox.addEventListener('change', function() {
-                    if (checkbox.checked) {
-                        assentosSelecionados++;
-                    } else {
-                        assentosSelecionados--;
-                    }
-
-                    // Bloqueia ou desbloqueia os checkboxes com base no limite de assentos
-                    if (assentosSelecionados >= maxAssentos) {
-                        checkboxes.forEach(function(cb) {
-                            if (!cb.checked) {
-                                cb.disabled = true;
-                            }
-                        });
-                    } else {
-                        checkboxes.forEach(function(cb) {
-                            cb.disabled = false;
-                        });
-                    }
-                });
-            });
-        });
-    </script>
-</script>
 </body>
 </html>
