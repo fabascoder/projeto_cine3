@@ -1,16 +1,13 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sessão</title>
+    <title>Seleção de Assentos</title>
     <link rel="stylesheet" href="css/pagamento_sessao.css">
-    <link rel="stylesheet" href="css/footer.css">
 </head>
-
 <body>
-    <?php 
+<?php 
     include_once "header_pagto.php";
     $_SESSION['total_pagar'] = $_POST['total_pagar']??"";
     $_SESSION['total'] = $_POST['total']??"";
@@ -20,7 +17,15 @@
     $_SESSION['tamanho-camiseta'] = $_POST['tamanho-camiseta']??"";
     $_SESSION['tamanho-camiseta'] = $_POST['tamanho-camiseta']??"";
     ?>
+    <header>
+        <!-- Código do header omitido para simplificação -->
+    </header>
+
     <main>
+        <div class="titulo">
+            <p>Selecione seus assentos</p>
+        </div>
+        <main>
     <form action="pagamento_produtos.php" method="post" id="sessao">
        
         <div class="caixa-principal">
@@ -342,78 +347,48 @@
         </div>
 </form>
     </main>
-    <footer>
-        <img src="imagens/Logo_Cine3-removebg-preview.png" alt="">
-        <div class="term">
-            <div>
-                <a href="termos.php">
-                    <p>TERMOS DE USO</p>
-                </a>
-            </div>
-            <div>
-                <a href="termos.php">
-                    <p>POLÍTICA DE PRIVACIDADE</p>
-                </a>
-            </div>
-            <div>
-                <a href="local.php">
-                    <p>CONTATO</p>
-                </a>
-            </div>
-            <div>
-                <a href="local.php">
-                    <p>LOCAL</p>
-                </a>
-            </div>
-            <div>
-                <a href="cadastro_filme.php">
-                    <p>CADASTRAR FILMES </p>
-                </a>
-            </div>
-        </div>
-        <div class="container_footer">
-            <div class="tampa"><i class="fa fa-language" aria-hidden="true"></i>
-                <select name="Idioma" id="idioma">
-                    <option value="PT">PORTUGUÊS </option>
-                    <option value="IG">INGLÊS</option>
-                    <option value="ES">ESPANHOL</option>
-                    <option value="CO">COREANO</option>
-                </select>
-            </div>
-    </footer>
-    <script src="javascript/assentos.js"></script>
+
     <script>
-        // Recupera a quantidade total de ingressos da sessionStorage (definida na página anterior)
-        const maxAssentos = parseInt(sessionStorage.getItem("totalIngressos")) || 0;
-        let selectedCount = 0;
-        const listaAssentos = document.getElementById('listaAssentos');
-        let assentosSelecionados = [];
+    document.addEventListener("DOMContentLoaded", function() {
+        // Recupera o total de ingressos salvo na página anterior
+        const totalIngressos = parseInt(sessionStorage.getItem("totalIngressos")) || 0;
+        let assentosSelecionados = 0;
 
-        // Selecione todos os checkboxes de assento
-        const checkboxes = document.querySelectorAll('.assentos');
+        // Seleciona todos os elementos de assento
+        const assentos = document.querySelectorAll(".assento");
 
-        checkboxes.forEach(checkbox => {
-            checkbox.addEventListener('change', function() {
-                const assentoId = this.id;
-
-                if (this.checked) {
-                    if (selectedCount < maxAssentos) {
-                        selectedCount++;
-                        assentosSelecionados.push(assentoId);
-                        this.parentElement.classList.add('assento-selecionado'); // Muda a cor do assento selecionado
-                    } else {
-                        this.checked = false; // Impede que mais assentos sejam selecionados
-                    }
-                } else {
-                    selectedCount--;
-                    assentosSelecionados = assentosSelecionados.filter(id => id !== assentoId);
-                    this.parentElement.classList.remove('assento-selecionado'); // Remove a cor do assento desmarcado
+        assentos.forEach(assento => {
+            assento.addEventListener("click", function() {
+                // Verifica se o assento já foi selecionado
+                if (!assento.classList.contains("selecionado") && assentosSelecionados < totalIngressos) {
+                    assento.classList.add("selecionado");
+                    assentosSelecionados++;
+                } else if (assento.classList.contains("selecionado")) {
+                    assento.classList.remove("selecionado");
+                    assentosSelecionados--;
+                } else if (assentosSelecionados >= totalIngressos) {
+                    alert(`Você só pode selecionar ${totalIngressos} assentos.`);
                 }
-
-                // Atualiza a lista de assentos escolhidos
-                listaAssentos.textContent = assentosSelecionados.length > 0 ? assentosSelecionados.join(', ') : 'Nenhum assento selecionado';
             });
         });
+    });
     </script>
+
+    <style>
+    /* Estilos simples para os assentos */
+    .assentos-container {
+        display: flex;
+        gap: 10px;
+    }
+    .assento {
+        width: 30px;
+        height: 30px;
+        background-color: #ccc;
+        cursor: pointer;
+    }
+    .assento.selecionado {
+        background-color: #4CAF50;
+    }
+    </style>
 </body>
 </html>
