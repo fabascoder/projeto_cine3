@@ -58,37 +58,6 @@
             </div>
         </div>
     </form>
-
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            const maxAssentos = <?php echo $total_assentos_permitidos; ?>;
-            const checkboxes = document.querySelectorAll('.assentos');
-            let assentosSelecionados = 0;
-
-            checkboxes.forEach(function(checkbox) {
-                checkbox.addEventListener('change', function() {
-                    if (checkbox.checked) {
-                        assentosSelecionados++;
-                    } else {
-                        assentosSelecionados--;
-                    }
-
-                    // Bloqueia ou desbloqueia os checkboxes com base no limite de assentos
-                    if (assentosSelecionados >= maxAssentos) {
-                        checkboxes.forEach(function(cb) {
-                            if (!cb.checked) {
-                                cb.disabled = true;
-                            }
-                        });
-                    } else {
-                        checkboxes.forEach(function(cb) {
-                            cb.disabled = false;
-                        });
-                    }
-                });
-            });
-        });
-    </script>
 </body>
 </html>
 
@@ -465,36 +434,35 @@
     </footer>
     <script src="javascript/assentos.js"></script>
     <script>
-    document.addEventListener("DOMContentLoaded", function() {
-        // Obtenha o número máximo de assentos permitido com base na sessão PHP
-        const maxAssentos = <?php echo $_SESSION['qtd_inteira'] + $_SESSION['qtd_meia']; ?>;
-        const checkboxes = document.querySelectorAll('.assentos'); // Seleciona todos os checkboxes de assentos
-        
-        let assentosSelecionados = 0;
+        document.addEventListener("DOMContentLoaded", function() {
+            const maxAssentos = <?php echo $total_assentos_permitidos; ?>;
+            const checkboxes = document.querySelectorAll('.assentos');
+            let assentosSelecionados = 0;
 
-        checkboxes.forEach(function(checkbox) {
-            checkbox.addEventListener('change', function() {
-                if (checkbox.checked) {
-                    assentosSelecionados++;
-                } else {
-                    assentosSelecionados--;
-                }
+            checkboxes.forEach(function(checkbox) {
+                checkbox.addEventListener('change', function() {
+                    if (checkbox.checked) {
+                        assentosSelecionados++;
+                    } else {
+                        assentosSelecionados--;
+                    }
 
-                // Bloqueia/desbloqueia checkboxes com base no limite de assentos
-                if (assentosSelecionados >= maxAssentos) {
-                    checkboxes.forEach(function(cb) {
-                        if (!cb.checked) {
-                            cb.disabled = true;
-                        }
-                    });
-                } else {
-                    checkboxes.forEach(function(cb) {
-                        cb.disabled = false;
-                    });
-                }
+                    // Bloqueia ou desbloqueia os checkboxes com base no limite de assentos
+                    if (assentosSelecionados >= maxAssentos) {
+                        checkboxes.forEach(function(cb) {
+                            if (!cb.checked) {
+                                cb.disabled = true;
+                            }
+                        });
+                    } else {
+                        checkboxes.forEach(function(cb) {
+                            cb.disabled = false;
+                        });
+                    }
+                });
             });
         });
-    });
+    </script>
 </script>
 </body>
 </html>
