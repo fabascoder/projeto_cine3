@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="css/principal.css">
     <link rel="stylesheet" href="css/filme.css">
     <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/header.css">
 </head>
 
 <body>
@@ -31,62 +32,76 @@
     ?>
     <header>
         <div class="logo-pesquisa">
-            <a href="index.php"><img src="imagens/Logo_Cine3-removebg-preview.png" alt="Imagem CINE3"
-                    width="200px"></a>
+            <a href="index.php"><img src="imagens/Logo_Cine3-removebg-preview.png" alt="Imagem CINE3" width="200px"></a>
             <div class="div_pesquisa">
                 <input type="search" id="pesquisa" placeholder="Pesquisar">
             </div>
         </div>
-
-        <nav id="navegacao">
-
-
-            <ul>
-                <li>
-                    <div id="window_ticket">
-                        <div id="ingresso">
-                            <a href="javascript:void(0)" id="openModal">
-                                <div>
+        <div class="menu-hamburguer">
+            <input type="checkbox" id="menu-toggle" class="menu-toggle">
+            <label for="menu-toggle" class="menu-icon">
+                <span class="material-symbols-outlined">menu</span>
+            </label>
+            <nav class="menu">
+                <ul>
+                    <li><a href="javascript:void(0)" id="openModal"><div>
                                     <span id="icon_ingresso" class="material-symbols-outlined">
                                         confirmation_number
                                     </span>
                                 </div>
                                 Ingressos
-                            </a>
-                        </div>
-                    </div>
-                </li>
-                <li class="item_produto">
-                    <a href="produtos.php">
-                        <div>
+                            </a></li>
+                    <li><a href="produtos.php"><div>
                             <span id="icon_produto" class="material-symbols-outlined">
                                 shopping_bag
                             </span>
-                        </div>
+                        </div> 
                         Produtos
-                    </a>
-                </li>
-                <li>
-                    <a href="local.php"> <!--LOCAL - LINK-->
-                        <div>
+                    </a></li>
+                    <li><a href="local.php"><div>
                             <span id="icon_local" class="material-symbols-outlined">
                                 pin_drop
                             </span>
                         </div>
-                        Localização
-                    </a>
-                </li>
-                <li>
-                <a href="login.php">
-                    <div>
-                        <span id="icon_profile" class="material-symbols-outlined">
-                            account_circle
-                        </span>
+                        Local
+                    </a></li>
+                    <li><a href="login.php"><div>
+                            <span id="icon_profile" class="material-symbols-outlined">
+                                account_circle
+                            </span>
+                        </div>
+                        <span id="login-text">Login</span></a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <nav id="navegacao">
+
+
+                
+
+                <!-- Modal HTML -->
+                <dialog id="modal-ingressos" class="modal">
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <h2 class="ingressos">Ingressos</h2>
+                        <div>
+                            <p class="p1">Padrão Inteira</p>
+                            <p class="v1">Válido de quinta-feira, sexta-feira, sábado e domingo.</p>
+                            <p class="t1">R$18,00</p>
+                        </div>
+                        <hr>
+                        <div>
+                            <p class="p1">Meia Promocional</p>
+                            <p class="v1">Válido de segunda-feira, terça-feira e quarta-feira OU com Comprovante
+                                Escolar.</p>
+                            <p class="t1">R$9,00</p>
+                        </div>
                     </div>
-                    Login <!--foto-->
-                </a>
-                </li>
-            </ul>
+                </dialog>
+
+
+
         </nav>
     </header>
     <main>

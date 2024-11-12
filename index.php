@@ -21,6 +21,7 @@
 
 <body>
     <header>
+        
         <div class="logo-pesquisa">
             <a href="index.php"><img src="imagens/Logo_Cine3-removebg-preview.png" alt="Imagem CINE3" width="200px"></a>
             <div class="div_pesquisa">
@@ -60,7 +61,7 @@
                                 account_circle
                             </span>
                         </div>
-                        <span id="login-text">Login</span></a></li>
+                        Login
                 </ul>
             </nav>
         </div>
@@ -91,7 +92,7 @@
                 </dialog>
 
 
-               
+
         </nav>
     </header>
 
