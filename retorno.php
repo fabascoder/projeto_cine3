@@ -12,23 +12,23 @@ $novo_pagto = [
     'site_id'             => $_GET['site_id'],
     'processing_mode'     => $_GET['processing_mode'],
     'merchant_account_id' => $_GET['merchant_account_id'],
-    'compra_id'           => $_GET['external_reference']
+    //'compra_id'           => $_GET['external_reference']
 ];
 echo "<pre>";
 print_r($_GET);
-$sql = "INSERT INTO pagamento (
-    msg, collection_status, payment_id, status, external_reference,
-    payment_type, merchant_order_id, preference_id, site_id,
-    processing_mode, merchant_account_id, compra_id
-) VALUES (
-    :msg, :collection_status, :payment_id, :status, :external_reference,
-    :payment_type, :merchant_order_id, :preference_id, :site_id,
-    :processing_mode, :merchant_account_id, :compra_id
-)";
-$pagto = $conexao->prepare($sql);
-if ($pagto->execute($novo_pagto)) {
-    echo '<div>Pagamento ' . $novo_pagto['status'] . ' <a href="pagamento_confirmacao.php?id=' . $novo_pagto['payment_id'] . '">Detalhes do pedido</a></div>';
-} else {
-    echo "Erro finalizar o pagamento.";
-}
+// $sql = "INSERT INTO pagto (
+//     msg, collection_status, payment_id, status, external_reference,
+//     payment_type, merchant_order_id, preference_id, site_id,
+//     processing_mode, merchant_account_id, compra_id
+// ) VALUES (
+//     :msg, :collection_status, :payment_id, :status, :external_reference,
+//     :payment_type, :merchant_order_id, :preference_id, :site_id,
+//     :processing_mode, :merchant_account_id, :compra_id
+// )";
+// $pagto = $conexao->prepare($sql);
+// if ($pagto->execute($novo_pagto)) {
+//     echo '<div>Pagamento ' . $novo_pagto['status'] . ' <a href="detalhe_pedido.php?id=' . $novo_pagto['payment_id'] . '">Detalhes do pedido</a></div>';
+// } else {
+//     echo "Erro finalizar o pagamento.";
+// }
 ?>
