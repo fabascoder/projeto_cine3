@@ -68,7 +68,7 @@
                         </div>
                         <div class="quantidade-ingresso">
                             <p>Quantidade</p>
-                            <select name="quantidadeInteira" id="quantidadeInteira" onchange="calcularTotal()"  onchange="salvarQuantidade()">
+                            <select name="quantidadeInteira" id="quantidadeInteira" onchange="calcularTotal()"calcularTotal(); salvarQuantidade()">
                                 <option value="0">0</option>
                                 <option value="1">1</option>
                                 <option value="2">2</option>
@@ -95,7 +95,7 @@
                         </div>
                         <div class="quantidade-ingresso">
                             <p>Quantidade</p>
-                            <select name="quantidadeMeia" id="quantidadeMeia" onchange="calcularTotal()"  onchange="salvarQuantidade()">
+                            <select name="quantidadeMeia" id="quantidadeMeia" onchange="calcularTotal(); salvarQuantidade()">
                                 <option value="0">0</option>
                                 <option value="1">1</option>
                                 <option value="2">2</option>
@@ -148,15 +148,16 @@
     </footer>
     <script src="javascript/produto.js"></script>
     <script>
-    function salvarQuantidade() {
-        const quantidadeInteira = parseInt(document.getElementById("quantidadeInteira").value) || 0;
-        const quantidadeMeia = parseInt(document.getElementById("quantidadeMeia").value) || 0;
-        const totalIngressos = quantidadeInteira + quantidadeMeia;
+        function salvarQuantidade() {
+            const quantidadeInteira = parseInt(document.getElementById("quantidadeInteira").value) || 0;
+            const quantidadeMeia = parseInt(document.getElementById("quantidadeMeia").value) || 0;
+            const totalIngressos = quantidadeInteira + quantidadeMeia;
 
-        // Salva o total de ingressos na sessionStorage para usar na próxima página
-        sessionStorage.setItem("totalIngressos", totalIngressos);
-    }
+            // Salva o total de ingressos na sessionStorage para usar na próxima página
+            sessionStorage.setItem("totalIngressos", totalIngressos);
+        }
     </script>
+
 </body>
 
 </html>

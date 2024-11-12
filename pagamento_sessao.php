@@ -383,7 +383,7 @@
     </footer>
     <script src="javascript/assentos.js"></script>
     <script>
-        // Recupera a quantidade total de ingressos da sessionStorage
+        // Recupera a quantidade total de ingressos da sessionStorage (definida na página anterior)
         const maxAssentos = parseInt(sessionStorage.getItem("totalIngressos")) || 0;
         let selectedCount = 0;
         const listaAssentos = document.getElementById('listaAssentos');
