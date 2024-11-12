@@ -70,7 +70,7 @@
                                 account_circle
                             </span>
                         </div>
-                        <span id="login-text">Login</span></a></li>
+                        Login
                 </ul>
             </nav>
         </div>
