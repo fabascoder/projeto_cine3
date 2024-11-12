@@ -311,7 +311,36 @@ footer div select {
   width: 267px;
   max-height: 400px;
 }
+/*
+.menu-hamburguer {
+  margin: auto;
+}
 
+/* Ícone do menu 
+.menu-icon {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.menu-toggle {
+  display: none;
+}
+nav.menu ul a{
+  padding-top: 0;
+  padding-bottom: 0;
+  
+}
+nav.menu{
+  padding-top: 0;
+}
+main{
+  margin-top: 200px;
+}
+div #icon_local{
+  margin-left: 15px;
+}
+*/
 /*MAIN*/
 @media screen and (max-width: 1060px){
   .foto {
@@ -534,6 +563,63 @@ footer div select {
   .logo-pesquisa #navegacao{
   }
 }
+/*
 @media screen and (max-width: 456px){
- 
+  .menu-hamburguer {
+    display: block;
+}
+header{
+  display: flex;
+  flex-direction: row;
+}
+header img{
+  width: 160px;
+}
+.logo-pesquisa #pesquisa{
+  margin-top: 14px;
+  width: 180px;
+  height: 30px;
+}
+.menu-icon {
+    display: block;
+    color: #fff;
+}
+
+.menu {
+    display: none;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    background-color: var(--vermelho);
+    width: 100%;
+    padding: 10px 0;
+    
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.menu ul li {
+    text-align: center;
+}
+
+.menu ul li a {
+    padding: 10px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.menu-toggle:checked + .menu-icon + .menu{
+    display: block;
+    
+}
+li .material-symbols-outlined{
+  display: none;
+}
 }
