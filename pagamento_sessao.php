@@ -384,10 +384,10 @@
     <script src="javascript/assentos.js"></script>
     <script>
     document.addEventListener("DOMContentLoaded", function() {
-        // Substitua 'qtdMax' pela quantidade de ingressos obtida da sessão ou do POST.
-        const maxAssentos = <?php echo $_SESSION['qtd_inteira'] + $_SESSION['qtd_meia']; ?> || 0;
-        const checkboxes = document.querySelectorAll('.assentos');
-
+        // Obtenha o número máximo de assentos permitido com base na sessão PHP
+        const maxAssentos = <?php echo $_SESSION['qtd_inteira'] + $_SESSION['qtd_meia']; ?>;
+        const checkboxes = document.querySelectorAll('.assentos'); // Seleciona todos os checkboxes de assentos
+        
         let assentosSelecionados = 0;
 
         checkboxes.forEach(function(checkbox) {
@@ -398,6 +398,7 @@
                     assentosSelecionados--;
                 }
 
+                // Bloqueia/desbloqueia checkboxes com base no limite de assentos
                 if (assentosSelecionados >= maxAssentos) {
                     checkboxes.forEach(function(cb) {
                         if (!cb.checked) {
