@@ -382,5 +382,36 @@
             </div>
     </footer>
     <script src="javascript/assentos.js"></script>
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        // Substitua 'qtdMax' pela quantidade de ingressos obtida da sessão ou do POST.
+        const maxAssentos = <?php echo $_SESSION['qtd_inteira'] + $_SESSION['qtd_meia']; ?> || 0;
+        const checkboxes = document.querySelectorAll('.assentos');
+
+        let assentosSelecionados = 0;
+
+        checkboxes.forEach(function(checkbox) {
+            checkbox.addEventListener('change', function() {
+                if (checkbox.checked) {
+                    assentosSelecionados++;
+                } else {
+                    assentosSelecionados--;
+                }
+
+                if (assentosSelecionados >= maxAssentos) {
+                    checkboxes.forEach(function(cb) {
+                        if (!cb.checked) {
+                            cb.disabled = true;
+                        }
+                    });
+                } else {
+                    checkboxes.forEach(function(cb) {
+                        cb.disabled = false;
+                    });
+                }
+            });
+        });
+    });
+</script>
 </body>
 </html>
