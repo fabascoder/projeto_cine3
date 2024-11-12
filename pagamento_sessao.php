@@ -12,10 +12,11 @@
 <body>
 <?php
 session_start();
-$qtd_inteira = $_SESSION['qtd_inteira'] ?? 0;
-$qtd_meia = $_SESSION['qtd_meia'] ?? 0;
-$total_assentos_permitidos = $qtd_inteira + $qtd_meia;
+$qtd_inteira = (int)($_SESSION['qtd_inteira'] ?? 0); // Força a conversão para inteiro
+$qtd_meia = (int)($_SESSION['qtd_meia'] ?? 0); // Força a conversão para inteiro
+$total_assentos_permitidos = $qtd_inteira + $qtd_meia; // Agora a soma será feita corretamente
 ?>
+
 
 <!DOCTYPE html>
 <html lang="pt-br">
