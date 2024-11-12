@@ -10,6 +10,28 @@
 </head>
 
 <body>
+    <form action="pagamento_sessao.php" method="post" onsubmit="return saveTicketCount()">
+        <!-- Código existente... -->
+
+        <input type="hidden" id="totalTickets" name="totalTickets" value="0">
+        <button type="submit" class="btn">AVANÇAR</button>
+
+        <script>
+            function calcularTotal() {
+                // Sua lógica de cálculo de total aqui
+            }
+
+            function saveTicketCount() {
+                const quantidadeInteira = parseInt(document.getElementById("quantidadeInteira").value) || 0;
+                const quantidadeMeia = parseInt(document.getElementById("quantidadeMeia").value) || 0;
+                const totalTickets = quantidadeInteira + quantidadeMeia;
+
+                document.getElementById("totalTickets").value = totalTickets;
+                return true; // Permite que o formulário seja enviado
+            }
+        </script>
+    </form>
+
     <header>
         <nav>
             <ul>
@@ -69,6 +91,7 @@
                         <div class="quantidade-ingresso">
                             <p>Quantidade</p>
                             <select name="quantidadeInteira" id="quantidadeInteira" onchange="calcularTotal()">
+                                <option value="0">0</option>
                                 <option value="1">1</option>
                                 <option value="2">2</option>
                                 <option value="3">3</option>
@@ -95,6 +118,7 @@
                         <div class="quantidade-ingresso">
                             <p>Quantidade</p>
                             <select name="quantidadeMeia" id="quantidadeMeia" onchange="calcularTotal()">
+                                <option value="0">0</option>
                                 <option value="1">1</option>
                                 <option value="2">2</option>
                                 <option value="3">3</option>
@@ -144,7 +168,6 @@
             </div>
         </div>
     </footer>
-
     <script src="javascript/produto.js"></script>
 </body>
 

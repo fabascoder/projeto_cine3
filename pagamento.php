@@ -13,12 +13,10 @@
     ?>
     <main>
         <div class="caixa-principal">
-            <?php
-            session_start();
+            <?php 
             $pipoca_p = $_POST['pipoca-pequena']?? 0;
-            $pipoca_m = $_POST['pipoca-grande']?? 0;
+            $pipoca_m = $_POST['pipoca-media']?? 0;
             $pipoca_g = $_POST['pipoca-grande']?? 0;
-
             $qtd_p = intval($_POST['qtd_pipoca_p'])?? 0;
             $qtd_m = intval($_POST['qtd_pipoca_m'])?? 0;
             $qtd_g = intval($_POST['qtd_pipoca_g'])?? 0;
@@ -26,7 +24,6 @@
             $refri_p = $_POST['refri_pequeno']?? 0;
             $refri_m = $_POST['refri_medio']?? 0;
             $refri_g = $_POST['refri_grande']?? 0;
-
             $qtd_refri_p = intval($_POST['qtd_refri_p'])?? 0;
             $qtd_refri_m = intval($_POST['qtd_refri_m'])?? 0;
             $qtd_refri_g = intval($_POST['qtd_refri_g'])?? 0;
