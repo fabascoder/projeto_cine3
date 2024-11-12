@@ -10,28 +10,6 @@
 </head>
 
 <body>
-    <form action="pagamento_sessao.php" method="post" onsubmit="return saveTicketCount()">
-        <!-- Código existente... -->
-
-        <input type="hidden" id="totalTickets" name="totalTickets" value="0">
-        <button type="submit" class="btn">AVANÇAR</button>
-
-        <script>
-            function calcularTotal() {
-                // Sua lógica de cálculo de total aqui
-            }
-
-            function saveTicketCount() {
-                const quantidadeInteira = parseInt(document.getElementById("quantidadeInteira").value) || 0;
-                const quantidadeMeia = parseInt(document.getElementById("quantidadeMeia").value) || 0;
-                const totalTickets = quantidadeInteira + quantidadeMeia;
-
-                document.getElementById("totalTickets").value = totalTickets;
-                return true; // Permite que o formulário seja enviado
-            }
-        </script>
-    </form>
-
     <header>
         <nav>
             <ul>
@@ -90,7 +68,7 @@
                         </div>
                         <div class="quantidade-ingresso">
                             <p>Quantidade</p>
-                            <select name="quantidadeInteira" id="quantidadeInteira" onchange="calcularTotal()">
+                            <select name="quantidadeInteira" id="quantidadeInteira" onchange="calcularTotal()"  onchange="salvarQuantidade()">
                                 <option value="0">0</option>
                                 <option value="1">1</option>
                                 <option value="2">2</option>
@@ -117,7 +95,7 @@
                         </div>
                         <div class="quantidade-ingresso">
                             <p>Quantidade</p>
-                            <select name="quantidadeMeia" id="quantidadeMeia" onchange="calcularTotal()">
+                            <select name="quantidadeMeia" id="quantidadeMeia" onchange="calcularTotal()"  onchange="salvarQuantidade()">
                                 <option value="0">0</option>
                                 <option value="1">1</option>
                                 <option value="2">2</option>
@@ -169,6 +147,16 @@
         </div>
     </footer>
     <script src="javascript/produto.js"></script>
+    <script>
+    function salvarQuantidade() {
+        const quantidadeInteira = parseInt(document.getElementById("quantidadeInteira").value) || 0;
+        const quantidadeMeia = parseInt(document.getElementById("quantidadeMeia").value) || 0;
+        const totalIngressos = quantidadeInteira + quantidadeMeia;
+
+        // Salva o total de ingressos na sessionStorage para usar na próxima página
+        sessionStorage.setItem("totalIngressos", totalIngressos);
+    }
+    </script>
 </body>
 
 </html>

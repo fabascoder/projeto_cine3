@@ -382,46 +382,9 @@
             </div>
     </footer>
     <script src="javascript/assentos.js"></script>
-    <?php 
-session_start();
-$_SESSION['totalTickets'] = $_POST['totalTickets'] ?? 0;
-$totalTickets = $_SESSION['totalTickets'];
-?>
-
-<!DOCTYPE html>
-<html lang="pt-br">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sessão</title>
-    <link rel="stylesheet" href="css/pagamento_sessao.css">
-    <link rel="stylesheet" href="css/footer.css">
-</head>
-
-<body>
-    <main>
-        <form action="pagamento_produtos.php" method="post" id="sessao">
-            <div class="caixa-principal">
-                <h1>SALA: 01</h1>
-                <div class="cinema">
-                    <div class="caixa-assentos">
-                        <div class="linha">
-                            <!-- Código para exibir os assentos -->
-                            <div class="assento"><input type="checkbox" class="assentos" id="A1"></div>
-                            <!-- Adicione os outros assentos aqui -->
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <button type="submit" class="btn">Confirmar Seleção</button>
-        </form>
-    </main>
-
     <script>
-        // Pegue a quantidade máxima de assentos permitida
-        const maxAssentos = <?php echo $totalTickets; ?>;
+        // Recupere a quantidade total de ingressos da sessionStorage
+        const maxAssentos = parseInt(sessionStorage.getItem("totalIngressos")) || 0;
         let selectedCount = 0;
 
         // Selecione todos os checkboxes de assento
@@ -442,8 +405,5 @@ $totalTickets = $_SESSION['totalTickets'];
             });
         });
     </script>
-</body>
-</html>
-
 </body>
 </html>
