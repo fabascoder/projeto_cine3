@@ -383,25 +383,35 @@
     </footer>
     <script src="javascript/assentos.js"></script>
     <script>
-        // Recupere a quantidade total de ingressos da sessionStorage
+        // Recupera a quantidade total de ingressos da sessionStorage
         const maxAssentos = parseInt(sessionStorage.getItem("totalIngressos")) || 0;
         let selectedCount = 0;
+        const listaAssentos = document.getElementById('listaAssentos');
+        let assentosSelecionados = [];
 
         // Selecione todos os checkboxes de assento
         const checkboxes = document.querySelectorAll('.assentos');
 
         checkboxes.forEach(checkbox => {
             checkbox.addEventListener('change', function() {
+                const assentoId = this.id;
+
                 if (this.checked) {
-                    selectedCount++;
-                    if (selectedCount > maxAssentos) {
-                        this.checked = false; // Desmarca o checkbox se ultrapassar o limite
-                        selectedCount--;
-                        alert(`Você só pode selecionar até ${maxAssentos} assentos.`);
+                    if (selectedCount < maxAssentos) {
+                        selectedCount++;
+                        assentosSelecionados.push(assentoId);
+                        this.parentElement.classList.add('assento-selecionado'); // Muda a cor do assento selecionado
+                    } else {
+                        this.checked = false; // Impede que mais assentos sejam selecionados
                     }
                 } else {
                     selectedCount--;
+                    assentosSelecionados = assentosSelecionados.filter(id => id !== assentoId);
+                    this.parentElement.classList.remove('assento-selecionado'); // Remove a cor do assento desmarcado
                 }
+
+                // Atualiza a lista de assentos escolhidos
+                listaAssentos.textContent = assentosSelecionados.length > 0 ? assentosSelecionados.join(', ') : 'Nenhum assento selecionado';
             });
         });
     </script>
