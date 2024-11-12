@@ -115,7 +115,7 @@
                     <div class="finalizar">
                         <input type="hidden" id="total_pagar" name="total_pagar" value="111.90">
                         <p id="total_pagar_display">TOTAL À PAGAR R$ 111,90</p>
-                        <button type="submit" class="btn">AVANÇAR</button>
+                        <button type="submit" class="btn">AVANÇAR ></button>
                     </div>
                 </div>
             </form>
