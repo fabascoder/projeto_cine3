@@ -10,6 +10,20 @@
 </head>
 
 <body>
+    <?php
+    session_start();
+
+    // Verificar se o formulário foi enviado
+    if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+        // Armazenar na sessão a quantidade de ingressos
+        $_SESSION['qtd_inteira'] = (int)$_POST['qtd_inteira']; // Quantidade de ingressos inteira
+        $_SESSION['qtd_meia'] = (int)$_POST['qtd_meia']; // Quantidade de ingressos meia
+
+        // Redirecionar para a página de pagamento da sessão
+        header("Location: pagamento_sessao.php");
+        exit;
+    }
+    ?>
     <header>
         <nav>
             <ul>
@@ -144,22 +158,6 @@
             </div>
         </div>
     </footer>
-    <form action="pagamento_sessao.php" method="post">
-    <label for="qtd_inteira">Ingressos Inteira:</label>
-    <input type="number" name="qtd_inteira" id="qtd_inteira" min="1" value="0">
-
-    <label for="qtd_meia">Ingressos Meia:</label>
-    <input type="number" name="qtd_meia" id="qtd_meia" min="0" value="0">
-
-    <button type="submit">Ir para Sessão</button>
-    </form>
-    <?php
-    session_start();
-    $_SESSION['qtd_inteira'] = $_POST['qtd_inteira'] ?? 0;
-    $_SESSION['qtd_meia'] = $_POST['qtd_meia'] ?? 0;
-    ?>
-
-
     <script src="javascript/produto.js"></script>
 </body>
 
