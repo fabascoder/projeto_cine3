@@ -217,5 +217,22 @@
                     
             </form>
     </main>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const checkboxes = document.querySelectorAll('.checkbox');
+        
+        checkboxes.forEach(checkbox => {
+            checkbox.addEventListener('change', function() {
+                const selectBox = this.parentNode.parentNode.querySelector('.produto');
+                if (this.checked) {
+                    selectBox.style.display = 'block';
+                } else {
+                    selectBox.style.display = 'none';
+                }
+            });
+        });
+    });
+    </script>
+
 </body>
 </html>
