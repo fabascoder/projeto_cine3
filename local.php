@@ -49,13 +49,6 @@
                     <a href="https://www.google.com/maps/dir//R.+Tito,+54+-+Vila+Romana,+São+Paulo+-+SP,+05051-000/@-23.5280642,-46.7741618,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x94cef8775663b04f:0x923835e9005f8309!2m2!1d-46.69176!2d-23.5280856?entry=ttu&g_ep=EgoyMDI0MTAyMC4xIKXMDSoASAFQAw%3D%3D" target="_blank" rel="external">Shopping Metrô Itaquera</a>
                 </div>
             </form>
-            <?php
-            $cep = $_POST['cep']??'';
-            $url = "https://viacep.com.br/ws/$cep/json/";
-            $json = file_get_contents($url);
-            $dados = json_decode($json, true);
-            
-            ?>
             <div id="resposta"></div>
             <script>
             const div = document.getElementById('resposta');

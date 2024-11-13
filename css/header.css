@@ -1,4 +1,4 @@
-@media screen and (max-width: 456px){
+@media screen and (max-width: 395px){
     .menu-hamburguer {
       display: block;
   }
@@ -49,6 +49,9 @@
       color: #fff;
       text-decoration: none;
       padding-right: 0;
+  }
+  .menu ul li a:hover{
+    color: #d95f80;
   }
   
   .menu-toggle:checked + .menu-icon + .menu{

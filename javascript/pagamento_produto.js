@@ -11,3 +11,11 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 });
+
+function salvarQuantidade() {
+    const quantidadeInteira = parseInt(document.getElementById("quantidadeInteira").value) || 0;
+    const quantidadeMeia = parseInt(document.getElementById("quantidadeMeia").value) || 0;
+    const totalIngressos = quantidadeInteira + quantidadeMeia;
+
+    sessionStorage.setItem("totalIngressos", totalIngressos);
+}

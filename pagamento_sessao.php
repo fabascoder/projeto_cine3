@@ -1,17 +1,14 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sessão</title>
+    <title>Seleção de Assentos</title>
     <link rel="stylesheet" href="css/pagamento_sessao.css">
     <link rel="stylesheet" href="css/footer.css">
 </head>
-
 <body>
-    <?php 
-    include_once "header_pagto.php";
+<?php 
     $_SESSION['total_pagar'] = $_POST['total_pagar']??"";
     $_SESSION['total'] = $_POST['total']??"";
     $_SESSION['qtd_inteira'] = $POST['qtd_inteira']??"";
@@ -20,7 +17,56 @@
     $_SESSION['tamanho-camiseta'] = $_POST['tamanho-camiseta']??"";
     $_SESSION['tamanho-camiseta'] = $_POST['tamanho-camiseta']??"";
     ?>
+    <header>
+        <nav>
+            <ul>
+                <li>
+                    <a href="index.php">
+                        <img src="imagens/Logo_Cine3-removebg-preview.png" alt="Cine3 Logo" class="logo">
+                    </a>
+                </li>
+
+                <li>
+                    <a href="">Olá, [Nome]</a>
+                </li>
+            </ul>
+            <a href="index.php"><i class="fa fa-arrow-left" aria-hidden="true"></i></a>
+        </nav>
+        <div id="caixa">
+            <div class="etapas-compra">
+                <img src="imagens/ingressos.png" alt="">
+
+                <p>Ingresso</p>
+            </div>
+
+            <div class="etapas-compra2">
+                <img src="imagens/secao.png" alt="">
+
+                <p>Seção</p>
+            </div>
+            <div class="etapas-compra">
+                <img src="imagens/pipoca.png" alt="">
+
+                <p>Produtos</p>
+            </div>
+            <div class="etapas-compra">
+                <img src="imagens/cartao.png" alt="">
+
+                <p>Pagamento</p>
+            </div>
+            <div class="etapas-compra">
+                <img src="imagens/confirmacao.png" alt="">
+
+                <p>Confirmação</p>
+            </div>
+        </div>
+    </header>
+
     <main>
+        <div class="titulo">
+            <p>Selecione seus assentos</p>
+        </div>
+        
     <form action="pagamento_produtos.php" method="post" id="sessao">
        
         <div class="caixa-principal">
@@ -342,6 +388,7 @@
         </div>
 </form>
     </main>
+
     <footer>
         <img src="imagens/Logo_Cine3-removebg-preview.png" alt="">
         <div class="term">

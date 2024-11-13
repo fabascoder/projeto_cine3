@@ -14,7 +14,7 @@
         <nav>
             <ul>
                 <li>
-                    <a href="#">
+                    <a href="index.php">
                         <img src="imagens/Logo_Cine3-removebg-preview.png" alt="Cine3 Logo" class="logo">
                     </a>
                 </li>
@@ -27,7 +27,7 @@
 
         <div id="caixa">
             <!-- Etapas de Compra -->
-            <div class="etapas-compra">
+            <div class="etapas-compra1">
                 <img src="imagens/ingressos.png" alt="">
                 <p>Ingresso</p>
             </div>
@@ -146,16 +146,7 @@
             </div>
         </div>
     </footer>
-    <script>
-    function salvarQuantidade() {
-        const quantidadeInteira = parseInt(document.getElementById("quantidadeInteira").value) || 0;
-        const quantidadeMeia = parseInt(document.getElementById("quantidadeMeia").value) || 0;
-        const totalIngressos = quantidadeInteira + quantidadeMeia;
-
-        // Salva o total de ingressos na sessionStorage para usar na próxima página
-        sessionStorage.setItem("totalIngressos", totalIngressos);
-    }
-    </script>
+    <script src="javascript/pagamento_ingressos.js"></script>
     <script src="javascript/produto.js"></script>
 </body>
 
