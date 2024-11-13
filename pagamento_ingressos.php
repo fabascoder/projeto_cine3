@@ -146,16 +146,7 @@
             </div>
         </div>
     </footer>
-    <script>
-    function salvarQuantidade() {
-        const quantidadeInteira = parseInt(document.getElementById("quantidadeInteira").value) || 0;
-        const quantidadeMeia = parseInt(document.getElementById("quantidadeMeia").value) || 0;
-        const totalIngressos = quantidadeInteira + quantidadeMeia;
-
-        // Salva o total de ingressos na sessionStorage para usar na próxima página
-        sessionStorage.setItem("totalIngressos", totalIngressos);
-    }
-    </script>
+    <script src="javascript/pagamento_ingressos.js"></script>
     <script src="javascript/produto.js"></script>
 </body>
 

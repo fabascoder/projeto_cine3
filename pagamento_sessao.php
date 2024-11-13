@@ -453,22 +453,6 @@
         });
     });
     </script>
-
-    <style>
-    /* Estilos simples para os assentos */
-    .assentos-container {
-        display: flex;
-        gap: 10px;
-    }
-    .assento {
-        width: 30px;
-        height: 30px;
-        background-color: #ccc;
-        cursor: pointer;
-    }
-    .assento.selecionado {
-        background-color: #4CAF50;
-    }
-    </style>
+    <script src="javascript/assentos.js"></script>
 </body>
 </html>
