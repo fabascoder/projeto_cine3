@@ -428,31 +428,7 @@
                 </select>
             </div>
     </footer>
-    <script>
-    document.addEventListener("DOMContentLoaded", function() {
-        // Recupera o total de ingressos salvo na página anterior
-        const totalIngressos = parseInt(sessionStorage.getItem("totalIngressos")) || 0;
-        let assentosSelecionados = 0;
-
-        // Seleciona todos os elementos de assento
-        const assentos = document.querySelectorAll(".assento");
-
-        assentos.forEach(assento => {
-            assento.addEventListener("click", function() {
-                // Verifica se o assento já foi selecionado
-                if (!assento.classList.contains("selecionado") && assentosSelecionados < totalIngressos) {
-                    assento.classList.add("selecionado");
-                    assentosSelecionados++;
-                } else if (assento.classList.contains("selecionado")) {
-                    assento.classList.remove("selecionado");
-                    assentosSelecionados--;
-                } else if (assentosSelecionados >= totalIngressos) {
-                    alert(`Você só pode selecionar ${totalIngressos} assentos.`);
-                }
-            });
-        });
-    });
-    </script>
+    <script src="javascript/pagamento_sessao.js"></script>
     <script src="javascript/assentos.js"></script>
 </body>
 </html>
