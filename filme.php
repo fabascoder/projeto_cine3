@@ -44,33 +44,39 @@
             </label>
             <nav class="menu">
                 <ul>
-                    <li><a href="javascript:void(0)" id="openModal"><div>
-                                    <span id="icon_ingresso" class="material-symbols-outlined">
-                                        confirmation_number
-                                    </span>
-                                </div>
-                                Ingressos
-                            </a></li>
-                    <li><a href="produtos.php"><div>
-                            <span id="icon_produto" class="material-symbols-outlined">
-                                shopping_bag
-                            </span>
-                        </div> 
-                        Produtos
-                    </a></li>
-                    <li><a href="local.php"><div>
-                            <span id="icon_local" class="material-symbols-outlined">
-                                pin_drop
-                            </span>
-                        </div>
-                        Local
-                    </a></li>
-                    <li><a href="login.php"><div>
-                            <span id="icon_profile" class="material-symbols-outlined">
-                                account_circle
-                            </span>
-                        </div>
-                        Login
+                    <li><a href="javascript:void(0)" id="openModal">
+                            <div>
+                                <span id="icon_ingresso" class="material-symbols-outlined">
+                                    confirmation_number
+                                </span>
+                            </div>
+                            Ingressos
+                        </a></li>
+                    <li><a href="produtos.php">
+                            <div>
+                                <span id="icon_produto" class="material-symbols-outlined">
+                                    shopping_bag
+                                </span>
+                            </div>
+                            Produtos
+                        </a></li>
+                    <li><a href="local.php">
+                            <div>
+                                <span id="icon_local" class="material-symbols-outlined">
+                                    pin_drop
+                                </span>
+                            </div>
+                            Local
+                        </a></li>
+                    <li><a href="login.php">
+                            <div>
+                                <span id="icon_profile" class="material-symbols-outlined">
+                                    account_circle
+                                </span>
+                            </div>
+                            Login
+                        </a>
+                    </li>
                 </ul>
             </nav>
         </div>
@@ -78,27 +84,27 @@
         <nav id="navegacao">
 
 
-                
 
-                <!-- Modal HTML -->
-                <dialog id="modal-ingressos" class="modal">
-                    <div class="modal-content">
-                        <span class="close">&times;</span>
-                        <h2 class="ingressos">Ingressos</h2>
-                        <div>
-                            <p class="p1">Padrão Inteira</p>
-                            <p class="v1">Válido de quinta-feira, sexta-feira, sábado e domingo.</p>
-                            <p class="t1">R$18,00</p>
-                        </div>
-                        <hr>
-                        <div>
-                            <p class="p1">Meia Promocional</p>
-                            <p class="v1">Válido de segunda-feira, terça-feira e quarta-feira OU com Comprovante
-                                Escolar.</p>
-                            <p class="t1">R$9,00</p>
-                        </div>
+
+            <!-- Modal HTML -->
+            <dialog id="modal-ingressos" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h2 class="ingressos">Ingressos</h2>
+                    <div>
+                        <p class="p1">Padrão Inteira</p>
+                        <p class="v1">Válido de quinta-feira, sexta-feira, sábado e domingo.</p>
+                        <p class="t1">R$18,00</p>
                     </div>
-                </dialog>
+                    <hr>
+                    <div>
+                        <p class="p1">Meia Promocional</p>
+                        <p class="v1">Válido de segunda-feira, terça-feira e quarta-feira OU com Comprovante
+                            Escolar.</p>
+                        <p class="t1">R$9,00</p>
+                    </div>
+                </div>
+            </dialog>
 
 
 
@@ -132,54 +138,55 @@
                 <h1>HORÁRIOS DE <span>PRÉ-VENDA</span></h1>
                 <div id="div_column">
                     <div id="column1">
-                        <ul>
-                            <li>
-                                    <a class="button_horario" href="pagamento_ingressos.php?hora=16&&dia=qui"><?php echo $resultado['horario'];?></a>
+                        <ul> 
+                            <?php 
+                            $diasDaSemana = ['Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sáb'];
+                            $select_horarios = $conexao->prepare('SELECT * FROM sessao_filme WHERE id_filme=?');
+                            $select_horarios->execute([$resultado['id']]);
+                            while( $horarios = $select_horarios->fetch()) {
+                                $data_filme = new DateTime($horarios['data_filme']);
+                                $diaSemana = $data_filme->format('w');
+                          echo '<li>
+                                    <a class="button_horario" href="pagamento_ingressos.php?hora=16&dia=qui&id='.$resultado['id'].'">'.$data_filme->format('d/m/Y').' '.$diasDaSemana[$diaSemana].' '.$horarios['horario_filme'].'</a>
                                 
-                            </li>
-                        </ul>
-                        <ul>
-                            <li>
-                                    <a class="button_horario" href="pagamento_ingressos.php?hora=15&&dia=sab">15:00, sáb</a>
-                                
-                            </li>
-                        </ul>
-                        <ul>
-                            <li>
-                                    <a class="button_horario" href="pagamento_ingressos.php?hora=18&&dia=seg">18:00, seg</a>
-                                
-                            </li>
+                            </li>';
+                        }
+                            ?>
                         </ul>
                     </div>
                     <div id="column2">
                         <div>
                             <ul>
                                 <li>
-                                    
-                                        <a class="button_horario" href="pagamento_ingressos.php?hora=13&&dia=qua">13:00, qua</a>
-                                    
+
+                                    <a class="button_horario" href="pagamento_ingressos.php?hora=13&&dia=qua">13:00,
+                                        qua</a>
+
                                 </li>
                             </ul>
                             <ul>
                                 <li>
-                                    
-                                        <a class="button_horario" href="pagamento_ingressos.php?hora=16&&dia=qui">16:00, qui</a>
-                                    
+
+                                    <a class="button_horario" href="pagamento_ingressos.php?hora=16&&dia=qui">16:00,
+                                        qui</a>
+
                                 </li>
                             </ul>
                             <ul>
                                 <li>
-                                    
-                                        <a class="button_horario" href="pagamento_ingressos.php?hora=20&&dia=ter">20:00, ter</a>
-                                    
+
+                                    <a class="button_horario" href="pagamento_ingressos.php?hora=20&&dia=ter">20:00,
+                                        ter</a>
+
                                 </li>
                             </ul>
                         </div>
                     </div>
                 </div>
 
-                <div class="descricao"> <!--MOVIE'S INFOTMARIONS-->
-                    <p>Gênero: <span><?php echo $resultado['genero'];?></span> 
+                <div class="descricao">
+                    <!--MOVIE'S INFOTMARIONS-->
+                    <p>Gênero: <span><?php echo $resultado['genero'];?></span>
 
                     <p>Duração: <span><?php echo $resultado['duracao'];?>h</span></p>
 
@@ -197,7 +204,7 @@
             <div class="sinopse">
                 <h2>SINOPSE</h2>
                 <p>
-                <?php 
+                    <?php 
                 echo $resultado['descricao'];
                 ?>
                 </p>
