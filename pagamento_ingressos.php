@@ -14,7 +14,7 @@
         <nav>
             <ul>
                 <li>
-                    <a href="#">
+                    <a href="index.php">
                         <img src="imagens/Logo_Cine3-removebg-preview.png" alt="Cine3 Logo" class="logo">
                     </a>
                 </li>
@@ -27,7 +27,7 @@
 
         <div id="caixa">
             <!-- Etapas de Compra -->
-            <div class="etapas-compra">
+            <div class="etapas-compra1">
                 <img src="imagens/ingressos.png" alt="">
                 <p>Ingresso</p>
             </div>

@@ -41,6 +41,18 @@ header li a{
     align-items: center;
     gap: 15px;
 }
+.etapas-compra2{
+    background-color: rgb(255, 255, 255);
+    width: 65px;
+    height: 65px;
+    margin: auto;
+    border-radius: 50%;
+    border: solid #bf5672 2px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
 #caixa {
     padding-top: 60px;
     text-align: center;
@@ -53,9 +65,21 @@ header li a{
     padding-top: 7px;
     display: flex;
 }
+.etapas-compra2 img{
+    margin: auto;
+    width: 50px;
+    height: 50px;
+    padding-top: 7px;
+    display: flex;
+}
 .etapas-compra p{
     font-family: "Zen Dots";
     font-size: 0.8rem;
+}
+.etapas-compra2 p{
+    font-family: "Zen Dots";
+    font-size: 0.8rem;
+    color: #bf5672;
 }
 main{
     margin: auto;

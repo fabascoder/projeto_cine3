@@ -50,6 +50,9 @@
       text-decoration: none;
       padding-right: 0;
   }
+  .menu ul li a:hover{
+    color: #d95f80;
+  }
   
   .menu-toggle:checked + .menu-icon + .menu{
       display: block;
