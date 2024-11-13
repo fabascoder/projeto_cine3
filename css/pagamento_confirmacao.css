@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap");
 
 body {
-  background-color: #f5f5f5;
+  background-color: #f9f9f9;
 }
 
 * {
@@ -29,10 +29,6 @@ li {
   padding-right: 20px;
 }
 
-header {
-  background-color: #f5f5f5;
-}
-
 .etapas-compra {
   background-color: #fff;
   width: 65px;
@@ -45,7 +41,18 @@ header {
   align-items: center;
   gap: 15px;
 }
-
+.etapas-compra5 {
+  background-color: #fff;
+  width: 65px;
+  height: 65px;
+  margin: auto;
+  border-radius: 50%;
+  border: solid #bf5672 2px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
 #caixa {
   padding-top: 60px;
   text-align: center;
@@ -58,12 +65,21 @@ header {
   height: 50px;
   padding-top: 7px;
 }
-
+.etapas-compra5 img {
+  margin: auto;
+  width: 50px;
+  height: 50px;
+  padding-top: 7px;
+}
 .etapas-compra p {
   font-family: "Zen Dots";
   font-size: 0.8rem;
 }
-
+.etapas-compra5 p {
+  font-family: "Zen Dots";
+  font-size: 0.8rem;
+  color: #bf5672;
+}
 main {
   margin: auto;
   display: flex;
@@ -203,7 +219,25 @@ main a {
     align-items: center;
     gap: 15px;
   }
+  .etapas-compra5 {
+    background-color: #fff;
+    width: 45px;
+    height: 45px;
+    margin: auto;
+    border-radius: 50%;
+    border: solid #bf5672 2px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
   .etapas-compra img {
+    margin: auto;
+    width: 30px;
+    height: 30px;
+    padding-top: 7px;
+  }
+  .etapas-compra5 img {
     margin: auto;
     width: 30px;
     height: 30px;
@@ -212,6 +246,11 @@ main a {
   .etapas-compra p {
     font-family: "Zen Dots";
     font-size: 0.54rem;
+  }
+  .etapas-compra5 p {
+    font-family: "Zen Dots";
+    font-size: 0.54rem;
+    color: #bf5672;
   }
   #caixa {
     padding-top: 60px;

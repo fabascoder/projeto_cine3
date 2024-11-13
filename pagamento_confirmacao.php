@@ -41,7 +41,7 @@
                 <img src="imagens/cartao.png" alt="">
                 <p>Pagamento</p>
             </div>
-            <div class="etapas-compra">
+            <div class="etapas-compra5">
                 <img src="imagens/confirmacao.png" alt="">
                 <p>Confirmação</p>
             </div>

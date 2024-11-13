@@ -62,6 +62,8 @@
                             </span>
                         </div>
                         Login
+                        </a>
+                    </li>
                 </ul>
             </nav>
         </div>
@@ -97,88 +99,26 @@
     </header>
 
     <main>
-
-        <div class="container">
-            <div class="esquerda">
-                <div class="arrow1" id="prev">
-                    < </div>
-                </div>
-                <div class="img_banner">
-                    <a href="">
-                        <img class="foto" src="imagens/Banner_Divertidamente2_Cine3 (6).jpg"
-                            alt="Imagem - Divertidamente 2">
-                    </a>
-                </div>
-
-                <div class="direita">
-                    <div class="arrow2" id="next"> > </div>
-                </div>
-            </div>
-
-
-            <!-- 
-            <section class="secao">
-                <h1>FILMES EM CARTAZ</h1>
-                <div class="container_secao">
-                    <div class="casa_arrow">
-                        <div class="arrow_esquerda_main">
-    
-                        </div>
-                    </div>
-                    <div class="container_imagens">
-                        
-
-                        <div class="casa_arrow">
-                            <div class="arrow_direita_main">
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section> -->
-
+    <form action="sessao.php" method='post'>
+        <label for="">DATA</label>
+        <input type="date" name="data_filme" id="data_filme">
+        <label for="">HORA</label>
+        <input type="time" name="horario_filme" id="horario_filme">
+        <label for="">LOCAL</label>
+        <input type="text" name="local_filme" id="local_filme">
+        <select name="id_filme" id="id_filme">
             <?php 
             include_once "conexao.php";
-            $select = $conexao->prepare('SELECT * FROM filme WHERE ativo = 0');
+            $select = $conexao->prepare('SELECT * FROM filme');
             $select->execute();
-            
+
+            while ($resultado = $select->fetch()) {
+                echo '<option value="'.$resultado['id'].'">'.$resultado['nome'].'</option>';
+            }
             ?>
-            <section class="secao">
-                <h1>FILMES EM CARTAZ</h1>
-                
-                <div class="container_secao">
-                    <div class="casa_arrow">
-                        <div class="arrow_esquerda_main">
-                            <!-- < -->
-                        </div>
-                    </div>
-                    <div class="container_imagens">
-                        <?php 
-                        while ($resultado = $select->fetch()) {
-                             $imagem = $resultado['imagem']??"umavidadeesperança.jpg";
-                            if($imagem == '') {
-                                $imagem = "umavidadeesperança.jpg";
-                            };
-                           
-                            echo ' <div>
-                            <a href="filme.php?id='.$resultado['id'].'">
-                                <img  src="imagens/'.$imagem.'" alt="'.$resultado['nome'].'" class="imagem_section tamanho">
-                            </a>
-                        </div>';
-                        }
-                        ?>
-
-
-                        <div class="casa_arrow">
-                            <div class="arrow_direita_main">
-                                <!---->
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-
+        </select>
+        <button type="submit" >ENVIAR</button>
+    </form>
     </main>
 
     <footer>

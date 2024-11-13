@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap');
 body{
-    background-color: #F5F5F5;
+    background-color: #f9f9f9;
 }
 * {
     margin: 0;
@@ -384,7 +384,25 @@ del {
         align-items: center;
         gap: 15px;
     }
+    .etapas-compra3 {
+        background-color: #fff;
+        width: 45px;
+        height: 45px;
+        margin: auto;
+        border-radius: 50%;
+        border: solid #bf5672 2px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
     .etapas-compra img{
+        margin: auto;
+        width: 30px;
+        height: 30px;
+        padding-top: 7px;
+    }
+    .etapas-compra3 img{
         margin: auto;
         width: 30px;
         height: 30px;
@@ -393,6 +411,11 @@ del {
     .etapas-compra p{
         font-family: "Zen Dots";
         font-size: 0.54rem;
+    }
+    .etapas-compra3 p{
+        font-family: "Zen Dots";
+        font-size: 0.54rem;
+        color: #bf5672;
     }
     #caixa {
         padding-top: 60px;
