@@ -71,13 +71,13 @@
             $total_produtos= 0;
             
             if($pipoca_p) {
-                $total_produtos +- $qtd_p * 37,00;
+                $total_produtos += $qtd_p * 37.00;
             }
             if($pipoca_m){
-                $total_produtos +- $qtd_m * 37,00;
+                $total_produtos += $qtd_m * 37.00;
             }
             if($pipoca_g){
-                $total_produtos +- $qtd_g * 37,00;
+                $total_produtos += $qtd_g * 37.00;
             }
             if($refri_p)
             
@@ -87,13 +87,12 @@
 
             $itens = [
                 "id"        => 01,
-                "title"     => "Sessão ".$_SESSION['dia']." as ".$_SESSION
-                ['hora'],
-                "description" = $descricao,
+                "title"     => "Sessão ".$_SESSION['dia']." as ".$_SESSION['hora'],
+                "description" => $descricao,
                 "quantity"  => 1,
                 "currency_id" => "BRL",
-                "unit_price" => $total_produtos;
-            ]
+                "unit_price" => $total_produtos
+            ];
 
 
             $data = [

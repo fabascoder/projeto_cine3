@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,12 +8,50 @@
     <link rel="stylesheet" href="css/pagamento_ingressos.css">
     <link rel="stylesheet" href="css/footer.css">
 </head>
+
 <body>
     <header>
         <nav>
             <ul>
                 <li>
                     <a href="index.php">
+                        <img src="imagens/Logo_Cine3-removebg-preview.png" alt="Cine3 Logo" class="logo">
+                    </a>
+                </li>
+                <li>
+                    <a href="">Olá, [Nome]</a>
+                </li>
+            </ul>
+            <a href="index.php"><i class="fa fa-arrow-left" aria-hidden="true"></i></a>
+        </nav>
+
+        <div id="caixa">
+            <!-- Etapas de Compra -->
+            <div class="etapas-compra">
+                <img src="imagens/ingressos.png" alt="">
+                <p>Ingresso</p>
+            </div>
+            <div class="etapas-compra">
+                <img src="imagens/secao.png" alt="">
+                <p>Seção</p>
+            </div>
+            <div class="etapas-compra">
+                <img src="imagens/pipoca.png" alt="">
+                <p>Produtos</p>
+            </div>
+            <div class="etapas-compra">
+                <img src="imagens/cartao.png" alt="">
+                <p>Pagamento</p>
+            </div>
+            <div class="etapas-compra">
+                <img src="imagens/confirmacao.png" alt="">
+                <p>Confirmação</p>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li>
+                    <a href="#">
                         <img src="imagens/Logo_Cine3-removebg-preview.png" alt="Cine3 Logo" class="logo">
                     </a>
                 </li>
@@ -66,7 +105,7 @@
                         </div>
                         <div class="quantidade-ingresso">
                             <p>Quantidade</p>
-                            <select name="quantidadeInteira" id="quantidadeInteira" onchange="calcularTotal(); salvarQuantidade()">
+                            <select name="quantidadeInteira" id="quantidadeInteira"  onchange="calcularTotal(); salvarQuantidade()">
                                 <option value="0">0</option>
                                 <option value="1">1</option>
                                 <option value="2">2</option>
@@ -93,7 +132,7 @@
                         </div>
                         <div class="quantidade-ingresso">
                             <p>Quantidade</p>
-                            <select name="quantidadeMeia" id="quantidadeMeia" onchange="calcularTotal(); salvarQuantidade()">
+                            <select name="quantidadeMeia" id="quantidadeMeia"  onchange="calcularTotal(); salvarQuantidade()">
                                 <option value="0">0</option>
                                 <option value="1">1</option>
                                 <option value="2">2</option>
@@ -115,7 +154,7 @@
                     <div class="finalizar">
                         <input type="hidden" id="total_pagar" name="total_pagar" value="111.90">
                         <p id="total_pagar_display">TOTAL À PAGAR R$ 111,90</p>
-                        <button type="submit" class="btn" onclick="salvarQuantidade()">AVANÇAR ></button>
+                        <button type="submit" class="btn">AVANÇAR ></button>
                     </div>
                 </div>
             </form>
@@ -124,8 +163,26 @@
 
     <footer>
         <!-- Conteúdo do Rodapé -->
+        <img src="imagens/Logo_Cine3-removebg-preview.png" alt="">
+        <div class="term">
+            <div><a href="termos.php"><p>TERMOS DE USO</p></a></div>
+            <div><a href="termos.php"><p>POLÍTICA DE PRIVACIDADE</p></a></div>
+            <div><a href="local.php"><p>CONTATO</p></a></div>
+            <div><a href="local.php"><p>LOCAL</p></a></div>
+            <div><a href="cadastro_filme.php"><p>CADASTRAR FILMES</p></a></div>
+        </div>
+        <div class="container_footer">
+            <div class="tampa">
+                <i class="fa fa-language" aria-hidden="true"></i>
+                <select name="Idioma" id="idioma">
+                    <option value="PT">PORTUGUÊS</option>
+                    <option value="IG">INGLÊS</option>
+                    <option value="ES">ESPANHOL</option>
+                    <option value="CO">COREANO</option>
+                </select>
+            </div>
+        </div>
     </footer>
-
     <script>
     function salvarQuantidade() {
         const quantidadeInteira = parseInt(document.getElementById("quantidadeInteira").value) || 0;
@@ -136,5 +193,7 @@
         sessionStorage.setItem("totalIngressos", totalIngressos);
     }
     </script>
+    <script src="javascript/produto.js"></script>
 </body>
+
 </html>

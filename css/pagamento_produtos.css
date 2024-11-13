@@ -464,3 +464,18 @@ del {
         padding: 5px;
     }
 }
+/* Estilo padrão para o checkbox */
+.checkbox {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #bf5672;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* Estilo para o checkbox quando estiver selecionado */
+.checkbox:checked {
+    background-color: #bf5672;
+}
