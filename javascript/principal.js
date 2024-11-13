@@ -47,4 +47,3 @@ window.onclick = function (event) {
         body.style.background = '#fff';
     }
 };
-
