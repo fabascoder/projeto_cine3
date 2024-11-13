@@ -145,7 +145,7 @@
                     </div>
                 </div>
                 <div class="avancar">
-                <a class="btn" href="pagamento.php">AVANÇAR</a>
+                <button type="submit" class="btn">AVANÇAR</button>
                 </div>
                 <div class="caixa-preta">
                     <img src="imagens/Logo_Cine3-removebg-preview.png" alt="Logo_Cine3.png" width="200px">

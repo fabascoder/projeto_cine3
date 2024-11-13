@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +7,6 @@
     <link rel="stylesheet" href="css/pagamento_ingressos.css">
     <link rel="stylesheet" href="css/footer.css">
 </head>
-
 <body>
     <header>
         <nav>
@@ -68,7 +66,7 @@
                         </div>
                         <div class="quantidade-ingresso">
                             <p>Quantidade</p>
-                            <select name="quantidadeInteira" id="quantidadeInteira" onchange="calcularTotal()"calcularTotal(); salvarQuantidade()">
+                            <select name="quantidadeInteira" id="quantidadeInteira" onchange="calcularTotal(); salvarQuantidade()">
                                 <option value="0">0</option>
                                 <option value="1">1</option>
                                 <option value="2">2</option>
@@ -117,7 +115,7 @@
                     <div class="finalizar">
                         <input type="hidden" id="total_pagar" name="total_pagar" value="111.90">
                         <p id="total_pagar_display">TOTAL À PAGAR R$ 111,90</p>
-                        <button type="submit" class="btn">AVANÇAR ></button>
+                        <button type="submit" class="btn" onclick="salvarQuantidade()">AVANÇAR ></button>
                     </div>
                 </div>
             </form>
@@ -126,38 +124,17 @@
 
     <footer>
         <!-- Conteúdo do Rodapé -->
-        <img src="imagens/Logo_Cine3-removebg-preview.png" alt="">
-        <div class="term">
-            <div><a href="termos.php"><p>TERMOS DE USO</p></a></div>
-            <div><a href="termos.php"><p>POLÍTICA DE PRIVACIDADE</p></a></div>
-            <div><a href="local.php"><p>CONTATO</p></a></div>
-            <div><a href="local.php"><p>LOCAL</p></a></div>
-            <div><a href="cadastro_filme.php"><p>CADASTRAR FILMES</p></a></div>
-        </div>
-        <div class="container_footer">
-            <div class="tampa">
-                <i class="fa fa-language" aria-hidden="true"></i>
-                <select name="Idioma" id="idioma">
-                    <option value="PT">PORTUGUÊS</option>
-                    <option value="IG">INGLÊS</option>
-                    <option value="ES">ESPANHOL</option>
-                    <option value="CO">COREANO</option>
-                </select>
-            </div>
-        </div>
     </footer>
-    <script src="javascript/produto.js"></script>
+
     <script>
-        function salvarQuantidade() {
-            const quantidadeInteira = parseInt(document.getElementById("quantidadeInteira").value) || 0;
-            const quantidadeMeia = parseInt(document.getElementById("quantidadeMeia").value) || 0;
-            const totalIngressos = quantidadeInteira + quantidadeMeia;
+    function salvarQuantidade() {
+        const quantidadeInteira = parseInt(document.getElementById("quantidadeInteira").value) || 0;
+        const quantidadeMeia = parseInt(document.getElementById("quantidadeMeia").value) || 0;
+        const totalIngressos = quantidadeInteira + quantidadeMeia;
 
-            // Salva o total de ingressos na sessionStorage para usar na próxima página
-            sessionStorage.setItem("totalIngressos", totalIngressos);
-        }
+        // Salva o total de ingressos na sessionStorage para usar na próxima página
+        sessionStorage.setItem("totalIngressos", totalIngressos);
+    }
     </script>
-
 </body>
-
 </html>
