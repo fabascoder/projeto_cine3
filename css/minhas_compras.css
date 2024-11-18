@@ -1,0 +1,270 @@
+@import url("https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap");
+
+/*CONTEÚDO CABEÇALHO*/
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  max-width: 100%;
+  width: 100%;
+  height: 100%;
+
+  font-family: "Zen Dots", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  background: #191815;
+}
+
+:root {
+  --vermelho: #401c26;
+  --cinza: #d9d9d9;
+}
+
+header {
+  display: flex;
+  background-color: var(--vermelho);
+  box-sizing: border-box;
+}
+#navegacao {
+  margin: auto;
+  /*justify-content: space-between;*/
+}
+.logo-pesquisa{
+  display: flex;
+  gap: 20px;
+}
+.logo-pesquisa #pesquisa {
+  margin: 17px 20px 0px 0px;
+  width: 350px;
+  height: 40px;
+  padding: 10px;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  font-size: 1.2rem;
+}
+ul {
+  display: flex;
+  gap: 80px;
+}
+
+li {
+  list-style: none;
+  color: #fff;
+  
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+a:hover {
+  opacity: 0.5s;
+  color: #d95f80;
+  transition: 200ms;
+}
+
+.login {
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#icon_ingresso {
+  margin-left: 38px;
+}
+
+#icon_produto {
+  margin-left: 35px;
+}
+
+#icon_local {
+  margin-left: 45px;
+}
+
+#icon_profile {
+  margin-left: 16px;
+}
+/*CONTEUDO PRINCIPAL*/
+main{
+    height: 100vh;
+    display: flex;
+}
+.barra-lateral{
+    width: 253px;
+    height: 600px;
+    background-color: #4b4b4b;
+    margin-left: 80px;   
+    height: 1080px; 
+}
+.barra-lateral p{
+    text-align: center;
+    color: #7c7c7c;
+    padding-bottom: 30px;
+    padding-top: 30px;
+}
+.barra-lateral ul{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    padding-top: 0px;
+}
+.barra-lateral ul li{
+    background-color: #d95f80;
+    border-top-left-radius: 16px;
+    border-bottom-left-radius: 16px;
+    padding: 10px;
+    margin-left: auto;
+}
+.barra-lateral ul .li-1{
+  background-color: #401c26;
+  box-shadow: 0px 3px 0px #dd2d2d;
+}
+.barra-lateral ul li:hover{
+  background-color: #401c26;
+  transition: 0.6s;
+}
+.barra-lateral ul li a{
+    font-family: "Zen Dots";
+    color: white;
+}
+/*BARRA PRINCIPAL*/
+.barra-principal{
+    width: 800px;
+    background-color: #4b4b4b;
+    margin-left: 90px;   
+    height: 1080px; 
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+}
+.barra-principal h1{
+  color: white;
+  padding: 40px;
+}
+.barra-principal .caixa-ingressos{
+  width: 700px;
+  margin: auto;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  height: 170px;
+  display: flex;
+  background-color: #2b2b2b;
+  border-radius: 5px;
+  
+}
+.barra-principal .caixa-ingressos img{
+  width: 100px;
+  margin: auto;
+  border-radius: 5px;
+}
+.caixa-imagem{
+  width: 150px;
+  height: 170px;
+  display: flex;
+}
+.caixa-ingressos p{
+  color: #d95f80;
+  margin-top: 10.071px;
+}
+.caixa-ingressos .informacoes{
+  display: flex;
+  flex-direction: column;
+}
+.informacoes p{
+  display: flex;
+  align-items: center;
+  font-size: 0.8rem;
+}
+.cancelar{
+  display: flex;
+  margin-left: 70px;
+}
+.cancelar button{
+  margin: auto;
+  font-size: 0.8rem;
+  font-family: sans-serif;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.cancelar button:hover{
+  text-decoration: underline;
+}
+/*HEADER*/
+@media screen and (max-width: 1238px){
+    ul{
+      gap: 40px;
+    }
+    .logo-pesquisa{
+      gap: 0px;
+    }
+    .logo-pesquisa #pesquisa {
+      margin: 17px 0px 0px 0px;
+      width: 270px;
+      height: 35px;
+      padding: 10px;
+      border-radius: 10px;
+      outline: none;
+      border: none;
+      font-size: 1.2rem;
+    }
+    header{
+      gap: 10px;
+    }
+  }
+  @media screen and (max-width: 981px){
+    header {
+      display: flex;
+      background-color: var(--vermelho);
+      flex-direction: column;
+    }
+    .logo-pesquisa{
+      display: flex;
+      margin: auto;
+      gap: 120px;
+    }
+    .logo-pesquisa #pesquisa{
+      margin: 17px 0px 0px 0px;
+    }
+    ul{
+      gap: 120px;
+    }
+  }
+  @media screen and (max-width: 741px){
+    ul{
+      gap: 60px;
+    }
+    .logo-pesquisa{
+      display: flex;
+      justify-content: space-between;
+      gap: 0px;
+    }
+    header {
+      display: flex;
+      background-color: var(--vermelho);
+      flex-direction: column;
+    }
+  }
+  @media screen and (max-width: 566px){
+    ul{
+      gap: 25px;
+      width: 100%;
+    }
+    .logo-pesquisa #pesquisa {
+      margin: 17px 0px 0px 0px;
+      width: 170px;
+      height: 35px;
+      padding: 10px;
+      border-radius: 10px;
+      outline: none;
+      border: none;
+      font-size: 1.2rem;
+    }
+    .logo-pesquisa #navegacao{
+    }
+  }
