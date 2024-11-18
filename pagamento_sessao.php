@@ -16,6 +16,9 @@
     $_SESSION['valor_inteira'] = $_POST['valor_inteira']??"";
     $_SESSION['tamanho-camiseta'] = $_POST['tamanho-camiseta']??"";
     $_SESSION['tamanho-camiseta'] = $_POST['tamanho-camiseta']??"";
+    $totalIngressos = $_SESSION['total_ingressos'] ?? 0; // valor padrão 0 se não existir
+
+
     ?>
     <header>
         <nav>
@@ -64,31 +67,32 @@
 
     <main> 
     <form action="pagamento_produtos.php" method="post" id="sessao">
-       
-        <div class="caixa-principal">
-            <h1>SALA: 01</h1>
-            <div class="cinema">
-                <div class="caixa-assentos">
-                    <div class="linha">
-                        <div class="numero"></div>
-                        <div class="numero">1</div>
-                        <div class="numero">2</div>
-                        <div class="numero">3</div>
-                        <div class="numero">4</div>
-                        <div class="numero">5</div>
-                        <div class="numero">6</div>
-                        <div class="numero">7</div>
-                        <div class="numero">8</div>
-                        <div class="numero">9</div>
-                        <div class="numero">10</div>
-                        <div class="numero">11</div>
-                        <div class="numero">12</div>
-                        <div class="numero">13</div>
-                        <div class="numero">14</div>
-                        <div class="numero">15</div>
-                    </div>
-                    <div class="linha">
-                        <label>A</label>
+    <div class="caixa-principal">
+        <h1>SALA: 01</h1>
+        <div class="cinema">
+            <div class="caixa-assentos">
+                <div class="linha">
+                    <div class="numero"></div>
+                    <div class="numero">1</div>
+                    <div class="numero">2</div>
+                    <div class="numero">3</div>
+                    <div class="numero">4</div>
+                    <div class="numero">5</div>
+                    <div class="numero">6</div>
+                    <div class="numero">7</div>
+                    <div class="numero">8</div>
+                    <div class="numero">9</div>
+                    <div class="numero">10</div>
+                    <div class="numero">11</div>
+                    <div class="numero">12</div>
+                    <div class="numero">13</div>
+                    <div class="numero">14</div>
+                    <div class="numero">15</div>
+                </div>
+                <div class="linha">
+                    <label>A</label>
+                    <div class="assento">
+                    <label>A</label>
                         <div class="assento"><input type="checkbox" name="assentos1" class="assentos" id="A1">
                         </div>
                         <div class="assento"><input type="checkbox" name="assentos2" class="assentos" id="A2">
@@ -353,36 +357,35 @@
                         <div class="assento"><input type="checkbox" name="assentos15" class="assentos" id="H15">
                         </div>
                     </div>
-
-                    <div class="tela">TELA</div>
-
                 </div>
             </div>
-            <p class=" assentos-escolhidos">ASSENTO(S) ESCOLHIDOS: <span  class="escolhidos"></span></p>
-            <hr>
-
-            <div class="localizacao">
-    
-                <div class="escolher-cidade">
-                <p>LOCAL:</p>
-                    <img src="/imagens/local.png" alt="" width="20px">
-                    <select name="local_sessao" id="local_sessao">
-                        <option value="São Paulo">São Paulo</option>
-                        <option value="Lapa">Lapa</option>
-                        <option value="Itaquera">Itaquera</option>
-                    </select>
-                </div>
-                <img src="/imagens/local.png" alt="" width="20px">
-                <a href="https://www.google.com/maps/dir//Av.+José+Pinheiro+Borges+-+Itaquera,+São+Paulo+-+SP,+08220-900/@-23.5405404,-46.5530448,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x94ce5e622db57c4f:0x3de99bb691d3dc68!2m2!1d-46.4706432!2d-23.5405621?entry=ttu&g_ep=EgoyMDI0MDkxOC4xIKXMDSoASAFQAw%3D%3D"
-                    target="_blank" class="shop">Shopping Metrô Itaquera</a>
-            </div>
-
-            <div class="botao">
-                <button type="submit" href="pagamento_produtos.php" class="btn">AVANÇAR ></button>
-            </div>
-
         </div>
+        <p class="assentos-escolhidos">ASSENTO(S) ESCOLHIDOS: <span class="escolhidos"></span></p>
+        <hr>
+
+        <!-- Localização e seleção da cidade -->
+        <div class="localizacao">
+            <div class="escolher-cidade">
+                <p>LOCAL:</p>
+                <img src="/imagens/local.png" alt="" width="20px">
+                <select name="local_sessao" id="local_sessao">
+                    <option value="São Paulo">São Paulo</option>
+                    <option value="Lapa">Lapa</option>
+                    <option value="Itaquera">Itaquera</option>
+                </select>
+            </div>
+            <img src="/imagens/local.png" alt="" width="20px">
+            <a href="https://www.google.com/maps/dir//Av.+José+Pinheiro+Borges+-+Itaquera,+São+Paulo+-+SP,+08220-900/@-23.5405404,-46.5530448,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x94ce5e622db57c4f:0x3de99bb691d3dc68!2m2!1d-46.4706432!2d-23.5405621?entry=ttu&g_ep=EgoyMDI0MDkxOC4xIKXMDSoASAFQAw%3D%3D"
+            target="_blank" class="shop">Shopping Metrô Itaquera</a>
+        </div>
+
+        <div class="botao">
+            <button type="submit" class="btn">AVANÇAR ></button>
+        </div>
+
+    </div>
 </form>
+
     </main>
 
     <footer>
