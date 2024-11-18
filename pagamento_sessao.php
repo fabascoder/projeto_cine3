@@ -16,9 +16,7 @@
     $_SESSION['valor_inteira'] = $_POST['valor_inteira']??"";
     $_SESSION['tamanho-camiseta'] = $_POST['tamanho-camiseta']??"";
     $_SESSION['tamanho-camiseta'] = $_POST['tamanho-camiseta']??"";
-    $totalIngressos = $_SESSION['total_ingressos'] ?? 0; // valor padrão 0 se não existir
-
-
+    $_SESSION['assentos'] = $_POST['assentos'] ?? []; // Adicionando os assentos selecionados
     ?>
     <header>
         <nav>
@@ -92,7 +90,7 @@
                 <div class="linha">
                     <label>A</label>
                     <div class="assento">
-                    <label>A</label>
+                     <label>A</label>
                         <div class="assento"><input type="checkbox" name="assentos1" class="assentos" id="A1">
                         </div>
                         <div class="assento"><input type="checkbox" name="assentos2" class="assentos" id="A2">
