@@ -62,11 +62,7 @@
         </div>
     </header>
 
-    <main>
-        <div class="titulo">
-            <p>Selecione seus assentos</p>
-        </div>
-        
+    <main> 
     <form action="pagamento_produtos.php" method="post" id="sessao">
        
         <div class="caixa-principal">
