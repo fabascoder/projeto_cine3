@@ -1,27 +1,36 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const totalIngressos = parseInt(localStorage.getItem('totalIngressos')) || 0;
+    // Captura as informações da quantidade de ingressos e os assentos selecionados
+    const totalIngressos = const totalIngressos = <?php echo json_encode($_SESSION['total_ingressos'] ?? 0); ?>;
 
-    if (totalIngressos === 0) {
-        alert('Você não pode selecionar nenhuma cadeira porque não escolheu ingressos.');
-        return;
-    }
+    const checkboxes = document.querySelectorAll('.assentos input[type="checkbox"]');
+    let selecionados = 0;
 
-    const cadeiras = document.querySelectorAll('.cadeira'); // Assumindo que as cadeiras têm essa classe.
-    let cadeirasSelecionadas = 0;
-
-    cadeiras.forEach(cadeira => {
-        cadeira.addEventListener('click', () => {
-            if (cadeira.classList.contains('selecionada')) {
-                // Desmarca a cadeira.
-                cadeira.classList.remove('selecionada');
-                cadeirasSelecionadas--;
-            } else if (cadeirasSelecionadas < totalIngressos) {
-                // Marca a cadeira se ainda houver ingressos disponíveis.
-                cadeira.classList.add('selecionada');
-                cadeirasSelecionadas++;
+    // Atualiza a quantidade de assentos selecionados conforme as mudanças
+    checkboxes.forEach(checkbox => {
+        checkbox.addEventListener('change', () => {
+            if (checkbox.checked) {
+                selecionados++;
             } else {
-                alert('Você já selecionou todas as cadeiras permitidas.');
+                selecionados--;
             }
+
+            // Verifica se o número de assentos selecionados excede o limite de ingressos
+            if (selecionados > totalIngressos) {
+                alert('Você não pode selecionar mais assentos do que a quantidade de ingressos!');
+                checkbox.checked = false;
+                selecionados--;
+            }
+
+            // Atualiza a exibição dos assentos escolhidos
+            const escolhidos = [];
+            checkboxes.forEach(checkbox => {
+                if (checkbox.checked) {
+                    escolhidos.push(checkbox.id);
+                }
+            });
+
+            // Exibe os assentos escolhidos na página
+            document.querySelector('.escolhidos').textContent = escolhidos.join(', ');
         });
     });
 });
