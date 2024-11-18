@@ -57,7 +57,11 @@
         </div>
 
         <div class="valores">
-            <form action="pagamento_sessao.php" method="post">
+            <form action="pagamento_sessao.php" method="post" onsubmit="salvarQuantidade();">
+                <input type="hidden" name="quantidadeInteira" id="quantidadeInteiraInput">
+                <input type="hidden" name="quantidadeMeia" id="quantidadeMeiaInput">
+                <input type="hidden" name="assentosSelecionados" id="assentosSelecionados">
+
                 <!-- Ingresso Inteira -->
                 <div class="caixa-valores">
                     <button type="button"><img src="imagens/lixeira-vermelha.png" alt="" width="30px"></button>
@@ -68,7 +72,7 @@
                         </div>
                         <div class="quantidade-ingresso">
                             <p>Quantidade</p>
-                            <select name="quantidadeInteira" id="quantidadeInteira"  onchange="calcularTotal(); salvarQuantidade()">
+                            <select name="quantidadeInteira" id="quantidadeInteira" onchange="calcularTotal(); salvarQuantidade()">
                                 <option value="0">0</option>
                                 <option value="1">1</option>
                                 <option value="2">2</option>
@@ -95,7 +99,7 @@
                         </div>
                         <div class="quantidade-ingresso">
                             <p>Quantidade</p>
-                            <select name="quantidadeMeia" id="quantidadeMeia"  onchange="calcularTotal(); salvarQuantidade()">
+                            <select name="quantidadeMeia" id="quantidadeMeia" onchange="calcularTotal(); salvarQuantidade()">
                                 <option value="0">0</option>
                                 <option value="1">1</option>
                                 <option value="2">2</option>
@@ -115,8 +119,8 @@
                 <!-- Total a Pagar -->
                 <div class="caixa-finalizar">
                     <div class="finalizar">
-                        <input type="hidden" id="total_pagar" name="total_pagar" value="111.90">
-                        <p id="total_pagar_display">TOTAL À PAGAR R$ 111,90</p>
+                        <input type="hidden" id="total_pagar" name="total_pagar" value="0">
+                        <p id="total_pagar_display">TOTAL À PAGAR R$ 0,00</p>
                         <button type="submit" class="btn">AVANÇAR ></button>
                     </div>
                 </div>
@@ -125,7 +129,6 @@
     </main>
 
     <footer>
-        <!-- Conteúdo do Rodapé -->
         <img src="imagens/Logo_Cine3-removebg-preview.png" alt="">
         <div class="term">
             <div><a href="termos.php"><p>TERMOS DE USO</p></a></div>
@@ -134,20 +137,23 @@
             <div><a href="local.php"><p>LOCAL</p></a></div>
             <div><a href="cadastro_filme.php"><p>CADASTRAR FILMES</p></a></div>
         </div>
-        <div class="container_footer">
-            <div class="tampa">
-                <i class="fa fa-language" aria-hidden="true"></i>
-                <select name="Idioma" id="idioma">
-                    <option value="PT">PORTUGUÊS</option>
-                    <option value="IG">INGLÊS</option>
-                    <option value="ES">ESPANHOL</option>
-                    <option value="CO">COREANO</option>
-                </select>
-            </div>
-        </div>
     </footer>
+
     <script src="javascript/pagamento_ingressos.js"></script>
-    <script src="javascript/produto.js"></script>
+    <script>
+        function salvarQuantidade() {
+            const quantidadeInteira = parseInt(document.getElementById('quantidadeInteira').value) || 0;
+            const quantidadeMeia = parseInt(document.getElementById('quantidadeMeia').value) || 0;
+
+            document.getElementById('quantidadeInteiraInput').value = quantidadeInteira;
+            document.getElementById('quantidadeMeiaInput').value = quantidadeMeia;
+
+            // Atualizar total no campo hidden e exibição
+            const total = (quantidadeInteira * 38) + (quantidadeMeia * 19);
+            document.getElementById('total_pagar').value = total.toFixed(2);
+            document.getElementById('total_pagar_display').innerText = `TOTAL À PAGAR R$ ${total.toFixed(2).replace('.', ',')}`;
+        }
+    </script>
 </body>
 
 </html>

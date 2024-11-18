@@ -155,32 +155,7 @@
                         </ul>
                     </div>
                     <div id="column2">
-                        <div>
-                            <ul>
-                                <li>
-
-                                    <a class="button_horario" href="pagamento_ingressos.php?hora=13&&dia=qua">13:00,
-                                        qua</a>
-
-                                </li>
-                            </ul>
-                            <ul>
-                                <li>
-
-                                    <a class="button_horario" href="pagamento_ingressos.php?hora=16&&dia=qui">16:00,
-                                        qui</a>
-
-                                </li>
-                            </ul>
-                            <ul>
-                                <li>
-
-                                    <a class="button_horario" href="pagamento_ingressos.php?hora=20&&dia=ter">20:00,
-                                        ter</a>
-
-                                </li>
-                            </ul>
-                        </div>
+                       
                     </div>
                 </div>
 
