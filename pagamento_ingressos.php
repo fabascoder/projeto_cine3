@@ -154,14 +154,23 @@
     <script src="javascript/pagamento_ingressos.js"></script>
     <script src="javascript/produto.js"></script>
     <script>
-            function salvarQuantidade() {
+function salvarQuantidade() {
     const quantidadeInteira = parseInt(document.getElementById('quantidadeInteira').value) || 0;
     const quantidadeMeia = parseInt(document.getElementById('quantidadeMeia').value) || 0;
     const totalIngressos = quantidadeInteira + quantidadeMeia;
-    
-    // Salvar no localStorage para usar na página de seleção de assentos
+
+    // Log para verificar o valor
+    console.log('Quantidade Inteira:', quantidadeInteira);
+    console.log('Quantidade Meia:', quantidadeMeia);
+    console.log('Total Ingressos:', totalIngressos);
+
+    // Salvar no localStorage
     localStorage.setItem('totalIngressos', totalIngressos);
+
+    // Confirmar que foi salvo
+    console.log('Valor salvo no localStorage:', localStorage.getItem('totalIngressos'));
 }
+
     </script>
 
 
