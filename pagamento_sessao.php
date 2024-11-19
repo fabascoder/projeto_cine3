@@ -360,6 +360,7 @@
                 </div>
             </div>
             <p class=" assentos-escolhidos">ASSENTO(S) ESCOLHIDOS: <span  class="escolhidos"></span></p>
+
             <hr>
 
             <div class="localizacao">
@@ -425,7 +426,7 @@
                 </select>
             </div>
     </footer>
-    <script src="javascript/pagamento_sessao.js"></script>
+    <!-- <script src="javascript/pagamento_sessao.js"></script> -->
     <script src="javascript/assentos.js"></script>
 </body>
 </html>
