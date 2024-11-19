@@ -56,6 +56,48 @@
             <p>Ingressos</p>
         </div>
 
+        <div class="info-filme">
+            <?php 
+            include_once "conexao.php";
+            $id = $_GET['id']??'';
+            $horario = $_GET['hora']??'';
+            $dia = $_GET['dia']??'';
+            if($id) {
+                $select = $conexao->prepare("SELECT * FROM filme WHERE id=:id");
+                $select->execute(['id'=>$id]);
+                $resultado = $select->fetch();
+            }
+            ?>
+
+
+            <div>
+                <p class="title-php">Filme</p>
+                <div>
+                    <?php
+                    echo $resultado['nome'];
+                    ?>
+                </div>
+            </div>
+
+            <div>
+                <p class="title-php">Horário</p>
+                <div>
+                    <?php 
+                    echo $horario;
+                    ?>
+                </div>
+            </div>
+
+            <div>
+                <p class="title-php">Dia</p>
+                <div>
+                    <?php 
+                    echo $dia;
+                    ?>
+                </div>
+            </div>
+        </div>
+
         <div class="valores">
             <form action="pagamento_sessao.php" method="post" onsubmit="salvarQuantidade();">
                 <input type="hidden" name="quantidadeInteira" id="quantidadeInteiraInput">

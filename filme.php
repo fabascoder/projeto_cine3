@@ -147,7 +147,7 @@
                                 $data_filme = new DateTime($horarios['data_filme']);
                                 $diaSemana = $data_filme->format('w');
                           echo '<li>
-                                    <a class="button_horario" href="pagamento_ingressos.php?hora=16&dia=qui&id='.$resultado['id'].'">'.$data_filme->format('d/m/Y').' '.$diasDaSemana[$diaSemana].' '.$horarios['horario_filme'].'</a>
+                                    <a class="button_horario" href="pagamento_ingressos.php?hora='.$horarios['horario_filme'].'&dia='.$diasDaSemana[$diaSemana].'&id='.$resultado['id'].'">'.$data_filme->format('d/m/Y').' '.$diasDaSemana[$diaSemana].' '.$horarios['horario_filme'].'</a>
                                 
                             </li>';
                         }
