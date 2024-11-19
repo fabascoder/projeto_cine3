@@ -117,7 +117,7 @@
                         </div>
                         <div class="quantidade-ingresso">
                             <p>Quantidade</p>
-                            <select name="quantidadeInteira" id="quantidadeInteira" onchange="calcularTotal(); salvarQuantidade()">
+                            <select name="quantidadeInteira" id="quantidadeInteira" onchange="calcularTotal()">
                                 <option value="0">0</option>
                                 <option value="1">1</option>
                                 <option value="2">2</option>
@@ -144,7 +144,7 @@
                         </div>
                         <div class="quantidade-ingresso">
                             <p>Quantidade</p>
-                            <select name="quantidadeMeia" id="quantidadeMeia" onchange="calcularTotal(); salvarQuantidade()">
+                            <select name="quantidadeMeia" id="quantidadeMeia" onchange="calcularTotal()">
                                 <option value="0">0</option>
                                 <option value="1">1</option>
                                 <option value="2">2</option>
@@ -185,20 +185,6 @@
     </footer>
 
     <script src="javascript/pagamento_ingressos.js"></script>
-    <script>
-        function salvarQuantidade() {
-            const quantidadeInteira = parseInt(document.getElementById('quantidadeInteira').value) || 0;
-            const quantidadeMeia = parseInt(document.getElementById('quantidadeMeia').value) || 0;
-
-            document.getElementById('quantidadeInteiraInput').value = quantidadeInteira;
-            document.getElementById('quantidadeMeiaInput').value = quantidadeMeia;
-
-            // Atualizar total no campo hidden e exibição
-            const total = (quantidadeInteira * 38) + (quantidadeMeia * 19);
-            document.getElementById('total_pagar').value = total.toFixed(2);
-            document.getElementById('total_pagar_display').innerText = `TOTAL À PAGAR R$ ${total.toFixed(2).replace('.', ',')}`;
-        }
-    </script>
 </body>
 
 </html>

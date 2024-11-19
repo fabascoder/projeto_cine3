@@ -360,6 +360,7 @@
                 </div>
             </div>
             <p class=" assentos-escolhidos">ASSENTO(S) ESCOLHIDOS: <span  class="escolhidos"></span></p>
+
             <hr>
 
             <div class="localizacao">
