@@ -55,7 +55,7 @@
                         </div>
                         Local
                     </a></li>
-                    <li><a href="perfil.php"><div>
+                    <li><a href="conta.php"><div>
                             <span id="icon_profile" class="material-symbols-outlined">
                                 account_circle
                             </span>
