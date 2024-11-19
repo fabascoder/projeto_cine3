@@ -425,7 +425,7 @@
                 </select>
             </div>
     </footer>
-    <script src="javascript/pagamento_sessao.js"></script>
+    <!-- <script src="javascript/pagamento_sessao.js"></script> -->
     <script src="javascript/assentos.js"></script>
 </body>
 </html>

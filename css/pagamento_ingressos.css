@@ -35,7 +35,7 @@ li {
 
 .info-filme {
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #fff;
+    background-color: #e7e7e7;
     width: 75%;
     height: 100px;
     margin: 1.6rem auto;
@@ -125,15 +125,16 @@ li {
 
 .caixa-valores,
 .camiseta-valores {
-    background-color: #fff;
+    background-color: #ffffff;
     width: 85%;
-    height: 300px;
+    height: 200px;
     margin: 1.6rem auto;
     border: black solid 2px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     gap: 1rem;
+    border-radius: 3px;
 }; 
 
 
@@ -187,13 +188,17 @@ select {
 .caixa-finalizar {
     text-align: end;
     padding: 20px;
+    font-size: 1.2rem;
 }
 
 .finalizar p {
-    padding-right: 0px;
-    font-weight: 600;
+    padding: 10px;
+    font-weight: 500;
     font-family: sans-serif;
     
+}
+
+.total {
 }
 
 .finalizar .btn {
