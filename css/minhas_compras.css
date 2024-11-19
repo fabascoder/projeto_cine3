@@ -90,13 +90,14 @@ a:hover {
 }
 /*CONTEUDO PRINCIPAL*/
 main{
-    height: 1080px;
+    height: 100vh;
+    display: flex;
 }
 .barra-lateral{
-    width: 250px;
+    width: 253px;
     height: 600px;
     background-color: #4b4b4b;
-    margin-left: 60px;   
+    margin-left: 80px;   
     height: 1080px; 
 }
 .barra-lateral p{
@@ -118,9 +119,81 @@ main{
     padding: 10px;
     margin-left: auto;
 }
+.barra-lateral ul .li-1{
+  background-color: #401c26;
+  box-shadow: 0px 3px 0px #dd2d2d;
+}
+.barra-lateral ul li:hover{
+  background-color: #401c26;
+  transition: 0.6s;
+}
 .barra-lateral ul li a{
     font-family: "Zen Dots";
     color: white;
+}
+/*BARRA PRINCIPAL*/
+.barra-principal{
+    width: 800px;
+    background-color: #4b4b4b;
+    margin-left: 90px;   
+    height: 1080px; 
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+}
+.barra-principal h1{
+  color: white;
+  padding: 40px;
+}
+.barra-principal .caixa-ingressos{
+  width: 700px;
+  margin: auto;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  height: 170px;
+  display: flex;
+  background-color: #2b2b2b;
+  border-radius: 5px;
+  
+}
+.barra-principal .caixa-ingressos img{
+  width: 100px;
+  margin: auto;
+  border-radius: 5px;
+}
+.caixa-imagem{
+  width: 150px;
+  height: 170px;
+  display: flex;
+}
+.caixa-ingressos p{
+  color: #d95f80;
+  margin-top: 10.071px;
+}
+.caixa-ingressos .informacoes{
+  display: flex;
+  flex-direction: column;
+}
+.informacoes p{
+  display: flex;
+  align-items: center;
+  font-size: 0.8rem;
+}
+.cancelar{
+  display: flex;
+  margin-left: 100px;
+}
+.cancelar button{
+  margin: auto;
+  font-size: 0.8rem;
+  font-family: sans-serif;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.cancelar button:hover{
+  text-decoration: underline;
 }
 /*HEADER*/
 @media screen and (max-width: 1238px){
