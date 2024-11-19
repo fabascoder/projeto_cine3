@@ -49,8 +49,7 @@
             <input type="text" name="elenco" id="elenco" class="form_input">
         </div>
         <div class="campo">
-            <label for="horario">Horário</label><br>
-            <input type="time" name="horario" id="horario" class="form_input">
+           <a href="cadastrar_sessao.php">HORARIO - DURAÇÃO - LOCAL</a>
         </div>
         <div class="campo">
             <label for="calssificacao">Idade</label><br>

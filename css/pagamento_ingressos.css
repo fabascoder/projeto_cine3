@@ -33,6 +33,26 @@ li {
     padding-right: 20px;
 }
 
+.info-filme {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #fff;
+    width: 75%;
+    height: 100px;
+    margin: 1.6rem auto;
+    border: #333 solid 2px;
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 30px;
+    border-radius: 5px;
+    color: #333;
+}
+
+.title-php {
+    font-weight: 600;
+    color: #444;
+}
+
 .etapas-compra {
     background-color: #fff;
     width: 65px;
@@ -114,7 +134,9 @@ li {
     flex-direction: column;
     justify-content: space-between;
     gap: 1rem;
-}
+}; 
+
+
 
 .caixa-valores button,
 .camiseta-valores button {
