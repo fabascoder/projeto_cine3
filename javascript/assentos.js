@@ -35,3 +35,4 @@ document.querySelectorAll('.assentos').forEach(checkbox => {
     checkbox.addEventListener('change', atualizarAssentosEscolhidos);
 });
 atualizarAssentosEscolhidos();
+
