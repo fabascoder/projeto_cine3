@@ -93,7 +93,7 @@
         </form>
         <div id="teste"></div>
     </div>
-
+    
     <script src="javascript/cadastro.js">
         const div = document.querySelector('php')
         const formulario = document.getElementById('formulario');

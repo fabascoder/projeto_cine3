@@ -55,6 +55,7 @@
     <main>
         <div class="caixa-principal">
             <?php 
+            session_start();
             $pipoca_p = $_POST['pipoca-pequena']?? 0;
             $pipoca_m = $_POST['pipoca-media']?? 0;
             $pipoca_g = $_POST['pipoca-grande']?? 0;

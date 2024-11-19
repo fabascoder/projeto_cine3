@@ -62,6 +62,9 @@
             $id = $_GET['id']??'';
             $horario = $_GET['hora']??'';
             $dia = $_GET['dia']??'';
+            session_start();
+            $_SESSION['dia'] = $dia;
+            $_SESSION['hora'] = $horario;
             if($id) {
                 $select = $conexao->prepare("SELECT * FROM filme WHERE id=:id");
                 $select->execute(['id'=>$id]);
@@ -106,7 +109,7 @@
 
                 <!-- Ingresso Inteira -->
                 <div class="caixa-valores">
-                    <button type="button"><img src="imagens/lixeira-vermelha.png" alt="" width="30px"></button>
+                    
                     <div class="escolhas">
                         <div class="tipo-ingresso">
                             <p>Ingresso:</p>
@@ -133,7 +136,7 @@
 
                 <!-- Ingresso Meia -->
                 <div class="caixa-valores">
-                    <button type="button"><img src="imagens/lixeira-vermelha.png" alt="" width="30px"></button>
+                   
                     <div class="escolhas">
                         <div class="tipo-ingresso">
                             <p>Ingresso:</p>
@@ -162,7 +165,7 @@
                 <div class="caixa-finalizar">
                     <div class="finalizar">
                         <input type="hidden" id="total_pagar" name="total_pagar" value="0">
-                        <p id="total_pagar_display">TOTAL À PAGAR R$ 0,00</p>
+                        <p id="total_pagar_display">TOTAL <span style="font-weight: 600;" class="total">R$ 0,00</span></p>
                         <button type="submit" class="btn">AVANÇAR ></button>
                     </div>
                 </div>
