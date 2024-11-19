@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
     // Recupera o total de ingressos salvo na página anterior
-    const totalIngressos = parseInt(sessionStorage.getItem("totalIngressos") || 0);
+    const totalIngressos = parseInt(sessionStorage.getItem("totalIngressos")) || 0;
     let assentosSelecionados = 0;
 
     // Seleciona todos os elementos de assento
@@ -22,6 +22,5 @@ document.addEventListener("DOMContentLoaded", function() {
                 return; // Finaliza a execução sem selecionar a cadeira
             }
         });
-    });
+   });
 });
-
