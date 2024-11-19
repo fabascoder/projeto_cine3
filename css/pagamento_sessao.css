@@ -254,6 +254,12 @@ color: #333
     background-color: black;
     cursor: auto;
 }
+
+.assento-selecionado {
+    background-color: #d95f80;
+    border: 2px solid #fff;
+}
+
 /*RODAPÉ*/
 
 /*ADICIONADO LINHA*/

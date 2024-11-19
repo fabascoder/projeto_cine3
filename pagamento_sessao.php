@@ -16,7 +16,7 @@
     $_SESSION['valor_inteira'] = $_POST['valor_inteira']??"";
     $_SESSION['tamanho-camiseta'] = $_POST['tamanho-camiseta']??"";
     $_SESSION['tamanho-camiseta'] = $_POST['tamanho-camiseta']??"";
-    $_SESSION['assentos'] = $_POST['assentos'] ?? []; // Adicionando os assentos selecionados
+    $_SESSION['assentos'] = $_POST['assentos'] ?? []; //adicionado 
     ?>
     <header>
         <nav>

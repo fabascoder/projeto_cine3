@@ -22,6 +22,5 @@ document.addEventListener("DOMContentLoaded", function() {
                 return; // Finaliza a execução sem selecionar a cadeira
             }
         });
-    });
+   });
 });
-
