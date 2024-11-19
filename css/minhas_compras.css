@@ -182,7 +182,7 @@ main{
 }
 .cancelar{
   display: flex;
-  margin-left: 70px;
+  margin-left: 100px;
 }
 .cancelar button{
   margin: auto;

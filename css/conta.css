@@ -174,3 +174,85 @@ label{
     font-family: sans-serif;
     margin-left: 50.4432px;
 }
+button{
+  border-radius: 25px;
+  background-color: #d95f80;
+  border: none;
+  width: 100px;
+  height: 40px;
+  margin-top: 40px;
+  margin-left: 50.4432px;
+  cursor: pointer;
+}
+@media screen and (max-width: 1238px){
+  ul{
+    gap: 40px;
+  }
+  .logo-pesquisa{
+    gap: 0px;
+  }
+  .logo-pesquisa #pesquisa {
+    margin: 17px 0px 0px 0px;
+    width: 270px;
+    height: 35px;
+    padding: 10px;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    font-size: 1.2rem;
+  }
+  header{
+    gap: 10px;
+  }
+}
+@media screen and (max-width: 981px){
+  header {
+    display: flex;
+    background-color: var(--vermelho);
+    flex-direction: column;
+  }
+  .logo-pesquisa{
+    display: flex;
+    margin: auto;
+    gap: 120px;
+  }
+  .logo-pesquisa #pesquisa{
+    margin: 17px 0px 0px 0px;
+  }
+  ul{
+    gap: 120px;
+  }
+}
+@media screen and (max-width: 741px){
+  ul{
+    gap: 60px;
+  }
+  .logo-pesquisa{
+    display: flex;
+    justify-content: space-between;
+    gap: 0px;
+  }
+  header {
+    display: flex;
+    background-color: var(--vermelho);
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 566px){
+  ul{
+    gap: 25px;
+    width: 100%;
+  }
+  .logo-pesquisa #pesquisa {
+    margin: 17px 0px 0px 0px;
+    width: 170px;
+    height: 35px;
+    padding: 10px;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    font-size: 1.2rem;
+  }
+  .logo-pesquisa #navegacao{
+  }
+}

@@ -112,6 +112,10 @@
             </ul>
         </div>
         <div class="barra-principal">
-            <h1>Senha</h1>
-            
+            <h1>Alterar Senha</h1>
+            <div class="caixa-senha"><label>*Senha Atual</label><input type="password" class="caixas" placeholder="******">
+            <br>
+            <div class="caixa-senha"><label>*Nova Senha</label><input type="password" class="caixas" placeholder="">
+            <div class="caixa-senha"><label>*Confirmar Senha</label><input type="password" class="caixas" placeholder="">
+            <button>Confirmar</button>
         </div>
