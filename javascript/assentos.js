@@ -24,3 +24,14 @@ document.addEventListener("DOMContentLoaded", function() {
         });
    });
 });
+
+function atualizarAssentosEscolhidos() {
+    const assentosSelecionados = document.querySelectorAll('.assentos:checked');
+    const idsSelecionados = Array.from(assentosSelecionados).map(assento => assento.id);
+    const spanEscolhidos = document.querySelector('.escolhidos');
+    spanEscolhidos.textContent = idsSelecionados.length > 0 ? idsSelecionados.join(', ') : 'Nenhum';
+}
+document.querySelectorAll('.assentos').forEach(checkbox => {
+    checkbox.addEventListener('change', atualizarAssentosEscolhidos);
+});
+atualizarAssentosEscolhidos();

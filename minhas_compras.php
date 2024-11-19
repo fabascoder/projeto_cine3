@@ -129,8 +129,6 @@
                     <button>Cancelar Pedido</button>
                 </div>
             </div>
-            <div class="caixa-ingressos"></div>
-            <div class="caixa-ingressos"></div>
         </div>
     </main>
     
