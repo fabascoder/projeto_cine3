@@ -20,6 +20,7 @@ function calcularTotal() {
     document.getElementById('totalMeia').textContent = `R$ ${totalMeia.toFixed(2)}`;
  
     // Atualizar o total a pagar
-    document.getElementById('total_pagar_display').textContent = `TOTAL À PAGAR R$ ${totalPagar.toFixed(2)}`;
+    document.getElementById('total_pagar_display').textContent = `TOTAL R$${totalPagar.toFixed(2)}`;
     document.getElementById('total_pagar').value = totalPagar.toFixed(2);
+    totalPagar.style.fontWeight = "500";
 }

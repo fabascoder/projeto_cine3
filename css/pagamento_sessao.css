@@ -259,6 +259,12 @@ color: #333
     background-color: #d95f80;
     border: 2px solid #fff;
 }
+.assento-selecionado {
+    background-color: #d95f80;
+    color: #d95f80;
+    border: 2px solid #d95f80;
+}
+
 
 /*RODAPÉ*/
 

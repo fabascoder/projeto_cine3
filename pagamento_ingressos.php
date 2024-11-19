@@ -62,6 +62,9 @@
             $id = $_GET['id']??'';
             $horario = $_GET['hora']??'';
             $dia = $_GET['dia']??'';
+            session_start();
+            $_SESSION['dia'] = $dia;
+            $_SESSION['hora'] = $horario;
             if($id) {
                 $select = $conexao->prepare("SELECT * FROM filme WHERE id=:id");
                 $select->execute(['id'=>$id]);
@@ -106,7 +109,7 @@
 
                 <!-- Ingresso Inteira -->
                 <div class="caixa-valores">
-                    <button type="button"><img src="imagens/lixeira-vermelha.png" alt="" width="30px"></button>
+                    
                     <div class="escolhas">
                         <div class="tipo-ingresso">
                             <p>Ingresso:</p>
@@ -114,7 +117,7 @@
                         </div>
                         <div class="quantidade-ingresso">
                             <p>Quantidade</p>
-                            <select name="quantidadeInteira" id="quantidadeInteira" onchange="calcularTotal(); salvarQuantidade()">
+                            <select name="quantidadeInteira" id="quantidadeInteira" onchange="calcularTotal()">
                                 <option value="0">0</option>
                                 <option value="1">1</option>
                                 <option value="2">2</option>
@@ -133,7 +136,7 @@
 
                 <!-- Ingresso Meia -->
                 <div class="caixa-valores">
-                    <button type="button"><img src="imagens/lixeira-vermelha.png" alt="" width="30px"></button>
+                   
                     <div class="escolhas">
                         <div class="tipo-ingresso">
                             <p>Ingresso:</p>
@@ -141,7 +144,7 @@
                         </div>
                         <div class="quantidade-ingresso">
                             <p>Quantidade</p>
-                            <select name="quantidadeMeia" id="quantidadeMeia" onchange="calcularTotal(); salvarQuantidade()">
+                            <select name="quantidadeMeia" id="quantidadeMeia" onchange="calcularTotal()">
                                 <option value="0">0</option>
                                 <option value="1">1</option>
                                 <option value="2">2</option>
@@ -162,7 +165,7 @@
                 <div class="caixa-finalizar">
                     <div class="finalizar">
                         <input type="hidden" id="total_pagar" name="total_pagar" value="0">
-                        <p id="total_pagar_display">TOTAL À PAGAR R$ 0,00</p>
+                        <p id="total_pagar_display">TOTAL <span style="font-weight: 600;" class="total">R$ 0,00</span></p>
                         <button type="submit" class="btn">AVANÇAR ></button>
                     </div>
                 </div>
@@ -182,20 +185,6 @@
     </footer>
 
     <script src="javascript/pagamento_ingressos.js"></script>
-    <script>
-        function salvarQuantidade() {
-            const quantidadeInteira = parseInt(document.getElementById('quantidadeInteira').value) || 0;
-            const quantidadeMeia = parseInt(document.getElementById('quantidadeMeia').value) || 0;
-
-            document.getElementById('quantidadeInteiraInput').value = quantidadeInteira;
-            document.getElementById('quantidadeMeiaInput').value = quantidadeMeia;
-
-            // Atualizar total no campo hidden e exibição
-            const total = (quantidadeInteira * 38) + (quantidadeMeia * 19);
-            document.getElementById('total_pagar').value = total.toFixed(2);
-            document.getElementById('total_pagar_display').innerText = `TOTAL À PAGAR R$ ${total.toFixed(2).replace('.', ',')}`;
-        }
-    </script>
 </body>
 
 </html>
