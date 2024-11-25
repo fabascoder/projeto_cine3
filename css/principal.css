@@ -158,7 +158,7 @@ h1 {
 }
 
 .secao {
-  margin: 50px;
+  margin: 40px 20px 25px 20px;
 }
 
 /* .container_secao{
@@ -413,8 +413,8 @@ footer div select {
   }
   .imagem_section {
     max-width: 100%;
-    width: 180px;
-    height: 260px;
+    width: 200px;
+    height: 280px;
     border-radius: 20px;
     box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.363);
   }
@@ -438,8 +438,8 @@ footer div select {
   }
   .imagem_section {
     max-width: 100%;
-    width: 120px;
-    height: 179px;
+    width: 140px;
+    height: 199px;
     border-radius: 20px;
     box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.363);
   }
@@ -499,8 +499,8 @@ footer div select {
   }
   .imagem_section {
     max-width: 100%;
-    width: 110px;
-    height: 159px;
+    width: 130px;
+    height: 179px;
     border-radius: 20px;
     box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.363);
   }
