@@ -189,11 +189,7 @@ h2 {
     border: none;
     font-size: 1.2rem;
   }
-  .logo-pesquisa #navegacao{
-  }
-}
-@media screen and (max-width: 456px){
- 
+  
 }
 /*MAIN*/
 @media screen and (max-width:1100px){
@@ -238,7 +234,6 @@ main .button_horario {
     margin: 30px 0px 30px 30px;
   }
 }
-
 @media screen and (max-width:534px){
   main .button_horario {
     display: inline-block;

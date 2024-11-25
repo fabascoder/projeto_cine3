@@ -110,6 +110,9 @@
                 <li class="li-1">
                     <a href="">Minha Senha</a>
                 </li>
+                <div style="display: flex; justify-content: end; color: red; padding: 5px;">
+                    <a href="logout.php">SAIR</a>
+                </div>
             </ul>
         </div>
         <div class="barra-principal">

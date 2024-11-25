@@ -15,7 +15,7 @@ if($dados) {
         $_SESSION['nome'] = $dados['nome'];
         $_SESSION['email'] = $dados['email'];
         // header('location: ./');
-        echo $dados['nome'];
+        header('location: finalizacao_login.php');
     } else {
        header('location: login.php?erro=Login ou senha inválidos!');
     }
