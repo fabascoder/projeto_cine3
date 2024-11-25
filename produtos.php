@@ -51,12 +51,34 @@
                         </div>
                         Local
                     </a></li>
-                    <li><a href="login.php"><div>
+                    
+                    <?php 
+                    session_start();
+                    if(isset($_SESSION['nome'])) {
+                     echo '   <li><a href="conta.php"><div>
                             <span id="icon_profile" class="material-symbols-outlined">
                                 account_circle
                             </span>
                         </div>
+                        
+                        '.$_SESSION['nome'].'
+                    </a></li>';
+                    } else {
+
+                    
+                
+                  echo '<li><a href="login.php"><div>
+                            <span id="icon_profile" class="material-symbols-outlined">
+                                account_circle
+                            </span>
+                        </div>
+                        
                         Login
+                    </a></li>';
+                 }
+                ?>
+
+
                 </ul>
             </nav>
         </div>
