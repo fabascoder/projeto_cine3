@@ -26,7 +26,7 @@
     <main>
         <div class="login-container">
             <h1>Login</h1>
-            <form onsubmit="validateLogin(event)">
+            <form action="logar.php" method="post">
                 <label for="email">E-mail</label>
                 <input type="email" id="email" name="email" required>
         
@@ -42,10 +42,16 @@
                 </div>
         
                 <button type="submit">Entrar</button>
+                <div>
+                    <?php 
+                    $mensagem = $_GET['erro']??"";
+                    echo $mensagem;
+                    ?>
+                </div>
             </form>
             <a href="cadastro.php" class="signup">Cadastre-se!</a>
         </div>
     </main>
-    <script src="javascript/login.js"></script>
+    <!-- <script src="javascript/login.js"></script> -->
 </body>
 </html>
