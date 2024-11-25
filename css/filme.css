@@ -103,6 +103,55 @@ h2 {
   font-size: 2rem;
   margin: 10px 0px 10px 10px;
 }
+
+/* Adiciona margem para que as informações fiquem mais abaixo */
+.descricao {
+  margin-top: 40px; /* Aumente ou diminua conforme necessário */
+}
+
+/* Cor rosa forte para dias, abreviações e horários */
+.button_horario {
+  color: #ff007f; /* Cor rosa forte */
+  background-color: #310a0a;
+  padding: 25px 50px;
+  margin: 30px;
+  border-radius: 80px;
+  width: 230px;
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: 100;
+}
+
+.button_horario:hover {
+  transition: 0.8s;
+  background-color: #db7777;
+  color: #ff007f; /* Cor rosa forte no hover */
+  box-shadow: 10px 3px 50px #dd2d2d;
+}
+
+/* Ajusta espaçamento entre os horários e outros elementos */
+#div_column {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Adiciona espaço entre colunas */
+}
+
+p {
+  color: #fff;
+  padding: 10px;
+  font-size: 1.2rem;
+  font-weight: 100;
+}
+
+/* Outros ajustes gerais */
+h1 {
+  font-weight: 200;
+  margin: 0px;
+  padding-left: 100px;
+  font-size: 2rem;
+  color: #fff;
+}
+
 /*HEADER*/
 @media screen and (max-width: 1238px){
   ul{
