@@ -1,12 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap');
 h1{
     font-family: "Zen Dots";
+    color: black;
 }
 p{
     font-family: sans-serif;
-}
-body {
-    background-color: #F5F5F5;
 }
 
 * {
@@ -32,7 +30,7 @@ body {
     font-family: "Zen Dots", sans-serif;
     font-weight: 400;
     font-style: normal;
-    background-color: #F5F5F5;
+    background-color: #f5f5f5;
   }
   
   :root {
