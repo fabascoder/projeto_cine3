@@ -158,14 +158,8 @@ li {
     justify-content: space-between;
     padding: 20px;
     text-align: center;
-    margin-bottom: 130px;
-}
-.escolhas-camisa{
-    display: flex;
-    justify-content: space-between;
-    padding: 20px;
-    text-align: center;
-    margin-bottom: 130px;
+    margin-bottom: 50px;
+    margin-top: 50px;
 }
 
 .tipo-ingresso,
@@ -244,9 +238,10 @@ select {
         font-size: 1.5rem; /* Reduz o tamanho da fonte */
     }
 
-    .escolhas-camisa{
+    .escolhas{
         flex-direction: column; /* Coloca as escolhas em coluna */
         margin: auto;
+        gap: 60px;
     }
     select {
         width: 100%; /* Faz o select ocupar toda a largura */
@@ -262,7 +257,6 @@ select {
     
     
 }
-
 @media screen and (max-width: 480px) {
     .titulo p {
         font-size: 1.2rem; /* Tamanho da fonte ainda menor */
@@ -333,12 +327,12 @@ select {
         margin: auto;
     }
     .escolhas{
-        padding: 0px;
+        padding: 20px;
     }
 }
 @media screen and (max-width: 420px){
     .escolhas{
-        padding: 0px;
+        padding: 20px;
     }
     .caixa-valores{
         width: 100%;

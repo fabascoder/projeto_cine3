@@ -119,9 +119,6 @@ include_once "conexao.php";
                 <li>
                     <a href="minha_senha.php">Minha Senha</a>
                 </li>
-                <div style="display: flex; justify-content: end; color: red;">
-                    <a href="logout.php">SAIR</a>
-                </div>
             </ul>
         </div>
         <div class="barra-principal">
