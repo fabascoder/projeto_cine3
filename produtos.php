@@ -37,7 +37,7 @@
                                 </div>
                                 Ingressos
                             </a></li>
-                    <li><a href="produtos.php"><div>
+                    <li class="li-1"><a href="produtos.php"><div>
                             <span id="icon_produto" class="material-symbols-outlined">
                                 shopping_bag
                             </span>

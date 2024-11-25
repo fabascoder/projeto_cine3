@@ -203,7 +203,12 @@ span {
   color: black; /* Texto preto para o botão selecionado */
   border: 1px solid black; /* Borda preta */
 }
-
+#icon_produto{
+  color: #d95f80;
+}
+.li-1 a{
+  color: #d95f80;
+}
 /*HEADER*/
   @media screen and (max-width: 1238px){
     ul{

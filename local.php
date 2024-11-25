@@ -7,25 +7,93 @@
     <title>Nossas Localidades</title>
     <link rel="stylesheet" href="css/local.css">
     <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
 </head>
 
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li>
-                    <a href="index.php">
-                        <img src="imagens/Logo_Cine3-removebg-preview.png" alt="Cine3 Logo" class="logo">
-                    </a>
-                </li>
+<header>
+        
+        <div class="logo-pesquisa">
+            <a href="index.php"><img src="imagens/Logo_Cine3-removebg-preview.png" alt="Imagem CINE3" width="200px"></a>
+            <div class="div_pesquisa">
+                <input type="search" id="pesquisa" placeholder="Pesquisar">
+            </div>
+        </div>
+        <div class="menu-hamburguer">
+            <input type="checkbox" id="menu-toggle" class="menu-toggle">
+            <label for="menu-toggle" class="menu-icon">
+                <span class="material-symbols-outlined">menu</span>
+            </label>
+            <nav class="menu">
+                <ul>
+                    <li><a href="javascript:void(0)" id="openModal"><div>
+                                    <span id="icon_ingresso" class="material-symbols-outlined">
+                                        confirmation_number
+                                    </span>
+                                </div>
+                                Ingressos
+                            </a></li>
+                    <li><a href="produtos.php"><div>
+                            <span id="icon_produto" class="material-symbols-outlined">
+                                shopping_bag
+                            </span>
+                        </div> 
+                        Produtos
+                    </a></li>
+                    <li class="li-1"><a href="local.php"><div>
+                            <span id="icon_local" class="material-symbols-outlined">
+                                pin_drop
+                            </span>
+                        </div>
+                        Local
+                    </a></li>
+                    <li><a href="login.php"><div>
+                            <span id="icon_profile" class="material-symbols-outlined">
+                                account_circle
+                            </span>
+                        </div>
+                        Login
+                </ul>
+            </nav>
+        </div>
 
-                <li>
-                    <a href="">Olá, [Nome]</a>
-                </li>
-            </ul>
-            <a href="pricipal.php"><i class="fa fa-arrow-left" aria-hidden="true"></i></a>
+        <nav id="navegacao">
+
+
+                
+
+                <!-- Modal HTML -->
+                <dialog id="modal-ingressos" class="modal">
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <h2 class="ingressos">Ingressos</h2>
+                        <div>
+                            <p class="p1">Padrão Inteira</p>
+                            <p class="v1">Válido de quinta-feira, sexta-feira, sábado e domingo.</p>
+                            <p class="t1">R$18,00</p>
+                        </div>
+                        <hr>
+                        <div>
+                            <p class="p1">Meia Promocional</p>
+                            <p class="v1">Válido de segunda-feira, terça-feira e quarta-feira OU com Comprovante
+                                Escolar.</p>
+                            <p class="t1">R$9,00</p>
+                        </div>
+                    </div>
+                </dialog>
+
+
+
         </nav>
-        <a href="index.php"><img src="imagens/seta.png" alt="" width="40px" id="seta"></a>
     </header>
     <div class="titulo">
         <h1>Nossas Localidades</h1>
