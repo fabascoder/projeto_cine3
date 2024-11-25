@@ -55,12 +55,13 @@
                         </div>
                         Local
                     </a></li>
-                    <li><a href="conta.php"><div>
+                    <li class="li-1"><a href="conta.php"><div>
                             <span id="icon_profile" class="material-symbols-outlined">
                                 account_circle
                             </span>
                         </div>
                         Perfil
+                    </a></li>
                 </ul>
             </nav>
         </div>
