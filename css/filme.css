@@ -103,6 +103,7 @@ h2 {
   font-size: 2rem;
   margin: 10px 0px 10px 10px;
 }
+
 /* Adiciona margem para que as informações fiquem mais abaixo */
 .descricao {
   margin-top: 40px; /* Aumente ou diminua conforme necessário */
@@ -150,6 +151,7 @@ h1 {
   font-size: 2rem;
   color: #fff;
 }
+
 /*HEADER*/
 @media screen and (max-width: 1238px){
   ul{
