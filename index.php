@@ -58,8 +58,8 @@
                     </a></li>
                     <?php 
                     session_start();
-                    if($_SESSION['nome']) {
-                     echo '   <li><a href="login.php"><div>
+                    if(isset($_SESSION['nome'])) {
+                     echo '   <li><a href="conta.php"><div>
                             <span id="icon_profile" class="material-symbols-outlined">
                                 account_circle
                             </span>
