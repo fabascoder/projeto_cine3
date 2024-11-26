@@ -173,9 +173,6 @@
                             ?>
                         </ul>
                     </div>
-                    <div id="column2">
-                       
-                    </div>
                 </div>
 
                 <div class="descricao">
