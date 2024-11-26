@@ -68,5 +68,6 @@ footer {
     .term{
       display: flex;
       flex-direction: column;
+      
     }
   }
