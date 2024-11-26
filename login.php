@@ -35,7 +35,7 @@
         
                 <div class="options">
                     <div>
-                        <input type="checkbox" id="remember-me" name="remember-me">
+                        <input type="checkbox" id="remember-me" name="cookie">
                         <label for="remember-me">Lembrar-me</label>
                     </div>
                     <a href="#">Esqueceu sua senha?</a>

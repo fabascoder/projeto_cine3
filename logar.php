@@ -10,6 +10,10 @@ $select->bindParam('email', $email);
 $select->execute();
 $dados = $select->fetch();
 // print_r($dados);
+if(isset($_POST['cookie'])) {
+    setcookie('email', $email, time() + 3600);
+}
+
 if($dados) {
     if($dados['senha'] == $senha) {
         $_SESSION['nome'] = $dados['nome'];

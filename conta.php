@@ -1,7 +1,10 @@
+<?php 
+session_start();
+?>
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html lang="pt-br">
 
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Minha Conta</title>
@@ -16,11 +19,11 @@
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-  
 </head>
+
 <body>
     <header>
-        
+
         <div class="logo-pesquisa">
             <a href="index.php"><img src="imagens/Logo_Cine3-removebg-preview.png" alt="Imagem CINE3" width="200px"></a>
             <div class="div_pesquisa">
@@ -34,71 +37,71 @@
             </label>
             <nav class="menu">
                 <ul>
-                    <li><a href="javascript:void(0)" id="openModal"><div>
-                                    <span id="icon_ingresso" class="material-symbols-outlined">
-                                        confirmation_number
-                                    </span>
-                                </div>
-                                Ingressos
-                            </a></li>
-                    <li><a href="produtos.php"><div>
-                            <span id="icon_produto" class="material-symbols-outlined">
-                                shopping_bag
-                            </span>
-                        </div> 
-                        Produtos
-                    </a></li>
-                    <li><a href="local.php"><div>
-                            <span id="icon_local" class="material-symbols-outlined">
-                                pin_drop
-                            </span>
-                        </div>
-                        Local
-                    </a></li>
-                    <li class="li-1"><a href="conta.php"><div>
-                            <span id="icon_profile" class="material-symbols-outlined">
-                                account_circle
-                            </span>
-                        </div>
-                        Perfil
-                    </a></li>
+                    <li><a href="javascript:void(0)" id="openModal">
+                            <div>
+                                <span id="icon_ingresso" class="material-symbols-outlined">
+                                    confirmation_number
+                                </span>
+                            </div>
+                            Ingressos
+                        </a></li>
+                    <li><a href="produtos.php">
+                            <div>
+                                <span id="icon_produto" class="material-symbols-outlined">
+                                    shopping_bag
+                                </span>
+                            </div>
+                            Produtos
+                        </a></li>
+                    <li><a href="local.php">
+                            <div>
+                                <span id="icon_local" class="material-symbols-outlined">
+                                    pin_drop
+                                </span>
+                            </div>
+                            Local
+                        </a></li>
+                    <li class="li-1"><a href="conta.php">
+                            <div>
+                                <span id="icon_profile" class="material-symbols-outlined">
+                                    account_circle
+                                </span>
+                            </div>
+                            Perfil
+                        </a></li>
                 </ul>
             </nav>
         </div>
 
         <nav id="navegacao">
-
-
-                
-
-                <!-- Modal HTML -->
-                <dialog id="modal-ingressos" class="modal">
-                    <div class="modal-content">
-                        <span class="close">&times;</span>
-                        <h2 class="ingressos">Ingressos</h2>
-                        <div>
-                            <p class="p1">Padrão Inteira</p>
-                            <p class="v1">Válido de quinta-feira, sexta-feira, sábado e domingo.</p>
-                            <p class="t1">R$18,00</p>
-                        </div>
-                        <hr>
-                        <div>
-                            <p class="p1">Meia Promocional</p>
-                            <p class="v1">Válido de segunda-feira, terça-feira e quarta-feira OU com Comprovante
-                                Escolar.</p>
-                            <p class="t1">R$9,00</p>
-                        </div>
+            <!-- Modal HTML -->
+            <dialog id="modal-ingressos" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h2 class="ingressos">Ingressos</h2>
+                    <div>
+                        <p class="p1">Padrão Inteira</p>
+                        <p class="v1">Válido de quinta-feira, sexta-feira, sábado e domingo.</p>
+                        <p class="t1">R$18,00</p>
                     </div>
-                </dialog>
-
-
-
+                    <hr>
+                    <div>
+                        <p class="p1">Meia Promocional</p>
+                        <p class="v1">Válido de segunda-feira, terça-feira e quarta-feira OU com Comprovante
+                            Escolar.</p>
+                        <p class="t1">R$9,00</p>
+                    </div>
+                </div>
+            </dialog>
         </nav>
     </header>
     <main>
         <div class="barra-lateral">
-            <p>Olá [Nome], Esse <br>é o seu Perfil</p>
-            <p>email@exemplo.com</p>
+            <p>Olá <?php echo $_SESSION['nome'];?>, Esse <br>é o seu Perfil</p>
+            <p>
+                <?php 
+            echo $_SESSION['email'];
+            ?></p>
             <ul>
                 <li class="li-1">
                     <a href="conta.php">Minha Conta</a>
@@ -106,12 +109,12 @@
                 <li>
                     <a href="minhas_compras.php">Minhas Compras</a>
                 </li>
-                
+
                 <li>
                     <a href="minha_senha.php">Minha Senha</a>
                 </li>
                 
-                <div style="display: flex; justify-content: end; color: red; padding: 5px;">
+                <div style="display: flex; justify-content: end; color: red;">
                     <a href="logout.php">SAIR</a>
                 </div>
             </ul>
@@ -119,10 +122,18 @@
         <div class="barra-principal">
             <h1>Meus Dados</h1>
             <div class="dados">
-                <div class="caixa-nome"><label>*Nome</label><input placeholder="Nome Do Usuario" name="account.name" class="caixas"></div>
-                <div class="caixa-cpf"><label>*CPF</label><input type="text" class="caixas" placeholder="***.***.***-**"></div>
-                <div class="caixa-email"><label>*Email</label><input type="text" class="caixas" placeholder="email@exemplo.com"></div>
+                <div class="caixa-nome"><label>*Nome</label><input placeholder="Nome Do Usuario" name="account.name"
+                        class="caixas"></div>
+                <div class="caixa-cpf"><label>*CPF</label><input type="text" class="caixas"
+                        placeholder="***.***.***-**"></div>
+                <div class="caixa-email"><label>*Email</label><input type="text" class="caixas"
+                        placeholder="email@exemplo.com"></div>
                 <div class="caixa-senha"><label>*Senha</label><input type="text" class="caixas" placeholder="******">
-                <a href="minha_senha.php">Alterar senha</a></div>
+                    <a href="minha_senha.php">Alterar senha</a>
+                </div>
             </div>
         </div>
+    </main>
+
+</body>
+</html>

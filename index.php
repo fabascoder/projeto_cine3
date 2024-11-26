@@ -185,6 +185,8 @@
                             </a>
                         </div>';
                         }
+
+                        echo $_COOKIE['email'];
                         ?>
 
 
