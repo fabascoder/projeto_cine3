@@ -59,12 +59,12 @@ footer {
     width: 137px;
     height: 30px;
   }
-  @media screen and (max-width: 914px){
+  @media screen and (max-width: 1005px){
     footer{
       flex-direction: column;
     }
   }
-  @media screen and (max-width: 476px){
+  @media screen and (max-width: 500px){
     .term{
       display: flex;
       flex-direction: column;

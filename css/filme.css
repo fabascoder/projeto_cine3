@@ -17,19 +17,22 @@ body {
 }
 
 #grid {
-  /* display: flex; */
+   display: flex; 
 
   height: 824px;
   padding: 0px;
   margin: 0;
   width: 100%;
 }
+.conteudo-grid{
+  margin: auto;
+}
 h1 {
   font-weight: 200;
-  /* text-align: center; */
+   text-align: center; 
   margin: 0px;
-  padding-left: 100px;
   font-size: 2rem;
+  padding: 20px;
 }
 
 main span {
@@ -48,7 +51,7 @@ main .button_horario {
   padding: 25px 50px;
   margin: 30px;
   border-radius: 80px;
-  width: 230px;
+  width: 268px;
   text-align: center;
   font-size: 1.3rem;
   font-weight: 100;
@@ -77,6 +80,7 @@ main .button_horario {
 
 #div_img {
   margin: 20px 20px 0px 20px;
+  height: 610px;
 }
 
 .foto_bad_boys {
@@ -85,7 +89,7 @@ main .button_horario {
   border: 2px solid #fff;
   width: 700px;
   height: 600px;
-  margin: 0px 0px 220px 0px;
+  margin: 0px 0px 20px 0px;
 }
 
 /*DESCRITION*/
@@ -101,6 +105,9 @@ p {
   font-size: 1.2rem;
   font-weight: 100;
 }
+p{
+  color: #fff;
+}
 
 hr {
   color: #fff;
@@ -109,6 +116,7 @@ hr {
 .caixa-trailer{
   display: flex;
   flex-direction: column;
+  
 }
 .caixa-trailer h1{
   text-align: center;
@@ -120,6 +128,11 @@ picture{
   margin: auto;
   padding: 30px;
   border-radius: 15px;
+  
+}
+iframe{
+  width:800px ;
+  height: 455px;
 }
 /*SINOPSE*/
 
@@ -170,8 +183,8 @@ h2 {
   .logo-pesquisa #pesquisa{
     margin: 17px 0px 0px 0px;
   }
-  ul{
-    gap: 120px;
+  .menu-hamburguer ul{
+    gap: 25px;
   }
 }
 @media screen and (max-width: 741px){
@@ -207,7 +220,7 @@ h2 {
   
 }
 /*MAIN*/
-@media screen and (max-width:1100px){
+@media screen and (max-width:1160px){
   .foto_bad_boys {
     max-width: 100%;
     border-radius: 21px;
@@ -243,10 +256,63 @@ main .button_horario {
     font-weight: 100;
   }
   #column1 .button_horario{
-    margin: 30px 30px 30px 0px;
+    margin: 30px 30px 30px 30px;
   }
   #column2 .button_horario{
-    margin: 30px 0px 30px 30px;
+    margin: 30px 30px 30px 30px;
+  }
+  #grid{
+    height: 530px;
+    display: block; 
+  }
+  #div_img {
+    height: 410px;
+  }
+}
+@media screen and (max-width:1005px){
+  iframe{
+    width:700px;
+    height:395px;
+  }
+}
+@media screen and (max-width:766px){
+  iframe{
+    width:600px;
+    height:335px;
+  }
+}
+@media screen and (max-width:680px){
+  iframe{
+    width:520px;
+    height:355px;
+  }
+  main .button_horario {
+    display: inline-block;
+    background-color: #310a0a;
+    padding: 25px 0px;
+    border-radius: 80px;
+    width: 200px;
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: 100;
+  }
+  main ul{
+    gap: 20px;
+  }
+  #column1 .button_horario{
+    margin: 15px 15px 15px 15px;
+  }
+  #grid{
+    height: 490px;
+  }
+}
+@media screen and (max-width:594px){
+  iframe{
+    width:420px;
+    height:325px;
+  }
+  main ul{
+    gap: 20px;
   }
 }
 @media screen and (max-width:534px){
@@ -259,6 +325,15 @@ main .button_horario {
     text-align: center;
     font-size: 1.3rem;
     font-weight: 100;
+  }
+  picture{
+    padding: 20px;
+  }
+}
+@media screen and (max-width:490px){
+  iframe{
+    width:360px;
+    height:255px;
   }
 }
 @media screen and (max-width:474px){
@@ -277,5 +352,14 @@ main .button_horario {
   }
   #column2 .button_horario{
     margin: 30px 0px 30px 17px;
+  }
+  #grid{
+    height: 550px;
+  }
+}
+@media screen and (max-width:414px){
+  iframe{
+    width:300px;
+    height:225px;
   }
 }

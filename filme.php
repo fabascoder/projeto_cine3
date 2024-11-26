@@ -155,6 +155,7 @@
             </div>
 
             <section id="grid">
+               <div class="conteudo-grid"> 
                 <h1>HORÁRIOS DE <span>PRÉ-VENDA</span></h1>
                 <div id="div_column">
                     <div id="column1">
@@ -174,9 +175,6 @@
                             ?>
                         </ul>
                     </div>
-                    <div id="column2">
-                       
-                    </div>
                 </div>
 
                 <div class="descricao">
@@ -191,13 +189,14 @@
 
                     <p>Elenco: <span><?php echo $resultado['elenco'];?></span>
                 </div>
+               </div> 
             </section>
         </div>
         <hr>
         <div class="caixa-trailer">
             <h1>TRAILER</h1>
             <picture>
-            <iframe width="800" height="455" src="https://www.youtube.com/embed/2x-2iYxgMFU?si=zs49fDVUcPw86Wb-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/2x-2iYxgMFU?si=zs49fDVUcPw86Wb-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </picture>            
         </div>                
         <section>
@@ -210,7 +209,6 @@
                 </p>
             </div>
         </section>
-
     </main>
     <footer>
         <img src="imagens/Logo_Cine3-removebg-preview.png" alt="">

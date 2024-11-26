@@ -19,18 +19,6 @@
     $_SESSION['tamanho-camiseta'] = $_POST['tamanho-camiseta']??"";
     $_SESSION['assentos'] = $_POST['assentos'] ?? []; //adicionado 
     ?>
-
-<?php
-
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $_SESSION['quantidadeInteira'] = $_POST['quantidadeInteira'] ?? 0;
-    $_SESSION['quantidadeMeia'] = $_POST['quantidadeMeia'] ?? 0;
-}
-
-// Total de assentos permitidos
-$totalAssentos = ($_SESSION['quantidadeInteira'] ?? 0) + ($_SESSION['quantidadeMeia'] ?? 0);
-?>
-
     <header>
         <nav>
             <ul>
@@ -372,9 +360,7 @@ $totalAssentos = ($_SESSION['quantidadeInteira'] ?? 0) + ($_SESSION['quantidadeM
 
                 </div>
             </div>
-            <p class="restrition-sitdowns">Você pode selecionar até <span id="max-assentos"><?php echo $totalAssentos; ?></span> assentos.</p>
-            <p class="assentos-escolhidos">ASSENTO(S) ESCOLHIDOS: <span class="escolhidos">0</span></p>
-
+            <p class=" assentos-escolhidos">ASSENTO(S) ESCOLHIDOS: <span  class="escolhidos"></span></p>
 
             <hr>
 
@@ -441,30 +427,32 @@ $totalAssentos = ($_SESSION['quantidadeInteira'] ?? 0) + ($_SESSION['quantidadeM
                 </select>
             </div>
     </footer>
+    <!-- <script src="javascript/pagamento_sessao.js"></script> -->
     <script>
-    // Total de assentos permitido (passado do PHP)
-    const totalAssentos = <?php echo $totalAssentos; ?>;
+        // Recupera o total de ingressos permitido
+        const totalIngressos = parseInt(localStorage.getItem('totalIngressos')) || 0;
 
-    document.addEventListener("DOMContentLoaded", () => {
-        const assentos = document.querySelectorAll(".assentos");
-        let selecionados = 0;
+        // Função para atualizar os assentos escolhidos
+        function atualizarAssentosEscolhidos() {
+            const assentosSelecionados = document.querySelectorAll('.assentos:checked');
+            const idsSelecionados = Array.from(assentosSelecionados).map(assento => assento.id);
 
-        assentos.forEach((assento) => {
-            assento.addEventListener("change", () => {
-                if (assento.checked) {
-                    if (selecionados < totalAssentos) {
-                        selecionados++;
-                    } else {
-                        assento.checked = false;
-                        alert("Você não pode selecionar mais assentos do que o permitido!");
-                    }
-                } else {
-                    selecionados--;
-                }
-            });
+            // Atualiza o texto no span com os IDs escolhidos
+            const spanEscolhidos = document.querySelector('.escolhidos');
+            spanEscolhidos.textContent = idsSelecionados.length > 0 ? idsSelecionados.join(', ') : 'Nenhum';
+
+            // Impede que mais assentos sejam selecionados do que o permitido
+            if (idsSelecionados.length > totalIngressos) {
+                alert(`Você só pode selecionar até ${totalIngressos} assentos.`);
+                assentosSelecionados[assentosSelecionados.length - 1].checked = false;
+            }
+        }
+
+        // Adiciona eventos de mudança em todos os checkboxes com a classe 'assentos'
+        document.querySelectorAll('.assentos').forEach(checkbox => {
+            checkbox.addEventListener('change', atualizarAssentosEscolhidos);
         });
-    });
-</script>
-
+    </script>
+    <script src="javascript/assentos.js"></script>
 </body>
 </html>
