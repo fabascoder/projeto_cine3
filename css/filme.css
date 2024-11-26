@@ -179,8 +179,8 @@ h2 {
   .logo-pesquisa #pesquisa{
     margin: 17px 0px 0px 0px;
   }
-  ul{
-    gap: 120px;
+  .menu-hamburguer ul{
+    gap: 25px;
   }
 }
 @media screen and (max-width: 741px){
@@ -252,10 +252,10 @@ main .button_horario {
     font-weight: 100;
   }
   #column1 .button_horario{
-    margin: 30px 30px 30px 0px;
+    margin: 30px 30px 30px 30px;
   }
   #column2 .button_horario{
-    margin: 30px 0px 30px 30px;
+    margin: 30px 30px 30px 30px;
   }
 }
 @media screen and (max-width:1005px){
@@ -275,11 +275,30 @@ main .button_horario {
     width:520px;
     height:355px;
   }
+  main .button_horario {
+    display: inline-block;
+    background-color: #310a0a;
+    padding: 25px 0px;
+    border-radius: 80px;
+    width: 200px;
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: 100;
+  }
+  main ul{
+    gap: 20px;
+  }
+  #column1 .button_horario{
+    margin: 15px 15px 15px 15px;
+  }
 }
 @media screen and (max-width:594px){
   iframe{
     width:420px;
     height:325px;
+  }
+  main ul{
+    gap: 20px;
   }
 }
 @media screen and (max-width:534px){
