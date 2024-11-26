@@ -120,6 +120,9 @@ main{
     box-shadow: 1px 1px 1px gray;
     display: block;
 }
+.localizacao p{
+  text-align: center;
+}
 main #img_princiapal{
     margin: auto;
     display: flex;
