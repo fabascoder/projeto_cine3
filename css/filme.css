@@ -101,6 +101,9 @@ p {
   font-size: 1.2rem;
   font-weight: 100;
 }
+p{
+  color: #fff;
+}
 
 hr {
   color: #fff;
@@ -109,6 +112,7 @@ hr {
 .caixa-trailer{
   display: flex;
   flex-direction: column;
+  
 }
 .caixa-trailer h1{
   text-align: center;
@@ -120,6 +124,11 @@ picture{
   margin: auto;
   padding: 30px;
   border-radius: 15px;
+  
+}
+iframe{
+  width:800px ;
+  height: 455px;
 }
 /*SINOPSE*/
 
@@ -247,6 +256,30 @@ main .button_horario {
   }
   #column2 .button_horario{
     margin: 30px 0px 30px 30px;
+  }
+}
+@media screen and (max-width:1005px){
+  iframe{
+    width:700px;
+    height:395px;
+  }
+}
+@media screen and (max-width:766px){
+  iframe{
+    width:600px;
+    height:335px;
+  }
+}
+@media screen and (max-width:680px){
+  iframe{
+    width:520px;
+    height:355px;
+  }
+}
+@media screen and (max-width:594px){
+  iframe{
+    width:420px;
+    height:325px;
   }
 }
 @media screen and (max-width:534px){
