@@ -18,7 +18,6 @@
     <link rel="stylesheet" href="css/filme.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/header.css">
-    <link rel="stylesheet" href="css/pagamento_produtos.css">
 </head>
 
 <body>
@@ -194,7 +193,12 @@
             </section>
         </div>
         <hr>
-
+        <div class="caixa-trailer">
+            <h1>TRAILER</h1>
+            <picture>
+            <iframe width="800" height="455" src="https://www.youtube.com/embed/2x-2iYxgMFU?si=zs49fDVUcPw86Wb-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </picture>            
+        </div>                
         <section>
             <div class="sinopse">
                 <h2>SINOPSE</h2>
@@ -205,6 +209,7 @@
                 </p>
             </div>
         </section>
+
     </main>
     <footer>
         <img src="imagens/Logo_Cine3-removebg-preview.png" alt="">
