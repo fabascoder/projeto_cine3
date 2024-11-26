@@ -65,6 +65,7 @@
             session_start();
             $_SESSION['dia'] = $dia;
             $_SESSION['hora'] = $horario;
+            $_SESSION['id_filme'] = $id;
             if($id) {
                 $select = $conexao->prepare("SELECT * FROM filme WHERE id=:id");
                 $select->execute(['id'=>$id]);
@@ -99,6 +100,7 @@
                     ?>
                 </div>
             </div>
+
         </div>
 
         <div class="valores">
