@@ -1,3 +1,6 @@
+<?php 
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -97,8 +100,8 @@
     </header>
     <main>
         <div class="barra-lateral">
-            <p>Olá [Nome], Esse <br>é o seu Perfil</p>
-            <p>email@exemplo.com</p>
+            <p>Olá <?php echo $_SESSION['nome']; ?>, Esse <br>é o seu Perfil</p>
+            <p><?php echo $_SESSION['email']; ?></p>
             <ul>
                 <li>
                     <a href="conta.php">Minha Conta</a>
@@ -110,6 +113,9 @@
                 <li class="li-1">
                     <a href="">Minha Senha</a>
                 </li>
+                <div style="display: flex; justify-content: end; color: red;">
+                    <a href="logout.php">SAIR</a>
+                </div>
             </ul>
         </div>
         <div class="barra-principal">
