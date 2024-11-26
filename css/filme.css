@@ -77,6 +77,7 @@ main .button_horario {
 
 #div_img {
   margin: 20px 20px 0px 20px;
+  height: 610px;
 }
 
 .foto_bad_boys {
@@ -85,7 +86,7 @@ main .button_horario {
   border: 2px solid #fff;
   width: 700px;
   height: 600px;
-  margin: 0px 0px 220px 0px;
+  margin: 0px 0px 20px 0px;
 }
 
 /*DESCRITION*/
@@ -257,6 +258,9 @@ main .button_horario {
   #column2 .button_horario{
     margin: 30px 30px 30px 30px;
   }
+  #grid{
+    height: 530px;
+  }
 }
 @media screen and (max-width:1005px){
   iframe{
@@ -291,6 +295,9 @@ main .button_horario {
   #column1 .button_horario{
     margin: 15px 15px 15px 15px;
   }
+  #grid{
+    height: 490px;
+  }
 }
 @media screen and (max-width:594px){
   iframe{
@@ -312,6 +319,15 @@ main .button_horario {
     font-size: 1.3rem;
     font-weight: 100;
   }
+  picture{
+    padding: 20px;
+  }
+}
+@media screen and (max-width:490px){
+  iframe{
+    width:360px;
+    height:255px;
+  }
 }
 @media screen and (max-width:474px){
   main .button_horario {
@@ -329,5 +345,14 @@ main .button_horario {
   }
   #column2 .button_horario{
     margin: 30px 0px 30px 17px;
+  }
+  #grid{
+    height: 550px;
+  }
+}
+@media screen and (max-width:414px){
+  iframe{
+    width:300px;
+    height:225px;
   }
 }
