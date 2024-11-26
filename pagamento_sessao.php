@@ -18,6 +18,7 @@
     $_SESSION['tamanho-camiseta'] = $_POST['tamanho-camiseta']??"";
     $_SESSION['assentos'] = $_POST['assentos'] ?? []; //adicionado 
     ?>
+
     <header>
         <nav>
             <ul>
@@ -359,7 +360,9 @@
 
                 </div>
             </div>
-            <p class=" assentos-escolhidos">ASSENTO(S) ESCOLHIDOS: <span  class="escolhidos"></span></p>
+            <p>Você pode selecionar até <span id="max-assentos"><?php echo $totalAssentos; ?></span> assentos.</p>
+            <p class="assentos-escolhidos">ASSENTO(S) ESCOLHIDOS: <span class="escolhidos">0</span></p>
+
 
             <hr>
 
@@ -426,32 +429,7 @@
                 </select>
             </div>
     </footer>
-    <!-- <script src="javascript/pagamento_sessao.js"></script> -->
-    <script>
-        // Recupera o total de ingressos permitido
-        const totalIngressos = parseInt(localStorage.getItem('totalIngressos')) || 0;
 
-        // Função para atualizar os assentos escolhidos
-        function atualizarAssentosEscolhidos() {
-            const assentosSelecionados = document.querySelectorAll('.assentos:checked');
-            const idsSelecionados = Array.from(assentosSelecionados).map(assento => assento.id);
 
-            // Atualiza o texto no span com os IDs escolhidos
-            const spanEscolhidos = document.querySelector('.escolhidos');
-            spanEscolhidos.textContent = idsSelecionados.length > 0 ? idsSelecionados.join(', ') : 'Nenhum';
-
-            // Impede que mais assentos sejam selecionados do que o permitido
-            if (idsSelecionados.length > totalIngressos) {
-                alert(`Você só pode selecionar até ${totalIngressos} assentos.`);
-                assentosSelecionados[assentosSelecionados.length - 1].checked = false;
-            }
-        }
-
-        // Adiciona eventos de mudança em todos os checkboxes com a classe 'assentos'
-        document.querySelectorAll('.assentos').forEach(checkbox => {
-            checkbox.addEventListener('change', atualizarAssentosEscolhidos);
-        });
-    </script>
-    <script src="javascript/assentos.js"></script>
 </body>
 </html>
