@@ -154,6 +154,7 @@
             </div>
 
             <section id="grid">
+               <div class="conteudo-grid"> 
                 <h1>HORÁRIOS DE <span>PRÉ-VENDA</span></h1>
                 <div id="div_column">
                     <div id="column1">
@@ -187,6 +188,7 @@
 
                     <p>Elenco: <span><?php echo $resultado['elenco'];?></span>
                 </div>
+               </div> 
             </section>
         </div>
         <hr>

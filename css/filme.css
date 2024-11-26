@@ -17,12 +17,15 @@ body {
 }
 
 #grid {
-  /* display: flex; */
+   display: flex; 
 
   height: 824px;
   padding: 0px;
   margin: 0;
   width: 100%;
+}
+.conteudo-grid{
+  margin: auto;
 }
 h1 {
   font-weight: 200;
@@ -260,6 +263,7 @@ main .button_horario {
   }
   #grid{
     height: 530px;
+    display: block; 
   }
   #div_img {
     height: 410px;
