@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="css/filme.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/header.css">
-
+    <link rel="stylesheet" href="css/pagamento_produtos.css">
 </head>
 
 <body>
@@ -194,7 +194,12 @@
             </section>
         </div>
         <hr>
-
+        <div class="caixa-trailer">
+            <h1>TRAILER</h1>
+            <picture>
+            <iframe width="800" height="455" src="https://www.youtube.com/embed/2x-2iYxgMFU?si=zs49fDVUcPw86Wb-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </picture>            
+        </div>                
         <section>
             <div class="sinopse">
                 <h2>SINOPSE</h2>
@@ -205,73 +210,7 @@
                 </p>
             </div>
         </section>
-        <div class="caixa-preta">
-                    <img src="imagens/Logo_Cine3-removebg-preview.png" alt="Logo_Cine3.png" width="200px">
-                    <h1>PROMOÇÃO DE <span>PRÉ-VENDA</span></h1>
-                    <div class="pipocas">
-                        <div class="porcoes">
-                            <div class="pipoca-media">
-                                <img src="imagens/balde-de-pipoca.png" alt="balde-de-pipoca.png" width="45px">
-                                
-                            </div>
-                            <div class="preco-combo">
-                                <p>PEQUENA</p>
-                                <p style="color: #bf5672;">R$23,99</p>
-                            </div>
-                        </div>
-                        <div class="porcoes">
-                            <div class="pipoca-media">
-                                <img src="imagens/balde-de-pipoca.png" alt="balde-de-pipoca.png" width="45px">
-                            </div>
-                            <div class="preco-combo">
-                                <p>MÉDIA</p>
-                                <p style="color: #bf5672;">R$33,99</p>
-                            </div>
-                        </div>
-                        <div class="porcoes">
-                            <div class="pipoca-grande">
-                                <img src="imagens/balde-de-pipoca.png" alt="balde-de-pipoca.png" width="45px">
-                            </div>
-                            <div class="preco-combo">
-                                    <p>GRANDE <br>
-                                        <del>37,49</del>
-                                    </p>
-                                <p style="color: #bf5672;">R$37,99</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="refrigerantes">
-                        <div class="porcoes">
-                            <div class="pipoca-pequena">
-                
-                                <img src="imagens/refrigerante.png" alt="refrigerante.png" width="45px">
-                            </div>
-                            <div class="preco-combo">
-                                <p>PEQUENA <br>refrigerante 200ml</p>
-                                <p style="color: #bf5672;">R$23,99</p>
-                            </div>
-                        </div>
-                        <div class="porcoes">
-                            <div class="pipoca-pequena">
-                                <img src="imagens/refrigerante.png" alt="refrigerante.png" width="45px">
-                            </div>
-                            <div class="preco-combo">
-                                <p>MÉDIA <br>refrigerante 500ml</p>
-                                <p style="color: #bf5672;">R$33,99</p>
-                            </div>
-                        </div>
-                        <div class="porcoes">
-                            <div class="pipoca-pequena">
-                                <img src="imagens/refrigerante.png" alt="refrigerante.png" width="45px">
-                            </div>
-                            <div class="preco-combo">
-                                    <p>GRANDE <br>refrigerante <br>1 Litro</p>
-                                <p style="color: #bf5672;">R$37,99</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="caixa-prevenda"><a href="index.php" class="pre-venda">FILMES EM<span style="color=white;"> PRÉ-VENDA</span></a></div>
-            </div>
+
     </main>
     <footer>
         <img src="imagens/Logo_Cine3-removebg-preview.png" alt="">

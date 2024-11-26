@@ -19,7 +19,7 @@ body {
 #grid {
   /* display: flex; */
 
-  height: 910px;
+  height: 824px;
   padding: 0px;
   margin: 0;
   width: 100%;
@@ -76,7 +76,7 @@ main .button_horario {
 
 
 #div_img {
-  margin: 20px;
+  margin: 20px 20px 0px 20px;
 }
 
 .foto_bad_boys {
@@ -105,7 +105,22 @@ p {
 hr {
   color: #fff;
 }
-
+/*TRAILER*/
+.caixa-trailer{
+  display: flex;
+  flex-direction: column;
+}
+.caixa-trailer h1{
+  text-align: center;
+  color: #d95f80;
+  font-family: "Zen Dots";
+  padding: 8px 0px 0px 0px;
+}
+picture{
+  margin: auto;
+  padding: 30px;
+  border-radius: 15px;
+}
 /*SINOPSE*/
 
 .sinopse {

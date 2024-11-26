@@ -62,6 +62,9 @@ button:hover {
     display: flex;
     align-items: center;
 }
+.campo a{
+    padding-left: 15px;
+}
 input#s1.form_input{
     width: 30px;
     margin: 0px 3px 0px 8px;

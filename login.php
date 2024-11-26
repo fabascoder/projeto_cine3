@@ -19,7 +19,7 @@
                     <img src="imagens/Logo_Cine3-removebg-preview.png" alt="Cine3 Logo" class="logo">
                 </a>
             </div>
-            <a href="index.php" class="back">VOLTAR</i></a>
+            <a href="index.php" class="back"><img src="imagens/seta.png" alt="" width="35px"></i></a>
         </nav>
     </header>
 
