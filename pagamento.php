@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -8,6 +11,15 @@
     <link rel="stylesheet" href="css/footer.css">
 </head>
 <body>
+<?php 
+    include_once "conexao.php";
+    $id = $_SESSION['id_filme']??'';
+    if($id) {
+        $select = $conexao->prepare("SELECT * FROM filme WHERE id=:id");
+        $select->execute(['id'=>$id]);
+        $resultado = $select->fetch();
+    }
+    ?>
 <header>
         <nav>
             <ul>
@@ -53,93 +65,104 @@
         </div>
     </header>
     <main>
-        <div class="caixa-principal">
-            <?php 
-            session_start();
-            $pipoca_p = $_POST['pipoca-pequena']?? 0;
-            $pipoca_m = $_POST['pipoca-media']?? 0;
-            $pipoca_g = $_POST['pipoca-grande']?? 0;
-            $qtd_p = intval($_POST['qtd_pipoca_p'])?? 0;
-            $qtd_m = intval($_POST['qtd_pipoca_m'])?? 0;
-            $qtd_g = intval($_POST['qtd_pipoca_g'])?? 0;
+        <div  class="caixa-principal">
+         
+              
+                   
+                        <?php
+                        
+                        $pipoca_p = $_POST['pipoca-pequena']?? 0;
+                        $pipoca_m = $_POST['pipoca-media']?? 0;
+                        $pipoca_g = $_POST['pipoca-grande']?? 0;
+                        $qtd_p = intval($_POST['qtd_pipoca_p'])?? 0;
+                        $qtd_m = intval($_POST['qtd_pipoca_m'])?? 0;
+                        $qtd_g = intval($_POST['qtd_pipoca_g'])?? 0;
+                        $refri_p = $_POST['refri_pequeno']?? 0;
+                        $refri_m = $_POST['refri_medio']?? 0;
+                        $refri_g = $_POST['refri_grande']?? 0;
+                        $qtd_refri_p = intval($_POST['qtd_refri_p'])?? 0;
+                        $qtd_refri_m = intval($_POST['qtd_refri_m'])?? 0;
+                        $qtd_refri_g = intval($_POST['qtd_refri_g'])?? 0;
+                        $total_produtos= 0;
+                        
+                        if($pipoca_p) {
+                            $total_produtos += $qtd_p * 23.99;
+                        }
+                        if($pipoca_m){
+                            $total_produtos += $qtd_m * 33.99;
+                        }
+                        if($pipoca_g){
+                            $total_produtos += $qtd_g * 37.99;
+                        }
+                        if($refri_p) {
+                            $total_produtos += $qtd_refri_p * 23.99;
+                        }
+                        if($refri_m) {
+                            $total_produtos += $qtd_refri_m * 33.99;
+                        }
+                        if($refri_g) {
+                            $total_produtos += $qtd_refri_g * 37.99;
+                        }
+                        
+                        
+                        ?>
+                        <div>
+                            <p class="title-php">Filme</p>
+                            <div class="result-php">
+                                <?php
+                                echo $resultado['nome'];
+                                ?>
+                            </div>
+                        </div>
+                        <div>
+                            <p class="title-php">Horário</p>
+                            <div  class="result-php">
+                                <?php
+                                echo $_SESSION['hora'];
+                                ?>
+                            </div>
+                        </div>
+                        <div>
+                            <p class="title-php">Dia</p>
+                            <div  class="result-php">
+                                <?php
+                                echo $_SESSION['dia'];
+                                ?>
+                            </div>
+                        </div>
+                        
+                                        <div>
+                                        <p class="title-php">Quant. Inteira</p>
+                                        <div>
+                        <?php
+                        echo $_SESSION['quantidadeInteira'];
+                        ?>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <p class="title-php">Quant. Meia</p>
+                                        <div>
+                        <?php
+                         echo $_SESSION['quantidadeMeia'];
+                        ?>
+                                        </div>
+                                    </div>
+                        
+                                    <div>
+                            <p class="title-php">Valor Produtos</p>
+                            <div  class="result-php">
+                                <?php
+                                echo "R$".number_format($total_produtos, 2, ",", ".");
+                                ?>
+                            </div>
+                        </div>
+                    
 
-            $refri_p = $_POST['refri_pequeno']?? 0;
-            $refri_m = $_POST['refri_medio']?? 0;
-            $refri_g = $_POST['refri_grande']?? 0;
-            $qtd_refri_p = intval($_POST['qtd_refri_p'])?? 0;
-            $qtd_refri_m = intval($_POST['qtd_refri_m'])?? 0;
-            $qtd_refri_g = intval($_POST['qtd_refri_g'])?? 0;
-            $total_produtos= 0;
-            
-            if($pipoca_p) {
-                $total_produtos += $qtd_p * 37.00;
-            }
-            if($pipoca_m){
-                $total_produtos += $qtd_m * 37.00;
-            }
-            if($pipoca_g){
-                $total_produtos += $qtd_g * 37.00;
-            }
-            if($refri_p)
-            
-
-            $descricao = "Sessão ".$_SESSION['dia']. " as ".$_SESSION['hora']."
-            assentos: $assentos";
-
-            $itens = [
-                "id"        => 01,
-                "title"     => "Sessão ".$_SESSION['dia']." as ".$_SESSION['hora'],
-                "description" => $descricao,
-                "quantity"  => 1,
-                "currency_id" => "BRL",
-                "unit_price" => $total_produtos
-            ];
-
-
-            $data = [
-                "items" => [$itens],
-                "external_reference" => $compra_id,
-                "transaction_amount" => $total,
-                "payer" => [
-                    "name" => $_SESSION['nome'],
-                    "surname" => $_SESSION['nome'],
-                    "email" => $_SESSION['email'],
-                    "identification" => [
-                        "type" => "CPF",
-                        "number" =>  $_SESSION['cpf']
-                    ],
-                    "date_created" => $data_atual->format('Y-m-d\TH:i:s\P') //"2024-04-01T00:00:00Z"
-                ],
-                "back_urls" => [
-                    "success" => "http://localhost/PROJETOS_24/back/retorno.php?msg=successo",
-                    "failure" => "http://localhost/PROJETOS_24/back/retorno.php?msg=failure",
-                    "pending" => "http://localhost/PROJETOS_24/back/retorno.php?msg=pending"
-                ],
-                "auto_return" => "approved"
-            ];
-        
-            $ch = curl_init($url);
-            curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-            curl_setopt($ch, CURLOPT_POST, true);
-            curl_setopt($ch, CURLOPT_HTTPHEADER, [
-                'Content-Type: application/json',
-                'Authorization: Bearer ' . $access_token
-            ]);
-            curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($data));
-            $response = curl_exec($ch);
-            curl_close($ch);
-        
-            $dados = json_decode($response, true);
-        
-            if (isset($dados['sandbox_init_point'])) {
-                header("Location: " . $dados['sandbox_init_point']);
-                exit;
-            } else {
-                echo "Erro ao processar pagamento";
-            }
-        
-            ?>
         </div>
+
+     
+       
+        
         <!-- <div class="botao">
             <a class="btn" href="pagamento_confirmacao.php">CONTINUAR ></a>
         </div> -->

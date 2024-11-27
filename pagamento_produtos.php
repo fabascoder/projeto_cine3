@@ -66,6 +66,9 @@
           // echo  '<h2>'.$_POST['assentos'.$i].'</h2>';
         }
     }
+
+    echo $_SESSION['quantidadeInteira'];
+    echo $_SESSION['quantidadeMeia'];
     // $_POST['assentos'.$i];
     ?>
     <main>
