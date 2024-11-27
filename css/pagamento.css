@@ -100,7 +100,7 @@ main {
 
 .caixa-principal {
     margin: auto;
-    border: solid lightslategray 2px;
+    border: solid #333 2px;
     width: 800px;
     display: flex;
     justify-content: space-between;
@@ -335,6 +335,17 @@ img {
         margin: auto;
     }
     
+}
+@media screen and (max-width: 663px){
+    main{
+        display: flex;
+    }
+    .caixa-principal{
+        flex-direction: column;
+        display: flex;
+        gap: 20px;
+        text-align: center;
+    }
 }
 /*FOOTER*/
 @media screen and (max-width: 914px){
