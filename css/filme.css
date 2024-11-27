@@ -1,7 +1,7 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: #000;
+  background-color: #000000;
 }
 
 #container_principal {
@@ -133,6 +133,8 @@ picture{
 iframe{
   width:800px ;
   height: 455px;
+  border-radius: 12px;
+
 }
 /*SINOPSE*/
 
