@@ -1,7 +1,7 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: #000;
+  background-color: #000000;
 }
 
 #container_principal {
@@ -133,6 +133,7 @@ picture{
 iframe{
   width:800px ;
   height: 455px;
+  border-radius: 12px;
 }
 /*SINOPSE*/
 
@@ -346,6 +347,9 @@ main .button_horario {
     text-align: center;
     font-size: 1.3rem;
     font-weight: 100;
+  }
+  a.button_horario{
+    font-size: 0.88rem;
   }
   #column1 .button_horario{
     margin: 30px 17px 30px 0px;
