@@ -97,11 +97,13 @@ session_start();
     </header>
     <main>
         <div class="barra-lateral">
-            <p>Olá <?php echo $_SESSION['nome'];?>, Esse <br>é o seu Perfil</p>
+            <p style="color:#fff;">Olá <span style="color: #fff;"><?php echo $_SESSION['nome'];?></span>, Esse <br>é o seu Perfil</p>
             <p>
-                <?php 
-            echo $_SESSION['email'];
-            ?></p>
+                <span style="color: #fff;">
+                    <?php 
+                                echo $_SESSION['email'];
+                                ?>
+                </span></p>
             <ul>
                 <li class="li-1">
                     <a href="conta.php">Minha Conta</a>

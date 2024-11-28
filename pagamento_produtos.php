@@ -67,10 +67,21 @@
         }
     }
 
-    echo $_SESSION['quantidadeInteira'];
-    echo $_SESSION['quantidadeMeia'];
-    // $_POST['assentos'.$i];
-    ?>
+
+    // Recuperar os assentos da sessão
+$assentosSelecionados = $_SESSION['assentos'] ?? [];
+
+// Criar uma string para exibir os assentos
+$assentosString = "";
+foreach ($assentosSelecionados as $assentos) {
+    $assentosString .= $assentos . ", ";
+}
+
+// Remover a última vírgula
+$assentosString = rtrim($assentosString, ", ");
+?>
+
+
     <main>
         <form action="pagamento.php" method="post">
             <div class="caixa-principal">
@@ -252,7 +263,7 @@
                     </div>
                 </div>
                 <div class="avancar">
-                <button type="submit" class="btn">AVANÇAR</button>
+                <button type="submit" class="btn">AVANÇAR ></button>
                 </div>
                 <div class="caixa-preta">
                     <img src="imagens/Logo_Cine3-removebg-preview.png" alt="Logo_Cine3.png" width="200px">
