@@ -189,10 +189,6 @@ form p a {
 
 @media screen and (max-width: 400px) {
 
-    body {
-        background: red
-    }
-
     .logo {
         display: none;
     }
@@ -201,7 +197,9 @@ form p a {
         display: flex;
         text-align: center;
     }
-
+    .back{
+        background-color: #f4f4f4;
+    }
     h1 {
         text-align: center;
         font-size: 1.7rem;

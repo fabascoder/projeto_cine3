@@ -42,7 +42,7 @@
                         </div>
                     </div>
                     </li>
-<!--Adicionando uma modal acima do "Modal HTML"-->
+
                     <!-- Modal HTML -->
                     <dialog id="modal-ingressos" class="modal">
                         <div class="modal-content">

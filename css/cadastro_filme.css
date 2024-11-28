@@ -1,13 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap');
 body {
     font-family: Arial, sans-serif;
+    background-color: #111;
 }
 
 form {
-    background-color: #f5f5f5;
+    background-color: #f5f5f5d0;
     width: 300px;
     border-radius: 5px;
+    padding: 10px;
+    margin: auto;
 }
-
+h1{
+    text-align: center;
+    font-family: "Zen Dots";
+    color: #bf5672;
+}
 input {
     padding: 5px;
     width: 260px;
@@ -21,6 +29,9 @@ input {
 label {
     margin-left: 15px;
     font-size: 1.1rem;
+    font-weight: bold;
+    letter-spacing: 0.3px;
+    margin-bottom: 10px;
 }
 
 button {
@@ -34,8 +45,9 @@ button {
 }
 
 button:hover {
-    background: #777;
-    border: none
+    background: #464646;
+    border: none;
+    cursor: pointer;
 }
 
 .msg {
@@ -45,4 +57,19 @@ button:hover {
 }
 
 .sinopse {
+}
+.campo .status{
+    display: flex;
+    align-items: center;
+}
+.campo a{
+    padding-left: 15px;
+}
+input#s1.form_input{
+    width: 30px;
+    margin: 0px 3px 0px 8px;
+}
+input#s0.form_input{
+    width: 30px;
+    margin: 0px 3px 0px 0px;
 }

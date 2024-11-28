@@ -5,17 +5,23 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+body{
+    background-color: #f9f9f9;
+}
 .logo {
     width: 210px;
 }
 
-a {
+main a {
     font-family: "Zen Dots";
     color: black;
     text-decoration: none;
 }
-
+header a{
+    text-decoration: none;
+    font-family: "Zen Dots";
+    color: black;
+}
 ul {
     display: flex;
     justify-content: space-between;
@@ -25,6 +31,26 @@ ul {
 li {
     list-style: none;
     padding-right: 20px;
+}
+
+.info-filme {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #e7e7e7;
+    width: 75%;
+    height: 100px;
+    margin: 1.6rem auto;
+    border: #333 solid 2px;
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 30px;
+    border-radius: 5px;
+    color: #333;
+}
+
+.title-php {
+    font-weight: 600;
+    color: #444;
 }
 
 .etapas-compra {
@@ -39,7 +65,18 @@ li {
     align-items: center;
     gap: 15px;
 }
-
+.etapas-compra1 {
+    background-color: #fff;
+    width: 65px;
+    height: 65px;
+    margin: auto;
+    border-radius: 50%;
+    border: solid #d15a72 2px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
 #caixa {
     padding-top: 60px;
     text-align: center;
@@ -53,12 +90,22 @@ li {
     height: 50px;
     padding-top: 7px;
 }
-
+.etapas-compra1 img {
+    margin: auto;
+    width: 50px;
+    height: 50px;
+    padding-top: 7px;
+}
 .etapas-compra p {
     font-family: "Zen Dots";
     font-size: 0.8rem;
 }
 
+.etapas-compra1 p {
+    font-family: "Zen Dots";
+    font-size: 0.8rem;
+    color: #d15a72;
+}
 .titulo {
     display: flex;
     align-items: center;
@@ -78,16 +125,19 @@ li {
 
 .caixa-valores,
 .camiseta-valores {
-    background-color: #fff;
+    background-color: #ffffff;
     width: 85%;
-    height: 300px;
+    height: 200px;
     margin: 1.6rem auto;
     border: black solid 2px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     gap: 1rem;
-}
+    border-radius: 3px;
+}; 
+
+
 
 .caixa-valores button,
 .camiseta-valores button {
@@ -108,14 +158,8 @@ li {
     justify-content: space-between;
     padding: 20px;
     text-align: center;
-    margin-bottom: 130px;
-}
-.escolhas-camisa{
-    display: flex;
-    justify-content: space-between;
-    padding: 20px;
-    text-align: center;
-    margin-bottom: 130px;
+    margin-bottom: 50px;
+    margin-top: 50px;
 }
 
 .tipo-ingresso,
@@ -138,12 +182,17 @@ select {
 .caixa-finalizar {
     text-align: end;
     padding: 20px;
+    font-size: 1.2rem;
 }
 
 .finalizar p {
-    padding-right: 30px;
-    font-weight: 600;
+    padding: 10px;
+    font-weight: 500;
     font-family: sans-serif;
+    
+}
+
+.total {
 }
 
 .finalizar .btn {
@@ -156,8 +205,11 @@ select {
     border-radius: 5px;
     cursor: pointer;
     padding: 15px 10px;
+    margin-bottom: 80px;
+    text-decoration: none;
+    font-family: "Zen Dots";
+    font-size: 0.9rem;
 }
-
 /* Media Queries para Responsividade */
 
 @media screen and (max-width: 1200px) {
@@ -186,9 +238,10 @@ select {
         font-size: 1.5rem; /* Reduz o tamanho da fonte */
     }
 
-    .escolhas-camisa{
+    .escolhas{
         flex-direction: column; /* Coloca as escolhas em coluna */
         margin: auto;
+        gap: 60px;
     }
     select {
         width: 100%; /* Faz o select ocupar toda a largura */
@@ -204,7 +257,6 @@ select {
     
     
 }
-
 @media screen and (max-width: 480px) {
     .titulo p {
         font-size: 1.2rem; /* Tamanho da fonte ainda menor */
@@ -234,7 +286,25 @@ select {
         align-items: center;
         gap: 15px;
     }
+    .etapas-compra1 {
+        background-color: #fff;
+        width: 45px;
+        height: 45px;
+        margin: auto;
+        border-radius: 50%;
+        border: solid #d15a72 2px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
     .etapas-compra img{
+        margin: auto;
+        width: 30px;
+        height: 30px;
+        padding-top: 7px;
+    }
+    .etapas-compra1 img{
         margin: auto;
         width: 30px;
         height: 30px;
@@ -244,6 +314,11 @@ select {
         font-family: "Zen Dots";
         font-size: 0.54rem;
     }
+    .etapas-compra1 p{
+        font-family: "Zen Dots";
+        font-size: 0.54rem;
+        color: #d15a72;
+    }
     #caixa {
         padding-top: 60px;
         text-align: center;
@@ -251,10 +326,13 @@ select {
         justify-content: space-around;
         margin: auto;
     }
+    .escolhas{
+        padding: 20px;
+    }
 }
 @media screen and (max-width: 420px){
     .escolhas{
-        padding: 0%;
+        padding: 20px;
     }
     .caixa-valores{
         width: 100%;
@@ -264,5 +342,8 @@ select {
     }
     .tamanho-camisa, .total-ingresso{
         margin: auto;
+    }
+    li{
+        padding: 0;
     }
 }

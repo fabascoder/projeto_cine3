@@ -7,22 +7,27 @@
 }
 
 body {
-    background-color: #F5F5F5;
+    background-color: #f9f9f9;
 }
 
 .logo {
     width: 210px;
 }
 
-a {
+.texto-total-produto {
+    color: red
+}
+
+.box-one {
+    display: flex;
+}
+
+ul a {
     font-family: "Zen Dots";
     color: black;
     text-decoration: none;
 }
 
-header {
-    background-color: #F5F5F5;
-}
 
 ul {
     display: flex;
@@ -47,7 +52,18 @@ li {
     align-items: center;
     gap: 15px;
 }
-
+.etapas-compra4 {
+    background-color: #fff;
+    width: 65px;
+    height: 65px;
+    margin: auto;
+    border-radius: 50%;
+    border: solid #d15a72 2px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
 #caixa {
     padding-top: 60px;
     text-align: center;
@@ -60,12 +76,21 @@ li {
     height: 50px;
     padding-top: 7px;
 }
-
+.etapas-compra4 img {
+    margin: auto;
+    width: 50px;
+    height: 50px;
+    padding-top: 7px;
+}
 .etapas-compra p {
     font-family: "Zen Dots";
     font-size: 0.8rem;
 }
-
+.etapas-compra4 p {
+    font-family: "Zen Dots";
+    font-size: 0.8rem;
+    color: #d15a72;
+}
 main {
     margin: auto;
     max-width: 800px;
@@ -75,8 +100,30 @@ main {
 
 .caixa-principal {
     margin: auto;
-    border: solid lightslategray 2px;
+    border: solid #333 2px;
     width: 800px;
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 20px;
+}
+
+.first-box{
+    display: flex;
+
+}
+
+
+
+.result-php {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.1rem;
+    color: #333;
+}
+
+.title-php {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.1rem;
+    color: #222;
 }
 
 .local-data {
@@ -148,6 +195,8 @@ img {
     border-radius: 5px;
     cursor: pointer;
     margin: auto;
+    text-decoration: none;
+    font-family: "Zen Dots";
 }
 .radio {
     width: 25px;
@@ -235,7 +284,25 @@ img {
         align-items: center;
         gap: 15px;
     }
+    .etapas-compra4 {
+        background-color: #fff;
+        width: 45px;
+        height: 45px;
+        margin: auto;
+        border-radius: 50%;
+        border: solid #d15a72 2px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
     .etapas-compra img{
+        margin: auto;
+        width: 30px;
+        height: 30px;
+        padding-top: 7px;
+    }
+    .etapas-compra4 img{
         margin: auto;
         width: 30px;
         height: 30px;
@@ -244,6 +311,11 @@ img {
     .etapas-compra p{
         font-family: "Zen Dots";
         font-size: 0.54rem;
+    }
+    .etapas-compra4 p{
+        font-family: "Zen Dots";
+        font-size: 0.54rem;
+        color: #d15a72;
     }
     #caixa {
         padding-top: 60px;
@@ -264,3 +336,26 @@ img {
     }
     
 }
+@media screen and (max-width: 663px){
+    main{
+        display: flex;
+    }
+    .caixa-principal{
+        flex-direction: column;
+        display: flex;
+        gap: 20px;
+        text-align: center;
+    }
+}
+/*FOOTER*/
+@media screen and (max-width: 914px){
+    footer{
+      flex-direction: column;
+    }
+  }
+  @media screen and (max-width: 476px){
+    .term{
+      display: flex;
+      flex-direction: column;
+    }
+  }

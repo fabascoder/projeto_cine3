@@ -1,52 +1,53 @@
-// Seleciona todos os botões de compra e os elementos do carrinho
 const buttons = document.querySelectorAll('.buy-button');
 const cartCounts = document.querySelectorAll('.cart-count');
-
-// Função para incrementar o número ao clicar no botão "Comprar"
 buttons.forEach((btn, index) => {
     btn.addEventListener('click', () => {
         const cartCount = cartCounts[index];
-        let currentCount = parseInt(cartCount.textContent) || 0;  // Pega o número atual ou define 0 se estiver vazio
-
-        currentCount += 1;  // Incrementa o número no carrinho
-        cartCount.textContent = currentCount;  // Atualiza o número no carrinho
-        cartCount.classList.add('not');  // Adiciona a classe "not" para exibir o carrinho
+        let currentCount = parseInt(cartCount.textContent) || 0;
+        currentCount += 1;
+        cartCount.textContent = currentCount;
+        cartCount.classList.add('not');
     });
 });
-
-// Função para decrementar o número ao clicar no próprio número do carrinho
 cartCounts.forEach((cartCount) => {
     cartCount.addEventListener('click', () => {
-        let currentCount = parseInt(cartCount.textContent) || 0;  // Pega o número atual do carrinho
-
+        let currentCount = parseInt(cartCount.textContent) || 0;
         if (currentCount > 1) {
-            currentCount -= 1;  // Decrementa o número
-            cartCount.textContent = currentCount;  // Atualiza o número no carrinho
+            currentCount -= 1;
+            cartCount.textContent = currentCount; 
         } else {
-            cartCount.textContent = '';  // Remove o número
-            cartCount.classList.remove('not');  // Remove a classe "not" para esconder o carrinho
+            cartCount.textContent = '';
+            cartCount.classList.remove('not');
         }
     });
 });
 
-document.addEventListener("DOMContentLoaded", function() {
-    // Seleciona todos os contêineres com botões de tamanhos
-    const sizeContainers = document.querySelectorAll('.sizes');
-
-    // Percorre cada contêiner de tamanhos individualmente
-    sizeContainers.forEach(container => {
-        const buttons = container.querySelectorAll('button');
-        
-        // Adiciona o evento de clique para cada botão dentro do contêiner
-        buttons.forEach(button => {
-            button.addEventListener('click', function() {
-                // Remove a classe 'selected' de todos os botões dentro do contêiner atual
-                buttons.forEach(btn => btn.classList.remove('selected'));
-                
-                // Adiciona a classe 'selected' ao botão clicado
-                this.classList.add('selected');
-                
-            });
+var modal = document.getElementById("modal-ingressos");
+var ingressoLink = document.getElementById("openModal");
+var body = document.querySelector('html')
+ingressoLink.addEventListener("click", function (event) {
+    event.preventDefault();
+    modal.style.display = "block";
+    body.style.background = '#000';
+});
+var span = document.getElementsByClassName("close")[0];
+span.onclick = function () {
+    modal.style.display = "none";
+    body.style.background = '#191814';
+};
+window.onclick = function (event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+};
+// chekbox
+const sizeGroups = document.querySelectorAll('.sizes');
+sizeGroups.forEach(group => {
+    const sizeButtons = group.querySelectorAll('.size-button');
+    sizeButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            sizeButtons.forEach(btn => btn.classList.remove('selected'));
+            button.classList.add('selected');
         });
     });
 });

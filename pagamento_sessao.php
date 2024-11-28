@@ -1,19 +1,41 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sessão</title>
+    <title>Seleção de Assentos</title>
     <link rel="stylesheet" href="css/pagamento_sessao.css">
+    <link rel="stylesheet" href="css/footer.css">
 </head>
-
 <body>
+<?php 
+    $_SESSION['total_pagar'] = $_POST['total_pagar']??"";
+    $_SESSION['total'] = $_POST['total']??"";
+    $_SESSION['qtd_inteira'] = $POST['qtd_inteira']??"";
+    $_SESSION['qtd_meia'] = $_POST['qtd_meia']??"";
+    $_SESSION['valor_inteira'] = $_POST['valor_inteira']??"";
+    $_SESSION['tamanho-camiseta'] = $_POST['tamanho-camiseta']??"";
+    $_SESSION['tamanho-camiseta'] = $_POST['tamanho-camiseta']??"";
+    $_SESSION['assentos'] = $_POST['assentos'] ?? []; //adicionado 
+    ?>
+
+<?php
+    session_start();
+    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+        $_SESSION['quantidadeInteira'] = $_POST['quantidadeInteira'] ?? 0;
+        $_SESSION['quantidadeMeia'] = $_POST['quantidadeMeia'] ?? 0;
+    }
+
+    // Total de assentos permitidos
+    $totalAssentos = ($_SESSION['quantidadeInteira'] ?? 0) + ($_SESSION['quantidadeMeia'] ?? 0);
+?>
+
+
     <header>
         <nav>
             <ul>
                 <li>
-                    <a href="#">
+                    <a href="index.php">
                         <img src="imagens/Logo_Cine3-removebg-preview.png" alt="Cine3 Logo" class="logo">
                     </a>
                 </li>
@@ -22,7 +44,7 @@
                     <a href="">Olá, [Nome]</a>
                 </li>
             </ul>
-            <a href="principal.php"><i class="fa fa-arrow-left" aria-hidden="true"></i></a>
+            <a href="index.php"><i class="fa fa-arrow-left" aria-hidden="true"></i></a>
         </nav>
         <div id="caixa">
             <div class="etapas-compra">
@@ -31,7 +53,7 @@
                 <p>Ingresso</p>
             </div>
 
-            <div class="etapas-compra">
+            <div class="etapas-compra2">
                 <img src="imagens/secao.png" alt="">
 
                 <p>Seção</p>
@@ -53,7 +75,10 @@
             </div>
         </div>
     </header>
-    <main>
+
+    <main> 
+    <form action="pagamento_produtos.php" method="post" id="sessao">
+       
         <div class="caixa-principal">
             <h1>SALA: 01</h1>
             <div class="cinema">
@@ -78,276 +103,279 @@
                     </div>
                     <div class="linha">
                         <label>A</label>
-                        <div class="assento"><input type="checkbox" name="assentos" class="assentos" id="assentos1">
+                        <div class="assento"><input type="checkbox" name="assentos1" class="assentos" id="A1">
                         </div>
-                        <div class="assento"><input type="checkbox" name="assentos" class="assentos" id="assentos2">
+                        <div class="assento"><input type="checkbox" name="assentos2" class="assentos" id="A2">
                         </div>
-                        <div class="assento"><input type="checkbox" name="assentos" class="assentos" id="assentos3">
+                        <div class="assento"><input type="checkbox" name="assentos3" class="assentos" id="A3">
                         </div>
-                        <div class="assento"><input type="checkbox" name="assentos" class="assentos" id="assentos4">
+                        <div class="assento"><input type="checkbox" name="assentos4" class="assentos" id="A4">
                         </div>
-                        <div class="assento"><input type="checkbox" name="assentos" class="assentos" id="assentos5">
+                        <div class="assento"><input type="checkbox" name="assentos5" class="assentos" id="A5">
                         </div>
-                        <div class="assento"><input type="checkbox" name="assentos" class="assentos" id="assentos6">
+                        <div class="assento"><input type="checkbox" name="assentos6" class="assentos" id="A6">
                         </div>
-                        <div class="assento"><input type="checkbox" name="assentos" class="assentos" id="assentos7">
+                        <div class="assento"><input type="checkbox" name="assentos7" class="assentos" id="A7">
                         </div>
-                        <div class="assento"><input type="checkbox" name="assentos" class="assentos" id="assentos8">
+                        <div class="assento"><input type="checkbox" name="assentos8" class="assentos" id="A8">
                         </div>
-                        <div class="assento"><input type="checkbox" name="assentos" class="assentos" id="assentos9">
+                        <div class="assento"><input type="checkbox" name="assentos9" class="assentos" id="A9">
                         </div>
-                        <div class="assento"><input type="checkbox" name="assentos" class="assentos" id="assentos10">
+                        <div class="assento"><input type="checkbox" name="assentos10" class="assentos" id="A10">
                         </div>
-                        <div class="assento"><input type="checkbox" name="assentos" class="assentos" id="assentos11">
+                        <div class="assento"><input type="checkbox" name="assentos11" class="assentos" id="A11">
                         </div>
-                        <div class="assento"><input type="checkbox" name="assentos" class="assentos" id="assentos12">
+                        <div class="assento"><input type="checkbox" name="assentos12" class="assentos" id="A12">
                         </div>
-                        <div class="assento"><input type="checkbox" name="assentos" class="assentos" id="assentos13">
+                        <div class="assento"><input type="checkbox" name="assentos13" class="assentos" id="A13">
                         </div>
-                        <div class="assento"><input type="checkbox" name="assentos" class="assentos" id="assentos14">
+                        <div class="assento"><input type="checkbox" name="assentos14" class="assentos" id="A14">
                         </div>
-                        <div class="assento"><input type="checkbox" name="assentos" class="assentos" id="assentos15">
+                        <div class="assento"><input type="checkbox" name="assentos15" class="assentos" id="A15">
                         </div>
                     </div>
                     <div class="linha">
                         <label>B</label>
-                        <div class="assento"><input type="checkbox" name="assentos" class="assentos" id="assentos16">
+                        <div class="assento"><input type="checkbox" name="assentos1" class="assentos" id="B1">
                         </div>
-                        <div class="assento"><input type="checkbox" name="assentos" class="assentos" id="assentos17">
+                        <div class="assento"><input type="checkbox" name="assentos2" class="assentos" id="B2">
                         </div>
-                        <div class="assento"><input type="checkbox" name="assentos" class="assentos" id="assentos18">
+                        <div class="assento"><input type="checkbox" name="assentos3" class="assentos" id="B3">
                         </div>
-                        <div class="assento"><input type="checkbox" name="assentos" class="assentos" id="assentos19">
+                        <div class="assento"><input type="checkbox" name="assentos4" class="assentos" id="B4">
                         </div>
-                        <div class="assento"><input type="checkbox" name="assentos" class="assentos" id="assentos20">
+                        <div class="assento"><input type="checkbox" name="assentos5" class="assentos" id="B5">
                         </div>
-                        <div class="assento"><input type="checkbox" name="assentos" class="assentos" id="assentos21">
+                        <div class="assento"><input type="checkbox" name="assentos6" class="assentos" id="B6">
                         </div>
-                        <div class="assento"><input type="checkbox" name="assentos" class="assentos" id="assentos22">
+                        <div class="assento"><input type="checkbox" name="assentos7" class="assentos" id="B7">
                         </div>
-                        <div class="assento"><input type="checkbox" name="assentos" class="assentos" id="assentos23">
+                        <div class="assento"><input type="checkbox" name="assentos8" class="assentos" id="B8">
                         </div>
-                        <div class="assento"><input type="checkbox" name="assentos" class="assentos" id="assentos24">
+                        <div class="assento"><input type="checkbox" name="assentos9" class="assentos" id="B9">
                         </div>
-                        <div class="assento"><input type="checkbox" name="assentos" class="assentos" id="assentos25">
+                        <div class="assento"><input type="checkbox" name="assentos10" class="assentos" id="B10">
                         </div>
-                        <div class="assento"><input type="checkbox" name="assentos" class="assentos" id="assentos26">
+                        <div class="assento"><input type="checkbox" name="assentos11" class="assentos" id="B11">
                         </div>
-                        <div class="assento"><input type="checkbox" name="assentos" class="assentos" id="assentos27">
+                        <div class="assento"><input type="checkbox" name="assentos12" class="assentos" id="B12">
                         </div>
-                        <div class="assento"><input type="checkbox" name="assentos" class="assentos" id="assentos28">
+                        <div class="assento"><input type="checkbox" name="assentos13" class="assentos" id="B13">
                         </div>
-                        <div class="assento"><input type="checkbox" name="assentos" class="assentos" id="assentos29">
+                        <div class="assento"><input type="checkbox" name="assentos14" class="assentos" id="B14">
                         </div>
-                        <div class="assento"><input type="checkbox" name="assentos" class="assentos" id="assentos30">
+                        <div class="assento"><input type="checkbox" name="assentos15" class="assentos" id="B15">
                         </div>
                     </div>
                     <div class="linha">
                         <label>C</label>
-                        <div class="assento"><input type="checkbox" name="assentos" class="assentos" id="assentos31">
+                        <div class="assento"><input type="checkbox" name="assentos1" class="assentos" id="C1">
                         </div>
-                        <div class="assento"><input type="checkbox" name="assentos" class="assentos" id="assentos32">
+                        <div class="assento"><input type="checkbox" name="assentos2" class="assentos" id="C2">
                         </div>
-                        <div class="assento"><input type="checkbox" name="assentos" class="assentos" id="assentos33">
+                        <div class="assento"><input type="checkbox" name="assentos3" class="assentos" id="C3">
                         </div>
-                        <div class="assento"><input type="checkbox" name="assentos" class="assentos" id="assentos34">
+                        <div class="assento"><input type="checkbox" name="assentos4" class="assentos" id="C4">
                         </div>
-                        <div class="assento"><input type="checkbox" name="assentos" class="assentos" id="assentos35">
+                        <div class="assento"><input type="checkbox" name="assentos5" class="assentos" id="C5">
                         </div>
-                        <div class="assento"><input type="checkbox" name="assentos" class="assentos" id="assentos36">
+                        <div class="assento"><input type="checkbox" name="assentos6" class="assentos" id="C6">
                         </div>
-                        <div class="assento"><input type="checkbox" name="assentos" class="assentos" id="assentos37">
+                        <div class="assento"><input type="checkbox" name="assentos7" class="assentos" id="C7">
                         </div>
-                        <div class="assento"><input type="checkbox" name="assentos" class="assentos" id="assentos38">
+                        <div class="assento"><input type="checkbox" name="assentos8" class="assentos" id="C8">
                         </div>
-                        <div class="assento"><input type="checkbox" name="assentos" class="assentos" id="assentos39">
+                        <div class="assento"><input type="checkbox" name="assentos9" class="assentos" id="C9">
                         </div>
-                        <div class="assento"><input type="checkbox" name="assentos" class="assentos" id="assentos40">
+                        <div class="assento"><input type="checkbox" name="assentos10" class="assentos" id="C10">
                         </div>
-                        <div class="assento"><input type="checkbox" name="assentos" class="assentos" id="assentos41">
+                        <div class="assento"><input type="checkbox" name="assentos11" class="assentos" id="C11">
                         </div>
-                        <div class="assento"><input type="checkbox" name="assentos" class="assentos" id="assentos42">
+                        <div class="assento"><input type="checkbox" name="assentos12" class="assentos" id="C12">
                         </div>
-                        <div class="assento"><input type="checkbox" name="assentos" class="assentos" id="assentos43">
+                        <div class="assento"><input type="checkbox" name="assentos13" class="assentos" id="C13">
                         </div>
-                        <div class="assento"><input type="checkbox" name="assentos" class="assentos" id="assentos44">
+                        <div class="assento"><input type="checkbox" name="assentos14" class="assentos" id="C14">
                         </div>
-                        <div class="assento"><input type="checkbox" name="assentos" class="assentos" id="assentos45">
+                        <div class="assento"><input type="checkbox" name="assentos15" class="assentos" id="C15">
                         </div>
                     </div>
                     <div class="linha">
                         <label>D</label>
-                        <div class="assento"><input type="checkbox" name="assentos" class="assentos" id="assentos46">
+                        <div class="assento"><input type="checkbox" name="assentos1" class="assentos" id="D1">
                         </div>
-                        <div class="assento"><input type="checkbox" name="assentos" class="assentos" id="assentos47">
+                        <div class="assento"><input type="checkbox" name="assentos2" class="assentos" id="D2">
                         </div>
-                        <div class="assento"><input type="checkbox" name="assentos" class="assentos" id="assentos48">
+                        <div class="assento"><input type="checkbox" name="assentos3" class="assentos" id="D3">
                         </div>
-                        <div class="assento"><input type="checkbox" name="assentos" class="assentos" id="assentos49">
+                        <div class="assento"><input type="checkbox" name="assentos4" class="assentos" id="D4">
                         </div>
-                        <div class="assento"><input type="checkbox" name="assentos" class="assentos" id="assentos50">
+                        <div class="assento"><input type="checkbox" name="assentos5" class="assentos" id="D5">
                         </div>
-                        <div class="assento"><input type="checkbox" name="assentos" class="assentos" id="assentos51">
+                        <div class="assento"><input type="checkbox" name="assentos6" class="assentos" id="D6">
                         </div>
-                        <div class="assento"><input type="checkbox" name="assentos" class="assentos" id="assentos52">
+                        <div class="assento"><input type="checkbox" name="assentos7" class="assentos" id="D7">
                         </div>
-                        <div class="assento"><input type="checkbox" name="assentos" class="assentos" id="assentos53">
+                        <div class="assento"><input type="checkbox" name="assentos8" class="assentos" id="D8">
                         </div>
-                        <div class="assento"><input type="checkbox" name="assentos" class="assentos" id="assentos54">
+                        <div class="assento"><input type="checkbox" name="assentos9" class="assentos" id="D9">
                         </div>
-                        <div class="assento"><input type="checkbox" name="assentos" class="assentos" id="assentos55">
+                        <div class="assento"><input type="checkbox" name="assentos10" class="assentos" id="D10">
                         </div>
-                        <div class="assento"><input type="checkbox" name="assentos" class="assentos" id="assentos56">
+                        <div class="assento"><input type="checkbox" name="assentos11" class="assentos" id="D11">
                         </div>
-                        <div class="assento"><input type="checkbox" name="assentos" class="assentos" id="assentos57">
+                        <div class="assento"><input type="checkbox" name="assentos12" class="assentos" id="D12">
                         </div>
-                        <div class="assento"><input type="checkbox" name="assentos" class="assentos" id="assentos58">
+                        <div class="assento"><input type="checkbox" name="assentos13" class="assentos" id="D13">
                         </div>
-                        <div class="assento"><input type="checkbox" name="assentos" class="assentos" id="assentos59">
+                        <div class="assento"><input type="checkbox" name="assentos14" class="assentos" id="D14">
                         </div>
-                        <div class="assento"><input type="checkbox" name="assentos" class="assentos" id="assentos60">
+                        <div class="assento"><input type="checkbox" name="assentos15" class="assentos" id="D15">
                         </div>
                     </div>
                     <div class="linha">
                         <label>E</label>
-                        <div class="assento"><input type="checkbox" name="assentos" class="assentos" id="assentos61">
+                        <div class="assento"><input type="checkbox" name="assentos1" class="assentos" id="E1">
                         </div>
-                        <div class="assento"><input type="checkbox" name="assentos" class="assentos" id="assentos62">
+                        <div class="assento"><input type="checkbox" name="assentos2" class="assentos" id="E2">
                         </div>
-                        <div class="assento"><input type="checkbox" name="assentos" class="assentos" id="assentos63">
+                        <div class="assento"><input type="checkbox" name="assentos3" class="assentos" id="E3">
                         </div>
-                        <div class="assento"><input type="checkbox" name="assentos" class="assentos" id="assentos64">
+                        <div class="assento"><input type="checkbox" name="assentos4" class="assentos" id="E4">
                         </div>
-                        <div class="assento"><input type="checkbox" name="assentos" class="assentos" id="assentos65">
+                        <div class="assento"><input type="checkbox" name="assentos5" class="assentos" id="E5">
                         </div>
-                        <div class="assento"><input type="checkbox" name="assentos" class="assentos" id="assentos66">
+                        <div class="assento"><input type="checkbox" name="assentos6" class="assentos" id="E6">
                         </div>
-                        <div class="assento"><input type="checkbox" name="assentos" class="assentos" id="assentos67">
+                        <div class="assento"><input type="checkbox" name="assentos7" class="assentos" id="E7">
                         </div>
-                        <div class="assento"><input type="checkbox" name="assentos" class="assentos" id="assentos68">
+                        <div class="assento"><input type="checkbox" name="assentos8" class="assentos" id="E8">
                         </div>
-                        <div class="assento"><input type="checkbox" name="assentos" class="assentos" id="assentos69">
+                        <div class="assento"><input type="checkbox" name="assentos9" class="assentos" id="E9">
                         </div>
-                        <div class="assento"><input type="checkbox" name="assentos" class="assentos" id="assentos70">
+                        <div class="assento"><input type="checkbox" name="assentos10" class="assentos" id="E10">
                         </div>
-                        <div class="assento"><input type="checkbox" name="assentos" class="assentos" id="assentos71">
+                        <div class="assento"><input type="checkbox" name="assentos11" class="assentos" id="E11">
                         </div>
-                        <div class="assento"><input type="checkbox" name="assentos" class="assentos" id="assentos72">
+                        <div class="assento"><input type="checkbox" name="assentos12" class="assentos" id="E12">
                         </div>
-                        <div class="assento"><input type="checkbox" name="assentos" class="assentos" id="assentos73">
+                        <div class="assento"><input type="checkbox" name="assentos13" class="assentos" id="E13">
                         </div>
-                        <div class="assento"><input type="checkbox" name="assentos" class="assentos" id="assentos74">
+                        <div class="assento"><input type="checkbox" name="assentos14" class="assentos" id="E14">
                         </div>
-                        <div class="assento"><input type="checkbox" name="assentos" class="assentos" id="assentos75">
+                        <div class="assento"><input type="checkbox" name="assentos15" class="assentos" id="E15">
                         </div>
                     </div>
                     <div class="linha">
                         <label>F</label>
-                        <div class="assento"><input type="checkbox" name="assentos" class="assentos" id="assentos76">
+                        <div class="assento"><input type="checkbox" name="assentos1" class="assentos" id="F1">
                         </div>
-                        <div class="assento"><input type="checkbox" name="assentos" class="assentos" id="assentos77">
+                        <div class="assento"><input type="checkbox" name="assentos2" class="assentos" id="F2">
                         </div>
-                        <div class="assento"><input type="checkbox" name="assentos" class="assentos" id="assentos78">
+                        <div class="assento"><input type="checkbox" name="assentos3" class="assentos" id="F3">
                         </div>
-                        <div class="assento"><input type="checkbox" name="assentos" class="assentos" id="assentos79">
+                        <div class="assento"><input type="checkbox" name="assentos4" class="assentos" id="F4">
                         </div>
-                        <div class="assento"><input type="checkbox" name="assentos" class="assentos" id="assentos80">
+                        <div class="assento"><input type="checkbox" name="assentos5" class="assentos" id="F5">
                         </div>
-                        <div class="assento"><input type="checkbox" name="assentos" class="assentos" id="assentos81">
+                        <div class="assento"><input type="checkbox" name="assentos6" class="assentos" id="F6">
                         </div>
-                        <div class="assento"><input type="checkbox" name="assentos" class="assentos" id="assentos82">
+                        <div class="assento"><input type="checkbox" name="assentos7" class="assentos" id="F7">
                         </div>
-                        <div class="assento"><input type="checkbox" name="assentos" class="assentos" id="assentos83">
+                        <div class="assento"><input type="checkbox" name="assentos8" class="assentos" id="F8">
                         </div>
-                        <div class="assento"><input type="checkbox" name="assentos" class="assentos" id="assentos84">
+                        <div class="assento"><input type="checkbox" name="assentos9" class="assentos" id="F9">
                         </div>
-                        <div class="assento"><input type="checkbox" name="assentos" class="assentos" id="assentos85">
+                        <div class="assento"><input type="checkbox" name="assentos10" class="assentos" id="F10">
                         </div>
-                        <div class="assento"><input type="checkbox" name="assentos" class="assentos" id="assentos86">
+                        <div class="assento"><input type="checkbox" name="assentos11" class="assentos" id="F11">
                         </div>
-                        <div class="assento"><input type="checkbox" name="assentos" class="assentos" id="assentos87">
+                        <div class="assento"><input type="checkbox" name="assentos12" class="assentos" id="F12">
                         </div>
-                        <div class="assento"><input type="checkbox" name="assentos" class="assentos" id="assentos88">
+                        <div class="assento"><input type="checkbox" name="assentos13" class="assentos" id="F13">
                         </div>
-                        <div class="assento"><input type="checkbox" name="assentos" class="assentos" id="assentos89">
+                        <div class="assento"><input type="checkbox" name="assentos14" class="assentos" id="F14">
                         </div>
-                        <div class="assento"><input type="checkbox" name="assentos" class="assentos" id="assentos90">
+                        <div class="assento"><input type="checkbox" name="assentos15" class="assentos" id="F15">
                         </div>
                     </div>
                     <div class="linha">
                         <label>G</label>
-                        <div class="assento"><input type="checkbox" name="assentos" class="assentos" id="assentos91">
+                        <div class="assento"><input type="checkbox" name="assentos1" class="assentos" id="G1">
                         </div>
-                        <div class="assento"><input type="checkbox" name="assentos" class="assentos" id="assentos92">
+                        <div class="assento"><input type="checkbox" name="assentos2" class="assentos" id="G2">
                         </div>
-                        <div class="assento"><input type="checkbox" name="assentos" class="assentos" id="assentos93">
+                        <div class="assento"><input type="checkbox" name="assentos3" class="assentos" id="G3">
                         </div>
-                        <div class="assento"><input type="checkbox" name="assentos" class="assentos" id="assentos94">
+                        <div class="assento"><input type="checkbox" name="assentos4" class="assentos" id="G4">
                         </div>
-                        <div class="assento"><input type="checkbox" name="assentos" class="assentos" id="assentos95">
+                        <div class="assento"><input type="checkbox" name="assentos5" class="assentos" id="G5">
                         </div>
-                        <div class="assento"><input type="checkbox" name="assentos" class="assentos" id="assentos96">
+                        <div class="assento"><input type="checkbox" name="assentos6" class="assentos" id="G6">
                         </div>
-                        <div class="assento"><input type="checkbox" name="assentos" class="assentos" id="assentos97">
+                        <div class="assento"><input type="checkbox" name="assentos7" class="assentos" id="G7">
                         </div>
-                        <div class="assento"><input type="checkbox" name="assentos" class="assentos" id="assentos98">
+                        <div class="assento"><input type="checkbox" name="assentos8" class="assentos" id="G8">
                         </div>
-                        <div class="assento"><input type="checkbox" name="assentos" class="assentos" id="assentos99">
+                        <div class="assento"><input type="checkbox" name="assentos9" class="assentos" id="G9">
                         </div>
-                        <div class="assento"><input type="checkbox" name="assentos" class="assentos" id="assentos100">
+                        <div class="assento"><input type="checkbox" name="assentos10" class="assentos" id="G10">
                         </div>
-                        <div class="assento"><input type="checkbox" name="assentos" class="assentos" id="assentos101">
+                        <div class="assento"><input type="checkbox" name="assentos11" class="assentos" id="G11">
                         </div>
-                        <div class="assento"><input type="checkbox" name="assentos" class="assentos" id="assentos102">
+                        <div class="assento"><input type="checkbox" name="assentos12" class="assentos" id="G12">
                         </div>
-                        <div class="assento"><input type="checkbox" name="assentos" class="assentos" id="assentos103">
+                        <div class="assento"><input type="checkbox" name="assentos13" class="assentos" id="G13">
                         </div>
-                        <div class="assento"><input type="checkbox" name="assentos" class="assentos" id="assentos104">
+                        <div class="assento"><input type="checkbox" name="assentos14" class="assentos" id="G14">
                         </div>
-                        <div class="assento"><input type="checkbox" name="assentos" class="assentos" id="assentos105">
+                        <div class="assento"><input type="checkbox" name="assentos15" class="assentos" id="G15">
                         </div>
                     </div>
                     <div class="linha">
                         <label>H</label>
-                        <div class="assento"><input type="checkbox" name="assentos" class="assentos" id="assentos106">
+                        <div class="assento"><input type="checkbox" name="assentos1" class="assentos" id="H1">
                         </div>
-                        <div class="assento"><input type="checkbox" name="assentos" class="assentos" id="assentos107">
+                        <div class="assento"><input type="checkbox" name="assentos2" class="assentos" id="H2">
                         </div>
-                        <div class="assento"><input type="checkbox" name="assentos" class="assentos" id="assentos108">
-                        </div>
-
-                        <div class="assento"><input type="checkbox" name="assentos" class="assentos" id="assentos109">
-                        </div>
-                        <div class="assento"><input type="checkbox" name="assentos" class="assentos" id="assentos110">
-                        </div>
-                        <div class="assento"><input type="checkbox" name="assentos" class="assentos" id="assentos111">
-                        </div>
-                        <div class="assento"><input type="checkbox" name="assentos" class="assentos" id="assentos112">
-                        </div>
-                        <div class="assento"><input type="checkbox" name="assentos" class="assentos" id="assentos113">
-                        </div>
-                        <div class="assento"><input type="checkbox" name="assentos" class="assentos" id="assentos114">
-                        </div>
-                        <div class="assento"><input type="checkbox" name="assentos" class="assentos" id="assentos115">
-                        </div>
-                        <div class="assento"><input type="checkbox" name="assentos" class="assentos" id="assentos116">
-                        </div>
-                        <div class="assento"><input type="checkbox" name="assentos" class="assentos" id="assentos117">
+                        <div class="assento"><input type="checkbox" name="assentos3" class="assentos" id="H3">
                         </div>
 
-                        <div class="assento"><input type="checkbox" name="assentos" class="assentos" id="assentos118">
+                        <div class="assento"><input type="checkbox" name="assentos4" class="assentos" id="H4">
                         </div>
-                        <div class="assento"><input type="checkbox" name="assentos" class="assentos" id="assentos119">
+                        <div class="assento"><input type="checkbox" name="assentos5" class="assentos" id="H5">
                         </div>
-                        <div class="assento"><input type="checkbox" name="assentos" class="assentos" id="assentos120">
+                        <div class="assento"><input type="checkbox" name="assentos6" class="assentos" id="H6">
+                        </div>
+                        <div class="assento"><input type="checkbox" name="assentos7" class="assentos" id="H7">
+                        </div>
+                        <div class="assento"><input type="checkbox" name="assentos8" class="assentos" id="H8">
+                        </div>
+                        <div class="assento"><input type="checkbox" name="assentos9" class="assentos" id="H9">
+                        </div>
+                        <div class="assento"><input type="checkbox" name="assentos10" class="assentos" id="H10">
+                        </div>
+                        <div class="assento"><input type="checkbox" name="assentos11" class="assentos" id="H11">
+                        </div>
+                        <div class="assento"><input type="checkbox" name="assentos12" class="assentos" id="H12">
+                        </div>
+
+                        <div class="assento"><input type="checkbox" name="assentos13" class="assentos" id="H13">
+                        </div>
+                        <div class="assento"><input type="checkbox" name="assentos14" class="assentos" id="H14">
+                        </div>
+                        <div class="assento"><input type="checkbox" name="assentos15" class="assentos" id="H15">
                         </div>
                     </div>
 
-                    <div class="tela">SALA 01</div>
+                    <div class="tela">TELA</div>
 
                 </div>
             </div>
-            <p class=" assentos-escolhidos">ASSENTO(S) ESCOLHIDOS: <span class="escolhidos">E-5; D-11;</span></p>
+            <p>Você pode selecionar até <span id="max-assentos"><?php echo $totalAssentos; ?></span> assentos.</p>
+            <p class="assentos-escolhidos">ASSENTO(S) ESCOLHIDOS: <span class="escolhidos">0</span></p>
+
+
             <hr>
 
             <div class="localizacao">
@@ -355,10 +383,10 @@
                 <div class="escolher-cidade">
                 <p>LOCAL:</p>
                     <img src="/imagens/local.png" alt="" width="20px">
-                    <select name="select" id="select">
+                    <select name="local_sessao" id="local_sessao">
                         <option value="São Paulo">São Paulo</option>
-                        <option value="São Paulo">São Paulo</option>
-                        <option value="São Paulo">São Paulo</option>
+                        <option value="Lapa">Lapa</option>
+                        <option value="Itaquera">Itaquera</option>
                     </select>
                 </div>
                 <img src="/imagens/local.png" alt="" width="20px">
@@ -367,11 +395,127 @@
             </div>
 
             <div class="botao">
-                <a type="submit" href="pagamento_produtos.php" class="btn">AVANÇAR ></a>
+                <button type="submit" href="pagamento_produtos.php" class="btn">AVANÇAR ></button>
             </div>
 
         </div>
+</form>
     </main>
-</body>
 
+    <footer>
+        <img src="imagens/Logo_Cine3-removebg-preview.png" alt="">
+        <div class="term">
+            <div>
+                <a href="termos.php">
+                    <p>TERMOS DE USO</p>
+                </a>
+            </div>
+            <div>
+                <a href="termos.php">
+                    <p>POLÍTICA DE PRIVACIDADE</p>
+                </a>
+            </div>
+            <div>
+                <a href="local.php">
+                    <p>CONTATO</p>
+                </a>
+            </div>
+            <div>
+                <a href="local.php">
+                    <p>LOCAL</p>
+                </a>
+            </div>
+            <div>
+                <a href="cadastro_filme.php">
+                    <p>CADASTRAR FILMES </p>
+                </a>
+            </div>
+        </div>
+        <div class="container_footer">
+            <div class="tampa"><i class="fa fa-language" aria-hidden="true"></i>
+                <select name="Idioma" id="idioma">
+                    <option value="PT">PORTUGUÊS </option>
+                    <option value="IG">INGLÊS</option>
+                    <option value="ES">ESPANHOL</option>
+                    <option value="CO">COREANO</option>
+                </select>
+            </div>
+    </footer>
+
+    <script>
+    // Total de assentos permitido (passado do PHP)
+    const totalAssentos = <?php echo $totalAssentos; ?>;
+
+    document.addEventListener("DOMContentLoaded", () => {
+        const assentos = document.querySelectorAll(".assentos");
+        let selecionados = 0;
+
+        assentos.forEach((assento) => {
+            assento.addEventListener("change", () => {
+                if (assento.checked) {
+                    if (selecionados < totalAssentos) {
+                        selecionados++;
+                        assento.parentNode.style.backgroundColor = ""; // Muda a cor do assento selecionado
+                    } else {
+                        assento.checked = false;
+                    }
+                } else {
+                    selecionados--;
+                    assento.parentNode.style.backgroundColor = ""; // Remove a cor do assento desmarcado
+                }
+
+                // Desabilita os assentos extras
+                if (selecionados >= totalAssentos) {
+                    assentos.forEach((a) => {
+                        if (!a.checked) {
+                            a.disabled = true; // Desabilita assentos não selecionados
+                            a.parentNode.style.opacity = "0.8"; // Visualmente indica desabilitação
+                        }
+                    });
+                } else {
+                    assentos.forEach((a) => {
+                        a.disabled = false; // Reabilita todos os assentos
+                        a.parentNode.style.opacity = "1"; // Remove o efeito visual
+                    });
+                }
+            });
+        });
+    });
+
+
+       // Obtém todos os checkboxes dos assentos
+       const assentos = document.querySelectorAll('.assentos');
+    const assentosEscolhidosEl = document.querySelector('.assentos-escolhidos .escolhidos');
+    const maxAssentos = parseInt(document.getElementById('max-assentos').textContent, 10);
+    let assentosSelecionados = [];
+
+    // Função para atualizar os assentos selecionados
+    function atualizarAssentosSelecionados() {
+        assentosEscolhidosEl.textContent = assentosSelecionados.length; // Mostra a quantidade selecionada
+        const assentosTexto = document.querySelector('.assentos-escolhidos');
+        assentosTexto.innerHTML = `ASSENTO(S) ESCOLHIDOS: <span class="escolhidos">${assentosSelecionados.length}</span> ${assentosSelecionados.join(', ')}`;
+
+    }
+
+    // Adiciona o evento de clique para cada checkbox
+    assentos.forEach((checkbox) => {
+        checkbox.addEventListener('change', function () {
+            if (this.checked) {
+                if (assentosSelecionados.length < maxAssentos) {
+                    assentosSelecionados.push(this.id); // Adiciona o ID do assento
+                } else {
+                    this.checked = false; // Impede seleção além do limite
+                    alert('Você atingiu o limite máximo de assentos!');
+                }
+            } else {
+                // Remove o assento desmarcado
+                assentosSelecionados = assentosSelecionados.filter(id => id !== this.id);
+            }
+            atualizarAssentosSelecionados();
+        });
+    });
+
+</script>
+
+</body>
 </html>

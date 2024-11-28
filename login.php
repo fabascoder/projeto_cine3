@@ -9,23 +9,24 @@
     <link href="https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/login.css">
     <script src="js/login.js" defer></script>
+    <link rel="stylesheet" href="css/footer.css">
 </head>
 <body>
 <header>
         <nav>
             <div>
-                <a href="principal.php">
+                <a href="index.php">
                     <img src="imagens/Logo_Cine3-removebg-preview.png" alt="Cine3 Logo" class="logo">
                 </a>
             </div>
-            <a href="principal.php" class="back">VOLTAR</i></a>
+            <a href="index.php" class="back"><img src="imagens/seta.png" alt="" width="35px"></i></a>
         </nav>
     </header>
 
     <main>
         <div class="login-container">
             <h1>Login</h1>
-            <form onsubmit="validateLogin(event)">
+            <form action="logar.php" method="post">
                 <label for="email">E-mail</label>
                 <input type="email" id="email" name="email" required>
         
@@ -34,17 +35,23 @@
         
                 <div class="options">
                     <div>
-                        <input type="checkbox" id="remember-me" name="remember-me">
+                        <input type="checkbox" id="remember-me" name="cookie">
                         <label for="remember-me">Lembrar-me</label>
                     </div>
                     <a href="#">Esqueceu sua senha?</a>
                 </div>
         
                 <button type="submit">Entrar</button>
+                <div>
+                    <?php 
+                    $mensagem = $_GET['erro']??"";
+                    echo $mensagem;
+                    ?>
+                </div>
             </form>
             <a href="cadastro.php" class="signup">Cadastre-se!</a>
         </div>
     </main>
-    <script src="javascript/login.js"></script>
+    <!-- <script src="javascript/login.js"></script> -->
 </body>
 </html>

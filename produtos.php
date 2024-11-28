@@ -10,92 +10,111 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/produto.css">
     <link rel="stylesheet" href="css/principal.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/header.css">
 </head>
 
-<body class="body">
+<body style="background: #fff;">
 
 <header>
-        <a href="./principal.php"><img src="imagens/Logo_Cine3.png" alt="Imagem CINE3" width="200px"></a>
-        <div class="div_pesquisa">
-            <input type="search" id="pesquisa" placeholder="Pesquisar">
+        <div class="logo-pesquisa">
+            <a href="index.php"><img src="imagens/Logo_Cine3-removebg-preview.png" alt="Imagem CINE3" width="200px"></a>
+            <div class="div_pesquisa">
+                <input type="search" id="pesquisa" placeholder="Pesquisar">
+            </div>
         </div>
-
-        <nav id="navegacao">
-
-
-            <ul>
-                <li>
-                    <div id="window_ticket">
-                        <div id="ingresso">
-                            <a href="javascript:void(0)" id="openModal">
-                                <div>
+        <div class="menu-hamburguer">
+            <input type="checkbox" id="menu-toggle" class="menu-toggle">
+            <label for="menu-toggle" class="menu-icon">
+                <span class="material-symbols-outlined">menu</span>
+            </label>
+            <nav class="menu">
+                <ul>
+                    <li><a href="javascript:void(0)" id="openModal"><div>
                                     <span id="icon_ingresso" class="material-symbols-outlined">
                                         confirmation_number
                                     </span>
                                 </div>
                                 Ingressos
-                            </a>
+                            </a></li>
+                    <li class="li-1"><a href="produtos.php"><div>
+                            <span id="icon_produto" class="material-symbols-outlined">
+                                shopping_bag
+                            </span>
+                        </div> 
+                        Produtos
+                    </a></li>
+                    <li><a href="local.php"><div>
+                            <span id="icon_local" class="material-symbols-outlined">
+                                pin_drop
+                            </span>
+                        </div>
+                        Local
+                    </a></li>
+                    
+                    <?php 
+                    session_start();
+                    if(isset($_SESSION['nome'])) {
+                     echo '   <li><a href="conta.php"><div>
+                            <span id="icon_profile" class="material-symbols-outlined">
+                                account_circle
+                            </span>
+                        </div>
+                        
+                        '.$_SESSION['nome'].'
+                    </a></li>';
+                    } else {
+
+                    
+                
+                  echo '<li><a href="login.php"><div>
+                            <span id="icon_profile" class="material-symbols-outlined">
+                                account_circle
+                            </span>
+                        </div>
+                        
+                        Login
+                    </a></li>';
+                 }
+                ?>
+
+
+                </ul>
+            </nav>
+        </div>
+
+        <nav id="navegacao">
+
+
+                
+
+                <!-- Modal HTML -->
+                <dialog id="modal-ingressos" class="modal">
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <h2 class="ingressos">Ingressos</h2>
+                        <div>
+                            <p class="p1">Padrão Inteira</p>
+                            <p class="v1">Válido de quinta-feira, sexta-feira, sábado e domingo.</p>
+                            <p class="t1">R$18,00</p>
+                        </div>
+                        <hr>
+                        <div>
+                            <p class="p1">Meia Promocional</p>
+                            <p class="v1">Válido de segunda-feira, terça-feira e quarta-feira OU com Comprovante
+                                Escolar.</p>
+                            <p class="t1">R$9,00</p>
                         </div>
                     </div>
-                    </li>
-
-                    <!-- Modal HTML -->
-                    <dialog id="modal-ingressos" class="modal">
-                        <div class="modal-content">
-                            <span class="close">&times;</span>
-                            <h2 class="ingressos">Ingressos</h2>
-                            <div>
-                                <p class="p1">Padrão Inteira</p>
-                                <p class="v1">Válido de quinta-feira, sexta-feira, sábado e domingo.</p>
-                                <p class="t1">R$18,00</p>
-                            </div>
-                            <hr>
-                            <div>
-                                <p class="p1">Meia Promocional</p>
-                                <p class="v1">Válido de segunda-feira, terça-feira e quarta-feira OU com Comprovante Escolar.</p>
-                                <p class="t1">R$9,00</p>
-                            </div>
-                        </div>
-                    </dialog>
+                </dialog>
 
 
-                    <li class="item_produto">
-                        <a href="produtos.php">
-                            <div>
-                                <span id="icon_produto" class="material-symbols-outlined">
-                                    shopping_bag
-                                </span>
-                            </div>
-                            Produtos
-                        </a>
-                    </li>
-                    <li>
-                        <a href="local.php">
-                            <div>
-                                <span id="icon_local" class="material-symbols-outlined">
-                                    pin_drop
-                                </span>
-                            </div>
-                            Localização
-                        </a>
-                    </li>
-            </ul>
 
-            <div class="login">
-                <a href="login.php" id="login-link">
-                    <div>
-                        <span id="icon_profile" class="material-symbols-outlined">
-                            account_circle
-                        </span>
-                    </div>
-                    <span id="login-text">Login</span>
-                </a>
-            </div>
         </nav>
     </header>
 
     <div class="topo">
-        <a href="principal.php"><img src="imagens/seta.png" alt="Seta" width="40px" id="seta"></a>
+        <a href="index.php"><img src="imagens/seta.png" alt="Seta" width="40px" id="seta"></a>
         <h1 class="h1">Produtos</h1>
     </div>
 
@@ -114,10 +133,11 @@
                         </div>
                         <p class="unisex">UNISSEX</p>
                         <div class="sizes">
-                            <button>P</button>
-                            <button>M</button>
-                            <button>G</button>
+                            <button class="size-button" data-size="P">P</button>
+                            <button class="size-button" data-size="M">M</button>
+                            <button class="size-button" data-size="G">G</button>
                         </div>
+
                         <p class="price">R$79,90</p>
                         <p class="free-shipping">Compras acima de R$129,99, você receberá frete grátis</p>
                         <div class="buy-cart-container">
@@ -141,10 +161,13 @@
                             ★★★<span class="cinza">★★</span>
                         </div>
                         <div class="sizes">
-                            <button>P</button>
-                            <button>M</button>
-                            <button>G</button>
+                            <button class="size-button" data-size="P">P</button>
+                            <button class="size-button" data-size="M">M</button>
+                            <button class="size-button" data-size="G">G</button>
                         </div>
+
+
+
                         <p class="price">R$29,90</p>
                         <p class="free-shipping">Compras acima de R$129,99, você receberá frete grátis</p>
                         <div class="buy-cart-container">
@@ -181,7 +204,48 @@
             </div>
         </section>
     </div>
+    <footer>
+        <img src="imagens/Logo_Cine3-removebg-preview.png" alt="">
+        <div class="term">
+            <div>
+                <a href="termos.php">
+                    <p>TERMOS DE USO</p>
+                </a>
+            </div>
+            <div>
+                <a href="termos.php">
+                    <p>POLÍTICA DE PRIVACIDADE</p>
+                </a>
+            </div>
+            <div>
+                <a href="local.php">
+                    <p>CONTATO</p>
+                </a>
+            </div>
+            <div>
+                <a href="local.php">
+                    <p>LOCAL</p>
+                </a>
+            </div>
+            <div>
+                <a href="cadastro_filme.php">
+                    <p>CADASTRAR FILMES </p>
+                </a>
+            </div>
+        </div>
+        <div class="container_footer">
+            <div class="tampa"><i class="fa fa-language" aria-hidden="true"></i>
+                <select name="Idioma" id="idioma">
+                    <option value="PT">PORTUGUÊS </option>
+                    <option value="IG">INGLÊS</option>
+                    <option value="ES">ESPANHOL</option>
+                    <option value="CO">COREANO</option>
+                </select>
+            </div>
+    </footer>
 <script src="javascript/produto.js"></script>
+<script src=""></script>
 </body>
 
 </html>
+<!--Fabrico gostoso-!>

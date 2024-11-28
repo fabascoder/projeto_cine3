@@ -18,7 +18,7 @@
         };
         ?>
     </header>
-    <h1>Filme</h1>
+    <h1>CADASTRE O FILME</h1>
     <form action="cadastrar_filme.php" method="post" class="formulario_filme" enctype="multipart/form-data">
         <div class="campo">
             <label for="nome">Nome do Filme</label><br>
@@ -29,6 +29,29 @@
             <input type="text" name="descricao" id="descricao" class="form_input">
         </div>
         <div class="campo">
+            <label for="genero">Gênero</label><br>
+            <input type="text" name="genero" id="genero" class="form_input">
+        </div>
+        <div class="campo">
+            <label for="duracao">Duração</label><br>
+            <input type="time" name="duracao" id="duracao" class="form_input">
+        </div>
+        <div class="campo">
+            <label for="direcao">Direção</label><br>
+            <input type="text" name="direcao" id="direcao" class="form_input">
+        </div>
+        <div class="campo">
+            <label for="distribuicao">Distribuição</label><br>
+            <input type="text" name="distribuicao" id="distribuicao" class="form_input">
+        </div>
+        <div class="campo">
+            <label for="elenco">Elenco</label><br>
+            <input type="text" name="elenco" id="elenco" class="form_input">
+        </div>
+        <div class="campo">
+           <a href="cadastrar_sessao.php">HORARIO - DURAÇÃO - LOCAL</a>
+        </div>
+        <div class="campo">
             <label for="calssificacao">Idade</label><br>
             <input type="text" name="classificacao" id="classificacao" class="form_input">
         </div>
@@ -37,8 +60,11 @@
             <input type="number" name="valor" id="valor" class="form_input">
         </div>
         <div class="campo">
-            <label for="status_filme">Status do Filme</label><br>
-            <input type="text" name="status_filme" id="status" class="form_input">
+            <div class="status">
+                <label for="status_filme">Status do Filme</label><br>
+                <input type="radio" name="status_filme" id="s0" value="0" class="form_input"> Disponível
+                <input type="radio" name="status_filme" id="s1" value="1" class="form_input"> Indisponível
+            </div>
         </div>
         <div class="campo">
             <label for="ano_lancamento">Ano de Lançamento</label><br>
@@ -49,7 +75,7 @@
             <input type="file" name="foto" id="imagem" class="imagem">
         </div>
         <div>
-            <button type="submite">CADASTRAR FILME</button>
+            <button type="submit">CADASTRAR FILME</button>
         </div>
         <div class="msg">
             <?php 

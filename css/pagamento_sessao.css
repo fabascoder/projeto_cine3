@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap');
 body{
-    background-color: #F5F5F5;
+    background-color: #f9f9f9;
 }
 *{
     margin: 0;
@@ -41,6 +41,18 @@ header li a{
     align-items: center;
     gap: 15px;
 }
+.etapas-compra2{
+    background-color: rgb(255, 255, 255);
+    width: 65px;
+    height: 65px;
+    margin: auto;
+    border-radius: 50%;
+    border: solid #bf5672 2px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
 #caixa {
     padding-top: 60px;
     text-align: center;
@@ -53,9 +65,21 @@ header li a{
     padding-top: 7px;
     display: flex;
 }
+.etapas-compra2 img{
+    margin: auto;
+    width: 50px;
+    height: 50px;
+    padding-top: 7px;
+    display: flex;
+}
 .etapas-compra p{
     font-family: "Zen Dots";
     font-size: 0.8rem;
+}
+.etapas-compra2 p{
+    font-family: "Zen Dots";
+    font-size: 0.8rem;
+    color: #bf5672;
 }
 main{
     margin: auto;
@@ -63,6 +87,13 @@ main{
     width: 100%;
     padding-top: 50px;
 }
+
+#sessao {
+    width: 100%;
+    margin: auto;
+
+}
+
 .caixa-principal{
     margin: auto;
     width: 100%;
@@ -150,7 +181,8 @@ a{
     font-family: "Zen Dots";
     font-size: 1rem;
     border-radius: 5px;
-    padding: 15px 20px
+    padding: 15px 20px;
+    cursor: pointer;
 }
 .botao{
     margin: auto;
@@ -199,6 +231,13 @@ color: #333
     width: 100%;
     border-radius: 20px;
     text-align: center;
+    margin-top: 18px;
+}
+.escolhidos {
+    display: block;
+    margin: auto;
+    width: 1550px;
+    overflow: none;
 }
 .caixa-assentos {
     display: flex;
@@ -216,6 +255,20 @@ color: #333
     background-color: black;
     cursor: auto;
 }
+
+.assento-selecionado {
+    background-color: #d95f80;
+    border: 2px solid #fff;
+}
+.assento-selecionado {
+    background-color: #d95f80;
+    color: #d95f80;
+    border: 2px solid #d95f80;
+}
+
+
+/*RODAPÉ*/
+
 /*ADICIONADO LINHA*/
 .linha {
     display: flex;
@@ -263,7 +316,25 @@ color: #333
         align-items: center;
         gap: 15px;
     }
+    .etapas-compra2 {
+        background-color: #fff;
+        width: 45px;
+        height: 45px;
+        margin: auto;
+        border-radius: 50%;
+        border: solid #bf5672 2px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
     .etapas-compra img{
+        margin: auto;
+        width: 30px;
+        height: 30px;
+        padding-top: 7px;
+    }
+    .etapas-compra2 img{
         margin: auto;
         width: 30px;
         height: 30px;
@@ -272,6 +343,11 @@ color: #333
     .etapas-compra p{
         font-family: "Zen Dots";
         font-size: 0.54rem;
+    }
+    .etapas-compra2 p{
+        font-family: "Zen Dots";
+        font-size: 0.54rem;
+        color: #bf5672;
     }
     #caixa {
         padding-top: 60px;

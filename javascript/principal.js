@@ -1,7 +1,7 @@
 const imagem  = [
     "imagens/Banner_Divertidamente2_Cine3 (6).jpg",
-    "imagens/imagemgrande.jpg",
-    "imagens/cinebaner.jpg"
+    "imagens/banner-foto-2.png",
+    "imagens/banner-foto-3.png"
 ];
 
 let index = 0;
@@ -24,29 +24,26 @@ nextBotao.addEventListener('click', () => {
     updateImagem();
 })
 
-// Obtém o modal
-var modal = document.getElementById("modal-ingressos");
+// Modal de Ingressos
+const modal = document.getElementById("modal-ingressos");
+const ingressoLink = document.getElementById("openModal");
+const body = document.querySelector('html');
 
-// Obtém o link correto
-var ingressoLink = document.getElementById("openModal");
-var body = document.querySelector('html')
-// Quando o usuário clicar no link de ingressos, abre o modal
 ingressoLink.addEventListener("click", function (event) {
-    event.preventDefault(); // Evita o redirecionamento
+    event.preventDefault();
     modal.style.display = "block";
     body.style.background = '#000';
 });
 
-// Quando o usuário clicar no <span> (x), fecha o modal
-var span = document.getElementsByClassName("close")[0];
-span.onclick = function () {
+const closeModal = document.querySelector(".close");
+closeModal.onclick = function () {
     modal.style.display = "none";
-    body.style.background = '#191814';
+    body.style.background = '#fff';
 };
 
-// Quando o usuário clicar fora do modal, fecha o modal
 window.onclick = function (event) {
     if (event.target == modal) {
         modal.style.display = "none";
+        body.style.background = '#fff';
     }
 };
