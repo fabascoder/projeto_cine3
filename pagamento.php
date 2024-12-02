@@ -68,7 +68,7 @@ session_start();
     </header>
     <main>
         <div class="caixa-principal" style="margin: 30px">
-            <div style=" padding: 30px">
+            <div style=" padding: 30px" class="caixa-secundaria">
                 <div>
 
                     <?php
@@ -107,7 +107,7 @@ session_start();
                     ?>
 
                 </div>
-                <div style="display: flex; justify-content: space-between; align-items: center; gap: 250px">
+                <div style="display: flex; justify-content: space-between; align-items: center;">
 
                     <div>
                         <p class="title-php">Filme</p>
