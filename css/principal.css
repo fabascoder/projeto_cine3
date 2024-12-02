@@ -28,9 +28,6 @@ header {
   background-color: var(--vermelho);
   box-sizing: border-box;
 }
-#navegacao {
-  /*justify-content: space-between;*/
-}
 .logo-pesquisa{
   display: flex;
   gap: 20px;
@@ -599,7 +596,5 @@ footer div select {
     outline: none;
     border: none;
     font-size: 1.2rem;
-  }
-  .logo-pesquisa #navegacao{
   }
 }
