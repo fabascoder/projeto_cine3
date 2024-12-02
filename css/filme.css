@@ -133,6 +133,7 @@ picture{
 iframe{
   width:800px ;
   height: 455px;
+  border-radius: 15px;
 }
 /*SINOPSE*/
 
