@@ -145,9 +145,9 @@
         </div>
         <div id="container_principal">
             <?php 
-              $imagem = $resultado['imagem']??"umavidadeesperança.jpg";
+              $imagem = $resultado['imagem']??"imagens/umavidadeesperança.jpg";
               if($imagem == '') {
-                  $imagem = "umavidadeesperança.jpg";
+                  $imagem = "imagens/umavidadeesperança.jpg";
               }
             ?>
             <div id="div_img">
@@ -161,17 +161,20 @@
                     <div id="column1">
                         <ul> 
                             <?php 
+                        
                             $diasDaSemana = ['Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sáb'];
                             $select_horarios = $conexao->prepare('SELECT * FROM sessao_filme WHERE id_filme=?');
                             $select_horarios->execute([$resultado['id']]);
-                            while( $horarios = $select_horarios->fetch()) {
+                            while ($horarios = $select_horarios->fetch()) {
                                 $data_filme = new DateTime($horarios['data_filme']);
                                 $diaSemana = $data_filme->format('w');
-                          echo '<li>
-                                    <a class="button_horario" href="pagamento_ingressos.php?hora='.$horarios['horario_filme'].'&dia='.$diasDaSemana[$diaSemana].'&id='.$resultado['id'].'">'.$data_filme->format('d/m/Y').' '.$diasDaSemana[$diaSemana].' '.$horarios['horario_filme'].'</a>
-                                
-                            </li>';
-                        }
+                                $url = isset($_SESSION['nome']) 
+                                    ? "pagamento_ingressos.php?hora={$horarios['horario_filme']}&dia={$diasDaSemana[$diaSemana]}&id={$resultado['id']}"
+                                    : "login.php";
+                                echo '<li>
+                                        <a class="button_horario" href="' . $url . '">' . $data_filme->format('d/m/Y') . ' ' . $diasDaSemana[$diaSemana] . ' ' . $horarios['horario_filme'] . '</a>
+                                      </li>';
+                            }
                             ?>
                         </ul>
                     </div>

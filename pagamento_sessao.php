@@ -16,7 +16,7 @@
     $_SESSION['valor_inteira'] = $_POST['valor_inteira']??"";
     $_SESSION['tamanho-camiseta'] = $_POST['tamanho-camiseta']??"";
     $_SESSION['tamanho-camiseta'] = $_POST['tamanho-camiseta']??"";
-    $_SESSION['assentos'] = $_POST['assentos'] ?? []; //adicionado 
+    //adicionado 
     ?>
 
 <?php
@@ -75,6 +75,7 @@
             </div>
         </div>
     </header>
+
 
     <main> 
     <form action="pagamento_produtos.php" method="post" id="sessao">
@@ -505,8 +506,9 @@
                     assentosSelecionados.push(this.id); // Adiciona o ID do assento
                 } else {
                     this.checked = false; // Impede seleção além do limite
-                    alert('Você atingiu o limite máximo de assentos!');
+                    alert('Você atingiu o limite máximo de assentos!'); 
                 }
+                this.value = this.id;
             } else {
                 // Remove o assento desmarcado
                 assentosSelecionados = assentosSelecionados.filter(id => id !== this.id);
@@ -514,7 +516,15 @@
             atualizarAssentosSelecionados();
         });
     });
+    
 
+// Bloqueia envio do formulário se o número de assentos não for suficiente
+document.getElementById('sessao').addEventListener('submit', function (event) {
+    if (assentosSelecionados.length < maxAssentos) {
+        event.preventDefault(); // Impede o envio do formulário
+        alert(`Por favor, selecione todos os ${maxAssentos} assentos antes de continuar.`);
+    }
+});
 </script>
 
 </body>

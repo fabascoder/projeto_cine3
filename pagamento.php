@@ -117,6 +117,8 @@ session_start();
                                         ?>
                         </div>
                     </div>
+
+
                     <div>
                         <p class="title-php">Horário</p>
                         <div class="result-php">
@@ -135,7 +137,29 @@ session_start();
                     </div>
                 </div>
 
-                <div style="margin-top: 40px;">
+                <div style="display: flex; justify-content: space-between; padding-bottom: 15px; margin-top: 30px">
+                        <p class="title-php">Assentos</p>
+                        <div class="result-php">
+                            <?php
+                          foreach($_SESSION["assentos"] as $assento) {
+                            echo " ".$assento;
+                          }   
+                            ?>
+                        </div>
+                    </div>
+
+                <div style="display: flex; justify-content: space-between; padding-bottom: 15px; margin-top: 0px">
+                        <p class="title-php">Local</p>
+                        <div class="result-php">
+                            <?php
+                            
+                            echo $_SESSION['local'];
+                        
+                            ?>
+                        </div>
+                    </div>
+
+                <div style="margin-top: 0px;">
                     <hr>
 
                     <div style="display: flex; justify-content: space-between; padding-bottom: 15px">
