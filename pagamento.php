@@ -198,7 +198,7 @@ session_start();
             <a class="btn" href="pagamento_confirmacao.php">CONTINUAR ></a>
         </div> -->
     </main>
-    <footer>
+    <footer style="margin-top: 205px";>
         <img src="imagens/Logo_Cine3-removebg-preview.png" alt="">
         <div class="term">
             <div>
