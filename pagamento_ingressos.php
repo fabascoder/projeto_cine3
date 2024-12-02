@@ -166,7 +166,7 @@
                 <!-- Total a Pagar -->
                 <div class="caixa-finalizar">
                     <div class="finalizar">
-                        <input type="hidden" id="total_pagar" name="total_pagar" >
+                        <input type="hidden" id="total_pagar" name="total_pagar" value="0">
                         <p id="total_pagar_display">TOTAL <span style="font-weight: 600;" class="total">R$ 0,00</span></p>
                         <button type="submit" class="btn">AVANÇAR ></button>
                     </div>
@@ -176,43 +176,14 @@
     </main>
 
     <footer>
-    <img src="imagens/Logo_Cine3-removebg-preview.png" alt="">
+        <img src="imagens/Logo_Cine3-removebg-preview.png" alt="">
         <div class="term">
-            <div>
-                <a href="termos.php">
-                    <p>TERMOS DE USO</p>
-                </a>
-            </div>
-            <div>
-                <a href="termos.php">
-                    <p>POLÍTICA DE PRIVACIDADE</p>
-                </a>
-            </div>
-            <div>
-                <a href="local.php">
-                    <p>CONTATO</p>
-                </a>
-            </div>
-            <div>
-                <a href="local.php">
-                    <p>LOCAL</p>
-                </a>
-            </div>
-            <div>
-                <a href="cadastro_filme.php">
-                    <p>CADASTRAR FILMES </p>
-                </a>
-            </div>
+            <div><a href="termos.php"><p>TERMOS DE USO</p></a></div>
+            <div><a href="termos.php"><p>POLÍTICA DE PRIVACIDADE</p></a></div>
+            <div><a href="local.php"><p>CONTATO</p></a></div>
+            <div><a href="local.php"><p>LOCAL</p></a></div>
+            <div><a href="cadastro_filme.php"><p>CADASTRAR FILMES</p></a></div>
         </div>
-        <div class="container_footer">
-            <div class="tampa"><i class="fa fa-language" aria-hidden="true"></i>
-                <select name="Idioma" id="idioma">
-                    <option value="PT">PORTUGUÊS </option>
-                    <option value="IG">INGLÊS</option>
-                    <option value="ES">ESPANHOL</option>
-                    <option value="CO">COREANO</option>
-                </select>
-            </div>
     </footer>
 
     <script src="javascript/pagamento_ingressos.js"></script>

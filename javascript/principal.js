@@ -1,7 +1,7 @@
 const imagem  = [
     "imagens/Banner_Divertidamente2_Cine3 (6).jpg",
-    "imagens/banner-foto-2.png",
-    "imagens/banner-foto-3.png"
+    "imagens/imagemgrande.jpg",
+    "imagens/cinebaner.jpg"
 ];
 
 let index = 0;

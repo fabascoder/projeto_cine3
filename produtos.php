@@ -244,7 +244,7 @@
             </div>
     </footer>
 <script src="javascript/produto.js"></script>
-<script src=""></script>
+<script src="javascript/principal.js"></script>
 </body>
 
 </html>

@@ -29,6 +29,7 @@ header {
   box-sizing: border-box;
 }
 #navegacao {
+  margin: auto;
   /*justify-content: space-between;*/
 }
 .logo-pesquisa{
@@ -102,7 +103,6 @@ main{
     background-color: #4b4b4b;
     margin-left: 170px;   
     height: 100%; 
-    box-shadow: 1px 1px 18px 1px #401c26;
 }
 .barra-lateral p{
     text-align: center;
@@ -138,13 +138,13 @@ main{
 /*BARRA PRINCIPAL*/
 .barra-principal{
     width: 800px;
-    background-color: #838383;
+    background-color: #4b4b4b;
     margin-left: 130px;    
     height: 100%; 
     display: flex;
     flex-direction: column;
     gap: 20px;
-    box-shadow: 1px 1px 18px 1px #401c26;
+
 }
 .barra-principal h1{
   color: white;
