@@ -27,7 +27,9 @@
                     <img src="imagens/Logo_Cine3-removebg-preview.png" alt="Cine3 Logo" class="logo">
                 </a>
             </div>
-            <a href="login.php" class="back">VOLTAR</i></a>
+            <a href="login.php" class="back">
+                <img src="imagens/seta.png" alt="" width="35px">
+            </i></a>
         </nav>
     </header>
     <div class="container">
