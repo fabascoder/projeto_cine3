@@ -107,6 +107,9 @@ main {
     padding: 50px 20px;
 }
 
+.caixa-secundaria div{
+    gap: 250px;
+}
 .first-box{
     display: flex;
 
@@ -228,8 +231,8 @@ img {
         width: 700px;
     }
 
-    .forma-de-pagamento {
-        flex-direction: column;
+    .caixa-secundaria div{
+        gap: 200px;
     }
 }
 
@@ -240,6 +243,9 @@ img {
 
     .caixa-principal {
         width: 600px;
+    }
+    .caixa-secundaria div{
+        gap: 150px;
     }
 }
 
@@ -260,15 +266,21 @@ img {
     .labels {
         padding-bottom: 40px;
     }
+    .caixa-secundaria div{
+        gap: 100px;
+    }
 }
 
 @media screen and (max-width: 527px) {
     .caixa-principal {
-        width: 400px;
+        width: 450px;
     }
 
     .botao {
         width: 350px;
+    }
+    .caixa-secundaria div{
+        gap: 70px;
     }
 }
 @media screen and (max-width:517px){
@@ -328,13 +340,15 @@ img {
         padding: 2px;
     }
     .caixa-principal{
-        width: 300px;
+        width: 325px;
     }
     .qr-code img{
         width: 120px;
         margin: auto;
     }
-    
+    .caixa-secundaria div{
+        gap: 30px;
+    }
 }
 /*FOOTER*/
 @media screen and (max-width: 914px){
