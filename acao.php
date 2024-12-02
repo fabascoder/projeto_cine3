@@ -8,3 +8,4 @@
     $dados = json_decode($json, true);
     echo $dados['logradouro'].' - '. $dados['bairro'].' - '.$dados['localidade'].' - '.$dados['uf'];    
     ?>
+    <!---->
