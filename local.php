@@ -170,7 +170,6 @@
             <br>
             <div class="decidir-local">
                 <img src="imagens/local.png" alt="" width="30px">
-                <a href="">Shopping Metrô Itaquera</a>
             </div>
             <p>Ligue: XXXXX-XXXX</p>
         </div>
