@@ -35,6 +35,13 @@ body {
     width: 100%;
   }
 
+  .tamanho-roupa {
+    color: #fff;
+    cursor: pointer;
+    background-color: #000000;
+    padding: 2px;
+  }
+
  .back-button {
     font-size: 24px;
     color: rgb(0, 0, 0);

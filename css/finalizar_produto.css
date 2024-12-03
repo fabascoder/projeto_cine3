@@ -1,0 +1,8 @@
+.caixa-principal {
+    margin: auto;
+    border: solid lightslategray 2px;
+    width: 800px;
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 20px;
+}
