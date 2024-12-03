@@ -67,156 +67,98 @@ session_start();
         </div>
     </header>
     <main>
-        <div class="caixa-principal" style="margin: 30px">
-            <div style=" padding: 30px">
-                <div>
-
-                    <?php
-                                $pipoca_p = $_POST['pipoca-pequena']?? 0;
-                                $pipoca_m = $_POST['pipoca-media']?? 0;
-                                $pipoca_g = $_POST['pipoca-grande']?? 0;
-                                $qtd_p = intval($_POST['qtd_pipoca_p'])?? 0;
-                                $qtd_m = intval($_POST['qtd_pipoca_m'])?? 0;
-                                $qtd_g = intval($_POST['qtd_pipoca_g'])?? 0;
-                                $refri_p = $_POST['refri_pequeno']?? 0;
-                                $refri_m = $_POST['refri_medio']?? 0;
-                                $refri_g = $_POST['refri_grande']?? 0;
-                                $qtd_refri_p = intval($_POST['qtd_refri_p'])?? 0;
-                                $qtd_refri_m = intval($_POST['qtd_refri_m'])?? 0;
-                                $qtd_refri_g = intval($_POST['qtd_refri_g'])?? 0;
-                                $total_produtos= 0;
-                
-                                if($pipoca_p) {
-                                    $total_produtos += $qtd_p * 23.99;
-                                }
-                                if($pipoca_m){
-                                    $total_produtos += $qtd_m * 33.99;
-                                }
-                                if($pipoca_g){
-                                    $total_produtos += $qtd_g * 37.99;
-                                }
-                                if($refri_p) {
-                                    $total_produtos += $qtd_refri_p * 23.99;
-                                }
-                                if($refri_m) {
-                                    $total_produtos += $qtd_refri_m * 33.99;
-                                }
-                                if($refri_g) {
-                                    $total_produtos += $qtd_refri_g * 37.99;
-                                }
-
-                    ?>
-
-                </div>
-                <div style="display: flex; justify-content: space-between; align-items: center; gap: 250px">
-
-                    <div>
-                        <p class="title-php">Filme</p>
-                        <div class="result-php" style="width: 122px;">
-                            <?php
-                                        echo $resultado['nome'];
-                             ?>
-                        </div>
-                    </div>
-                    <div>
-                        <p class="title-php">Horário</p>
-                        <div class="result-php">
-                            <?php
-                                        echo $_SESSION['hora'];
-                            ?>
-                        </div>
-                    </div>
-                    <div>
-                        <p class="title-php">Dia</p>
-                        <div class="result-php">
-                            <?php
-                                        echo $_SESSION['dia'];
-                            ?>
-                        </div>
-                    </div>
-                </div>
-
-                
-
-                
-
-                    <div style="display: flex; justify-content: space-between; padding-bottom: 15px; margin-top: 10px">
-                        <p class="title-php" style="font-weight: 500">Assentos</p>
+        <div  class="caixa-principal">
+         
+              
+                   
+                        <?php
+                        
+                        $pipoca_p = $_POST['pipoca-pequena']?? 0;
+                        $pipoca_m = $_POST['pipoca-media']?? 0;
+                        $pipoca_g = $_POST['pipoca-grande']?? 0;
+                        $qtd_p = intval($_POST['qtd_pipoca_p'])?? 0;
+                        $qtd_m = intval($_POST['qtd_pipoca_m'])?? 0;
+                        $qtd_g = intval($_POST['qtd_pipoca_g'])?? 0;
+                        $refri_p = $_POST['refri_pequeno']?? 0;
+                        $refri_m = $_POST['refri_medio']?? 0;
+                        $refri_g = $_POST['refri_grande']?? 0;
+                        $qtd_refri_p = intval($_POST['qtd_refri_p'])?? 0;
+                        $qtd_refri_m = intval($_POST['qtd_refri_m'])?? 0;
+                        $qtd_refri_g = intval($_POST['qtd_refri_g'])?? 0;
+                        $total_produtos= 0;
+                        
+                        if($pipoca_p) {
+                            $total_produtos += $qtd_p * 23.99;
+                        }
+                        if($pipoca_m){
+                            $total_produtos += $qtd_m * 33.99;
+                        }
+                        if($pipoca_g){
+                            $total_produtos += $qtd_g * 37.99;
+                        }
+                        if($refri_p) {
+                            $total_produtos += $qtd_refri_p * 23.99;
+                        }
+                        if($refri_m) {
+                            $total_produtos += $qtd_refri_m * 33.99;
+                        }
+                        if($refri_g) {
+                            $total_produtos += $qtd_refri_g * 37.99;
+                        }
+                        
+                        
+                        ?>
                         <div>
-                            <div style="">
+                            <p class="title-php">Filme</p>
+                            <div class="result-php">
                                 <?php
-                                     $selectedSeats = $_SESSION['assentos'] ?? [];
-                                
-                                     // Verificar se há assentos selecionados
-                                     if (!empty($selectedSeats)) {
-                                         foreach ($selectedSeats as $seat) {
-                                            echo "<span style='font-family: Arial, Helvetica, sans-serif; font-size: 1.1rem; font-weight: 600; color: #fc5b5b;'>".$seat."; "."</span>";
-                                         }
-                                         echo "</ul>";
-                                     } else {
-                                         echo "<p>Nenhum assento foi selecionado.</p>";
-                                     }
+                                echo $resultado['nome'];
                                 ?>
                             </div>
                         </div>
-                    </div>
-
-                <hr>
-                    
-
-                    
-                    <div style="display: flex; justify-content: space-between; padding-bottom: 15px">
-                        <p class="title-php" style="font-weight: 500">Ingresso inteira <br><span style="font-weight: 500">R$38,00</span></p>
                         <div>
-                            <div style="">
+                            <p class="title-php">Horário</p>
+                            <div  class="result-php">
                                 <?php
-                                    echo $_SESSION['quantidadeInteira']."x";
-                                    ?>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div style="display: flex; justify-content: space-between; padding-bottom: 15px">
-                        <p class="title-php" style="font-weight: 500">Ingresso meia <br ><span style="font-weight: 500">R$19,00</span></p>
-                        <div>
-                            <div>
-                                <?php
-                                    echo $_SESSION['quantidadeMeia']."x";
-                                    ?>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div style="display: flex; justify-content: space-between; ">
-                        <p class="title-php" style="font-weight: 500">Valor Produtos</p>
-                        <div class="result-php">
-                            <div>
-                                <?php
-                                            echo "R$".number_format($total_produtos, 2, ",", ".");
-                                            ?>
-                            </div>
-                        </div>
-                    </div>
-
-                     <hr>
-
-                    <div style="display: flex; justify-content: space-between;margin-top: 10px ">
-                        <p class="title-php">TOTAL</p>
-                        <div class="result-php">
-                            <div>
-                                <?php
-                                $tmeia = 19.00 * $_SESSION['quantidadeMeia'];
-                                $tinteira = 38.00 * $_SESSION['quantidadeInteira'];
-                                $total = $tmeia + $tinteira;
-                                $totalComProduto = $total + $total_produtos;
-                                echo "R$".number_format($totalComProduto, 2, ",", ".");
+                                echo $_SESSION['hora'];
                                 ?>
                             </div>
                         </div>
-                    </div>
-
-                </div>
-            </div>
+                        <div>
+                            <p class="title-php">Dia</p>
+                            <div  class="result-php">
+                                <?php
+                                echo $_SESSION['dia'];
+                                ?>
+                            </div>
+                        </div>
+                        
+                                        <div>
+                                        <p class="title-php">Quant. Inteira</p>
+                                        <div>
+                        <?php
+                        echo $_SESSION['quantidadeInteira'];
+                        ?>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <p class="title-php">Quant. Meia</p>
+                                        <div>
+                        <?php
+                         echo $_SESSION['quantidadeMeia'];
+                        ?>
+                                        </div>
+                                    </div>
+                        
+                                    <div>
+                            <p class="title-php">Valor Produtos</p>
+                            <div  class="result-php">
+                                <?php
+                                echo "R$".number_format($total_produtos, 2, ",", ".");
+                                ?>
+                            </div>
+                        </div>
+                    
 
         </div>
 
@@ -227,7 +169,7 @@ session_start();
             <a class="btn" href="pagamento_confirmacao.php">CONTINUAR ></a>
         </div> -->
     </main>
-    <footer>
+    <footer style="margin-top: 205px";>
         <img src="imagens/Logo_Cine3-removebg-preview.png" alt="">
         <div class="term">
             <div>

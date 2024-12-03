@@ -43,10 +43,6 @@ p{
     background-color: var(--vermelho);
     box-sizing: border-box;
   }
-  #navegacao {
-    margin: auto;
-    /*justify-content: space-between;*/
-  }
   .logo-pesquisa{
     display: flex;
     gap: 20px;
@@ -137,7 +133,7 @@ main #img_princiapal{
     justify-content: space-between;
     border-bottom-right-radius: 15px;
     border-bottom-left-radius: 15px;
-    margin-bottom: 30px;
+    gap: 22px;
 }
 .decidir-local{
     display: flex;
@@ -159,7 +155,7 @@ main a{
         width: 600px;
     }
     .localizacao{
-        gap:20px
+        gap:10px
     }
     #seta{
         padding: 20px;

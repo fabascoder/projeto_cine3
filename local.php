@@ -127,7 +127,7 @@
         <img src="imagens/Localizaçao_Cine3.png" alt="" id="img_princiapal">
         <div class="localizacao">
             <div class="decidir-local">
-                <img src="imagens/local.png" alt="" width="30px">
+                <img src="imagens/local2.png" alt="" width="30px">
                 <select name="tamanho-camisa" id="tamanho-camisa">
                     <option value="P">São Paulo</option>
                     <option value="M">São Paulo</option>
@@ -169,10 +169,10 @@
             </script>
             <br>
             <div class="decidir-local">
-                <img src="imagens/local.png" alt="" width="30px">
-                <a href="">Shopping Metrô Itaquera</a>
-            </div>
+                <img src="imagens/telefone.png" alt="" width="30px">
+            
             <p>Ligue: XXXXX-XXXX</p>
+            </div>
         </div>
     </main>
     <footer>

@@ -79,7 +79,7 @@ main .button_horario {
 
 
 #div_img {
-  margin: 20px 20px 0px 20px;
+  margin: 0px 20px 0px 20px;
   height: 610px;
 }
 
@@ -133,6 +133,7 @@ picture{
 iframe{
   width:800px ;
   height: 455px;
+  border-radius: 15px;
 }
 /*SINOPSE*/
 

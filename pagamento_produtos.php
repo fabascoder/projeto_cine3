@@ -56,14 +56,14 @@
     
     session_start();
     $_SESSION['local'] = $_POST['local_sessao'];
-    $_SESSION['assentos'] = [];
+    $_SESSION['assentos'] = $_POST['assentos'] ?? [];
     // foreach($_POST as $campos) {
     //      echo '<h2>'.$campos.'</h2>';
     // }
     for($i = 1; $i <= 120; $i++) {
         if(!empty($_POST['assentos'.$i])){
             $_SESSION['assentos'][$i] = $_POST['assentos'.$i];
-          // echo  '<h2>'.$_POST['assentos'.$i].'</h2>';
+           echo  '<h2>'.$_POST['assentos'.$i].'</h2>';
         }
     }
 
