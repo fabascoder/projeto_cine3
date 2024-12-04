@@ -98,8 +98,6 @@ main {
     margin-top: 90px;
 }
 
- 
-
 .caixa-secundaria div{
     gap: 250px;
 }
@@ -342,7 +340,6 @@ img {
     }
     .qr-code img{
         width: 120px;
-        margin: auto;
     }
     .caixa-secundaria div{
         gap: 30px;
