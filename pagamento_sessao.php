@@ -47,10 +47,10 @@
             <a href="index.php"><i class="fa fa-arrow-left" aria-hidden="true"></i></a>
         </nav>
         <div id="caixa">
-            <div class="etapas-compra" style="border:solid rgb(168, 168, 168) ;" >
+            <div class="etapas-compra">
                 <img src="imagens/ingressos.png" alt="">
 
-                <p style="color: rgb(168, 168, 168) ;">Ingresso</p>
+                <p >Ingresso</p>
             </div>
 
             <div class="etapas-compra2">
