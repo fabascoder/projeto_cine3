@@ -97,15 +97,14 @@
                         <h2 class="ingressos">Ingressos</h2>
                         <div>
                             <p class="p1">Padrão Inteira</p>
-                            <p class="v1">Válido de quinta-feira, sexta-feira, sábado e domingo.</p>
-                            <p class="t1">R$18,00</p>
+                            <p class="v1">Todos os dias</p>
+                            <p class="t1">R$38,00</p>
                         </div>
                         <hr>
                         <div>
-                            <p class="p1">Meia Promocional</p>
-                            <p class="v1">Válido de segunda-feira, terça-feira e quarta-feira OU com Comprovante
-                                Escolar.</p>
-                            <p class="t1">R$9,00</p>
+                            <p class="p1">Padrão Meia</p>
+                            <p class="v1">Todos os dias</p>
+                            <p class="t1">R$19,00</p>
                         </div>
                     </div>
                 </dialog>

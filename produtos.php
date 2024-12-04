@@ -119,90 +119,92 @@
     </div>
 
     <div class="container">
-        <section class="product-section">
-            <h2>Confira os nossos produtos</h2>
-
-            <!-- Produto Camiseta -->
-            <div class="product-card">
-                <div class="product-content">
-                    <img src="imagens/Camiseta_Cine3.png" alt="Camiseta Cine3" class="product-image">
-                    <div class="product-info">
-                        <h3>Camiseta CINE3!</h3>
-                        <div class="rating">
-                            ★★★★★
+        <form action="finalizar_produto.php" method="POST">
+            <section class="product-section">
+                <h2>Confira os nossos produtos</h2>
+                <!-- Produto Camiseta -->
+                <div class="product-card">
+                    <div class="product-content">
+                        <img src="imagens/Camiseta_Cine3.png" alt="Camiseta Cine3" class="product-image">
+                        <div class="product-info">
+                            <h3>Camiseta CINE3!</h3>
+                            <div class="rating">
+                                ★★★★★
+                            </div>
+                            <p class="unisex">UNISSEX</p>
+                            <div class="sizes">
+                                <button class="size-button" data-size="P">P</button>
+                                <button class="size-button" data-size="M">M</button>
+                                <button class="size-button" data-size="G">G</button>
+                            </div>
+                            <input type="hidden" id="valor_produto_1" name="valor_produto_1" value="79,00">
+                            <p class="price"><span class="total">R$79,90</span></p>
+                            <p class="free-shipping">Compras acima de R$129,99, você receberá frete grátis</p>
+                            <div class="buy-cart-container">
+                                <a class="buy-button button-active btn1">Comprar</a>
+                                <div class="cart-notification">
+                                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                    <span class="cart-count"></span>
+                                </div>
+                            </div>
                         </div>
-                        <p class="unisex">UNISSEX</p>
-                        <div class="sizes">
-                            <button class="size-button" data-size="P">P</button>
-                            <button class="size-button" data-size="M">M</button>
-                            <button class="size-button" data-size="G">G</button>
+                    </div>
+                </div>
+                <!-- Produto Copos -->
+                <div class="product-card">
+                    <div class="product-content">
+                        <img src="imagens/Copos_cartao_Cine3.png" alt="Copos e cartões Cine3" class="product-image">
+                        <div class="product-info">
+                            <h3>Balde de pipoca CINE3 + <br>2 cartões CINE3</h3>
+                            <div class="rating">
+                                ★★★<span class="cinza">★★</span>
+                            </div>
+                            <div class="sizes">
+                                <a class="tamanho-roupa" data-size="P">P</a>                     
+                                <a class="tamanho-roupa" data-size="M">M</a>                     
+                                <a class="tamanho-roupa" data-size="G">G</a>                     
+            
+                            </div>
+                            <input type="hidden" id="valor_produto_2" name="valor_produto_2" value="29,00">
+                            <p class="price"><span class="total">R$29,00</span></p>
+                            <p class="free-shipping">Compras acima de R$129,99, você receberá frete grátis</p>
+                            <div class="buy-cart-container">
+                                <a class="buy-button button-active btn2">Comprar</a>
+                                <div class="cart-notification">
+                                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                    <span class="cart-count"></span>
+                                </div>
+                            </div>
                         </div>
-
-                        <p class="price">R$79,90</p>
-                        <p class="free-shipping">Compras acima de R$129,99, você receberá frete grátis</p>
-                        <div class="buy-cart-container">
-                            <button class="buy-button button-active btn1">Comprar</button>
-                            <div class="cart-notification">
+                    </div>
+                </div>
+                <!-- Produto Acessórios -->
+                <div class="product-card">
+                    <div class="product-content port">
+                        <img src="imagens/Acessorios_Cine3.png" alt="Acessórios CINE3" class="product-image img">
+                        <div class="product-info">
+                            <h3>Acessórios CINE3 + camiseta + sacola + <br> óculos + chaveiro + 2 cartões</h3>
+                            <div class="rating">
+                                ★★★★<span class="cinza">★</span>
+                            </div>
+                            <input type="hidden" id="valor_produto_3" name="valor_produto_3" value="129,00">
+                            <p class="price"><span class="total">R$129,00</span></p>
+                            <p class="free-shipping">Compras acima de R$129,99, você receberá frete grátis</p>
+                            <div class="buy-cart-container">
+                                <a class="buy-button button-active btn3">Comprar</a>
+                                <div class="cart-notification">
                                 <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                                <span class="cart-count"></span>
+                                    <span class="cart-count"></span>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
-
-            <!-- Produto Copos -->
-            <div class="product-card">
-                <div class="product-content">
-                    <img src="imagens/Copos_cartao_Cine3.png" alt="Copos e cartões Cine3" class="product-image">
-                    <div class="product-info">
-                        <h3>Balde de pipoca CINE3 + <br>2 cartões CINE3</h3>
-                        <div class="rating">
-                            ★★★<span class="cinza">★★</span>
-                        </div>
-                        <div class="sizes">
-                            <button class="size-button" data-size="P">P</button>
-                            <button class="size-button" data-size="M">M</button>
-                            <button class="size-button" data-size="G">G</button>
-                        </div>
-
-
-
-                        <p class="price">R$29,90</p>
-                        <p class="free-shipping">Compras acima de R$129,99, você receberá frete grátis</p>
-                        <div class="buy-cart-container">
-                            <button class="buy-button button-active btn2">Comprar</button>
-                            <div class="cart-notification">
-                                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                                <span class="cart-count"></span>
-                            </div>
-                        </div>
+                    <div style="display: flex; justify-content: center; align-items: center;">
+                        <button class="btn" type="submit">FINALIZAR</button>
                     </div>
                 </div>
-            </div>
-
-            <!-- Produto Acessórios -->
-            <div class="product-card">
-                <div class="product-content port">
-                    <img src="imagens/Acessorios_Cine3.png" alt="Acessórios CINE3" class="product-image img">
-                    <div class="product-info">
-                        <h3>Acessórios CINE3 + camiseta + sacola + <br> óculos + chaveiro + 2 cartões</h3>
-                        <div class="rating">
-                            ★★★★<span class="cinza">★</span>
-                        </div>
-                        <p class="price">R$129,90</p>
-                        <p class="free-shipping">Compras acima de R$129,99, você receberá frete grátis</p>
-                        <div class="buy-cart-container">
-                            <button class="buy-button button-active btn3">Comprar</button>
-                            <div class="cart-notification">
-                            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                                <span class="cart-count"></span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+            </section>
+        </form>
     </div>
     <footer>
         <img src="imagens/Logo_Cine3-removebg-preview.png" alt="">

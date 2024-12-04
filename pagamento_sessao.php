@@ -76,8 +76,12 @@
         </div>
     </header>
 
-
+ <div class="titulo">
+            <a href="pagamento_ingressos.php"><img src="imagens/seta.png" alt="" width="30px"></a>
+            <p>Sessão</p>
+        </div>
     <main> 
+   
     <form action="pagamento_produtos.php" method="post" id="sessao">
        
         <div class="caixa-principal">
@@ -373,7 +377,7 @@
 
                 </div>
             </div>
-            <p>Você pode selecionar até <span id="max-assentos"><?php echo $totalAssentos; ?></span> assentos.</p>
+            <p style="font-family: Arial, Helvetica, sans-serif; padding-top: 18px; font-size: 15px; margin-left: 20px; color: #333;">Você pode selecionar até <span id="max-assentos"><?php echo $totalAssentos; ?></span> assentos.</p>
             <p class="assentos-escolhidos">ASSENTO(S) ESCOLHIDOS: <span class="escolhidos">0</span></p>
 
 
@@ -395,9 +399,9 @@
                     target="_blank" class="shop">Shopping Metrô Itaquera</a>
             </div>
 
-                <div class="botao">
-                    <button type="submit" href="pagamento_produtos.php" class="btn">AVANÇAR ></button>
-                </div>
+            <div class="botao">
+                <button type="submit" href="pagamento_produtos.php" class="btn">AVANÇAR ></button>
+            </div>
 
         </div>
 </form>
@@ -444,30 +448,88 @@
     </footer>
     <!-- <script src="javascript/pagamento_sessao.js"></script> -->
     <script>
-    // Recupera o total de ingressos permitido
-    const totalIngressos = parseInt(localStorage.getItem('totalIngressos')) || 0;
+    // Total de assentos permitido (passado do PHP)
+    const totalAssentos = <?php echo $totalAssentos; ?>;
 
-    // Função para atualizar os assentos escolhidos
-    function atualizarAssentosEscolhidos() {
-        const assentosSelecionados = document.querySelectorAll('.assentos:checked');
-        const idsSelecionados = Array.from(assentosSelecionados).map(assento => assento.id);
+    document.addEventListener("DOMContentLoaded", () => {
+        const assentos = document.querySelectorAll(".assentos");
+        let selecionados = 0;
 
-        // Atualiza o texto no span com os IDs escolhidos
-        const spanEscolhidos = document.querySelector('.escolhidos');
-        spanEscolhidos.textContent = idsSelecionados.length > 0 ? idsSelecionados.join(', ') : 'Nenhum';
+        assentos.forEach((assento) => {
+            assento.addEventListener("change", () => {
+                if (assento.checked) {
+                    if (selecionados < totalAssentos) {
+                        selecionados++;
+                        assento.parentNode.style.backgroundColor = ""; // Muda a cor do assento selecionado
+                    } else {
+                        assento.checked = false;
+                    }
+                } else {
+                    selecionados--;
+                    assento.parentNode.style.backgroundColor = ""; // Remove a cor do assento desmarcado
+                }
 
-        // Impede que mais assentos sejam selecionados do que o permitido
-        if (idsSelecionados.length > totalIngressos) {
-            alert(`Você só pode selecionar até ${totalIngressos} assentos.`);
-            assentosSelecionados[assentosSelecionados.length - 1].checked = false;
-        }
+                // Desabilita os assentos extras
+                if (selecionados >= totalAssentos) {
+                    assentos.forEach((a) => {
+                        if (!a.checked) {
+                            a.disabled = true; // Desabilita assentos não selecionados
+                            a.parentNode.style.opacity = "0.8"; // Visualmente indica desabilitação
+                        }
+                    });
+                } else {
+                    assentos.forEach((a) => {
+                        a.disabled = false; // Reabilita todos os assentos
+                        a.parentNode.style.opacity = "1"; // Remove o efeito visual
+                    });
+                }
+            });
+        });
+    });
+
+
+       // Obtém todos os checkboxes dos assentos
+       const assentos = document.querySelectorAll('.assentos');
+    const assentosEscolhidosEl = document.querySelector('.assentos-escolhidos .escolhidos');
+    const maxAssentos = parseInt(document.getElementById('max-assentos').textContent, 10);
+    let assentosSelecionados = [];
+
+    // Função para atualizar os assentos selecionados
+    function atualizarAssentosSelecionados() {
+        assentosEscolhidosEl.textContent = assentosSelecionados.length; // Mostra a quantidade selecionada
+        const assentosTexto = document.querySelector('.assentos-escolhidos');
+        assentosTexto.innerHTML = `ASSENTO(S) ESCOLHIDOS: <span class="escolhidos">${assentosSelecionados.length}</span> ${assentosSelecionados.join(', ')}`;
+
     }
 
-    // Adiciona eventos de mudança em todos os checkboxes com a classe 'assentos'
-    document.querySelectorAll('.assentos').forEach(checkbox => {
-        checkbox.addEventListener('change', atualizarAssentosEscolhidos);
+    // Adiciona o evento de clique para cada checkbox
+    assentos.forEach((checkbox) => {
+        checkbox.addEventListener('change', function () {
+            if (this.checked) {
+                if (assentosSelecionados.length < maxAssentos) {
+                    assentosSelecionados.push(this.id); // Adiciona o ID do assento
+                } else {
+                    this.checked = false; // Impede seleção além do limite
+                    alert('Você atingiu o limite máximo de assentos!'); 
+                }
+                this.value = this.id;
+            } else {
+                // Remove o assento desmarcado
+                assentosSelecionados = assentosSelecionados.filter(id => id !== this.id);
+            }
+            atualizarAssentosSelecionados();
+        });
     });
-    </script>
-    <script src="javascript/assentos.js"></script>
+    
+
+// Bloqueia envio do formulário se o número de assentos não for suficiente
+document.getElementById('sessao').addEventListener('submit', function (event) {
+    if (assentosSelecionados.length < maxAssentos) {
+        event.preventDefault(); // Impede o envio do formulário
+        alert(`Por favor, selecione todos os ${maxAssentos} assentos antes de continuar.`);
+    }
+});
+</script>
+
 </body>
 </html>
