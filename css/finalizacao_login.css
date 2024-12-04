@@ -3,7 +3,6 @@ body {
 }
 
 .container {
-  
     align-items: center; 
     justify-content: center;
     position: absolute;
@@ -13,6 +12,7 @@ body {
     background-color: #fff;
     padding: 50px;
     border-radius: 10px;
+    width: 800px;
 }
 
 .box-imagem {
@@ -23,7 +23,6 @@ body {
 
 .caixa-1 {
     height: 300px;
-    width: 800px;
     margin-bottom: 100px;
   
     justify-content: center;
@@ -39,7 +38,7 @@ body {
 .tittle {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 2.3rem;
-    margin-left: 30px;
+    text-align: center;
     color: #a2a2a2
 }
 
@@ -62,4 +61,47 @@ body {
 .link-button:hover{
     transition: 0.5;
     color: #d95f80
+}
+@media screen and (max-width: 899px){
+    .container{
+        width: 600px;
+    }
+    h1.tittle{
+        text-align: center;
+        font-size: 1.7rem;
+    }
+
+}
+@media screen and (max-width: 720px){
+    .container{
+        width: 500px;
+    }
+    h1.tittle{
+        text-align: center;
+        font-size: 1.7rem;
+    }
+}
+@media screen and (max-width: 616px){
+    .container{
+        width: 400px;
+        height: 300px;
+    }
+    h1.tittle{
+        text-align: center;
+        font-size: 1.5rem;
+    }
+    img.verification-photo{
+        width: 150px;
+        height: 150px;
+    }
+
+}
+@media screen and (max-width: 520px){
+    .container{
+        width: 250px;
+    }
+    h1.tittle{
+        text-align: center;
+        font-size: 1.5rem;
+    }
 }

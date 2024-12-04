@@ -28,9 +28,6 @@ header {
   background-color: var(--vermelho);
   box-sizing: border-box;
 }
-#navegacao {
-  /*justify-content: space-between;*/
-}
 .logo-pesquisa{
   display: flex;
   gap: 20px;
@@ -60,13 +57,11 @@ a {
   text-decoration: none;
   color: #fff;
 }
-
 a:hover {
   opacity: 0.5s;
   color: #d95f80;
   transition: 200ms;
 }
-
 .login {
   color: #fff;
   font-family: Arial, Helvetica, sans-serif;
@@ -102,12 +97,11 @@ main{
     background-color: #4b4b4b;
     margin-left: 170px;   
     height: 100%; 
-    box-shadow: 1px 1px 18px 1px #401c26;
 }
 .barra-lateral p{
     text-align: center;
     color: #7c7c7c;
-    padding-bottom: 30px;
+    padding-bottom: 130px;
     padding-top: 30px;
 }
 .barra-lateral ul{
@@ -144,7 +138,6 @@ main{
     display: flex;
     flex-direction: column;
     gap: 20px;
-    box-shadow: 1px 1px 18px 1px #401c26;
 }
 .barra-principal h1{
   color: white;
@@ -174,7 +167,7 @@ main{
     display: flex;
     flex-direction: column;
 }
-label{
+main label{
     font-family: sans-serif;
     margin-left: 50.4432px;
 }
@@ -372,6 +365,9 @@ button{
   .caixas{
     width: 310px;
   }
+  .barra-principal label{
+    margin-left: 40px;
+  }
 }
 @media screen and (max-width: 640px){
   .barra-principal{
@@ -424,11 +420,18 @@ button{
   .caixas{
     width: 170px;
   }
-  
+  .barra-principal label{
+    margin-left: 26px;
+  }
 }
 @media screen and (max-width: 440px){
   .barra-lateral ul li{
     padding: 7px;
+  }
+}
+@media screen and (max-width: 429px){
+  .barra-principal{
+    width: 200px;
   }
 }
 @media screen and (max-width: 420px){
@@ -437,19 +440,25 @@ button{
   }
   .barra-lateral{
     margin-left: 0px;
+    width: 170px;
   }
+  
 }
-@media screen and (max-width: 399px){
+@media screen and (max-width: 400px){
   .barra-lateral ul li a{
     font-size: 0.8rem;
   }
   .barra-principal{
-    width: 198px;
+    width: 184px;
+    margin-left: 8px;
   }
   .caixas{
     width: 166px;
   }
   .barra-lateral{
-    margin-left: 5px;
+    margin-left: 0px;
+  }
+  .caixas{
+    margin: 0px 10px;
   }
 }
