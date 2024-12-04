@@ -106,7 +106,7 @@ main{
 .barra-lateral p{
     text-align: center;
     color: #7c7c7c;
-    padding-bottom: 30px;
+    padding-bottom: 130px;
     padding-top: 30px;
 }
 .barra-lateral ul{
@@ -272,7 +272,7 @@ main{
     }
   }
   /*MAIN*/
-@media screen and (max-width: 1220px){
+@media screen and (max-width: 1260px){
   .barra-lateral{
     margin-left: 50px;
     
@@ -280,6 +280,9 @@ main{
   .barra-principal{
     margin: auto;
     width: 750px;
+  }
+  .barra-principal .caixa-ingressos{
+    width: 650px;
   }
 }
 @media screen and (max-width: 1160px){
@@ -393,6 +396,7 @@ main{
   }
   .barra-principal .caixa-ingressos{
     width: 340px;
+    height: 190px;
   }
 }
 @media screen and (max-width: 640px){

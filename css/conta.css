@@ -28,9 +28,6 @@ header {
   background-color: var(--vermelho);
   box-sizing: border-box;
 }
-#navegacao {
-  /*justify-content: space-between;*/
-}
 .logo-pesquisa{
   display: flex;
   gap: 20px;
@@ -64,9 +61,6 @@ a:hover {
   opacity: 0.5s;
   color: #d95f80;
   transition: 200ms;
-}
-.span1{
-  text-align: center;
 }
 .login {
   color: #fff;
@@ -103,12 +97,11 @@ main{
     background-color: #4b4b4b;
     margin-left: 170px;   
     height: 100%; 
-    box-shadow: 1px 1px 18px 1px #401c26;
 }
 .barra-lateral p{
     text-align: center;
     color: #7c7c7c;
-    padding-bottom: 30px;
+    padding-bottom: 130px;
     padding-top: 30px;
 }
 .barra-lateral ul{
@@ -145,7 +138,6 @@ main{
     display: flex;
     flex-direction: column;
     gap: 20px;
-    box-shadow: 1px 1px 18px 1px #401c26;
 }
 .barra-principal h1{
   color: white;

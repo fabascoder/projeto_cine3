@@ -116,7 +116,7 @@ session_start();
     <main>
         <div class="barra-lateral">
             <p>Olá <?php echo $_SESSION['nome'];?>, Esse <br>é o seu Perfil</p>
-            <p><?php echo $_SESSION['email']; ?></p>
+            
             <ul>
                 <li>
                     <a href="conta.php">Minha Conta</a>
