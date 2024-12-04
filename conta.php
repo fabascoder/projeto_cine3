@@ -119,12 +119,12 @@ session_start();
         <div class="barra-principal">
             <h1>Meus Dados</h1>
             <div class="dados">
-                <div class="caixa-nome"><label>*Nome</label><input placeholder="Nome Do Usuario" name="account.name"
+                <div class="caixa-nome"><label>*Nome</label><input placeholder="<?php echo $_SESSION['nome'];?>" name="account.name"
                         class="caixas"></div>
                 <div class="caixa-cpf"><label>*CPF</label><input type="text" class="caixas"
                         placeholder="***.***.***-**"></div>
                 <div class="caixa-email"><label>*Email</label><input type="text" class="caixas"
-                        placeholder="email@exemplo.com"></div>
+                        placeholder="<?php echo $_SESSION['email'];?>"></div>
                 <div class="caixa-senha"><label>*Senha</label><input type="text" class="caixas" placeholder="******">
                     <a href="minha_senha.php">Alterar senha</a>
                 </div>
