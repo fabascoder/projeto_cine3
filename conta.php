@@ -97,7 +97,7 @@ session_start();
     </header>
     <main>
         <div class="barra-lateral">
-            <p style="color:#fff;">Olá <span style="color: #d95f80; text-decoration: underline;"><?php echo $_SESSION['nome'];?>,</span> Esse <br>é o seu Perfil</p>
+            <p style="color:#7c7c7c;">Olá <span style="color: #d95f80; text-decoration: underline;"><?php echo $_SESSION['nome'];?>,</span> Esse <br>é o seu Perfil</p>
             
             <ul>
                 <li class="li-1">
