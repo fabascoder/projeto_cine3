@@ -98,10 +98,10 @@ session_start();
     <main>
         <div class="barra-lateral">
             <p style="color:#fff;">Olá <span style="color: #fff;"><?php echo $_SESSION['nome'];?></span>, Esse <br>é o seu Perfil</p>
-            <p>
-                <span style="color: #fff;">
+            <p> 
+                <span style="color: #fff;" class="span1">
                     <?php 
-                                echo $_SESSION['email'];
+                                echo str_replace('@', '@<br>', $_SESSION['email']);
                                 ?>
                 </span></p>
             <ul>
