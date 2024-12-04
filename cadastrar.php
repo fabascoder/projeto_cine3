@@ -37,7 +37,7 @@ $cep = $_POST['cep'];
 
     $insert = $conexao->prepare('INSERT INTO dados_cadastro (nome, email, senha, cpf, cep) VALUES (:nome, :email, :senha, :cpf, :cep)');
     if ($insert->execute($new_usuario)) {
-        echo "CADASTRADO!";
+        header('location: finalizacao_login.php');
         require 'vendor/autoload.php';
         $mail = new PHPMailer(true);
         try {

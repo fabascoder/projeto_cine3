@@ -67,7 +67,7 @@ session_start();
         </div>
     </header>
     <main>
-        <div class="caixa-principal" style="margin: 30px">
+        <div class="caixa-principal" style="margin: 30px; border: 1px solid black">
             <div style=" padding: 30px" class="caixa-secundaria">
                 <div>
 
@@ -110,46 +110,46 @@ session_start();
                 <div style="display: flex; justify-content: space-between; align-items: center;">
 
                     <div>
-                        <p class="title-php">Filme</p>
+                        <p class="title-php" style="font-weight: 600; color: #333;">Filme</p>
                         <div class="result-php">
                             <?php
-                                        echo $resultado['nome'];
+                                        echo "<span style='color: #666;'>".$resultado['nome']."</span>";
                                         ?>
                         </div>
                     </div>
 
 
                     <div>
-                        <p class="title-php">Horário</p>
+                        <p class="title-php" style="font-weight: 600; color: #333;">Horário</p>
                         <div class="result-php">
                             <?php
-                                        echo $_SESSION['hora'];
+                                         echo "<span style='color: #666;'>".$resultado['horario']."</span>";
                                         ?>
                         </div>
                     </div>
                     <div>
-                        <p class="title-php">Dia</p>
+                        <p class="title-php" style="font-weight: 600; color: #333;">Dia</p>
                         <div class="result-php">
                             <?php
-                                        echo $_SESSION['dia'];
+                                        echo "<span style='color: #666;'>".$_SESSION['dia']."</span>";
                                         ?>
                         </div>
                     </div>
                 </div>
 
                 <div style="display: flex; justify-content: space-between; padding-bottom: 15px; margin-top: 30px">
-                        <p class="title-php">Assentos</p>
+                        <p class="title-php" style="color: #333">Assentos</p>
                         <div class="result-php">
                             <?php
                           foreach($_SESSION["assentos"] as $assento) {
-                            echo " ".$assento;
+                            echo "<span style='color: #d95f80'>".$assento."</span>"."; ";
                           }   
                             ?>
                         </div>
                     </div>
 
                 <div style="display: flex; justify-content: space-between; padding-bottom: 15px; margin-top: 0px">
-                        <p class="title-php">Local</p>
+                        <p class="title-php" style="color: #333">Local</p>
                         <div class="result-php">
                             <?php
                             
@@ -163,29 +163,29 @@ session_start();
                     <hr>
 
                     <div style="display: flex; justify-content: space-between; padding-bottom: 15px">
-                        <p class="title-php">Ingresso inteira <br>R$38,00</p>
+                        <p class="title-php" style="color: #333">Ingresso inteira <br>R$38,00</p>
                         <div>
                             <div style="">
                                 <?php
-                                    echo $_SESSION['quantidadeInteira']."x";
-                                    ?>
+                                   echo "<span style='font-family: Arial, Helvetica, sans-serif; color: #333'>".$_SESSION['quantidadeInteira']."x"."</span>";
+                                  ?>
                             </div>
                         </div>
                     </div>
 
                     <div style="display: flex; justify-content: space-between; padding-bottom: 15px">
-                        <p class="title-php">Ingresso meia <br>R$19,00</p>
+                        <p class="title-php" style="color: #333">Ingresso meia <br>R$19,00</p>
                         <div>
                             <div>
                                 <?php
-                                    echo $_SESSION['quantidadeMeia']."x";
+                                    echo "<span style='font-family: Arial, Helvetica, sans-serif; color: #333'>".$_SESSION['quantidadeMeia']."x"."</span>";
                                     ?>
                             </div>
                         </div>
                     </div>
 
                     <div style="display: flex; justify-content: space-between; ">
-                        <p class="title-php">Valor Produtos</p>
+                        <p class="title-php" style="color: #333">Valor Produtos</p>
                         <div class="result-php">
                             <div>
                                 <?php
@@ -196,7 +196,7 @@ session_start();
                     </div>
                      <hr>
                     <div style="display: flex; justify-content: space-between;margin-top: 10px ">
-                        <p class="title-php">TOTAL</p>
+                        <p class="title-php" style="color: black">TOTAL</p>
                         <div class="result-php">
                             <div>
                                 <?php
@@ -204,7 +204,7 @@ session_start();
                                 $tinteira = 38.00 * $_SESSION['quantidadeInteira'];
                                 $total = $tmeia + $tinteira;
                                 $totalComProduto = $total + $total_produtos;
-                                echo "R$".number_format($totalComProduto, 2, ",", ".");
+                                echo "<span style='color: black'>"."R$".number_format($totalComProduto, 2, ",", ".")."</span>";
                                 ?>
                             </div>
                         </div>

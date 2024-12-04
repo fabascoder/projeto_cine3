@@ -131,8 +131,7 @@
         </nav>
     </header>
     <main>
-        <?php 
-        session_start();
+        <?php
         $_SESSION['dia'] = $_GET['dia']??"qui";
         $_SESSION['hora'] = $_GET['hora']??"16";
         echo $_SESSION['hora'];

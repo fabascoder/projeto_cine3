@@ -52,6 +52,10 @@
             </div>
         </div>
     </header>
+    <div class="titulo">
+            <a href="pagamento_sessao.php"><img src="imagens/seta.png" alt="" width="30px"></a>
+            <p>Produtos</p>
+        </div>
 <?php 
     
     session_start();
@@ -63,12 +67,11 @@
     for($i = 1; $i <= 120; $i++) {
         if(!empty($_POST['assentos'.$i])){
             $_SESSION['assentos'][$i] = $_POST['assentos'.$i];
-           echo  '<h2>'.$_POST['assentos'.$i].'</h2>';
+          
         }
     }
 
-    echo $_SESSION['quantidadeInteira'];
-    echo $_SESSION['quantidadeMeia'];
+
     // $_POST['assentos'.$i];
     ?>
     <main>
@@ -251,8 +254,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="avancar">
-                <button type="submit" class="btn">AVANÇAR</button>
+                <div class="avancar" style="margin-top: 20px">
+                <button type="submit" class="btn" >AVANÇAR</button>
                 </div>
                 <div class="caixa-preta">
                     <img src="imagens/Logo_Cine3-removebg-preview.png" alt="Logo_Cine3.png" width="200px">

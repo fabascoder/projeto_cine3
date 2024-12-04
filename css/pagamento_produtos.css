@@ -15,7 +15,18 @@ ul a, .caixa-preta a {
     color: black;
     text-decoration: none;  
 }
+.titulo {
+    display: flex;
+    align-items: center;
+    padding: 55px 0 0 80px;
+    gap: 10px;
+}
 
+.titulo p {
+    font-family: "Zen Dots";
+    font-size: 1.7rem;
+    color: #d15a72;
+}
 ul {
     display: flex;
     justify-content: space-between;

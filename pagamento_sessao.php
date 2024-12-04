@@ -76,8 +76,12 @@
         </div>
     </header>
 
-
+ <div class="titulo">
+            <a href="pagamento_ingressos.php"><img src="imagens/seta.png" alt="" width="30px"></a>
+            <p>Sessão</p>
+        </div>
     <main> 
+   
     <form action="pagamento_produtos.php" method="post" id="sessao">
        
         <div class="caixa-principal">
@@ -373,7 +377,7 @@
 
                 </div>
             </div>
-            <p>Você pode selecionar até <span id="max-assentos"><?php echo $totalAssentos; ?></span> assentos.</p>
+            <p style="font-family: Arial, Helvetica, sans-serif; padding-top: 18px; font-size: 15px; margin-left: 20px; color: #333;">Você pode selecionar até <span id="max-assentos"><?php echo $totalAssentos; ?></span> assentos.</p>
             <p class="assentos-escolhidos">ASSENTO(S) ESCOLHIDOS: <span class="escolhidos">0</span></p>
 
 
@@ -396,7 +400,7 @@
             </div>
 
             <div class="botao">
-                <button type="submit" href="pagamento_produtos.php" class="btn">AVANÇAR ></button>
+            <button type="submit" href="pagamento_produtos.php" class="btn" disabled>AVANÇAR ></button>
             </div>
 
         </div>
@@ -525,6 +529,58 @@ document.getElementById('sessao').addEventListener('submit', function (event) {
         alert(`Por favor, selecione todos os ${maxAssentos} assentos antes de continuar.`);
     }
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+    const assentos = document.querySelectorAll(".assentos");
+    const botaoAvancar = document.querySelector(".btn");
+    const maxAssentos = parseInt(document.getElementById("max-assentos").textContent, 10);
+    let assentosSelecionados = 0;
+
+    // Atualiza o estado do botão "Avançar"
+    function atualizarBotao() {
+        if (assentosSelecionados === maxAssentos) {
+            botaoAvancar.disabled = false;
+            botaoAvancar.style.color = "#d95f80"; // Cor original do botão
+            botaoAvancar.style.backgroundColor = "#000"; // Cor original do botão
+            botaoAvancar.style.cursor = "pointer";
+        } else {
+            botaoAvancar.disabled = true;
+            botaoAvancar.style.backgroundColor = "gray"; // Cor cinza para indicar bloqueio
+            botaoAvancar.style.color = "#d9d9d9"; // Cor cinza para indicar bloqueio
+            botaoAvancar.style.cursor = "pointer";
+        }
+    }
+
+    // Atualiza o número de assentos selecionados e o estado do botão
+    assentos.forEach((checkbox) => {
+        checkbox.addEventListener("change", function () {
+            if (this.checked) {
+                if (assentosSelecionados < maxAssentos) {
+                    assentosSelecionados++;
+                } else {
+                    this.checked = false; // Impede a seleção além do limite
+                    alert("Você atingiu o limite máximo de assentos!");
+                }
+            } else {
+                assentosSelecionados--;
+            }
+            atualizarBotao();
+        });
+    });
+
+    // Inicializa o estado do botão
+    atualizarBotao();
+});
+
+// Bloqueia envio do formulário se o número de assentos não for suficiente
+document.getElementById("sessao").addEventListener("submit", function (event) {
+    const maxAssentos = parseInt(document.getElementById("max-assentos").textContent, 10);
+    if (assentosSelecionados < maxAssentos) {
+        event.preventDefault(); // Impede o envio do formulário
+        alert(`Por favor, selecione todos os ${maxAssentos} assentos antes de continuar.`);
+    }
+});
+
 </script>
 
 </body>
