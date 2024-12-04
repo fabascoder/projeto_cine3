@@ -56,21 +56,32 @@
     
     session_start();
     $_SESSION['local'] = $_POST['local_sessao'];
-    $_SESSION['assentos'] = [];
+    $_SESSION['assentos'] = $_POST['assentos'] ?? [];
     // foreach($_POST as $campos) {
     //      echo '<h2>'.$campos.'</h2>';
     // }
     for($i = 1; $i <= 120; $i++) {
         if(!empty($_POST['assentos'.$i])){
             $_SESSION['assentos'][$i] = $_POST['assentos'.$i];
-          // echo  '<h2>'.$_POST['assentos'.$i].'</h2>';
+           echo  '<h2>'.$_POST['assentos'.$i].'</h2>';
         }
     }
 
-    echo $_SESSION['quantidadeInteira'];
-    echo $_SESSION['quantidadeMeia'];
-    // $_POST['assentos'.$i];
-    ?>
+
+    // Recuperar os assentos da sessão
+$assentosSelecionados = $_SESSION['assentos'] ?? [];
+
+// Criar uma string para exibir os assentos
+$assentosString = "";
+foreach ($assentosSelecionados as $assentos) {
+    $assentosString .= $assentos . ", ";
+}
+
+// Remover a última vírgula
+$assentosString = rtrim($assentosString, ", ");
+?>
+
+
     <main>
         <form action="pagamento.php" method="post">
             <div class="caixa-principal">
@@ -252,7 +263,7 @@
                     </div>
                 </div>
                 <div class="avancar">
-                <button type="submit" class="btn">AVANÇAR</button>
+                <button type="submit" class="btn">AVANÇAR ></button>
                 </div>
                 <div class="caixa-preta">
                     <img src="imagens/Logo_Cine3-removebg-preview.png" alt="Logo_Cine3.png" width="200px">

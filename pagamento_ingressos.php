@@ -167,7 +167,7 @@
                 <div class="caixa-finalizar">
                     <div class="finalizar">
                         <input type="hidden" id="total_pagar" name="total_pagar" value="0">
-                        <p id="total_pagar_display">TOTAL: <span style="font-weight: 600;" class="total">R$ 0,00</span></p>
+                        <p id="total_pagar_display">TOTAL <span style="font-weight: 600;" class="total">R$ 0,00</span></p>
                         <button type="submit" class="btn">AVANÇAR ></button>
                     </div>
                 </div>
@@ -186,7 +186,9 @@
         </div>
     </footer>
 
-    <script src="javascript/pagamento_ingressos.js"></script>
+    <script src="javascript/pagamento_ingressos.js">
+        
+    </script>
 </body>
 
 </html>
